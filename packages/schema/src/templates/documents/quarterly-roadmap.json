@@ -1,0 +1,1040 @@
+{
+  "format": "canvas.board",
+  "schemaVersion": 39,
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Quarterly roadmap",
+      "order": "a0"
+    }
+  ],
+  "objects": [
+    {
+      "id": "quarterly-roadmap-0",
+      "parentId": null,
+      "pageId": "page-1",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 1600,
+      "height": 1000,
+      "name": "Quarterly roadmap",
+      "clip": false,
+      "background": null,
+      "showName": false,
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "cornerRadius": 16
+    },
+    {
+      "id": "quarterly-roadmap-1",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 48,
+      "y": 40,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "title",
+      "type": "text",
+      "width": 900,
+      "height": 40,
+      "text": "Quarterly roadmap",
+      "runs": [
+        {
+          "length": 17,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 32,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "quarterly-roadmap-10",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 582,
+      "y": 212,
+      "rotation": 0,
+      "z": "a9",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "quarter divider",
+      "type": "line",
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": 720
+        }
+      ],
+      "route": "straight",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "startCap": "none",
+      "endCap": "none"
+    },
+    {
+      "id": "quarterly-roadmap-11",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 908,
+      "y": 212,
+      "rotation": 0,
+      "z": "aA",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "quarter divider",
+      "type": "line",
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": 720
+        }
+      ],
+      "route": "straight",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "startCap": "none",
+      "endCap": "none"
+    },
+    {
+      "id": "quarterly-roadmap-12",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 1234,
+      "y": 212,
+      "rotation": 0,
+      "z": "aB",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "quarter divider",
+      "type": "line",
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": 720
+        }
+      ],
+      "route": "straight",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "startCap": "none",
+      "endCap": "none"
+    },
+    {
+      "id": "quarterly-roadmap-13",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 72,
+      "y": 236,
+      "rotation": 0,
+      "z": "aC",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane label",
+      "type": "text",
+      "width": 176,
+      "height": 22.5,
+      "text": "Workstream",
+      "runs": [
+        {
+          "length": 10,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "quarterly-roadmap-14",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 72,
+      "y": 264,
+      "rotation": 0,
+      "z": "aD",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane prompt",
+      "type": "text",
+      "width": 176,
+      "height": 17.5,
+      "text": "What’s the goal here?",
+      "runs": [
+        {
+          "length": 21,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "quarterly-roadmap-15",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 72,
+      "y": 480,
+      "rotation": 0,
+      "z": "aE",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane label",
+      "type": "text",
+      "width": 176,
+      "height": 22.5,
+      "text": "Workstream",
+      "runs": [
+        {
+          "length": 10,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "quarterly-roadmap-16",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 72,
+      "y": 508,
+      "rotation": 0,
+      "z": "aF",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane prompt",
+      "type": "text",
+      "width": 176,
+      "height": 17.5,
+      "text": "What’s the goal here?",
+      "runs": [
+        {
+          "length": 21,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "quarterly-roadmap-17",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 72,
+      "y": 724,
+      "rotation": 0,
+      "z": "aG",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane label",
+      "type": "text",
+      "width": 176,
+      "height": 22.5,
+      "text": "Workstream",
+      "runs": [
+        {
+          "length": 10,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "quarterly-roadmap-18",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 72,
+      "y": 752,
+      "rotation": 0,
+      "z": "aH",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane prompt",
+      "type": "text",
+      "width": 176,
+      "height": 17.5,
+      "text": "What’s the goal here?",
+      "runs": [
+        {
+          "length": 21,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "quarterly-roadmap-19",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 280,
+      "y": 252,
+      "rotation": 0,
+      "z": "aI",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "initiative",
+      "type": "shape",
+      "width": 594,
+      "height": 64,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1],
+      "cornerRadius": 32,
+      "sides": 4,
+      "label": {
+        "text": "Add an initiative",
+        "runs": [
+          {
+            "length": 17,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "quarterly-roadmap-2",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 48,
+      "y": 88,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "subtitle",
+      "type": "text",
+      "width": 900,
+      "height": 20,
+      "text": "What are we building this year, and roughly when?",
+      "runs": [
+        {
+          "length": 49,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "quarterly-roadmap-20",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 932,
+      "y": 340,
+      "rotation": 0,
+      "z": "aJ",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "initiative",
+      "type": "shape",
+      "width": 278,
+      "height": 64,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1],
+      "cornerRadius": 32,
+      "sides": 4,
+      "label": {
+        "text": "Add an initiative",
+        "runs": [
+          {
+            "length": 17,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "quarterly-roadmap-21",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 606,
+      "y": 496,
+      "rotation": 0,
+      "z": "aK",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "initiative",
+      "type": "shape",
+      "width": 278,
+      "height": 64,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1],
+      "cornerRadius": 32,
+      "sides": 4,
+      "label": {
+        "text": "Add an initiative",
+        "runs": [
+          {
+            "length": 17,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "quarterly-roadmap-22",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 932,
+      "y": 584,
+      "rotation": 0,
+      "z": "aL",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "initiative",
+      "type": "shape",
+      "width": 594,
+      "height": 64,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1],
+      "cornerRadius": 32,
+      "sides": 4,
+      "label": {
+        "text": "Add an initiative",
+        "runs": [
+          {
+            "length": 17,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "quarterly-roadmap-23",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 280,
+      "y": 740,
+      "rotation": 0,
+      "z": "aM",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "initiative",
+      "type": "shape",
+      "width": 278,
+      "height": 64,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1],
+      "cornerRadius": 32,
+      "sides": 4,
+      "label": {
+        "text": "Add an initiative",
+        "runs": [
+          {
+            "length": 17,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "quarterly-roadmap-24",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 606,
+      "y": 828,
+      "rotation": 0,
+      "z": "aN",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "initiative",
+      "type": "shape",
+      "width": 594,
+      "height": 64,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1],
+      "cornerRadius": 32,
+      "sides": 4,
+      "label": {
+        "text": "Add an initiative",
+        "runs": [
+          {
+            "length": 17,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "quarterly-roadmap-25",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 1210,
+      "y": 260,
+      "rotation": 0,
+      "z": "aO",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "milestone",
+      "type": "shape",
+      "width": 48,
+      "height": 48,
+      "kind": "diamond",
+      "stroke": null,
+      "fill": {
+        "token": "accent"
+      },
+      "cornerRadius": 0,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "quarterly-roadmap-26",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 1266,
+      "y": 272,
+      "rotation": 0,
+      "z": "aP",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "milestone label",
+      "type": "text",
+      "width": 260,
+      "height": 20,
+      "text": "Add a milestone",
+      "runs": [
+        {
+          "length": 15,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 500,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "quarterly-roadmap-3",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 264,
+      "y": 140,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "Q1",
+      "type": "shape",
+      "width": 310,
+      "height": 56,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": {
+        "text": "Q1",
+        "runs": [
+          {
+            "length": 2,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 18,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "quarterly-roadmap-4",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 590,
+      "y": 140,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "Q2",
+      "type": "shape",
+      "width": 310,
+      "height": 56,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": {
+        "text": "Q2",
+        "runs": [
+          {
+            "length": 2,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 18,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "quarterly-roadmap-5",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 916,
+      "y": 140,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "Q3",
+      "type": "shape",
+      "width": 310,
+      "height": 56,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": {
+        "text": "Q3",
+        "runs": [
+          {
+            "length": 2,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 18,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "quarterly-roadmap-6",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 1242,
+      "y": 140,
+      "rotation": 0,
+      "z": "a5",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "Q4",
+      "type": "shape",
+      "width": 310,
+      "height": 56,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": {
+        "text": "Q4",
+        "runs": [
+          {
+            "length": 2,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 18,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "quarterly-roadmap-7",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 48,
+      "y": 212,
+      "rotation": 0,
+      "z": "a6",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane 1",
+      "type": "shape",
+      "width": 1504,
+      "height": 232,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 12,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "quarterly-roadmap-8",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 48,
+      "y": 456,
+      "rotation": 0,
+      "z": "a7",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane 2",
+      "type": "shape",
+      "width": 1504,
+      "height": 232,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 12,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "quarterly-roadmap-9",
+      "parentId": "quarterly-roadmap-0",
+      "pageId": null,
+      "x": 48,
+      "y": 700,
+      "rotation": 0,
+      "z": "a8",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane 3",
+      "type": "shape",
+      "width": 1504,
+      "height": 232,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 12,
+      "sides": 4,
+      "label": null
+    }
+  ]
+}

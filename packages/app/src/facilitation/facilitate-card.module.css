@@ -1,0 +1,180 @@
+/* The Facilitate card (the design board's Whiteboard page, frames A and B): a 248 px
+   floating sheet 16 px from the canvas's bottom-right corner, its 224 px rows 8 px apart, 13 px in
+   from the top, left and bottom and 11 px from the right inside its 1 px border, as the design
+   draws them. Theme tokens only. */
+@value dockInset, compactInset, compactPillTop, tabletRowTop from '../toolbar/dock.module.css';
+
+.card {
+  position: absolute;
+  right: dockInset;
+  bottom: dockInset;
+  z-index: var(--layer-controls);
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 248px;
+  padding: 12px 10px 12px 12px;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: 8px;
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-sheet);
+  color: var(--color-ink-primary);
+}
+
+/* A row: 28 px tall, its parts centred. */
+.row {
+  display: flex;
+  align-items: center;
+  height: 28px;
+}
+
+.head {
+  gap: var(--space-2);
+}
+
+.timer {
+  gap: 6px;
+}
+
+.title {
+  font: var(--text-label);
+  font-weight: 500;
+  letter-spacing: var(--text-label-tracking);
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* The time: 15/20 semibold untracked (the design's Note/Head), in a 52 px box, so the row does
+   not shift as it counts. */
+.time {
+  min-width: 52px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  color: inherit;
+  font: var(--text-title);
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+  text-align: left;
+}
+
+.time:enabled {
+  cursor: text;
+}
+
+.time:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.time[data-state='done'] {
+  color: var(--color-hand-you);
+}
+
+/* The duration field, in the time's place while a person sets it. */
+.durationField {
+  box-sizing: border-box;
+  width: 72px;
+  height: 28px;
+  padding: 0 6px;
+  border: 1px solid var(--color-line-control);
+  border-radius: 4px;
+  background: var(--color-surface-raised);
+  color: inherit;
+  font: var(--text-title);
+  letter-spacing: var(--text-title-tracking);
+}
+
+.durationField:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.of {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/* The card's 28 px icon buttons: 4 px padding, 4 px corners, pressed while on. */
+.iconButton {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  color: inherit;
+}
+
+.iconButton[aria-pressed='true'] {
+  background: var(--color-surface-pressed);
+}
+
+.iconButton:disabled {
+  opacity: 0.38;
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.collapsedTime {
+  color: var(--color-ink-secondary);
+  font: var(--text-mono-value);
+  letter-spacing: var(--text-mono-value-tracking);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Below 768 px wide: over the canvas's bottom-right corner, its bottom level with the
+   undo pill's (11 px above the compact bar), 8 px in; collapsed, a pill of its head with 48 px
+   buttons; expanded, the card as wide as it fits. */
+.card[data-compact] {
+  right: max(compactInset, env(safe-area-inset-right, 0px));
+  bottom: calc(compactPillTop - 56px);
+  width: min(248px, calc(100% - 2 * compactInset));
+}
+
+.card[data-compact][data-collapsed] {
+  width: auto;
+  padding: 3px 4px 3px 12px;
+  border-radius: 10px;
+}
+
+.card[data-compact] .head {
+  height: 48px;
+}
+
+.card[data-compact] .head .iconButton {
+  width: 48px;
+  height: 48px;
+}
+
+/* Tablet widths, 768 to 1019 px (iPad portrait): the dock, centred, would reach the card
+   at the bottom-right corner (the signed-in dock is 476 px: from 1020 px it clears the 248 px card
+   by 8 px), so the card sits at the top right instead, 16 px in and 16 px under the top bars
+   (8 px crowded the presence bar), level with the zoom control at the top left. */
+@media (768px <= width < 1020px) {
+  .card {
+    top: tabletRowTop;
+    bottom: auto;
+  }
+}
+
+/* Under the whiteboard's floating chrome a focused field is one amber box (item 7): its
+   own 1 px edge takes the focus colour, with no outline ring beside it (an invalid field keeps its
+   red edge and the ring). The attribute outranks the site's `.frame input:focus-visible`. */
+:is([data-whiteboard-chrome='floating'], [data-whiteboard-chrome-scope='floating'])
+  .durationField:focus-visible:not([aria-invalid='true']) {
+  outline: none;
+  outline-offset: 0;
+  border-color: var(--color-focus-ring);
+}

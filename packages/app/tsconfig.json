@@ -1,0 +1,36 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "types": ["vite/client"],
+    "emitDeclarationOnly": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"],
+  "references": [
+    {
+      "path": "../collab"
+    },
+    {
+      "path": "../document"
+    },
+    {
+      "path": "../engine"
+    },
+    {
+      "path": "../schema"
+    },
+    {
+      "path": "../text"
+    },
+    {
+      "path": "../tools"
+    },
+    {
+      "path": "./scripts"
+    }
+  ]
+}

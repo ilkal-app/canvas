@@ -1,0 +1,47 @@
+/* The frame bars: one row per recent frame, oldest at the top, its stages laid end to
+   end from the left, a 60 Hz frame filling the plot's width (longer frames run past it, clipped).
+   Colours cycle through the theme's marking colours. */
+.plot {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-bottom: var(--space-2);
+  overflow: hidden;
+  border-right: 1px solid var(--color-line-hairline);
+}
+
+.bar {
+  display: flex;
+  flex: none;
+  height: 2px;
+}
+
+.segment {
+  flex: none;
+  height: 100%;
+  background: var(--color-ink-secondary);
+}
+
+.segment:nth-child(6n + 1) {
+  background: var(--color-mark-live);
+}
+
+.segment:nth-child(6n + 2) {
+  background: var(--color-hand-agent);
+}
+
+.segment:nth-child(6n + 3) {
+  background: var(--color-hand-you);
+}
+
+.segment:nth-child(6n + 4) {
+  background: var(--color-peer-jonas);
+}
+
+.segment:nth-child(6n + 5) {
+  background: var(--color-peer-mira);
+}
+
+.segment:nth-child(6n) {
+  background: var(--color-mark-red-pencil);
+}

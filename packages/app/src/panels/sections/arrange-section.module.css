@@ -1,0 +1,56 @@
+/* The arrange section (Figma "Inspector by selection"): three rows of 40 px icon
+   buttons, a rule between a row's groups. Theme tokens only (theme/token-usage.test.ts). */
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+}
+
+/* The room between a row's groups: the frames leave a gap, no drawn line. */
+.rule {
+  width: var(--space-3);
+  height: 40px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  cursor: pointer;
+}
+
+.button:hover:not([aria-disabled='true']) {
+  background: var(--color-surface-raised);
+}
+
+.button:active:not([aria-disabled='true']) {
+  background: var(--color-surface-pressed);
+}
+
+/* Disabled (UI-18 item 2): faded to 38%, still focusable, its tooltip saying why. */
+.button[aria-disabled='true'] {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}

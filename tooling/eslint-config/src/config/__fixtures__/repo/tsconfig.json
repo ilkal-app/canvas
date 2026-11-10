@@ -1,0 +1,5 @@
+{
+  // The fixture repo's solution tsconfig, like the real root one.
+  "files": [],
+  "references": [{ "path": "packages/document" }, { "path": "tooling/scenario" }]
+}

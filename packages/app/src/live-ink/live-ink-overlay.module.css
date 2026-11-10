@@ -1,0 +1,8 @@
+/* The live ink overlay: the stroke under way, drawn by the page over the engine's
+   canvas, the board stage's whole box (it never takes a pointer: set on the element). */
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}

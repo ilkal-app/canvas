@@ -1,0 +1,860 @@
+{
+  "format": "canvas.board",
+  "schemaVersion": 39,
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Flowchart",
+      "order": "a0"
+    }
+  ],
+  "objects": [
+    {
+      "id": "flowchart-starter-0",
+      "parentId": null,
+      "pageId": "page-1",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 1600,
+      "height": 1000,
+      "name": "Flowchart",
+      "clip": false,
+      "background": null,
+      "showName": false,
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "cornerRadius": 16
+    },
+    {
+      "id": "flowchart-starter-1",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 48,
+      "y": 40,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "title",
+      "type": "text",
+      "width": 900,
+      "height": 40,
+      "text": "Flowchart",
+      "runs": [
+        {
+          "length": 9,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 32,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "flowchart-starter-10",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a9",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "flow",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "flowchart-starter-4",
+        "anchor": {
+          "x": 1,
+          "y": 0.5
+        }
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "flowchart-starter-5",
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        }
+      },
+      "route": "straight",
+      "stroke": {
+        "color": "ink",
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "triangle",
+      "label": null
+    },
+    {
+      "id": "flowchart-starter-11",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aA",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "flow yes",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "flowchart-starter-5",
+        "anchor": {
+          "x": 1,
+          "y": 0.5
+        }
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "flowchart-starter-6",
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        }
+      },
+      "route": "straight",
+      "stroke": {
+        "color": "ink",
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "triangle",
+      "label": {
+        "text": "Yes",
+        "runs": [
+          {
+            "length": 3,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": "ink",
+              "weight": 500,
+              "italic": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "flowchart-starter-12",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aB",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "flow",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "flowchart-starter-6",
+        "anchor": {
+          "x": 1,
+          "y": 0.5
+        }
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "flowchart-starter-7",
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        }
+      },
+      "route": "straight",
+      "stroke": {
+        "color": "ink",
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "triangle",
+      "label": null
+    },
+    {
+      "id": "flowchart-starter-13",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aC",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "flow no",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "flowchart-starter-5",
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        }
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "flowchart-starter-8",
+        "anchor": {
+          "x": 0.5,
+          "y": 0
+        }
+      },
+      "route": "straight",
+      "stroke": {
+        "color": "ink",
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "triangle",
+      "label": {
+        "text": "No",
+        "runs": [
+          {
+            "length": 2,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": "ink",
+              "weight": 500,
+              "italic": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "flowchart-starter-14",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aD",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "flow back",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "flowchart-starter-8",
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        }
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "flowchart-starter-4",
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        }
+      },
+      "route": "elbow",
+      "stroke": {
+        "color": "ink",
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "triangle",
+      "label": null
+    },
+    {
+      "id": "flowchart-starter-15",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 48,
+      "y": 820,
+      "rotation": 0,
+      "z": "aE",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "legend rule",
+      "type": "line",
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 1504,
+          "y": 0
+        }
+      ],
+      "route": "straight",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "startCap": "none",
+      "endCap": "none"
+    },
+    {
+      "id": "flowchart-starter-16",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 80,
+      "y": 852,
+      "rotation": 0,
+      "z": "aF",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "legend heading",
+      "type": "text",
+      "width": 260,
+      "height": 17.5,
+      "text": "Shapes to copy",
+      "runs": [
+        {
+          "length": 14,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "flowchart-starter-17",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 80,
+      "y": 888,
+      "rotation": 0,
+      "z": "aG",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "legend start/end",
+      "type": "shape",
+      "width": 140,
+      "height": 52,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1],
+      "cornerRadius": 26,
+      "sides": 4,
+      "label": {
+        "text": "Start or end",
+        "runs": [
+          {
+            "length": 12,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": "ink",
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "flowchart-starter-18",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 244,
+      "y": 888,
+      "rotation": 0,
+      "z": "aH",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "legend step",
+      "type": "shape",
+      "width": 140,
+      "height": 52,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "muted"
+        },
+        "width": 1.5
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 8,
+      "sides": 4,
+      "label": {
+        "text": "Step",
+        "runs": [
+          {
+            "length": 4,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": "ink",
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "flowchart-starter-19",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 408,
+      "y": 872,
+      "rotation": 0,
+      "z": "aI",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "legend decision",
+      "type": "shape",
+      "width": 160,
+      "height": 84,
+      "kind": "diamond",
+      "stroke": null,
+      "fill": [0.9568627450980393, 0.8117647058823529, 0.6509803921568628, 1],
+      "cornerRadius": 0,
+      "sides": 4,
+      "label": {
+        "text": "Decision",
+        "runs": [
+          {
+            "length": 8,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": "ink",
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "flowchart-starter-2",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 48,
+      "y": 88,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "subtitle",
+      "type": "text",
+      "width": 900,
+      "height": 20,
+      "text": "Map a process step by step. Where does it branch?",
+      "runs": [
+        {
+          "length": 49,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "flowchart-starter-3",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 80,
+      "y": 380,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "start",
+      "type": "shape",
+      "width": 180,
+      "height": 72,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1],
+      "cornerRadius": 36,
+      "sides": 4,
+      "label": {
+        "text": "Start",
+        "runs": [
+          {
+            "length": 5,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 18,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "flowchart-starter-4",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 340,
+      "y": 368,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "step",
+      "type": "shape",
+      "width": 220,
+      "height": 96,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "muted"
+        },
+        "width": 1.5
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": {
+        "text": "Add a step",
+        "runs": [
+          {
+            "length": 10,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "flowchart-starter-5",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 640,
+      "y": 326,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "decision",
+      "type": "shape",
+      "width": 240,
+      "height": 180,
+      "kind": "diamond",
+      "stroke": null,
+      "fill": [0.9568627450980393, 0.8117647058823529, 0.6509803921568628, 1],
+      "cornerRadius": 0,
+      "sides": 4,
+      "label": {
+        "text": "Ask a question?",
+        "runs": [
+          {
+            "length": 15,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "flowchart-starter-6",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 960,
+      "y": 368,
+      "rotation": 0,
+      "z": "a5",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "step",
+      "type": "shape",
+      "width": 220,
+      "height": 96,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "muted"
+        },
+        "width": 1.5
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": {
+        "text": "Add a step",
+        "runs": [
+          {
+            "length": 10,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "flowchart-starter-7",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 1280,
+      "y": 380,
+      "rotation": 0,
+      "z": "a6",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "end",
+      "type": "shape",
+      "width": 180,
+      "height": 72,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1],
+      "cornerRadius": 36,
+      "sides": 4,
+      "label": {
+        "text": "End",
+        "runs": [
+          {
+            "length": 3,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 18,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "flowchart-starter-8",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 650,
+      "y": 640,
+      "rotation": 0,
+      "z": "a7",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "step",
+      "type": "shape",
+      "width": 220,
+      "height": 96,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "muted"
+        },
+        "width": 1.5
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": {
+        "text": "Try another way",
+        "runs": [
+          {
+            "length": 15,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "flowchart-starter-9",
+      "parentId": "flowchart-starter-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a8",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "flow",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "flowchart-starter-3",
+        "anchor": {
+          "x": 1,
+          "y": 0.5
+        }
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "flowchart-starter-4",
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        }
+      },
+      "route": "straight",
+      "stroke": {
+        "color": "ink",
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "triangle",
+      "label": null
+    }
+  ]
+}

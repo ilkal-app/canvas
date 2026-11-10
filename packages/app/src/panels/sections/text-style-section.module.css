@@ -1,0 +1,45 @@
+.section {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.spacing {
+  display: grid;
+  gap: var(--space-2);
+}
+
+/* The variable axes: one slider per axis the font shows. */
+.axes {
+  display: grid;
+  gap: var(--space-2);
+}
+
+/* A spacing field: its label and number, then its unit beside them. */
+.spacingRow {
+  display: flex;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.spacingRow > :first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.spacingRow > :last-child {
+  flex: 0 0 72px;
+}
+
+.hint {
+  margin: 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}

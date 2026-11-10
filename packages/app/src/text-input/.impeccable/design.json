@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T21:14:53.321196+00:00",
+  "title": "Design System: Canvas font picker",
+  "extensions": {
+    "breakpoints": [
+      {
+        "name": "compact-dialog",
+        "value": "768px"
+      }
+    ],
+    "shadows": [
+      {
+        "name": "replacement-dialog",
+        "value": "var(--shadow-float)",
+        "purpose": "Inherited shared dialog elevation."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Browse trigger",
+      "kind": "button",
+      "description": "Opens the inline font browser.",
+      "html": "<button class=\"ds-control\" type=\"button\">Browse fonts</button>",
+      "css": ".ds-control{border:1px solid var(--color-line-control);border-radius:var(--radius-control);background:var(--color-surface-sheet);color:var(--color-ink-primary);font:var(--text-caption);padding:var(--space-2);min-height:28px}.ds-control:focus-visible{outline:2px solid var(--color-focus-ring);outline-offset:2px}button.ds-control{cursor:pointer}button.ds-control:hover{background:var(--color-surface-raised)}@media(pointer:coarse){.ds-control{min-height:44px}}"
+    },
+    {
+      "name": "Font search",
+      "kind": "input",
+      "description": "Theme-aware placeholder and keyboard focus.",
+      "html": "<input class=\"ds-control ds-search\" type=\"search\" aria-label=\"Search fonts\" placeholder=\"Search fonts\">",
+      "css": ".ds-control{border:1px solid var(--color-line-control);border-radius:var(--radius-control);background:var(--color-surface-sheet);color:var(--color-ink-primary);font:var(--text-caption);padding:var(--space-2);min-height:28px}.ds-control:focus-visible{outline:2px solid var(--color-focus-ring);outline-offset:2px}button.ds-control{cursor:pointer}button.ds-control:hover{background:var(--color-surface-raised)}@media(pointer:coarse){.ds-control{min-height:44px}}.ds-search{width:100%;min-width:0}.ds-search::placeholder{color:var(--color-ink-secondary);opacity:1}"
+    },
+    {
+      "name": "Font sources",
+      "kind": "custom",
+      "description": "Wrapping source buttons with a pressed selection.",
+      "html": "<div class=\"ds-sources\" aria-label=\"Font source\"><button class=\"ds-control\" aria-pressed=\"true\">Library</button><button class=\"ds-control\" aria-pressed=\"false\">All fonts</button><button class=\"ds-control\" aria-pressed=\"false\">On this computer</button></div>",
+      "css": ".ds-control{border:1px solid var(--color-line-control);border-radius:var(--radius-control);background:var(--color-surface-sheet);color:var(--color-ink-primary);font:var(--text-caption);padding:var(--space-2);min-height:28px}.ds-control:focus-visible{outline:2px solid var(--color-focus-ring);outline-offset:2px}button.ds-control{cursor:pointer}button.ds-control:hover{background:var(--color-surface-raised)}@media(pointer:coarse){.ds-control{min-height:44px}}.ds-sources{display:flex;flex-wrap:wrap;gap:var(--space-1)}.ds-sources button[aria-pressed=true]{background:var(--color-surface-pressed)}"
+    },
+    {
+      "name": "Category field",
+      "kind": "input",
+      "description": "Native category filter.",
+      "html": "<select class=\"ds-control\" aria-label=\"Font category\"><option>All categories</option><option>sans</option><option>serif</option><option>mono</option><option>display</option><option>handwriting</option></select>",
+      "css": ".ds-control{border:1px solid var(--color-line-control);border-radius:var(--radius-control);background:var(--color-surface-sheet);color:var(--color-ink-primary);font:var(--text-caption);padding:var(--space-2);min-height:28px}.ds-control:focus-visible{outline:2px solid var(--color-focus-ring);outline-offset:2px}button.ds-control{cursor:pointer}button.ds-control:hover{background:var(--color-surface-raised)}@media(pointer:coarse){.ds-control{min-height:44px}}"
+    },
+    {
+      "name": "Font choice",
+      "kind": "button",
+      "description": "Family metadata and a single-line preview; runtime supplies the loaded preview family.",
+      "html": "<button class=\"ds-control ds-choice\" aria-label=\"Use Inter\"><span class=\"ds-meta\">Inter<small>sans</small></span><span class=\"ds-preview\">The quick brown fox</span></button>",
+      "css": ".ds-control{border:1px solid var(--color-line-control);border-radius:var(--radius-control);background:var(--color-surface-sheet);color:var(--color-ink-primary);font:var(--text-caption);padding:var(--space-2);min-height:28px}.ds-control:focus-visible{outline:2px solid var(--color-focus-ring);outline-offset:2px}button.ds-control{cursor:pointer}button.ds-control:hover{background:var(--color-surface-raised)}@media(pointer:coarse){.ds-control{min-height:44px}}.ds-choice{display:grid;gap:var(--space-1);text-align:start;min-width:0}.ds-meta{display:flex;justify-content:space-between;gap:var(--space-2)}.ds-meta small{color:var(--color-ink-secondary);font:var(--text-caption)}.ds-preview{font:var(--text-body);font-family:\"Canvas preview Inter\",var(--font-ui);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}"
+    },
+    {
+      "name": "Local font access",
+      "kind": "custom",
+      "description": "Explicit permission action with local-byte and collaboration context; unsupported browsers show availability guidance.",
+      "html": "<div class=\"ds-local\"><p>Font files stay on this computer. Others need the same font to edit its text.</p><button class=\"ds-control\" type=\"button\">Allow local fonts</button></div>",
+      "css": ".ds-control{border:1px solid var(--color-line-control);border-radius:var(--radius-control);background:var(--color-surface-sheet);color:var(--color-ink-primary);font:var(--text-caption);padding:var(--space-2);min-height:28px}.ds-control:focus-visible{outline:2px solid var(--color-focus-ring);outline-offset:2px}button.ds-control{cursor:pointer}button.ds-control:hover{background:var(--color-surface-raised)}@media(pointer:coarse){.ds-control{min-height:44px}}.ds-local{display:grid;gap:var(--space-2)}.ds-local p{margin:0;color:var(--color-ink-secondary);font:var(--text-caption)}"
+    },
+    {
+      "name": "Replacement body spacing",
+      "kind": "custom",
+      "description": "Body and failure-message excerpt inside the shared narrow dialog or compact bottom sheet. Runtime supplies FontPicker and the shared Cancel button.",
+      "html": "<div class=\"ds-replacement-body\"><p>Missing font: Example. Choosing a replacement changes this text\u2019s font for everyone. Its words stay the same.</p><p role=\"status\">That font could not be applied. Choose another available font.</p></div>",
+      "css": ".ds-replacement-body{display:grid;gap:var(--space-4);min-height:0;overflow-y:auto;padding:var(--space-5);background:var(--color-surface-sheet);color:var(--color-ink-primary)}.ds-replacement-body p{margin:0;font:var(--text-body);overflow-wrap:anywhere}"
+    }
+  ]
+}

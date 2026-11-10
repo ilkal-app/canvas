@@ -1,0 +1,164 @@
+/* The Facilitate card's dot vote (the design board's Whiteboard page, frames A and B):
+   a hairline rule, then the idle row (the vote icon, "Dot vote · 3 each", Start) or the live
+   panel: a 224 px raised inset 13 px in (12 px inside its 1 px accent border), 6 px corners, its
+   head, a 200 × 6 progress track and its actions 8 px apart. Theme tokens only. */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.rule {
+  height: 1px;
+  background: var(--color-line-hairline);
+}
+
+.idle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 28px;
+}
+
+.label {
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* The design's 76 × 28 buttons, smaller than the shared button's 32 px. */
+.section .button {
+  width: 76px;
+  height: 28px;
+}
+
+.panel {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 12px;
+  border: 1px solid var(--color-hand-you);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-raised);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 16px;
+}
+
+.left {
+  margin-left: auto;
+  font: var(--text-mono-value);
+  letter-spacing: var(--text-mono-value-tracking);
+}
+
+.track {
+  overflow: hidden;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--color-surface-pressed);
+}
+
+.done {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--color-hand-you);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  height: 28px;
+}
+
+.count {
+  flex: 1;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.notice {
+  margin: 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/* The vote's section, the revealed top stickies and the voting cursor's toggle. */
+.scope {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.ranked {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: rank;
+}
+
+.rank {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  counter-increment: rank;
+}
+
+.rank::before {
+  content: counter(rank) '.';
+  color: var(--color-ink-secondary);
+}
+
+.rankLabel {
+  overflow: hidden;
+  flex: 1;
+  min-width: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rankCount {
+  color: var(--color-ink-secondary);
+}
+
+.cursor {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  color: inherit;
+}
+
+.cursor[aria-pressed='true'] {
+  background: var(--color-surface-pressed);
+  color: var(--color-hand-you);
+}
+
+.cursor:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}

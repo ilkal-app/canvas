@@ -1,0 +1,24 @@
+/* The auto-layout section: its number fields two by two, as the layout section's,
+   its lists a row each, then its add and remove buttons. Theme tokens only (theme/token-usage.test.ts). */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+.cell {
+  min-width: 0;
+}
+
+/* A list field takes a whole row, so its choice reads in full. */
+.wide {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}

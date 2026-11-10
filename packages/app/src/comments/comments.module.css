@@ -1,0 +1,804 @@
+/* Comments (card and pins redesigned in, Figma "Comment box — proposal" and
+   "Comment components"). Theme tokens only (theme/token-usage.test.ts). Two departures from the
+   frame, for the accessibility bar: the reply field's edge is the 3:1 control line, not the
+   hairline, and a message's time is secondary ink, not faint (faint is under 4.5:1 at 11 px). */
+
+@value dockTop from '../toolbar/dock.module.css';
+
+/* The card: beside its pin (placed by `cardPlacement` in comment-card-position.ts, which writes
+   `left` and `top`), between the top bars and the dock (`CARD_INSETS`). It floats over the
+   drawers, as the dock and zoom control do, so a pin near an open inspector keeps its card in
+   reach; the bars and their menus stay above it. The messages scroll; the card itself does not,
+   so its actions can sit over its top edge. */
+.card {
+  position: absolute;
+  z-index: var(--layer-controls);
+  top: calc(var(--space-4) * 2 + 42px);
+  left: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: min(288px, calc(100% - var(--space-3) * 2));
+  max-height: calc(100% - var(--space-4) * 2 - 42px - dockTop - var(--space-3));
+  box-sizing: border-box;
+  padding: var(--space-3);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: 10px;
+  background: var(--color-surface-sheet);
+  color: var(--color-ink-primary);
+  box-shadow: var(--shadow-float);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+}
+
+/* Opening, the card grows from its pin's corner (scale 0.96 to 1) and fades in over 160 ms;
+   closing, the reverse in 120 ms; in place of another card, it cross-fades. */
+.card {
+  transform-origin: top left;
+  animation: card-open 160ms ease-out backwards;
+}
+
+.card[data-side='left'] {
+  transform-origin: top right;
+}
+
+.card[data-side='above'] {
+  transform-origin: bottom left;
+}
+
+.card[data-motion='switch'] {
+  animation-name: card-fade;
+}
+
+.card[data-motion='closing'] {
+  pointer-events: none;
+  animation: card-close 120ms ease-in forwards;
+}
+
+@keyframes card-open {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes card-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes card-close {
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+/* The card takes focus when it opens, for Escape; it is a container, not a control. */
+.card:focus {
+  outline: none;
+}
+
+/* Resolve and ⋯ (Figma `Comment/Actions`): over the card's top edge, shown while the pointer is
+   over the card or focus is in them, always on a touch screen; above the messages, whose rows are
+   positioned for their own ⋯. */
+.actions {
+  position: absolute;
+  z-index: 1;
+  top: -15px;
+  right: var(--space-3);
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-raised);
+  opacity: 0;
+}
+
+.card:hover .actions,
+.actions:focus-within {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .actions {
+    opacity: 1;
+  }
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  cursor: pointer;
+}
+
+.action:hover:not(:disabled),
+.action[aria-expanded='true'] {
+  background: var(--color-surface-pressed);
+}
+
+.action[data-resolved='true'] {
+  color: var(--color-mark-live);
+}
+
+.action:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.action:focus-visible,
+.pin:focus-visible,
+.send:focus-visible,
+.menuItem:focus-visible,
+.members button:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.menuAnchor {
+  position: relative;
+}
+
+.menu,
+.members {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-1);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+}
+
+.menu {
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + var(--space-1));
+  right: 0;
+  width: 220px;
+}
+
+.menuItem,
+.members button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 32px;
+  box-sizing: border-box;
+  padding: var(--space-1) var(--space-2);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+  text-align: start;
+  cursor: pointer;
+}
+
+.menuItem:hover:not(:disabled),
+.members button:hover {
+  background: var(--color-surface-raised);
+}
+
+.menuItem:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.menuLabel {
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+.menuHint {
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The messages (Figma `Comment/Message`): avatar, name and time, text. */
+.messages {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: contain;
+  list-style: none;
+}
+
+.message {
+  position: relative;
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+
+/* A message's own ⋯ (item 16): over its row's top right end, so it takes no room in either
+   chrome's layout, shown while the pointer is over the row or focus is in it, its menu open, or
+   always on a touch screen, which has no hover. Its menu opens to its left, inside the row, where
+   the scrolling list cannot clip it. */
+.messageMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: var(--radius-control);
+  background: var(--color-surface-sheet);
+  opacity: 0;
+}
+
+.messageMenu .menu {
+  top: 0;
+  right: calc(100% + var(--space-1));
+  width: max-content;
+}
+
+.message:hover .messageMenu,
+.messageMenu:focus-within,
+.messageMenu:has([aria-expanded='true']) {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .messageMenu {
+    opacity: 1;
+  }
+}
+
+.body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.meta {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.meta strong {
+  overflow: hidden;
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  text-overflow: ellipsis;
+}
+
+/* An agent's message: the presence bar's agent mark, its badge and operator. */
+.avatar[data-kind='agent'] {
+  box-sizing: border-box;
+  border: 1.5px dashed var(--color-hand-agent);
+  border-radius: 6px;
+  background: var(--color-surface-sheet);
+  color: var(--color-hand-agent);
+}
+
+.agentBadge {
+  padding: 0 4px;
+  border: 1px solid var(--color-hand-agent);
+  border-radius: 4px;
+  color: var(--color-hand-agent);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.operator {
+  overflow: hidden;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  text-overflow: ellipsis;
+}
+
+.meta time {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.text {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.confirm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  margin-top: var(--space-2);
+  color: var(--color-ink-secondary);
+}
+
+/* An author's initials on their presence colour (`CommentAvatar`), as the share dialog paints
+   them: the theme's darkest or lightest text. */
+.avatar {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-surface-pressed);
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+}
+
+.avatar[data-ink='dark'],
+[data-theme='light'] .avatar[data-ink='light'] {
+  color: var(--color-action-on);
+}
+
+.avatar[data-ink='light'],
+[data-theme='light'] .avatar[data-ink='dark'] {
+  color: var(--color-ink-primary);
+}
+
+/* The reply field (Figma `Comment/Composer`): one line that grows, the send button inside. */
+.composer {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.field {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-end;
+  padding: var(--space-1) var(--space-1) var(--space-1) 10px;
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-raised);
+}
+
+.field:focus-within {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.field textarea {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-height: 126px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 3px 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+  resize: none;
+}
+
+.field textarea:focus {
+  outline: none;
+}
+
+.field textarea::placeholder {
+  color: var(--color-ink-secondary);
+}
+
+.send {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-action-fill);
+  color: var(--color-action-on);
+  cursor: pointer;
+}
+
+.send:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.limit {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.limit:empty {
+  display: none;
+}
+
+.error {
+  margin: 0;
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* A pin (Figma `Comment/Pin`): its first author's avatar in a teardrop, anchored at its
+   bottom-left corner, which sits on its point. 28 px at rest (`PIN_SIZE_PX`). */
+.pin {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  padding: 3px;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 14px 14px 14px 3px;
+  background: var(--color-surface-raised);
+  box-shadow: var(--shadow-float);
+  transform: translateY(-100%);
+  cursor: pointer;
+}
+
+/* Motion (the approved motion spec): on hover or keyboard focus the pin lifts 2 px and
+   grows to 1.08 over 120 ms, from its anchored corner; its ring brightens. */
+.pin {
+  transform-origin: bottom left;
+  transition:
+    transform 120ms ease-out,
+    border-color 120ms ease-out,
+    opacity 120ms ease-out,
+    visibility 0s;
+}
+
+.pin:hover,
+.pin:focus-visible {
+  border-color: var(--color-ink-secondary);
+  transform: translateY(calc(-100% - 2px)) scale(1.08);
+}
+
+/* Hidden while its object moves: fades out over 80 ms, back over 120 ms once the
+   object settles. */
+.pin[data-moving='true'] {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 80ms ease-out,
+    visibility 0s linear 80ms;
+}
+
+/* The first message beside a pin, after a 300 ms pause on it (Figma "Hover: … preview after
+   300 ms"); none for the thread already open. */
+.preview {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 6px);
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+  max-width: 240px;
+  box-sizing: border-box;
+  padding: 6px 10px 6px 8px;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: 8px;
+  background: var(--color-surface-raised);
+  color: var(--color-ink-primary);
+  box-shadow: var(--shadow-float);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition:
+    opacity 120ms ease-out,
+    visibility 0s linear 120ms;
+}
+
+.preview strong {
+  font-weight: var(--text-label-weight);
+}
+
+.previewText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pin:hover .preview,
+.pin:focus-visible .preview {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 120ms ease-out 300ms,
+    visibility 0s linear 300ms;
+}
+
+.pin[data-state='open'] .preview {
+  display: none;
+}
+
+/* Open: the ring in your colour. */
+.pin[data-state='open'] {
+  padding: 2px;
+  border: 2px solid var(--color-hand-you);
+}
+
+.pin[data-state='resolved'] {
+  border-color: var(--color-line-hairline);
+}
+
+.pin[data-state='resolved'] .avatar {
+  opacity: 0.45;
+}
+
+/* A cluster (Figma `Comment/Cluster`): pins that overlap on screen drawn as one, the
+   pin's teardrop widened to two faces and the thread count. */
+.cluster {
+  composes: pin;
+  gap: var(--space-1);
+  align-items: center;
+  width: auto;
+  padding: 3px 9px 3px 3px;
+}
+
+.faces {
+  display: flex;
+}
+
+.faces > * + * {
+  margin-left: -6px;
+}
+
+.count {
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+/* The threads panel takes the right-hand drawer slot, the inspector's place, for
+   browsing threads; unchanged by. */
+.panel {
+  composes: slot from '../shell/drawer.module.css';
+  position: absolute;
+  z-index: var(--layer-drawer);
+  width: 296px;
+  overflow: auto;
+  overscroll-behavior-x: none;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: 12px;
+  background: var(--color-surface-sheet);
+  color: var(--color-ink-primary);
+  box-shadow: var(--shadow-float);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+}
+
+.panel button {
+  cursor: pointer;
+  padding: 6px 10px;
+  margin: 4px 0;
+}
+
+.panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.panel li {
+  border-bottom: 1px solid var(--color-line-hairline);
+  padding: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+/* Reduced motion: every change is instant; no scale, no lift. Last, so it wins over
+   the motion above. */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card[data-motion='closing'] {
+    animation: none;
+  }
+
+  .pin,
+  .pin[data-moving='true'],
+  .preview,
+  .pin:hover .preview,
+  .pin:focus-visible .preview {
+    transition: none;
+  }
+
+  .pin:hover,
+  .pin:focus-visible {
+    transform: translateY(-100%);
+  }
+}
+
+/* The floating whiteboard's card (design frame B): 16 px inside its 1 px border, 8 px
+   corners, headed by a bar of its title, Resolve or Reopen, ⋯ and Close (28 px controls). */
+.card[data-chrome='whiteboard'] {
+  padding: var(--space-4);
+  border-radius: 8px;
+}
+
+.bar {
+  display: flex;
+  flex: none;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
+  height: 28px;
+}
+
+.bar:has([data-thread-deletion]) {
+  height: auto;
+}
+
+/* A thread's deletion question takes its own row under the bar's 28 px controls. */
+.bar > [data-thread-deletion] {
+  flex-basis: 100%;
+  order: 1;
+}
+
+.barTitle {
+  overflow: hidden;
+  flex: 1;
+  min-width: 0;
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  font-weight: 500;
+  letter-spacing: var(--text-label-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.barActions {
+  display: flex;
+  gap: 2px;
+}
+
+.bar .action {
+  width: 28px;
+  height: 28px;
+}
+
+/* The floating whiteboard's pin (design frame B): a 28 px accent disc with its thread's
+   message count in action/on (item 11); still anchored at its bottom-left corner. */
+/* A pin the person may move is dragged, not scrolled, by touch, and shows it can be. */
+.pin[data-draggable] {
+  cursor: grab;
+  touch-action: none;
+}
+
+.pin[data-dragging] {
+  cursor: grabbing;
+}
+
+.pin[data-variant='count'] {
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 14px;
+  background: var(--color-hand-you);
+  color: var(--color-action-on);
+}
+
+.pin[data-variant='count'][data-state='open'] {
+  padding: 0;
+  border: 0;
+  outline: 2px solid var(--color-hand-you);
+  outline-offset: 2px;
+}
+
+/* Keyboard focus on the open pin still shows the focus ring's colour, not the accent's. */
+.pin[data-variant='count'][data-state='open']:focus-visible {
+  outline-color: var(--color-focus-ring);
+}
+
+.pin[data-variant='count'][data-state='resolved'] {
+  border: 1px solid var(--color-line-hairline);
+  background: var(--color-surface-raised);
+  color: var(--color-ink-secondary);
+}
+
+.pinCount {
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+}
+
+/* The floating whiteboard's card messages (item 12; design frame B): a 24 px head row of
+   the avatar, the author in UI/Strong and the time at its right end, then the text flush left
+   under the avatar, 6 px below. The body's wrapper gives way so its parts sit in the grid. */
+.card[data-chrome='whiteboard'] .message {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  column-gap: var(--space-2);
+  row-gap: 6px;
+  align-items: center;
+}
+
+.card[data-chrome='whiteboard'] .message > .avatar {
+  width: 24px;
+  height: 24px;
+}
+
+.card[data-chrome='whiteboard'] .message .body {
+  display: contents;
+}
+
+.card[data-chrome='whiteboard'] .meta {
+  align-items: center;
+  min-height: 24px;
+}
+
+.card[data-chrome='whiteboard'] .meta strong {
+  font: var(--text-strong);
+  letter-spacing: var(--text-strong-tracking);
+}
+
+.card[data-chrome='whiteboard'] .meta time {
+  margin-left: auto;
+}
+
+.card[data-chrome='whiteboard'] .message .text,
+.card[data-chrome='whiteboard'] .message .confirm {
+  grid-column: 1 / -1;
+}
+
+/* Its reply field: 36 px high, the send arrow a 28 px icon button in its default state. */
+.card[data-chrome='whiteboard'] .field {
+  box-sizing: border-box;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 var(--space-1) 0 10px;
+}
+
+.card[data-chrome='whiteboard'] .send {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+}
+
+.card[data-chrome='whiteboard'] .send:hover:not(:disabled) {
+  background: var(--color-surface-pressed);
+}
+
+/* Under the whiteboard's floating chrome the composer's field is one amber box while its text
+   area has focus (item 7): the field's own edge takes the focus colour, no outline. */
+:is([data-whiteboard-chrome='floating'], [data-whiteboard-chrome-scope='floating'])
+  .field:focus-within {
+  outline: none;
+  outline-offset: 0;
+  border-color: var(--color-focus-ring);
+}

@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src"],
+  // The engine core has no DOM. Only gpu/ may touch browser GPU APIs; it is its own project
+  // with the DOM lib (src/gpu/tsconfig.json), so a DOM global elsewhere fails to type-check.
+  // Likewise workers/web-worker/ is its own project with the WebWorker lib, and host/web/ (the
+  // engine host's browser platform) one with the DOM lib.
+  // scripts/ (the shader build) is a project of its own, referenced so `tsc -b` type-checks it
+  // too. Rendering on a real GPU is tested by the golden-scene harness (tooling/golden).
+  "exclude": ["src/gpu", "src/workers/web-worker", "src/host/web"],
+  "references": [
+    { "path": "../schema" },
+    { "path": "../text" },
+    { "path": "./src/gpu" },
+    { "path": "./src/workers/web-worker" },
+    { "path": "./src/host/web" },
+    { "path": "./scripts" }
+  ]
+}

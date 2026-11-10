@@ -1,0 +1,141 @@
+/* The floating whiteboard's zoom control and its minimap (the design board's
+   Whiteboard page): 16 px from the canvas's bottom-left corner. Closed, the classic control's
+   171 × 38 row (`dock.module.css`); open, a 232 × 192 card: the hint, the 216 × 120 map and the
+   216 px row, 6 px apart. Theme tokens only. */
+@value dockInset, tabletRowTop from './dock.module.css';
+
+.card {
+  position: absolute;
+  bottom: dockInset;
+  left: dockInset;
+  z-index: var(--layer-controls);
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 6px;
+  /* 5 px across inside the 1 px border: the design's 6 px inset. */
+  padding: var(--space-1) 5px;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-sheet);
+}
+
+.card[data-open] {
+  width: 232px;
+  /* The design's content 9 px in from the top, left and bottom inside the 1 px border; its 216 px
+     content leaves 7 px on the right. */
+  padding: var(--space-2) 6px var(--space-2) var(--space-2);
+}
+
+/* The hint and the map, 6 px apart as the card's rows: they fade in when the card opens and out
+   over the last 160 ms of its linger (useCameraMotionPhase), not under reduced motion. */
+.mapArea {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation: map-in 160ms ease-out;
+}
+
+.mapArea[data-fading] {
+  opacity: 0;
+  transition: opacity 160ms ease-in;
+}
+
+@keyframes map-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mapArea,
+  .mapArea[data-fading] {
+    animation: none;
+    transition: none;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 28px;
+}
+
+/* The percentage in a 36 px box, 40 px in the open card. */
+.row .value {
+  width: 36px;
+}
+
+.card[data-open] .row .value {
+  width: 40px;
+}
+
+/* The divider before the minimap toggle: 20 px tall. */
+.row .divider {
+  height: 20px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.hint {
+  margin: 0;
+  /* Text, not a placeholder: AA contrast. */
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/* The zoom, with the button over it that opens the preset menu. */
+.presets {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  border-radius: var(--radius-control);
+}
+
+/* Hovered, the surface under the zoom's words, which the clear button over them lets through. */
+.presets:hover {
+  background: var(--color-surface-raised);
+}
+
+.presetsButton {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-control);
+  background: transparent;
+  cursor: pointer;
+}
+
+.presetsButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Tablet widths, 768 to 1019 px (iPad portrait): the dock, centred, would reach the
+   zoom control at the bottom-left corner, and the widest tool panel (Sticky) the place over it,
+   so the control sits at the top left instead, 16 px in and 16 px under the board bar, level with
+   the Facilitate card (over the panels' row it floated apart from everything). Its row
+   stays put when it opens: the hint and the map unfold below it, the open card keeping the closed
+   one's 4 px above the row (the design's 9 px inset goes under the map instead). */
+@media (768px <= width < 1020px) {
+  .card {
+    top: tabletRowTop;
+    bottom: auto;
+    flex-direction: column-reverse;
+  }
+
+  .card[data-open] {
+    padding-top: var(--space-1);
+  }
+}

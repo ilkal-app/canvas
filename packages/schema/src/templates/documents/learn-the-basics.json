@@ -1,0 +1,553 @@
+{
+  "format": "canvas.board",
+  "schemaVersion": 38,
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Learn the basics",
+      "order": "a0"
+    }
+  ],
+  "objects": [
+    {
+      "id": "learn-the-basics-0",
+      "parentId": null,
+      "pageId": "page-1",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "Learn the basics",
+      "type": "frame",
+      "width": 1600,
+      "height": 1000,
+      "clip": false,
+      "background": null,
+      "showName": false,
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "cornerRadius": 16
+    },
+    {
+      "id": "learn-the-basics-1",
+      "parentId": "learn-the-basics-0",
+      "pageId": null,
+      "x": 64,
+      "y": 56,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "title",
+      "type": "text",
+      "width": 1000,
+      "height": 44,
+      "text": "Learn the basics",
+      "runs": [
+        {
+          "length": 16,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 36,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "learn-the-basics-2",
+      "parentId": "learn-the-basics-0",
+      "pageId": null,
+      "x": 64,
+      "y": 112,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lede",
+      "type": "text",
+      "width": 1100,
+      "height": 28,
+      "text": "A 60-second tour. Follow the arrows, try each step right here, then go back home.",
+      "runs": [
+        {
+          "length": 81,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "learn-the-basics-3",
+      "parentId": "learn-the-basics-0",
+      "pageId": null,
+      "x": 64,
+      "y": 200,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "1 Add a sticky",
+      "type": "sticky",
+      "width": 280,
+      "height": 280,
+      "text": "1. Add a sticky\n\nPress S, then click anywhere on the board. Type your idea. Press Esc when you're done.",
+      "runs": [
+        {
+          "length": 103,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9647058823529412, 0.8901960784313725, 0.6039215686274509, 1]
+    },
+    {
+      "id": "learn-the-basics-4",
+      "parentId": "learn-the-basics-0",
+      "pageId": null,
+      "x": 448,
+      "y": 200,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "2 Connect",
+      "type": "sticky",
+      "width": 280,
+      "height": 280,
+      "text": "2. Connect ideas\n\nPress C, then drag from one sticky to another to connect them with an arrow.",
+      "runs": [
+        {
+          "length": 94,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "learn-the-basics-5",
+      "parentId": "learn-the-basics-0",
+      "pageId": null,
+      "x": 832,
+      "y": 200,
+      "rotation": 0,
+      "z": "a5",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "3 Comment",
+      "type": "sticky",
+      "width": 280,
+      "height": 280,
+      "text": "3. Leave a comment\n\nPress M and click a spot to comment. Type @ and a name to mention someone.",
+      "runs": [
+        {
+          "length": 94,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1]
+    },
+    {
+      "id": "learn-the-basics-6",
+      "parentId": "learn-the-basics-0",
+      "pageId": null,
+      "x": 1216,
+      "y": 200,
+      "rotation": 0,
+      "z": "a6",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "4 Share",
+      "type": "sticky",
+      "width": 280,
+      "height": 280,
+      "text": "4. Share the board\n\nPress Share at the top right. Invite people by email, or copy a link anyone can open.",
+      "runs": [
+        {
+          "length": 105,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9529411764705882, 0.7647058823529411, 0.8117647058823529, 1]
+    },
+    {
+      "id": "learn-the-basics-7",
+      "parentId": "learn-the-basics-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a7",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "step 1 to 2",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "learn-the-basics-3",
+        "anchor": {
+          "x": 1,
+          "y": 0.5
+        }
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "learn-the-basics-4",
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        }
+      },
+      "route": "straight",
+      "stroke": {
+        "color": {
+          "token": "accent"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "triangle",
+      "label": null
+    },
+    {
+      "id": "learn-the-basics-8",
+      "parentId": "learn-the-basics-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a8",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "step 2 to 3",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "learn-the-basics-4",
+        "anchor": {
+          "x": 1,
+          "y": 0.5
+        }
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "learn-the-basics-5",
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        }
+      },
+      "route": "straight",
+      "stroke": {
+        "color": {
+          "token": "accent"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "triangle",
+      "label": null
+    },
+    {
+      "id": "learn-the-basics-9",
+      "parentId": "learn-the-basics-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a9",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "step 3 to 4",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "learn-the-basics-5",
+        "anchor": {
+          "x": 1,
+          "y": 0.5
+        }
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "learn-the-basics-6",
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        }
+      },
+      "route": "straight",
+      "stroke": {
+        "color": {
+          "token": "accent"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "triangle",
+      "label": null
+    },
+    {
+      "id": "learn-the-basics-10",
+      "parentId": "learn-the-basics-0",
+      "pageId": null,
+      "x": 64,
+      "y": 552,
+      "rotation": 0,
+      "z": "aA",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "practice label",
+      "type": "text",
+      "width": 900,
+      "height": 28,
+      "text": "Try it here",
+      "runs": [
+        {
+          "length": 11,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 22,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "learn-the-basics-11",
+      "parentId": "learn-the-basics-0",
+      "pageId": null,
+      "x": 64,
+      "y": 588,
+      "rotation": 0,
+      "z": "aB",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "practice hint",
+      "type": "text",
+      "width": 1100,
+      "height": 24,
+      "text": "Add a sticky next to this one, then connect the two. Nothing here can break: undo is Cmd+Z (Ctrl+Z on Windows).",
+      "runs": [
+        {
+          "length": 111,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "learn-the-basics-12",
+      "parentId": "learn-the-basics-0",
+      "pageId": null,
+      "x": 64,
+      "y": 640,
+      "rotation": 0,
+      "z": "aC",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "practice sticky",
+      "type": "sticky",
+      "width": 200,
+      "height": 200,
+      "text": "Connect a sticky to me",
+      "runs": [
+        {
+          "length": 22,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1]
+    },
+    {
+      "id": "learn-the-basics-13",
+      "parentId": "learn-the-basics-0",
+      "pageId": null,
+      "x": 1280,
+      "y": 640,
+      "rotation": 0,
+      "z": "aD",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "done",
+      "type": "sticky",
+      "width": 256,
+      "height": 200,
+      "text": "All done? Go back home: your Get started checklist ticks itself.",
+      "runs": [
+        {
+          "length": 64,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9647058823529412, 0.8901960784313725, 0.6039215686274509, 1]
+    }
+  ]
+}

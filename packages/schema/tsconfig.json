@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    // The template documents are JSON files the documents module imports.
+    "resolveJsonModule": true
+  },
+  "include": ["src", "src/templates/documents/*.json"]
+}

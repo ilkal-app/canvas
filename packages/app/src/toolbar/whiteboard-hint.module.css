@@ -1,0 +1,19 @@
+/* The onboarding hint: one caption line in secondary ink, centred under the floating
+   dock in the 16 px between it and the canvas's bottom edge (the design has no hint: the sticky
+   panel's hint caption is its type). It takes no pointer, so clicks reach the canvas. */
+@value dockInset from './dock.module.css';
+
+.hint {
+  position: absolute;
+  bottom: calc((dockInset - 14px) / 2);
+  left: 50%;
+  z-index: var(--layer-controls);
+  margin: 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  line-height: 14px;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  pointer-events: none;
+}

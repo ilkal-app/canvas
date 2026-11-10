@@ -1,0 +1,17 @@
+.body {
+  display: grid;
+  gap: var(--space-4);
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--space-5);
+}
+
+.body p {
+  margin: 0;
+  font: var(--text-body);
+  overflow-wrap: anywhere;
+}
+
+.body > button {
+  justify-self: end;
+}

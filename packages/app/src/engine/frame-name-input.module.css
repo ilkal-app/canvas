@@ -1,0 +1,18 @@
+/* A section's name being edited under the whiteboard's floating chrome (item 18): a field
+   on the sheet with a 1 px control edge, as wide as its text (`bindFrameNameInput` sizes it); on
+   focus that edge alone turns amber, one box, as the chrome's other fields since. */
+.floating {
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-sheet);
+  color: var(--color-ink-primary);
+}
+
+/* The chrome's attribute outranks the site's `.frame input:focus-visible` outline. */
+:is([data-whiteboard-chrome='floating'], [data-whiteboard-chrome-scope='floating'])
+  .floating:focus-visible {
+  outline: none;
+  outline-offset: 0;
+  border-color: var(--color-focus-ring);
+  box-shadow: none;
+}

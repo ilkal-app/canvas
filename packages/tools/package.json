@@ -1,0 +1,30 @@
+{
+  "name": "@canvas/tools",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Interaction modes: select, text, sticky, pen, shapes, connectors, image placement.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "lint": "eslint --max-warnings 0 ."
+  },
+  "dependencies": {
+    "@canvas/document": "workspace:*",
+    "@canvas/engine": "workspace:*",
+    "@canvas/schema": "workspace:*"
+  },
+  "devDependencies": {
+    "yjs": "~13.6.33"
+  }
+}

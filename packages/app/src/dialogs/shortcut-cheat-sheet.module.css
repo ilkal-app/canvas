@@ -1,0 +1,52 @@
+/* The dialog's frame (backdrop, box, header, Close) is the Dialog primitive's (dialog.module.css). */
+
+.groups:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-5) var(--space-6);
+  padding: var(--space-5);
+  overflow-y: auto;
+  overscroll-behavior-x: none;
+}
+
+.groupTitle {
+  margin: 0 0 var(--space-2);
+  color: var(--color-ink-secondary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.list {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-1) 0;
+}
+
+.description {
+  margin: 0;
+}
+
+.chords {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: var(--space-1);
+  margin: 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}

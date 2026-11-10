@@ -1,0 +1,80 @@
+/* The link chip: one row under a link, its address as plain text with Open, Copy, Edit
+   and Remove; theme tokens only (theme/token-usage.test.ts). */
+
+.layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  max-width: min(420px, calc(100% - 2 * var(--space-2)));
+  pointer-events: auto;
+}
+
+/* The address, never wrapped: the chip's tooltip and Edit show it whole. */
+.address {
+  overflow: hidden;
+  min-width: 0;
+  padding: 0 var(--space-2);
+  color: var(--color-ink-secondary);
+  font: var(--text-mono-value);
+  letter-spacing: var(--text-mono-value-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.action {
+  flex: none;
+  box-sizing: border-box;
+  height: 28px;
+  padding: 0 var(--space-2);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  cursor: pointer;
+}
+
+.action:hover {
+  background: var(--color-surface-pressed);
+}
+
+.action:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* A finger's chip: 44 px targets (the tap that opened it was a touch). */
+.chip[data-touch] .action {
+  min-width: 44px;
+  height: 44px;
+}
+
+@media (pointer: coarse) {
+  .action {
+    min-width: 44px;
+    height: 44px;
+  }
+}
+
+/* The canvas over a link while the select tool hovers it: a hand, as over a web link. */
+.overLink {
+  cursor: pointer !important;
+}
+
+/* The chip in the editing popover's row: in the row's flow, not placed on the canvas. */
+.inlineChip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-width: 0;
+  max-width: 320px;
+}

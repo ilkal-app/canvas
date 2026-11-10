@@ -1,0 +1,30 @@
+{
+  "name": "@canvas/text",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Font parsing, font metrics and text layout, shared by the renderer and the agent surface.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "lint": "eslint --max-warnings 0 ."
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4"
+  },
+  "dependencies": {
+    "@canvas/schema": "workspace:*",
+    "brotli": "1.3.3",
+    "harfbuzzjs": "1.6.2"
+  }
+}

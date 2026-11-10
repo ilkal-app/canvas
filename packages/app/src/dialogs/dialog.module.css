@@ -1,0 +1,216 @@
+/* Over the shell's floating bars and panels (theme/layer-tokens.ts), which would otherwise cover
+   the dialog's head. */
+.backdrop {
+  position: absolute;
+  z-index: var(--layer-dialog);
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  background: var(--color-backdrop);
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  width: min(760px, 100%);
+  max-height: 100%;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  color: var(--color-ink-primary);
+}
+
+.dialog[data-width='narrow'] {
+  width: min(560px, 100%);
+}
+
+.header {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--color-line-hairline);
+}
+
+.title {
+  min-width: 0;
+  margin: 0;
+  font: var(--text-title);
+  letter-spacing: var(--text-title-tracking);
+  overflow-wrap: anywhere;
+}
+
+.close {
+  flex: none;
+  height: 32px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-sheet);
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Close as an icon (the share dialog): a 28 px button, the head without its line. The
+   redesigned modals (design board, "Batch 3: panels to redesign") are 480 px wide with
+   8 px corners (), their head 56 px tall with the title 24 px in and Close 16 px
+   from the edge. */
+.header[data-close='icon'] {
+  box-sizing: border-box;
+  min-height: 56px;
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-5);
+  border-bottom: 0;
+}
+
+.dialog[data-close='icon'][data-width='narrow'] {
+  box-sizing: border-box;
+  width: min(480px, 100%);
+  border-radius: 8px;
+}
+
+/* A picker of cards (the New board dialog's templates, H3): 840 × 640, rounder, its
+   64 px head holding a search between the title and Close, a line under it. */
+.dialog[data-width='gallery'] {
+  box-sizing: border-box;
+  width: min(840px, 100%);
+  height: min(640px, 100%);
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.header[data-width='gallery'] {
+  box-sizing: border-box;
+  height: 64px;
+  min-height: 64px;
+  padding: 0 20px 0 var(--space-5);
+  border-bottom: 1px solid var(--color-line-hairline);
+}
+
+.header[data-width='gallery'] .title {
+  flex: 1 0 auto;
+  white-space: nowrap;
+}
+
+.closeIcon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  cursor: pointer;
+}
+
+.close:hover,
+.closeIcon:hover {
+  background: var(--color-surface-raised);
+}
+
+.close:focus-visible,
+.closeIcon:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Below 768 px wide. A sheet (MS3): risen from the bottom edge, the full width, its
+   top corners rounded, a handle drawn above its head. A page (MS4): the whole container, its head
+   a fixed bar the content's own actions (`data-dialog-actions`) sit over, Close then hidden. */
+@media (width < 768px) {
+  .backdrop[data-compact] {
+    padding: 0;
+  }
+
+  .backdrop[data-compact='sheet'] {
+    align-items: flex-end;
+  }
+
+  .dialog[data-compact='sheet'] {
+    position: relative;
+    width: 100%;
+    max-height: 90%;
+    border-width: 1px 0 0;
+    border-radius: var(--radius-sheet) var(--radius-sheet) 0 0;
+  }
+
+  .dialog[data-compact='sheet']::before {
+    position: absolute;
+    top: var(--space-2);
+    left: 50%;
+    width: 36px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--color-line-strong);
+    content: '';
+    transform: translateX(-50%);
+  }
+
+  .dialog[data-compact='sheet'] .header {
+    padding-top: var(--space-5);
+  }
+
+  .backdrop[data-compact='page'] {
+    align-items: stretch;
+  }
+
+  .dialog[data-compact='page'] {
+    position: relative;
+    width: 100%;
+    max-height: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .dialog[data-compact='page'] .header {
+    box-sizing: border-box;
+    height: 56px;
+    padding-block: 0;
+  }
+
+  .dialog[data-compact='page']:has([data-dialog-actions]) .header {
+    justify-content: center;
+  }
+
+  .dialog[data-width='gallery'][data-compact='sheet'] {
+    height: 90%;
+  }
+
+  .header[data-width='gallery'] {
+    height: auto;
+    min-height: 0;
+    padding: var(--space-5) var(--space-4) var(--space-3);
+  }
+
+  .header[data-width='gallery'] .title {
+    flex: none;
+  }
+
+  /* The redesign's 480 px is a desktop width: compact, it fills the width as every sheet does. */
+  .dialog[data-close='icon'][data-compact] {
+    width: 100%;
+  }
+
+  /* Compact, the sheet and the page keep their own corners. */
+  .dialog[data-close='icon'][data-compact='sheet'] {
+    border-radius: var(--radius-sheet) var(--radius-sheet) 0 0;
+  }
+
+  .dialog[data-close='icon'][data-compact='page'] {
+    border-radius: 0;
+  }
+
+  .dialog[data-compact='page']:has([data-dialog-actions]) .close,
+  .dialog[data-compact='page']:has([data-dialog-actions]) .closeIcon {
+    display: none;
+  }
+}

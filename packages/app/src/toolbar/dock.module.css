@@ -1,0 +1,383 @@
+/* The dock (Figma "Dock · modes & flyouts" as scaled up on 2026-10-06): a sheet
+   floating over the canvas's bottom centre that hugs its 40 px controls, 2 px apart, with its 4 px
+   padding and 1 px border, 50 px tall; the zoom control over the canvas's bottom-left corner. Both
+   sit 16 px off the canvas's edges (`--space-4`; 12 px before).
+   Overlays placed above them (comments.module.css, layers-drawer.module.css,
+   feedback/toast-region.module.css) import these values rather than repeating the sums, so a
+   change to the margin or a height is one line here. The toast region measures the dock itself
+   (feedback/toast-placement.ts) and uses `dockTop` only before it has. */
+
+/* Off the canvas's edges: the dock and the zoom control, and the shell's one inset for what
+   floats over the canvas, which the top bars and the layers drawer take too, so the drawer, the
+   zoom control and the board-name bar share one left edge (item 10). */
+@value dockInset: var(--space-4);
+/* The dock's top edge above the canvas's bottom edge: its margin and its 50 px. */
+@value dockTop: calc(dockInset + 50px);
+/* The zoom control's top edge above the canvas's bottom edge: its margin and its 38 px. */
+@value zoomTop: calc(dockInset + 38px);
+/* Under the floating chrome at tablet widths, 768 to 1019 px (iPad portrait), the top of
+   the row the zoom control and the Facilitate card share: the top bars' 16 px margin, their 44 px
+   and the design's 16 px inset under them. */
+@value tabletRowTop: calc(dockInset + 44px + dockInset);
+
+.dock {
+  position: absolute;
+  bottom: dockInset;
+  left: 50%;
+  z-index: var(--layer-controls);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  max-width: calc(100% - 2 * var(--space-3));
+  padding: var(--space-1);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  transform: translateX(-50%);
+}
+
+/* A row above the zoom control, centred, when the dock does not fit beside it (a narrow window;
+   `useDockPlacement`). Beside it, the dock's left edge is set where it is measured. */
+.dock[data-placement='above'] {
+  bottom: calc(zoomTop + var(--space-2));
+}
+
+.slot {
+  position: relative;
+  display: inline-flex;
+}
+
+/* A shortcut in a flyout's item. */
+.hint {
+  min-width: 16px;
+  padding: 0 var(--space-1);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-pressed);
+  color: var(--color-ink-secondary);
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+  text-align: center;
+}
+
+.divider {
+  flex: none;
+  width: 1px;
+  height: 18px;
+  background: var(--color-line-hairline);
+}
+
+/* A tool: a 20 px icon in a 40 px square with the sheet's 6 px corners, its name and shortcut in
+   the tooltip. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sheet);
+  background: transparent;
+  color: var(--color-ink-primary);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--color-surface-raised);
+}
+
+.button:focus-visible,
+.zoomButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Selected: the action colour on the pressed surface, distinct from enabled and disabled. */
+.button[aria-pressed='true'] {
+  border-color: var(--color-action-fill);
+  background: var(--color-surface-pressed);
+  color: var(--color-action-fill);
+}
+
+/* Disabled (not built yet): faint ink on the sheet, its contrast stated in theme-tokens.test.ts;
+   still focusable, so its tooltip can say why. */
+.button[aria-disabled='true'] {
+  color: var(--color-ink-faint);
+  cursor: not-allowed;
+}
+
+.button[aria-disabled='true']:hover {
+  background: transparent;
+}
+
+/* A flyout group's corner caret: a 5 px triangle in the button's bottom-right corner. */
+.caret {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 5px solid var(--color-ink-secondary);
+  cursor: pointer;
+}
+
+.caret::after {
+  position: absolute;
+  inset: -6px -3px -3px -6px;
+  content: '';
+}
+
+/* A menu opening above its button: a group's flyout. */
+.menu {
+  position: absolute;
+  bottom: calc(100% + var(--space-3));
+  left: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 200px;
+  padding: var(--space-1);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+}
+
+.menuHeading,
+.menuFooter {
+  padding: var(--space-1) var(--space-2);
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.menuHeading {
+  font: var(--text-section);
+  letter-spacing: var(--text-section-tracking);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 32px;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-control);
+  color: var(--color-ink-primary);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.menuItem:hover,
+.menuItem:focus-visible {
+  background: var(--color-surface-raised);
+}
+
+/* Inside its menu, which would clip a ring drawn outside the item. */
+.menuItem:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -2px;
+}
+
+.menuItem[aria-checked='true'] {
+  /* Raised, not pressed: a description in secondary ink keeps 4.5:1 on it in both themes. */
+  background: var(--color-surface-raised);
+}
+
+.menuItem[aria-disabled='true'] {
+  color: var(--color-ink-faint);
+  cursor: not-allowed;
+}
+
+.menuText {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.menuDescription {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/* The zoom control: −, the percentage, +, fit, and after a divider the layers toggle (Figma
+   "01 · Board at rest"): 171 px with the toggle, 2 px apart as the frame spaces them. */
+.zoom {
+  position: absolute;
+  bottom: dockInset;
+  left: dockInset;
+  z-index: var(--layer-controls);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: var(--space-1);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+}
+
+.zoomButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  cursor: pointer;
+}
+
+.zoomButton:hover {
+  background: var(--color-surface-raised);
+}
+
+/* The layers toggle while the drawer is open: the pressed surface, as the frame shows it. */
+.zoomButton[aria-pressed='true'] {
+  background: var(--color-surface-pressed);
+}
+
+.zoomDivider {
+  flex: none;
+  width: 1px;
+  height: 18px;
+  background: var(--color-line-hairline);
+}
+
+.zoomValue {
+  /* A fixed width keeps the control as wide whatever the zoom: 3200% in Geist Mono at 12 px. */
+  width: 38px;
+  color: var(--color-ink-primary);
+  font: var(--text-mono-value);
+  letter-spacing: var(--text-mono-value-tracking);
+  text-align: center;
+}
+
+/* Below 768 px wide (the design's mobile frames): the compact bottom bar in the dock's place, the undo
+   pill over the canvas's bottom-left corner above it, and the compact zoom control at the
+   bottom right. 8 px off the edges (and the device's safe area), the pills 11 px above the
+   bar, as the frames draw them; overlays placed against them import these values. */
+@value compactInset: 8px;
+@value compactBarHeight: 58px;
+@value compactBarBottom: calc(compactInset + env(safe-area-inset-bottom, 0px));
+@value compactPillTop: calc(compactBarBottom + compactBarHeight + 11px + 56px);
+
+/* 374 px (the frames' width less their margins; narrower only on a narrower screen), its seven
+   48 px targets spread edge to edge inside 6 px of padding. */
+.compactBar {
+  position: absolute;
+  bottom: compactBarBottom;
+  left: 50%;
+  z-index: var(--layer-controls);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: min(374px, calc(100% - 2 * compactInset));
+  height: compactBarHeight;
+  padding: var(--space-1) 6px;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: 10px;
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  transform: translateX(-50%);
+}
+
+/* A wrapper that only carries `inert`: it takes no box of its own. */
+.contents {
+  display: contents;
+}
+
+/* While editing is refused (the live board loading): dimmed, out of reach. */
+.compactBar[data-dimmed],
+.undoPill[data-dimmed] {
+  opacity: 0.5;
+}
+
+/* Why editing is refused, a caption chip over the bar's centre (L1's "Editing starts…"). */
+.refusal {
+  position: absolute;
+  bottom: calc(compactBarBottom + compactBarHeight + var(--space-2));
+  left: 50%;
+  z-index: var(--layer-controls);
+  padding: 5px var(--space-2);
+  border-radius: 5px;
+  background: var(--color-ink-primary);
+  color: var(--color-ground-mat);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+/* A tool in the bar: the dock's button as a 48 px touch target holding the shared 20 px icon. */
+.compactButton {
+  composes: button;
+  width: 48px;
+  height: 48px;
+}
+
+/* A flyout opens over the whole bar, 8 px above it, so it stays on the screen wherever its
+   button is: the bar, transformed, is the box a fixed menu is placed in. */
+.compactBar .menu {
+  position: fixed;
+  right: 0;
+  bottom: calc(100% + var(--space-2));
+  left: 0;
+  min-width: 0;
+}
+
+/* Finger-sized rows in the bar's flyouts ('s 44 px; 48 px as the bar's targets). */
+.compactBar .menuItem {
+  min-height: 48px;
+}
+
+/* The undo pill (the mobile design's "undo"): two 50 px targets in a 106 × 56 sheet. */
+.undoPill {
+  position: absolute;
+  bottom: calc(compactPillTop - 56px);
+  left: max(compactInset, env(safe-area-inset-left, 0px));
+  z-index: var(--layer-controls);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 56px;
+  padding: 2px;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: 10px;
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+}
+
+.pillButton {
+  composes: zoomButton;
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-sheet);
+}
+
+/* The compact zoom control (the mobile design's "zoom"): at the bottom right, level with the undo pill. */
+.zoom[data-compact] {
+  right: compactInset;
+  bottom: calc(compactPillTop - 56px);
+  left: auto;
+  box-sizing: border-box;
+  height: 56px;
+  padding: 2px 2px 2px var(--space-3);
+  border-radius: 10px;
+}
+
+.zoom[data-compact] .zoomButton {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-sheet);
+}

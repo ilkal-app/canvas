@@ -1,0 +1,52 @@
+/* The chip (the Library page's Chip: the sticky panel's Square and Wide, filters):
+   24 px with round ends, at least 64 px wide (the Library's Chip), the caption's type; theme tokens only (theme/token-usage.test.ts).
+   Its edge is the control line, not the design's hairline: a control's edge must be seen at
+   3:1 (item 3). */
+
+.chip {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 64px;
+  height: 24px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-line-control);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.chip:hover:not(:disabled) {
+  color: var(--color-ink-primary);
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--color-surface-pressed);
+  color: var(--color-ink-primary);
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.chip:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+/* A finger needs 48 px: the chip keeps its look and takes presses 12 px around it. */
+@media (pointer: coarse) {
+  .chip::before {
+    position: absolute;
+    inset: -12px 0;
+    content: '';
+  }
+}

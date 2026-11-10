@@ -1,0 +1,114 @@
+/* The images' states over the canvas: theme tokens only
+   (theme/token-usage.test.ts). */
+.layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Over the image, its size, turned with it; the canvas under it keeps its pointer (a drag of the
+   image), only the buttons take one. */
+.overlay {
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  transform-origin: 0 0;
+  pointer-events: none;
+}
+
+/* A failed upload: a dashed outline of the red pencil around the image. */
+.overlay[data-image-state='failed'] {
+  outline: 2px dashed var(--color-mark-red-pencil);
+  outline-offset: 0;
+}
+
+/* What the state says, on the sheet in the image's middle (it may overflow a small image). */
+.panel {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: var(--space-1);
+  align-items: center;
+  max-width: 280px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  color: var(--color-ink-primary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  text-align: center;
+}
+
+.label {
+  color: var(--color-ink-secondary);
+  white-space: nowrap;
+}
+
+/* "Upload failed" in the primary ink (red pencil text is under 4.5:1 at this size), after a red
+   dot; the outline carries the red. */
+.heading {
+  display: inline-flex;
+  gap: var(--space-2);
+  align-items: center;
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+.dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-mark-red-pencil);
+}
+
+.reason {
+  color: var(--color-ink-secondary);
+  overflow-wrap: anywhere;
+}
+
+/* The phase for screen readers only; the visible words (with the bytes) are hidden from them. */
+.announcement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* The determinate bar: a hairline track and the action fill. */
+.progress {
+  width: 140px;
+  height: 4px;
+  accent-color: var(--color-action-fill);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-1);
+  pointer-events: auto;
+}
+
+/* Below 768 px wide (L3's compact form): a narrower panel and bar, and Cancel, Retry and
+   Remove as finger-sized targets ('s 44 px). */
+@media (width < 768px) {
+  .panel {
+    box-sizing: border-box;
+    max-width: 220px;
+    padding: var(--space-2);
+  }
+
+  .progress {
+    width: 96px;
+  }
+
+  .actions > * {
+    min-height: 44px;
+  }
+}

@@ -1,0 +1,17 @@
+/* The objects an undo notice is about: each outlined, 2 px outside its
+   bounds, over the canvas, while the notice shows, in the secondary ink, or in the presence
+   colour of the person the notice names (set inline). It takes no input and says
+   nothing: the notice says it. */
+.layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.outline {
+  position: absolute;
+  box-sizing: border-box;
+  border: 2px solid var(--color-ink-secondary);
+  border-radius: var(--radius-control);
+}

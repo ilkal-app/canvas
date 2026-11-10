@@ -1,0 +1,52 @@
+Bundled chrome fonts: Geist and Geist Mono, SIL OFL 1.1, see LICENSE (the shell's own); Rand (Optimo), the site's only, under the owner's web and app licence, not open source. The package README lists them.
+
+Geist	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/geist	library/geist/LICENSE.txt
+Inter	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/inter	library/inter/LICENSE.txt
+Roboto	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/roboto	library/roboto/LICENSE.txt
+Open Sans	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/opensans	library/opensans/LICENSE.txt
+Lato	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/lato	library/lato/LICENSE.txt
+Montserrat	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/montserrat	library/montserrat/LICENSE.txt
+Poppins	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/poppins	library/poppins/LICENSE.txt
+DM Sans	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans	library/dmsans/LICENSE.txt
+Work Sans	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/worksans	library/worksans/LICENSE.txt
+Manrope	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/manrope	library/manrope/LICENSE.txt
+Nunito	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/nunito	library/nunito/LICENSE.txt
+IBM Plex Sans	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsans	library/ibmplexsans/LICENSE.txt
+Source Serif 4	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/sourceserif4	library/sourceserif4/LICENSE.txt
+Merriweather	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/merriweather	library/merriweather/LICENSE.txt
+Lora	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/lora	library/lora/LICENSE.txt
+Playfair Display	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/playfairdisplay	library/playfairdisplay/LICENSE.txt
+EB Garamond	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond	library/ebgaramond/LICENSE.txt
+Fraunces	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/fraunces	library/fraunces/LICENSE.txt
+IBM Plex Serif	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexserif	library/ibmplexserif/LICENSE.txt
+Geist Mono	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/geistmono	library/geistmono/LICENSE.txt
+JetBrains Mono	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/jetbrainsmono	library/jetbrainsmono/LICENSE.txt
+IBM Plex Mono	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono	library/ibmplexmono/LICENSE.txt
+Fira Code	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/firacode	library/firacode/LICENSE.txt
+Space Grotesk	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/spacegrotesk	library/spacegrotesk/LICENSE.txt
+Oswald	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/oswald	library/oswald/LICENSE.txt
+Bebas Neue	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/bebasneue	library/bebasneue/LICENSE.txt
+Archivo Black	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/archivoblack	library/archivoblack/LICENSE.txt
+Caveat	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/caveat	library/caveat/LICENSE.txt
+Kalam	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/kalam	library/kalam/LICENSE.txt
+Patrick Hand	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/patrickhand	library/patrickhand/LICENSE.txt
+Indie Flower	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/indieflower	library/indieflower/LICENSE.txt
+Noto Sans SC	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc	script-coverage/notosanssc/LICENSE.txt
+Noto Sans Arabic	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosansarabic	script-coverage/notosansarabic/LICENSE.txt
+Noto Sans Devanagari	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosansdevanagari	script-coverage/notosansdevanagari/LICENSE.txt
+Noto Sans Hebrew	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosanshebrew	script-coverage/notosanshebrew/LICENSE.txt
+Noto Sans Thai	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthai	script-coverage/notosansthai/LICENSE.txt
+Noto Sans Bengali	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosansbengali	script-coverage/notosansbengali/LICENSE.txt
+Noto Sans Tamil	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstamil	script-coverage/notosanstamil/LICENSE.txt
+Noto Sans Telugu	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstelugu	script-coverage/notosanstelugu/LICENSE.txt
+Noto Sans Kannada	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskannada	script-coverage/notosanskannada/LICENSE.txt
+Noto Sans Malayalam	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosansmalayalam	script-coverage/notosansmalayalam/LICENSE.txt
+Noto Sans Georgian	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosansgeorgian	script-coverage/notosansgeorgian/LICENSE.txt
+Noto Sans Armenian	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosansarmenian	script-coverage/notosansarmenian/LICENSE.txt
+Noto Sans Ethiopic	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosansethiopic	script-coverage/notosansethiopic/LICENSE.txt
+Noto Sans Khmer	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskhmer	script-coverage/notosanskhmer/LICENSE.txt
+Noto Sans Myanmar	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosansmyanmar	script-coverage/notosansmyanmar/LICENSE.txt
+Noto Sans Sinhala	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssinhala	script-coverage/notosanssinhala/LICENSE.txt
+Noto Sans Lao	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosanslao	script-coverage/notosanslao/LICENSE.txt
+Noto Sans JP	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp	script-coverage/notosansjp/LICENSE.txt
+Noto Sans KR	OFL-1.1	https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskr	script-coverage/notosanskr/LICENSE.txt

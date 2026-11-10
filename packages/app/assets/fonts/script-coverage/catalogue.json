@@ -1,0 +1,1619 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "family": "Noto Sans SC",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["chinese-simplified", "cyrillic", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanssc/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaG9_FnYw.ttf",
+          "sha256": "450625c8d46ab3df97b7904ded955ec2746d17ec76740cb1e91d1ba63a0f89af"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanssc/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanssc/v41/k3kCo84MPvpLmixcA63oeAL7Iqp5IZJF9bmaGzjCnYw.ttf",
+          "sha256": "0066a522a1ac007c1d72bc4fccb114f80ff7294641c78cead9715bd14d43b9ea"
+        }
+      ],
+      "licenceFile": "notosanssc/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Arabic",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["arabic", "latin", "latin-ext", "math", "symbols"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansarabic",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansarabic/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansarabic/v33/nwpxtLGrOAZMl5nJ_wfgRg3DrWFZWsnVBJ_sS6tlqHHFlhQ5l3sQWIHPqzCfyGyvuw.ttf",
+          "sha256": "146b2193f4aee343a8da5e2295255b04db547d74339a12be51763b3a0081868d"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansarabic/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansarabic/v33/nwpxtLGrOAZMl5nJ_wfgRg3DrWFZWsnVBJ_sS6tlqHHFlhQ5l3sQWIHPqzCfL2uvuw.ttf",
+          "sha256": "195e8d8e1e723630e46c1d19fe7ec118a73e5825baa198737d6a96df8c4063b1"
+        }
+      ],
+      "licenceFile": "notosansarabic/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Devanagari",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["devanagari", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansdevanagari",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansdevanagari/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansdevanagari/v30/TuGoUUFzXI5FBtUq5a8bjKYTZjtRU6Sgv3NaV_SNmI0b8QQCQmHn6B2OHjbL_08AlXQly-A.ttf",
+          "sha256": "526a1b34db43de480d51a8a923c474b848489005d61b6ef45b3a850f7e141ff3"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansdevanagari/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansdevanagari/v30/TuGoUUFzXI5FBtUq5a8bjKYTZjtRU6Sgv3NaV_SNmI0b8QQCQmHn6B2OHjbL_08AlZMiy-A.ttf",
+          "sha256": "3b752492302c04610e0f3efe281256443778f5d4668c25df6d28ffd8dda57183"
+        }
+      ],
+      "licenceFile": "notosansdevanagari/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Hebrew",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["cyrillic-ext", "greek-ext", "hebrew", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanshebrew",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanshebrew/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanshebrew/v50/or3HQ7v33eiDljA1IufXTtVf7V6RvEEdhQlk0LlGxCyaeNKYZC0sqk3xXGiXd4qtog.ttf",
+          "sha256": "a5cc5ce90ed4f6393992728fcc63657c4dd83aed119acbd5f4ed223e40c71129"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanshebrew/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanshebrew/v50/or3HQ7v33eiDljA1IufXTtVf7V6RvEEdhQlk0LlGxCyaeNKYZC0sqk3xXGiXkI2tog.ttf",
+          "sha256": "8a65248544dde06765c38908b768b243bfefc0b06e07f88852eb4a2842593a33"
+        }
+      ],
+      "licenceFile": "notosanshebrew/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Thai",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "thai"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthai",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansthai/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansthai/v29/iJWnBXeUZi_OHPqn4wq6hQ2_hbJ1xyN9wd43SofNWcd1MKVQt_So_9CdU5RtpzE.ttf",
+          "sha256": "6c5e4ca047263ed8f07b174be2f7c396d245504ce0f77adc1d26b0978bc95426"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansthai/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansthai/v29/iJWnBXeUZi_OHPqn4wq6hQ2_hbJ1xyN9wd43SofNWcd1MKVQt_So_9CdU3NqpzE.ttf",
+          "sha256": "fd475b89dca5b9b2ad5f294944c6c82a1641c29b0a30bc1b771227250fb826a8"
+        }
+      ],
+      "licenceFile": "notosansthai/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Bengali",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["bengali", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansbengali",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansbengali/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansbengali/v33/Cn-SJsCGWQxOjaGwMQ6fIiMywrNJIky6nvd8BjzVMvJx2mcSPVFpVEqE-6KmsolLudA.ttf",
+          "sha256": "89e77fc7f35436abc4a972f60701c5f6684b6bfd23e4f73880d7da8132e5c2c9"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansbengali/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansbengali/v33/Cn-SJsCGWQxOjaGwMQ6fIiMywrNJIky6nvd8BjzVMvJx2mcSPVFpVEqE-6Kmsm5MudA.ttf",
+          "sha256": "fffa71fbfe82996f030ac55f15f785c9f6b20f540c3e77ea532b065e850d8af4"
+        }
+      ],
+      "licenceFile": "notosansbengali/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Tamil",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "tamil"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstamil",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanstamil/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanstamil/v31/ieVc2YdFI3GCY6SyQy1KfStzYKZgzN1z4LKDbeZce-0429tBManUktuex7vGo70R.ttf",
+          "sha256": "0d36491d4b3b945d1b4d1258755e79b67cc6fffd9614531bf17fbfe532bd55f8"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanstamil/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanstamil/v31/ieVc2YdFI3GCY6SyQy1KfStzYKZgzN1z4LKDbeZce-0429tBManUktuex7shpL0R.ttf",
+          "sha256": "abecad237d6cf136b8d72012e435a3bcbab48c8232f57a65ed353024486ce3f9"
+        }
+      ],
+      "licenceFile": "notosanstamil/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Telugu",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "telugu"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstelugu",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanstelugu/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanstelugu/v30/0FlxVOGZlE2Rrtr-HmgkMWJNjJ5_RyT8o8c7fHkeg-esVC5dzHkHIJQqrEntezbqQQ.ttf",
+          "sha256": "431117bdd6a14d00b187e0549241d8cbf45f9ddff9847f961dd511178666d563"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanstelugu/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanstelugu/v30/0FlxVOGZlE2Rrtr-HmgkMWJNjJ5_RyT8o8c7fHkeg-esVC5dzHkHIJQqrEntnDHqQQ.ttf",
+          "sha256": "d9acc5b5312c3edc860d1f736894f0bab8fcf29205daabf7e66fe445476b57bb"
+        }
+      ],
+      "licenceFile": "notosanstelugu/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Kannada",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["kannada", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskannada",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanskannada/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanskannada/v32/8vIs7xs32H97qzQKnzfeXycxXZyUmySvZWItmf1fe6TVmgop9ndpS-BqHEyGrDvNzSI.ttf",
+          "sha256": "4b8dd08fc05afa13cc8daa8ac2187f35711be026286db8608e87c86f715e273d"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanskannada/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanskannada/v32/8vIs7xs32H97qzQKnzfeXycxXZyUmySvZWItmf1fe6TVmgop9ndpS-BqHEyGrNzKzSI.ttf",
+          "sha256": "f2d6b3d0b32f03f6c375ad2e9a18ab67ecfe8bd86bd9a047bef936282eb36af5"
+        }
+      ],
+      "licenceFile": "notosanskannada/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Malayalam",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "malayalam"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansmalayalam",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansmalayalam/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansmalayalam/v29/sJoi3K5XjsSdcnzn071rL37lpAOsUThnDZIfPdbeSNzVakglNM-Qw8EaeB8Nss-_RuD9BA.ttf",
+          "sha256": "d069babb32b90efb3a33302cbbd25ffef95fe9b7652fe608da41fe47b0538af4"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansmalayalam/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansmalayalam/v29/sJoi3K5XjsSdcnzn071rL37lpAOsUThnDZIfPdbeSNzVakglNM-Qw8EaeB8Nss-_oef9BA.ttf",
+          "sha256": "f305d0f525b50454d7bfcdfffda2920ba0bfb560bdb561957ca710cbe101fb62"
+        }
+      ],
+      "licenceFile": "notosansmalayalam/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Georgian",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["cyrillic-ext", "georgian", "greek-ext", "latin", "latin-ext", "math", "symbols"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansgeorgian",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansgeorgian/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansgeorgian/v48/PlIaFke5O6RzLfvNNVSitxkr76PRHBC4Ytyq-Gof7PUs4S7zWn-8YDB09HFNdpvnzFj-.ttf",
+          "sha256": "5f304169c7922a44fc5efdf4be880966c6641a4d25d32f501a8c166f2eeaf7be"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansgeorgian/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansgeorgian/v48/PlIaFke5O6RzLfvNNVSitxkr76PRHBC4Ytyq-Gof7PUs4S7zWn-8YDB09HFNdpsAy1j-.ttf",
+          "sha256": "42790b85fe0a752049833f8c394d46c5ef44236b4befad22eb553056fb7dab6c"
+        }
+      ],
+      "licenceFile": "notosansgeorgian/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Armenian",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["armenian", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansarmenian",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansarmenian/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansarmenian/v47/ZgN0jOZKPa7CHqq0h37c7ReDUubm2SEdFXp7ig73qtTY5idb74R9UdM3y2nZLorxb60i.ttf",
+          "sha256": "eb9cb9fc5344f58981b10c9f84e36797fd07e06f8357157310a1b247a63a7cba"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansarmenian/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansarmenian/v47/ZgN0jOZKPa7CHqq0h37c7ReDUubm2SEdFXp7ig73qtTY5idb74R9UdM3y2nZLooWaK0i.ttf",
+          "sha256": "374c293cda37648babed0d92bbc6699ebe8f7208da2847ead95b8b58b538381d"
+        }
+      ],
+      "licenceFile": "notosansarmenian/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Ethiopic",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["ethiopic", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansethiopic",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansethiopic/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansethiopic/v50/7cHPv50vjIepfJVOZZgcpQ5B9FBTH9KGNfhSTgtoow1KVnIvyBoMSzUMacb-T35OK6Dj.ttf",
+          "sha256": "6d66ffc7a4a33f95d56df3c02417083d14f2bfd1f7b4c50ebcdcda3d3f89ea9c"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansethiopic/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansethiopic/v50/7cHPv50vjIepfJVOZZgcpQ5B9FBTH9KGNfhSTgtoow1KVnIvyBoMSzUMacb-T36pLKDj.ttf",
+          "sha256": "dcd2194308a22136f931c3665bbba652bd4d71b1bc33be9c7aabddaddc8ce05d"
+        }
+      ],
+      "licenceFile": "notosansethiopic/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Khmer",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["khmer", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskhmer",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanskhmer/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanskhmer/v29/ijw3s5roRME5LLRxjsRb-gssOenAyendxrgV2c-Zw-9vbVUti_Z_dWgtWYuNAJz4.ttf",
+          "sha256": "a6b8a41682170ee0c8df82adb86650498c1a833c4ca00c1f043c81305680dbe8"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanskhmer/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanskhmer/v29/ijw3s5roRME5LLRxjsRb-gssOenAyendxrgV2c-Zw-9vbVUti_Z_dWgtWYtqB5z4.ttf",
+          "sha256": "c82ee21a66355eb6130bf407cf86ee42f19836952976dc507d3e09cf7e1c232d"
+        }
+      ],
+      "licenceFile": "notosanskhmer/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Myanmar",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "myanmar"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansmyanmar",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansmyanmar/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansmyanmar/v27/AlZU_y1ZtY3ymOryg38hOCSdOnFq0FP9_gnYM_ME0QeqLzz8-kqmtY3KLEbEGTOZltU.ttf",
+          "sha256": "36bace7489176107fce4414fef846b68f5b99e5a03f73f18f7dae6a9e484cf10"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansmyanmar/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansmyanmar/v27/AlZU_y1ZtY3ymOryg38hOCSdOnFq0FP9_gnYM_ME0QeqLzz8-kqmtY3KLEbEGdSeltU.ttf",
+          "sha256": "b1a9fc8f0866f0c62e31af77ac9a61ef49e1130b7f45aa14a2acbcc3db5ba85a"
+        }
+      ],
+      "licenceFile": "notosansmyanmar/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Sinhala",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "sinhala"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssinhala",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanssinhala/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanssinhala/v36/yMJ2MJBya43H0SUF_WmcBEEf4rQVO2P524V5N_MxQzQtb-tf5dJbC30Fu9zUwg2a5lg.ttf",
+          "sha256": "59414cb52e3c2f1081c4788dad26008a1de7d510211b6c38300308f3557e1fe5"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanssinhala/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanssinhala/v36/yMJ2MJBya43H0SUF_WmcBEEf4rQVO2P524V5N_MxQzQtb-tf5dJbC30Fu9zUwuqd5lg.ttf",
+          "sha256": "62a62af72ee6abd1e68780eac4f170550671faf86851d4104fe3273ee438e70e"
+        }
+      ],
+      "licenceFile": "notosanssinhala/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Lao",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["lao", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanslao",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanslao/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanslao/v33/bx6lNx2Ol_ixgdYWLm9BwxM3NW6BOkuf763Clj73CiQ_J1Djx9pidOt4ccbdfw.ttf",
+          "sha256": "394b8a502bc668afc49263ceda2f599eda308114ccffd07ee9c4f26c7443e39a"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanslao/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanslao/v33/bx6lNx2Ol_ixgdYWLm9BwxM3NW6BOkuf763Clj73CiQ_J1Djx9pidOt4lsHdfw.ttf",
+          "sha256": "8f159753b5cd9e94215de11a5ee8dbf54d7fb519e200b078d3b9e4efdc48d2bb"
+        }
+      ],
+      "licenceFile": "notosanslao/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans JP",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["cyrillic", "japanese", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansjp/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansjp/v57/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj75s.ttf",
+          "sha256": "f037d714109f22d57ce75fd9a6b9d23439c903061fb11106c070b2dcc03f2021"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansjp/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansjp/v57/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFPYk75s.ttf",
+          "sha256": "59bb5d2915bba3a256950116e7a48a810bd8cde63793d5111b9e5726eec1e799"
+        }
+      ],
+      "licenceFile": "notosansjp/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans KR",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["cyrillic", "korean", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskr",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanskr/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanskr/v40/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLQ.ttf",
+          "sha256": "84e2b8acadd0a01af9f0de6b0a2d29117fb5b0eabd7c2f8353d9d2da0461d5fa"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanskr/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanskr/v40/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzg01eLQ.ttf",
+          "sha256": "7c81aeacbc15d1a18de6928dddf66cf272fa1dcc401715cfd8325def9390533f"
+        }
+      ],
+      "licenceFile": "notosanskr/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Symbols 2",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["braille", "latin", "latin-ext", "math", "mayan-numerals", "symbols"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssymbols2",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanssymbols2/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanssymbols2/v25/I_uyMoGduATTei9eI8daxVHDyfisHr71ypM.ttf",
+          "sha256": "f56f4b90e7653ee69d88593c337bd9bb3cad6e4c0d1b4ef55bf0424ec8cc7c95"
+        }
+      ],
+      "licenceFile": "notosanssymbols2/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Math",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": [],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansmath",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansmath/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansmath/v19/7Aump_cpkSecTWaHRlH2hyV5UHkG.ttf",
+          "sha256": "3cbaf44af13f592bc7f7172a50edab4c73ac2f3d19af2d697a01ebd3288e322d"
+        }
+      ],
+      "licenceFile": "notosansmath/LICENSE.txt"
+    },
+    {
+      "family": "Noto Color Emoji",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["emoji"],
+      "source": "https://github.com/googlefonts/noto-emoji/tree/1ffdd21391dd1f25c081fa93a9dea0c7c029442b/2D/fonts",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notocoloremoji/400.ttf",
+          "source": "https://raw.githubusercontent.com/googlefonts/noto-emoji/1ffdd21391dd1f25c081fa93a9dea0c7c029442b/2D/fonts/Noto-COLRv1.ttf",
+          "sha256": "b8e25ea68db82f9e4d0aee921f4420be2be39887bd5c893a2ad98710531f9d0c",
+          "metricsUrl": "notocoloremoji/400-metrics.ttf"
+        }
+      ],
+      "licenceFile": "notocoloremoji/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Adlam",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["adlam", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansadlam",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansadlam/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansadlam/v27/neIczCCpqp0s5pPusPamd81eMfjPonvqdbYxxpgufnv0TGk.ttf",
+          "sha256": "b1b63b1f761f8680ead8cf0c91908ac6463fb3199f7969333135b168ffc58f38"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansadlam/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansadlam/v27/neIczCCpqp0s5pPusPamd81eMfjPonvqdbYxxpgufpzzTGk.ttf",
+          "sha256": "ba6df3a7c52f11d46b23f3520b5e7136a74b89b341520feed58c60bfda43ac91"
+        }
+      ],
+      "licenceFile": "notosansadlam/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Balinese",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["balinese", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansbalinese",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansbalinese/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansbalinese/v27/NaPwcYvSBuhTirw6IaFn6UrRDaqje-lpbbRtYf-Fwu2Ov7fdhE4.ttf",
+          "sha256": "bb468c004b3b786f2254029a5f2ebc5518f31f8af726ecfe4c7ef19dc757f988"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansbalinese/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansbalinese/v27/NaPwcYvSBuhTirw6IaFn6UrRDaqje-lpbbRtYf-Fwu2Ov1DahE4.ttf",
+          "sha256": "a36e2269da70f69dba22149b9fd451279a3c49511272075831638db5a21bff39"
+        }
+      ],
+      "licenceFile": "notosansbalinese/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Bamum",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["bamum", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansbamum",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansbamum/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansbamum/v35/uk-0EGK3o6EruUbnwovcbBTkkklK_Ya_PBHfNGTPEddO-_g.ttf",
+          "sha256": "2e0d66785a10e07c333debb5227a7dfc342f11c2e5c8b95730fb3d9aa3b46357"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansbamum/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansbamum/v35/uk-0EGK3o6EruUbnwovcbBTkkklK_Ya_PBHfNGTPETBJ-_g.ttf",
+          "sha256": "574ab5005323fa0fc6cad068f675d885ef2df24b135a885e35cad842a99ce61c"
+        }
+      ],
+      "licenceFile": "notosansbamum/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Batak",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["batak", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansbatak",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansbatak/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansbatak/v24/gok2H6TwAEdtF9N8-mdTCQvT-Zdgow.ttf",
+          "sha256": "b46e7f8ee8df628993489d9558c4d782f604d0c762cbf0eb9e265d64a6ca3e8a"
+        }
+      ],
+      "licenceFile": "notosansbatak/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Brahmi",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["brahmi", "latin", "latin-ext", "math", "symbols"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansbrahmi",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansbrahmi/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansbrahmi/v20/vEFK2-VODB8RrNDvZSUmQQIIByV18tI.ttf",
+          "sha256": "f6c60c45575e70194ac79fa0bdf58120ae92397cebbef69daefd23d484239635"
+        }
+      ],
+      "licenceFile": "notosansbrahmi/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Buginese",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["buginese", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansbuginese",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansbuginese/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansbuginese/v21/esDM30ldNv-KYGGJpKGk18phe_7Da6_gtQ.ttf",
+          "sha256": "217b24f26b0e4a23a6e96588361d0fbc62043d05ef26f17dd1ba67350bca92ca"
+        }
+      ],
+      "licenceFile": "notosansbuginese/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Canadian Aboriginal",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["canadian-aboriginal", "latin", "latin-ext", "math", "symbols"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanscanadianaboriginal",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanscanadianaboriginal/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanscanadianaboriginal/v28/4C_TLjTuEqPj-8J01CwaGkiZ9os0iGVkezM1mUT-j_Lmlzda6uH_nnX1bzigWLn_yA.ttf",
+          "sha256": "301b084f1418da1f187564db2b44595eeffbb6291f077ef10d81f3e703aedf78"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanscanadianaboriginal/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanscanadianaboriginal/v28/4C_TLjTuEqPj-8J01CwaGkiZ9os0iGVkezM1mUT-j_Lmlzda6uH_nnX1bzigv77_yA.ttf",
+          "sha256": "28336a01d05585b173af09abe445c09440b592af7ccf083214771f2e0637bf4c"
+        }
+      ],
+      "licenceFile": "notosanscanadianaboriginal/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Chakma",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["chakma", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanschakma",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanschakma/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanschakma/v19/Y4GQYbJ8VTEp4t3MKJSMjg5OIzhi4Jg.ttf",
+          "sha256": "e1caf9afb4f13b36cce8426395a22b07d630e87b130ba50699b8b979787ee2ee"
+        }
+      ],
+      "licenceFile": "notosanschakma/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Cham",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["cham", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanscham",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanscham/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanscham/v33/pe06MIySN5pO62Z5YkFyQb_bbuRhe6D4yip43qfcERwcvw.ttf",
+          "sha256": "3a8c618144043bf4a1f5774ec89b2f57d43588a1c2de27071f8cfa838105ff3d"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanscham/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanscham/v33/pe06MIySN5pO62Z5YkFyQb_bbuRhe6D4yip43qfc9hscvw.ttf",
+          "sha256": "3cd24c3b034307af1b55c48a20064d4229f3837026084bace8d261dc0972b532"
+        }
+      ],
+      "licenceFile": "notosanscham/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Cherokee",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["cherokee", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanscherokee",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanscherokee/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanscherokee/v25/KFOPCm6Yu8uF-29fiz9vQF9YWK6Z8O10cHNA0cSkZCHYWi5PDkk.ttf",
+          "sha256": "6b0aa3c7a76d6031c35161452903021470c51bd9e9067dc6d7f4687473d3cff7"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanscherokee/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanscherokee/v25/KFOPCm6Yu8uF-29fiz9vQF9YWK6Z8O10cHNA0cSkZCHYWslIDkk.ttf",
+          "sha256": "cb8adf834dda61c7d631eff4365345541f984db6d194ef1ac9c0ae3f8398e179"
+        }
+      ],
+      "licenceFile": "notosanscherokee/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Coptic",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["coptic", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanscoptic",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanscoptic/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanscoptic/v22/iJWfBWmUZi_OHPqn4wq6kgqumOEd78s.ttf",
+          "sha256": "89f3fa9fd6329604698f0b5af35d16f3359805eac3ed7c2caf9f59ca79f5bdde"
+        }
+      ],
+      "licenceFile": "notosanscoptic/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Cuneiform",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["cuneiform", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanscuneiform",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanscuneiform/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanscuneiform/v18/bMrrmTWK7YY-MF22aHGGd7H8PhJtvBDWgb8.ttf",
+          "sha256": "961b90f1e2e9fb9380e921a9ecc56d53adbae3aa3c4f4d13f4dc3432188f8fc9"
+        }
+      ],
+      "licenceFile": "notosanscuneiform/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Deseret",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["deseret", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansdeseret",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansdeseret/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansdeseret/v18/MwQsbgPp1eKH6QsAVuFb9AZM6MMr2Vq9.ttf",
+          "sha256": "7d826b07e4efa2b1e52c690c2bee1344224b7594ec0a9bb37c893a9c728d2111"
+        }
+      ],
+      "licenceFile": "notosansdeseret/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Egyptian Hieroglyphs",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["egyptian-hieroglyphs", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansegyptianhieroglyphs",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansegyptianhieroglyphs/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansegyptianhieroglyphs/v30/vEF42-tODB8RrNDvZSUmRhcQHzx1s7y_F9-j3qSzEcbEYindSQ.ttf",
+          "sha256": "d0b3041bc635fbec21c69ee5b2dbd0930be233a7be684333c1edcd3ced908486"
+        }
+      ],
+      "licenceFile": "notosansegyptianhieroglyphs/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Glagolitic",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["cyrillic-ext", "glagolitic", "latin", "latin-ext", "math", "symbols"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansglagolitic",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansglagolitic/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansglagolitic/v19/1q2ZY4-BBFBst88SU_tOj4J-4yuNF_HI4ERK.ttf",
+          "sha256": "8ae9019b273cfc9bac4ccc773fa692246ab19d4fba680864963a06111d612ce3"
+        }
+      ],
+      "licenceFile": "notosansglagolitic/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Gothic",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["gothic", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansgothic",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansgothic/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansgothic/v17/TuGKUUVzXI5FBtUq5a8bj6wRbzxTFMU.ttf",
+          "sha256": "23088596a1546de0bc1c6389c2810ceb1275bbc863db3cff8f7655bb5011dea8"
+        }
+      ],
+      "licenceFile": "notosansgothic/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Gujarati",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["gujarati", "latin", "latin-ext", "math", "symbols"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansgujarati",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansgujarati/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansgujarati/v27/wlpWgx_HC1ti5ViekvcxnhMlCVo3f5pv17ivlzsUB14gg1TMR2Gw4VceEl7MA_ypFwPM.ttf",
+          "sha256": "bca081f50318974bcb1cbed113fef3f04dd918cd513a30474b0a0d626d58d4c9"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansgujarati/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansgujarati/v27/wlpWgx_HC1ti5ViekvcxnhMlCVo3f5pv17ivlzsUB14gg1TMR2Gw4VceEl7MA_xOEAPM.ttf",
+          "sha256": "50700e4f6679aa20a13fb025ae9758de442ae0d6652622d66a1dda62cf9bef0a"
+        }
+      ],
+      "licenceFile": "notosansgujarati/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Gurmukhi",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["gurmukhi", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansgurmukhi",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansgurmukhi/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansgurmukhi/v29/w8g9H3EvQP81sInb43inmyN9zZ7hb7ATbSWo4q8dJ74a3cVrYFQ_bogT0-gPeG1Oenbx.ttf",
+          "sha256": "19fc828daafcbccb8a72856a9445e0d6f03c04ec9984b4255b45e7b1ee5ac01b"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansgurmukhi/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansgurmukhi/v29/w8g9H3EvQP81sInb43inmyN9zZ7hb7ATbSWo4q8dJ74a3cVrYFQ_bogT0-gPeG2pfXbx.ttf",
+          "sha256": "5720c5b05798d6f9c6fd55b053e7f7df6b70debc0a4aec173fd63057861b5472"
+        }
+      ],
+      "licenceFile": "notosansgurmukhi/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans HK",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["chinese-hongkong", "cyrillic", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanshk",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanshk/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanshk/v36/nKKF-GM_FYFRJvXzVXaAPe97P1KHynJFP716qHB--oU.ttf",
+          "sha256": "7d5b9b82615fc05dc6f5b1a55686a8a9a56d7c439ada87152ec7b9be3c75d45b"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanshk/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanshk/v36/nKKF-GM_FYFRJvXzVXaAPe97P1KHynJFP716qJd5-oU.ttf",
+          "sha256": "134317005ab911ff8a8e2f961c5a25dfadfaa1c5092c830d3d8f94a598a1e241"
+        }
+      ],
+      "licenceFile": "notosanshk/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Imperial Aramaic",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["imperial-aramaic", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansimperialaramaic",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansimperialaramaic/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansimperialaramaic/v18/a8IMNpjwKmHXpgXbMIsbTc_kvks91LlLetBr5itQrtdm.ttf",
+          "sha256": "1659b7637dc57c3bf53d22782e17abffa328277dc41f9248247e1fa479975af8"
+        }
+      ],
+      "licenceFile": "notosansimperialaramaic/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Javanese",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["javanese", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjavanese",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansjavanese/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansjavanese/v25/2V01KJkDAIA6Hp4zoSScDjV0Y-eoHAHT-Z3MngEefiidxJnkFFk.ttf",
+          "sha256": "28c26fa0eeb61bc68384e139cc93050f5b5f1b5fed2f747e10469034547b1c43"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansjavanese/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansjavanese/v25/2V01KJkDAIA6Hp4zoSScDjV0Y-eoHAHT-Z3MngEefiidxH7jFFk.ttf",
+          "sha256": "2a190e1f5ab4d6d2de0611a907d1716c79eb7eaa608d734f442635f2f7f172d3"
+        }
+      ],
+      "licenceFile": "notosansjavanese/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Kayah Li",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["kayah-li", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskayahli",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanskayahli/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanskayahli/v26/B50nF61OpWTRcGrhOVJJwOMXdca6Yecki3E06x2jVTX3WCc3CZE.ttf",
+          "sha256": "774d16c8cab9d0d92a349a093180c1ea9bd1155365075e8e9e415e9c557be206"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanskayahli/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanskayahli/v26/B50nF61OpWTRcGrhOVJJwOMXdca6Yecki3E06x2jVTX3WMAwCZE.ttf",
+          "sha256": "792e3f22ec99341073e520caf575595f42581c63edb9263a65f35d27c7dfc86b"
+        }
+      ],
+      "licenceFile": "notosanskayahli/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Kharoshthi",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["kharoshthi", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanskharoshthi",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanskharoshthi/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanskharoshthi/v17/Fh4qPiLjKS30-P4-pGMMXCCfvkc5Vd7KE5z4.ttf",
+          "sha256": "249784c90980c4565d82c9b320b0914203d8886e830943aa6c5291665f7e7548"
+        }
+      ],
+      "licenceFile": "notosanskharoshthi/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Lepcha",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "lepcha"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanslepcha",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanslepcha/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanslepcha/v20/0QI7MWlB_JWgA166SKhu05TekNS32AI.ttf",
+          "sha256": "45c76733590842c3e7ac31a71f29d46ea7a657b6b6bb6dbb09bc43561ec4d6ce"
+        }
+      ],
+      "licenceFile": "notosanslepcha/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Limbu",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "limbu"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanslimbu",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanslimbu/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanslimbu/v26/3JnlSDv90Gmq2mrzckOBBRRoNJVj0A.ttf",
+          "sha256": "046cc49d22a55857c2d58df12e95a52bad60e19c078bd1dc527a4a17b6b1d07d"
+        }
+      ],
+      "licenceFile": "notosanslimbu/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Linear B",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "linear-b"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanslinearb",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanslinearb/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanslinearb/v18/HhyJU4wt9vSgfHoORYOiXOckKNB737IV3A.ttf",
+          "sha256": "f8ce05bb6e40aa7deb61b23cbe8984cfeb97e59136fa692128440be24fcaa283"
+        }
+      ],
+      "licenceFile": "notosanslinearb/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Lisu",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "lisu"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanslisu",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanslisu/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanslisu/v27/uk-3EGO3o6EruUbnwovcYhz6kh57_nqbcTdjJnHP2Vwt2w.ttf",
+          "sha256": "4ae9155dab17d3e313903c80fa99b0a7d7f3e11e0b56b522d312e8b216502dcc"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanslisu/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanslisu/v27/uk-3EGO3o6EruUbnwovcYhz6kh57_nqbcTdjJnHPPlst2w.ttf",
+          "sha256": "7ec641692ff88addc5dc5ee187dd6eddc512fed17911f82265f13d427873d5d9"
+        }
+      ],
+      "licenceFile": "notosanslisu/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Mandaic",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "mandaic"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansmandaic",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansmandaic/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansmandaic/v18/cIfnMbdWt1w_HgCcilqhKQBo_OsMI5_A.ttf",
+          "sha256": "0e0d1eee2a8da099034b57c99d8bc9d95c6d428f7455633e6a76c1cc873e5537"
+        }
+      ],
+      "licenceFile": "notosansmandaic/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Meetei Mayek",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "meetei-mayek"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansmeeteimayek",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansmeeteimayek/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansmeeteimayek/v20/HTxAL3QyKieByqY9eZPFweO0be7M21uSphSdhqILnmrRfJ8t_1TJ_vTW.ttf",
+          "sha256": "53c963b84b4eeec05837dcb697d22a9c806bf5b740e4e72bb91fb74cb7269e63"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansmeeteimayek/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansmeeteimayek/v20/HTxAL3QyKieByqY9eZPFweO0be7M21uSphSdhqILnmrRfJ8t_1Qu-fTW.ttf",
+          "sha256": "3d001177f43a023ee8440dd3417b746ee5535d5f9383cfd5141d5a246231edba"
+        }
+      ],
+      "licenceFile": "notosansmeeteimayek/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Mongolian",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "math", "mongolian", "symbols"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansmongolian",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansmongolian/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansmongolian/v23/VdGCAYADGIwE0EopZx8xQfHlgEAMsrToxLs.ttf",
+          "sha256": "1a4b487bb08a3d21320b914395095ab2b81be9be8e53b400eb4cb31522148eb5"
+        }
+      ],
+      "licenceFile": "notosansmongolian/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans NKo",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "nko"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansnko",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansnko/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansnko/v7/esDX31ZdNv-KYGGJpKGk2_RpMpA.ttf",
+          "sha256": "c692d8cbebae1992fcce9712e54703510d45b561dd9ed2694b296a2eb103e1af"
+        }
+      ],
+      "licenceFile": "notosansnko/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans New Tai Lue",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "new-tai-lue"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansnewtailue",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansnewtailue/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansnewtailue/v24/H4cKBW-Pl9DZ0Xe_nHUapt7PovLXAhAnY7wqaLy-OJgU3p_pdeXAYUY.ttf",
+          "sha256": "64761a179eeebbd594ba0750dad1328d73392557091a9a1b6b1baeaca84cc2d6"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansnewtailue/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansnewtailue/v24/H4cKBW-Pl9DZ0Xe_nHUapt7PovLXAhAnY7wqaLy-OJgU3p_pdQLHYUY.ttf",
+          "sha256": "03987bc225e0fc27229f9eb9746c73077ed7b6321fe1c5f1a06b1143f9456716"
+        }
+      ],
+      "licenceFile": "notosansnewtailue/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Ogham",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "ogham"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansogham",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansogham/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansogham/v18/kmKlZqk1GBDGN0mY6k5lmEmww4hrtw.ttf",
+          "sha256": "ec9427782248d07a4041e6626a178b14d9cef863722a19c60bf66e8141c77612"
+        }
+      ],
+      "licenceFile": "notosansogham/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Ol Chiki",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "ol-chiki"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansolchiki",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansolchiki/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansolchiki/v31/N0b92TJNOPt-eHmFZCdQbrL32r-4CvhzDzRwlxOQYuVALWk267I.ttf",
+          "sha256": "0ccbdac61de5d2a2f17a2f841ddff3cef41af21028d3379bc016ae644da0e0a8"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansolchiki/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansolchiki/v31/N0b92TJNOPt-eHmFZCdQbrL32r-4CvhzDzRwlxOQYuVALY4x67I.ttf",
+          "sha256": "0906de1281bdb209777e614e3069d2ad43143bedcb0562abe21c7e6fa1ed4b6f"
+        }
+      ],
+      "licenceFile": "notosansolchiki/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Old Italic",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "old-italic"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansolditalic",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansolditalic/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansolditalic/v18/TuGOUUFzXI5FBtUq5a8bh68BJxxEVam7tWlR.ttf",
+          "sha256": "ef67318da8cb40266c0125a1dd562bc37fec0ee4ac5206ccbdddcafa3ce83fc0"
+        }
+      ],
+      "licenceFile": "notosansolditalic/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Old Persian",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "old-persian"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansoldpersian",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansoldpersian/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansoldpersian/v17/wEOjEAbNnc5caQTFG18FHrZr9Bp6-8CmIJ_tqA.ttf",
+          "sha256": "bdf830368ea5b2aab75aec9feeaeb25863eb2463d943ec643dcea71acd21086a"
+        }
+      ],
+      "licenceFile": "notosansoldpersian/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Oriya",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "oriya"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansoriya",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansoriya/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansoriya/v35/AYCppXfzfccDCstK_hrjDyADv5e9748vhj3CJBLHIARtgD6TJQS0dJT5Ivj0f6_c.ttf",
+          "sha256": "2594200ddd1e5fb89780c0054652d45fe0cac44ce153e6ca5a4a25cb673fcff4"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansoriya/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansoriya/v35/AYCppXfzfccDCstK_hrjDyADv5e9748vhj3CJBLHIARtgD6TJQS0dJT5IvgTeK_c.ttf",
+          "sha256": "4f7de603aa86d30504fa3117ef709daf623ce7fff2fb0de499996dd1c9dbec3e"
+        }
+      ],
+      "licenceFile": "notosansoriya/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Osmanya",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "osmanya"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansosmanya",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansosmanya/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansosmanya/v20/8vIS7xs32H97qzQKnzfeWzUyUpOJmz6k.ttf",
+          "sha256": "49ca3f5390cde93cd6556ce1a574668c4b87c97cc8ff10695bca70b865e8e683"
+        }
+      ],
+      "licenceFile": "notosansosmanya/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Pahawh Hmong",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "pahawh-hmong"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanspahawhhmong",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanspahawhhmong/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanspahawhhmong/v21/bWtp7e_KfBziStx7lIzKKaMUOBEA3UPQDW7krzc.ttf",
+          "sha256": "53b55a92442922a33ddc33f2107dd118de455e752e611b2aa37cd7d28ea5d9cb"
+        }
+      ],
+      "licenceFile": "notosanspahawhhmong/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Phoenician",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "phoenician"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansphoenician",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansphoenician/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansphoenician/v18/jizFRF9Ksm4Bt9PvcTaEkIHiTVtxmFtS5X7J.ttf",
+          "sha256": "668d3bb498d99f70e94d69f54873b854adbe44b71b6b6dbd40430a7a81e4a8f7"
+        }
+      ],
+      "licenceFile": "notosansphoenician/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Runic",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "runic"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansrunic",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansrunic/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansrunic/v18/H4c_BXWPl9DZ0Xe_nHUaus7W68WWaw.ttf",
+          "sha256": "ad5339d52495b063bd4cd8b8850849672891778b414bab09fe19f56ebd624e85"
+        }
+      ],
+      "licenceFile": "notosansrunic/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Samaritan",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "samaritan"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssamaritan",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanssamaritan/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanssamaritan/v17/buEqppe9f8_vkXadMBJJo0tSmaYjFkxOUo4.ttf",
+          "sha256": "0a0de27821690fbcc16011d129b236b176371dbc084990650a3a322b7f912689"
+        }
+      ],
+      "licenceFile": "notosanssamaritan/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Saurashtra",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "saurashtra"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssaurashtra",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanssaurashtra/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanssaurashtra/v24/ea8GacQ0Wfz_XKWXe6OtoA8w8zvmYwTef9nd.ttf",
+          "sha256": "f1cdaaf16394dc81fc8e91c5c72a517c2837e8b676e8597709f4a9822c5988fa"
+        }
+      ],
+      "licenceFile": "notosanssaurashtra/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Shavian",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "shavian"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansshavian",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansshavian/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansshavian/v18/CHy5V_HZE0jxJBQlqAeCKjJvQBNF4EFQ.ttf",
+          "sha256": "9aac60b0e69f83ccbab6997bdb7bf47bed6b3a25c572e19408b4b73fc1a0db14"
+        }
+      ],
+      "licenceFile": "notosansshavian/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Sundanese",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "sundanese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssundanese",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanssundanese/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanssundanese/v28/FwZw7_84xUkosG2xJo2gm7nFwSLQkdymq2mkz3Gz1_b6ctxpNNHC.ttf",
+          "sha256": "e86ad6bbc435e0d5d527eb31ad03e6cca7cceff37bee7505faaab668c1907eda"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanssundanese/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanssundanese/v28/FwZw7_84xUkosG2xJo2gm7nFwSLQkdymq2mkz3Gz1_b6ctyOM9HC.ttf",
+          "sha256": "0ad142c60073aa3d636cf7b0595f0d37568ec8e6585ad49adf72db3f6b5d5578"
+        }
+      ],
+      "licenceFile": "notosanssundanese/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Syriac",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "syriac"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssyriac",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanssyriac/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanssyriac/v18/Ktk7AKuMeZjqPnXgyqribqzQqgW0LYiVqV7dXcP0C-VD9MaJ.ttf",
+          "sha256": "f0509dd5285e5129c13c2733b24b3136670fa6367b1572278d4e03b0e4efeb07"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanssyriac/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanssyriac/v18/Ktk7AKuMeZjqPnXgyqribqzQqgW0LYiVqV7dXcP0C-Wk88aJ.ttf",
+          "sha256": "9ac32fcbc7bcb15866c530550ff97d2465ab41b0b5975cad82c7052de07ad43e"
+        }
+      ],
+      "licenceFile": "notosanssyriac/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans TC",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["chinese-traditional", "cyrillic", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstc",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanstc/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanstc/v40/-nFuOG829Oofr2wohFbTp9ifNAn722rq0MXz76Cy_Co.ttf",
+          "sha256": "619662a0583f38311e92666927e5edbfd30f2a1fbe8593685660bd11bdd46a10"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanstc/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanstc/v40/-nFuOG829Oofr2wohFbTp9ifNAn722rq0MXz70e1_Co.ttf",
+          "sha256": "33e8464f3432fd9eba5fa6ff74f5fb9ee612cad703877bd71c36e6f167c0a7e3"
+        }
+      ],
+      "licenceFile": "notosanstc/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Tai Le",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "tai-le"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstaile",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanstaile/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanstaile/v19/vEFK2-VODB8RrNDvZSUmVxEATwR58tI.ttf",
+          "sha256": "5f1f0eca1d4869f1b8fbdf1ab3ef07ba02293b605629cd894bb7125a0192027c"
+        }
+      ],
+      "licenceFile": "notosanstaile/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Tai Tham",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "tai-tham"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstaitham",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanstaitham/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanstaitham/v25/kJEbBv0U4hgtwxDUw2x9q7tbjLIfbPGHBoaVSAZ3MdLJBCUbPgo.ttf",
+          "sha256": "58325d18c90d62b534fd6291f8d0ff7379b304dd02f7fd7f85e0b6fe1333cf76"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosanstaitham/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanstaitham/v25/kJEbBv0U4hgtwxDUw2x9q7tbjLIfbPGHBoaVSAZ3MdLJBMIcPgo.ttf",
+          "sha256": "cc9cc5d8718f8c48ebebd3fd1628c4bf71f812f31fd2c954451e79aef977569f"
+        }
+      ],
+      "licenceFile": "notosanstaitham/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Tai Viet",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "tai-viet"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstaiviet",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanstaiviet/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanstaiviet/v20/8QIUdj3HhN_lv4jf9vsE-9GMOLsaSPZr6w.ttf",
+          "sha256": "857a4558336caf69c74a99d6373e44fd0c4399990cc048e941c06cf9b26061b1"
+        }
+      ],
+      "licenceFile": "notosanstaiviet/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Thaana",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "thaana"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthaana",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansthaana/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansthaana/v26/C8c14dM-vnz-s-3jaEsxlxHkBH-WZOETXfoQrfQ9Y4XrbhLh.ttf",
+          "sha256": "ad5c2f580a287dbb9bba0fb61ee9dd25771f0531a237e7ccaa427c51f68267e8"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notosansthaana/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansthaana/v26/C8c14dM-vnz-s-3jaEsxlxHkBH-WZOETXfoQrfQ9Y4UMaRLh.ttf",
+          "sha256": "f3996f55b374131cf9603858e981b2dc54c098be702fdd321469b16375d63c9e"
+        }
+      ],
+      "licenceFile": "notosansthaana/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Tifinagh",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "tifinagh"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstifinagh",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosanstifinagh/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosanstifinagh/v21/I_uzMoCduATTei9eI8dawkHIwvmhCvbn6g.ttf",
+          "sha256": "35303a158b69802801d1341e7637dab55ec69c20c311479f8fae86722895090c"
+        }
+      ],
+      "licenceFile": "notosanstifinagh/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Ugaritic",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "ugaritic"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansugaritic",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansugaritic/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansugaritic/v17/3qTwoiqhnSyU8TNFIdhZVCwbjCpkAXXkMg.ttf",
+          "sha256": "87b854d2a75216bd6a3b537c3217848585e43ed98429e7776dd3b034de3633ac"
+        }
+      ],
+      "licenceFile": "notosansugaritic/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Vai",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "vai"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansvai",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansvai/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansvai/v19/NaPecZTSBuhTirw6IaFn_UrURMQ.ttf",
+          "sha256": "abb90bb58ef777a5624c7fadf8af227f938ea80568645e3d262702d0994fb70a"
+        }
+      ],
+      "licenceFile": "notosansvai/LICENSE.txt"
+    },
+    {
+      "family": "Noto Sans Yi",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "yi"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansyi",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notosansyi/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notosansyi/v22/sJoD3LFXjsSdcnzn071rO3apxQ.ttf",
+          "sha256": "3ff4fa26624dda0ad9fa4bd53ff24f8a1c1e848981152e9c07f64f661cef14ad"
+        }
+      ],
+      "licenceFile": "notosansyi/LICENSE.txt"
+    },
+    {
+      "family": "Noto Serif Tibetan",
+      "licence": "OFL-1.1",
+      "category": "serif",
+      "subsets": ["latin", "latin-ext", "tibetan"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoseriftibetan",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "notoseriftibetan/400.ttf",
+          "source": "https://fonts.gstatic.com/s/notoseriftibetan/v24/gokGH7nwAEdtF9N45n0Vaz7O-pk0wsvxHeDXMfqguoCmIrYcPS4.ttf",
+          "sha256": "f94e3bde2a13ec085793d1ff2d97f8dd58960df0aeb92c65afad276fa4a57c15"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "notoseriftibetan/700.ttf",
+          "source": "https://fonts.gstatic.com/s/notoseriftibetan/v24/gokGH7nwAEdtF9N45n0Vaz7O-pk0wsvxHeDXMfqguoCmIlEbPS4.ttf",
+          "sha256": "7981d58ba98a81964e3d712edbff7ba32634d83b3dc10b97d24ec7b9d920ebcf"
+        }
+      ],
+      "licenceFile": "notoseriftibetan/LICENSE.txt"
+    }
+  ]
+}

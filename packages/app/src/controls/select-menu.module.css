@@ -1,0 +1,133 @@
+/* The select of the Control states sheet (Figma 35:1786) and its open menu (the share dialog's role
+   menu): theme tokens only (theme/token-usage.test.ts). */
+
+.wrapper {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+}
+
+.select {
+  display: inline-flex;
+  gap: var(--space-1);
+  align-items: center;
+  height: 30px;
+  padding: 0 var(--space-2) 0 10px;
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-sheet);
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* A role in a row: its edge only shows on hover, open or focus. */
+.select[data-variant='quiet'] {
+  border-color: transparent;
+}
+
+.select:hover:not(:disabled),
+.select[aria-expanded='true'] {
+  border-color: var(--color-line-control);
+  background: var(--color-surface-raised);
+}
+
+.select:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.select:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.value {
+  min-width: 0;
+}
+
+.menu {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 196px;
+  margin: 0;
+  padding: var(--space-1);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: 8px;
+  background: var(--color-surface-raised);
+  box-shadow: var(--shadow-float);
+  list-style: none;
+}
+
+/* Closed, the list stays in the page but is not shown: `hidden` loses to `display` above. */
+.menu[hidden] {
+  display: none;
+}
+
+.option,
+.removal {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  padding: 6px var(--space-2);
+  border-radius: 5px;
+  color: var(--color-ink-primary);
+  cursor: pointer;
+}
+
+.option[data-active='true'],
+.removal[data-active='true'] {
+  background: var(--color-surface-pressed);
+}
+
+.optionText {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.optionLabel {
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+.optionDescription {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/* Remove access, with a rule above it: a divider, not the item's edge. The design writes it in the
+   red pencil, which is under 4.5:1 for small text on the raised surface in both themes, so the
+   words take the primary ink and a red pencil mark leads them. */
+.removal {
+  margin-top: var(--space-1);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-line-hairline);
+  border-radius: 0 0 5px 5px;
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+.removal::before {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-mark-red-pencil);
+  content: '';
+}
+
+/* The secondary ink is under 4.5:1 on the pressed surface in Graphite: the active item's line
+   takes the primary ink. */
+.option[data-active='true'] .optionDescription {
+  color: var(--color-ink-primary);
+}

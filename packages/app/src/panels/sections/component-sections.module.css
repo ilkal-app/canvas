@@ -1,0 +1,166 @@
+/* The component and instance sections: a main's name and instances, an instance's
+   main, its actions and a row per overridable child. Theme tokens only
+   (theme/token-usage.test.ts). */
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* The editing controls, disabled together for a person who cannot edit or a locked object. */
+.editing {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.caption {
+  margin: 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/* One axis of a main's Variants section: its name, each value with its own actions
+   under it, then Add value and Remove axis. */
+.axis {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.variantValue {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+/* A value's Make default and Remove value, under its field at the right. */
+.variantActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-1);
+}
+
+/* An instance's variant pickers, one per axis. */
+.pickers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* What a chosen variant's preset sets, beside its control while not overridden. */
+.fromVariant {
+  flex: none;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  white-space: nowrap;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.mainName {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--color-ink-primary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.rowHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.rowName {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* A property's control, with "Reset" after it while the instance overrides the property. */
+.field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Stacked and stretched as the row's own children are, so a row without overrides lays out as
+   before. */
+.fieldControl {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-direction: column;
+}
+
+/* A slot's "Swap options" in its main: "Any main", then a checkbox per main. */
+.swapOptions {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.swapOptions legend {
+  margin-bottom: var(--space-1);
+  padding: 0;
+}
+
+.check {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-ink-primary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.check input {
+  margin: 0;
+  accent-color: var(--color-action-fill);
+}
+
+.check:has(input:disabled) {
+  color: var(--color-ink-secondary);
+}

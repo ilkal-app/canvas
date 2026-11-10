@@ -1,0 +1,12 @@
+/* The minimap (the design board's Whiteboard page, frame B): a 216 × 120 map on the
+   ground mat, 4 px corners. Theme tokens only; the canvas reads its stroke colours from them. */
+
+.map {
+  display: block;
+  width: 216px;
+  height: 120px;
+  border-radius: 4px;
+  background: var(--color-ground-mat);
+  cursor: pointer;
+  touch-action: none;
+}

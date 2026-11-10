@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ilkal SDK: an infinite canvas for your app</title>
+    <meta
+      name="description"
+      content="@ilkal/sdk puts an infinite canvas in any web page: shapes, text, sticky notes, frames, pens and connectors, drawn on the GPU. Open source under the Apache License 2.0."
+    />
+    <link rel="canonical" href="https://ilkal.dev/" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --text: #1d1d1f;
+        --muted: #5c5c63;
+        --surface: #ffffff;
+        --code: #f3f3f5;
+        --rule: #e2e2e6;
+        --link: #2554c7;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text: #ededf0;
+          --muted: #a3a3ad;
+          --surface: #141416;
+          --code: #222226;
+          --rule: #33333a;
+          --link: #8fb0ff;
+        }
+      }
+      body {
+        margin: 0;
+        background: var(--surface);
+        color: var(--text);
+        font:
+          17px/1.6 system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          sans-serif;
+      }
+      main {
+        max-width: 42rem;
+        margin: 0 auto;
+        padding: 4rem 1rem 3rem;
+      }
+      h1 {
+        font-size: 2.25rem;
+        line-height: 1.2;
+        margin: 0 0 1rem;
+      }
+      p,
+      ul {
+        margin: 0 0 1.25rem;
+      }
+      a {
+        color: var(--link);
+      }
+      code,
+      pre {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.9em;
+        background: var(--code);
+        border-radius: 6px;
+      }
+      code {
+        padding: 0.1em 0.3em;
+      }
+      pre {
+        padding: 1rem;
+        overflow-x: auto;
+      }
+      pre code {
+        padding: 0;
+        background: none;
+      }
+      footer {
+        border-top: 1px solid var(--rule);
+        color: var(--muted);
+        font-size: 0.9rem;
+        padding-top: 1.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>An infinite canvas for your app</h1>
+      <p>
+        <code>@ilkal/sdk</code> puts an infinite canvas in any web page: shapes, text, sticky notes,
+        frames, pens and connectors, drawn on the GPU. It is the canvas Boards is built on, open
+        source under the
+        <a href="https://github.com/ilkal-app/canvas/blob/main/LICENSE">Apache License 2.0</a>.
+      </p>
+      <pre><code>import { mount } from '@ilkal/sdk';
+
+const canvas = await mount(document.getElementById('board')!, { theme: 'system' });</code></pre>
+      <p>
+        <strong>Local first.</strong> Version 0 keeps the board in the page, in memory or on the
+        device. It makes no network request of its own. Real-time collaboration comes in a later
+        release.
+      </p>
+      <p>
+        <strong>One command layer.</strong> Your code changes the board through the commands the
+        editor's own tools use. Each is checked against the board and applied in one undo step, or
+        refused whole. Run a command as the person at the board, or as an agent working beside them:
+        undo takes either back.
+      </p>
+      <p>
+        <strong>Events.</strong> Listen for changes, the person's selection and errors, all typed.
+      </p>
+      <p>
+        <strong>Your look.</strong> Light, dark or the system's theme, changed while the canvas
+        runs, and your own fonts for its toolbar and panels.
+      </p>
+      <ul>
+        <li>Install: <code>npm install @ilkal/sdk react react-dom</code></li>
+        <li>
+          Source, issues and contributing:
+          <a href="https://github.com/ilkal-app/canvas">github.com/ilkal-app/canvas</a>
+        </li>
+        <li>API reference: <a href="api/">ilkal.dev/api</a></li>
+      </ul>
+      <footer>
+        Ilkal™ is a trademark of Rudr Studio, Inc. See
+        <a href="https://github.com/ilkal-app/canvas/blob/main/TRADEMARKS.md">TRADEMARKS.md</a>
+        for how you may use the name.
+      </footer>
+    </main>
+  </body>
+</html>

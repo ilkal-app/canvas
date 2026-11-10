@@ -1,0 +1,78 @@
+/* The floating whiteboard dock (design "Whiteboard · tool panels"): a 50 px
+   sheet centred 16 px above the canvas's bottom edge, its 40 px tools 2 px apart in three
+   sections, 1 × 20 px dividers between them, 5 px in from its ends (4 px padding inside its 1 px
+   border): 476 px wide with all eleven tools. */
+@value dockInset, compactInset, compactBarHeight, compactBarBottom from './dock.module.css';
+
+.dock {
+  position: absolute;
+  bottom: dockInset;
+  left: 50%;
+  z-index: var(--layer-controls);
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 2px;
+  height: 50px;
+  max-width: calc(100% - 2 * var(--space-3));
+  padding: 0 var(--space-1);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: 8px;
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-sheet);
+  transform: translateX(-50%);
+}
+
+/* A section: its tools, 2 px apart, as one group for assistive technology. */
+.section {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.divider {
+  flex: none;
+  width: 1px;
+  height: 20px;
+  background: var(--color-line-hairline);
+}
+
+/* Below 768 px wide: the compact bar in the classic bar's place and size (
+   the mobile design), 374 px wide (narrower only on a narrower screen), 8 px off the bottom and the
+   device's safe area, its 48 px targets spread edge to edge inside 6 px of padding. */
+.dock[data-compact] {
+  bottom: compactBarBottom;
+  justify-content: space-between;
+  width: min(374px, calc(100% - 2 * compactInset));
+  max-width: none;
+  height: compactBarHeight;
+  padding: var(--space-1) 6px;
+  border-radius: 10px;
+}
+
+.dock[data-compact] .section {
+  gap: 0;
+}
+
+/* Comment's unread dot: an accent dot at its button's top right, ringed
+   in the dock's surface so it reads on the pressed state too. */
+.unreadDot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  box-sizing: border-box;
+  border: 1.5px solid var(--color-surface-sheet);
+  border-radius: 50%;
+  background: var(--color-hand-you);
+  pointer-events: none;
+}
+
+/* While the pointer is over the dock or a button has keyboard focus, so a tooltip may show, the
+   dock rises a layer over its tool panels (the open panel hid the other buttons'
+   tooltips). Only then: at rest its shadow stays under the panel and the hint, as drawn. */
+.dock:hover,
+.dock:has(:focus-visible) {
+  z-index: calc(var(--layer-controls) + 1);
+}

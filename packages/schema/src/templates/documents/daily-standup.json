@@ -1,0 +1,841 @@
+{
+  "format": "canvas.board",
+  "schemaVersion": 39,
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Daily standup",
+      "order": "a0"
+    }
+  ],
+  "objects": [
+    {
+      "id": "daily-standup-0",
+      "parentId": null,
+      "pageId": "page-1",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 1600,
+      "height": 1000,
+      "name": "Daily standup",
+      "clip": false,
+      "background": null,
+      "showName": false,
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "cornerRadius": 16
+    },
+    {
+      "id": "daily-standup-1",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 48,
+      "y": 40,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "title",
+      "type": "text",
+      "width": 900,
+      "height": 40,
+      "text": "Daily standup",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 32,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "daily-standup-10",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 848,
+      "y": 228,
+      "rotation": 0,
+      "z": "a9",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "today",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "What I’m working on",
+      "runs": [
+        {
+          "length": 19,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1]
+    },
+    {
+      "id": "daily-standup-11",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 1264,
+      "y": 228,
+      "rotation": 0,
+      "z": "aA",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "blocker",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Anything in my way?",
+      "runs": [
+        {
+          "length": 19,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9529411764705882, 0.7647058823529411, 0.8117647058823529, 1]
+    },
+    {
+      "id": "daily-standup-12",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 48,
+      "y": 444,
+      "rotation": 0,
+      "z": "aB",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "row 2",
+      "type": "shape",
+      "width": 1504,
+      "height": 224,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 12,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "daily-standup-13",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 80,
+      "y": 476,
+      "rotation": 0,
+      "z": "aC",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "avatar",
+      "type": "shape",
+      "width": 56,
+      "height": 56,
+      "kind": "ellipse",
+      "stroke": null,
+      "fill": [0.9568627450980393, 0.8117647058823529, 0.6509803921568628, 1],
+      "cornerRadius": 0,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "daily-standup-14",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 80,
+      "y": 548,
+      "rotation": 0,
+      "z": "aD",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "name",
+      "type": "text",
+      "width": 200,
+      "height": 22.5,
+      "text": "Your name",
+      "runs": [
+        {
+          "length": 9,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "daily-standup-15",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 432,
+      "y": 468,
+      "rotation": 0,
+      "z": "aE",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "yesterday",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "What I finished",
+      "runs": [
+        {
+          "length": 15,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "daily-standup-16",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 848,
+      "y": 468,
+      "rotation": 0,
+      "z": "aF",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "today",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "What I’m working on",
+      "runs": [
+        {
+          "length": 19,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1]
+    },
+    {
+      "id": "daily-standup-17",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 1264,
+      "y": 468,
+      "rotation": 0,
+      "z": "aG",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "blocker",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Anything in my way?",
+      "runs": [
+        {
+          "length": 19,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9529411764705882, 0.7647058823529411, 0.8117647058823529, 1]
+    },
+    {
+      "id": "daily-standup-18",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 48,
+      "y": 684,
+      "rotation": 0,
+      "z": "aH",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "row 3",
+      "type": "shape",
+      "width": 1504,
+      "height": 224,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 12,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "daily-standup-19",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 80,
+      "y": 716,
+      "rotation": 0,
+      "z": "aI",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "avatar",
+      "type": "shape",
+      "width": 56,
+      "height": 56,
+      "kind": "ellipse",
+      "stroke": null,
+      "fill": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1],
+      "cornerRadius": 0,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "daily-standup-2",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 48,
+      "y": 88,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "subtitle",
+      "type": "text",
+      "width": 900,
+      "height": 20,
+      "text": "A quick round: what moved, what’s next, what’s in the way.",
+      "runs": [
+        {
+          "length": 58,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "daily-standup-20",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 80,
+      "y": 788,
+      "rotation": 0,
+      "z": "aJ",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "name",
+      "type": "text",
+      "width": 200,
+      "height": 22.5,
+      "text": "Your name",
+      "runs": [
+        {
+          "length": 9,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "daily-standup-21",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 432,
+      "y": 708,
+      "rotation": 0,
+      "z": "aK",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "yesterday",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "What I finished",
+      "runs": [
+        {
+          "length": 15,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "daily-standup-22",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 848,
+      "y": 708,
+      "rotation": 0,
+      "z": "aL",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "today",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "What I’m working on",
+      "runs": [
+        {
+          "length": 19,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1]
+    },
+    {
+      "id": "daily-standup-23",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 1264,
+      "y": 708,
+      "rotation": 0,
+      "z": "aM",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "blocker",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Anything in my way?",
+      "runs": [
+        {
+          "length": 19,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9529411764705882, 0.7647058823529411, 0.8117647058823529, 1]
+    },
+    {
+      "id": "daily-standup-3",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 320,
+      "y": 152,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "header Yesterday",
+      "type": "text",
+      "width": 400,
+      "height": 25,
+      "text": "Yesterday",
+      "runs": [
+        {
+          "length": 9,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "center",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "daily-standup-4",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 736,
+      "y": 152,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "header Today",
+      "type": "text",
+      "width": 400,
+      "height": 25,
+      "text": "Today",
+      "runs": [
+        {
+          "length": 5,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "center",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "daily-standup-5",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 1152,
+      "y": 152,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "header Blockers",
+      "type": "text",
+      "width": 400,
+      "height": 25,
+      "text": "Blockers",
+      "runs": [
+        {
+          "length": 8,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "center",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "daily-standup-6",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 48,
+      "y": 204,
+      "rotation": 0,
+      "z": "a5",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "row 1",
+      "type": "shape",
+      "width": 1504,
+      "height": 224,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 12,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "daily-standup-7",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 80,
+      "y": 236,
+      "rotation": 0,
+      "z": "a6",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "avatar",
+      "type": "shape",
+      "width": 56,
+      "height": 56,
+      "kind": "ellipse",
+      "stroke": null,
+      "fill": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1],
+      "cornerRadius": 0,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "daily-standup-8",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 80,
+      "y": 308,
+      "rotation": 0,
+      "z": "a7",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "name",
+      "type": "text",
+      "width": 200,
+      "height": 22.5,
+      "text": "Your name",
+      "runs": [
+        {
+          "length": 9,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "daily-standup-9",
+      "parentId": "daily-standup-0",
+      "pageId": null,
+      "x": 432,
+      "y": 228,
+      "rotation": 0,
+      "z": "a8",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "yesterday",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "What I finished",
+      "runs": [
+        {
+          "length": 15,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    }
+  ]
+}

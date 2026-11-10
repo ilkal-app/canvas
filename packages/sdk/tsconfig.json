@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    // Runs in the host page.
+    "lib": ["ES2022", "DOM"],
+    "jsx": "react-jsx",
+    // Vite bundles the JavaScript; tsc contributes only the declarations.
+    "emitDeclarationOnly": true
+  },
+  "include": ["src"],
+  // scripts/ (the third-party licence list) is a project of its own, referenced so `tsc -b`
+  // type-checks it too; sample/ (the sample host page) references this one, from the root.
+  "references": [
+    { "path": "../app" },
+    { "path": "../document" },
+    { "path": "../schema" },
+    { "path": "./scripts" }
+  ]
+}

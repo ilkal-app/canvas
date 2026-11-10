@@ -1,0 +1,62 @@
+.menu {
+  position: fixed;
+  z-index: var(--layer-menu);
+  min-width: 220px;
+  max-height: calc(100vh - 2 * var(--space-2));
+  padding: var(--space-1);
+  overflow-y: auto;
+  overscroll-behavior-x: none;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  color: var(--color-ink-primary);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+}
+
+.separator {
+  height: 1px;
+  margin: var(--space-1) 0;
+  background: var(--color-line-hairline);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  width: 100%;
+  min-height: 32px;
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+/* A finger needs a taller row. */
+@media (pointer: coarse) {
+  .item {
+    min-height: 44px;
+  }
+}
+
+.item:hover,
+.item:focus-visible {
+  background: var(--color-surface-raised);
+}
+
+.item:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -2px;
+}
+
+.chord {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}

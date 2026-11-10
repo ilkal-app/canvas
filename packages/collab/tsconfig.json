@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    // Runs in the browser: WebSocket, IndexedDB.
+    "lib": ["ES2022", "DOM"]
+  },
+  "include": ["src"],
+  "references": [{ "path": "../schema" }, { "path": "../document" }]
+}

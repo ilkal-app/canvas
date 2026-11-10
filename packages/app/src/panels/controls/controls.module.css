@@ -1,0 +1,360 @@
+.control {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 28px;
+}
+
+.label {
+  flex: 0 0 72px;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.swatch {
+  position: relative;
+  display: inline-flex;
+  width: 32px;
+  height: 24px;
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  overflow: hidden;
+}
+
+.swatch input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* A mixed value is striped, an absent one struck through, over the input's own colour. */
+.swatch[data-state='mixed']::after,
+.swatch[data-state='none']::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  pointer-events: none;
+}
+
+.swatch[data-state='mixed']::after {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-surface-sheet) 0 4px,
+    var(--color-ink-secondary) 4px 8px
+  );
+}
+
+.swatch[data-state='none']::after {
+  background: linear-gradient(
+    to top right,
+    var(--color-surface-sheet) calc(50% - 1px),
+    var(--color-ink-secondary) calc(50% - 1px) calc(50% + 1px),
+    var(--color-surface-sheet) calc(50% + 1px)
+  );
+}
+
+.input,
+.select {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 28px;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-sheet);
+  color: var(--color-ink-primary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/* Numbers in the chrome are set in Geist Mono: a number field's value. */
+.number {
+  composes: input;
+  width: 100%;
+  font: var(--text-mono-value);
+  letter-spacing: var(--text-mono-value-tracking);
+  font-variant-numeric: tabular-nums;
+}
+
+.input::placeholder {
+  color: var(--color-ink-secondary);
+}
+
+.toggle {
+  min-width: 28px;
+  height: 28px;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-sheet);
+  color: var(--color-ink-primary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  cursor: pointer;
+}
+
+/* Hover lifts an enabled field; a disabled one has none (the control states sheet). */
+.input:not(:disabled):hover,
+.select:not(:disabled):hover,
+.toggle:not(:disabled):hover {
+  background: var(--color-surface-raised);
+}
+
+.toggle[aria-pressed='true'] {
+  border-color: var(--color-action-fill);
+  background: var(--color-surface-pressed);
+  color: var(--color-action-fill);
+}
+
+.toggle[aria-pressed='mixed'] {
+  border-style: dashed;
+  border-color: var(--color-action-fill);
+}
+
+/* The sheet's focus ring: 2 px of the person's hand colour, outside the
+   control. */
+.input:focus-visible,
+.select:focus-visible,
+.toggle:focus-visible,
+.swatch:focus-within {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* A disabled field (the control states sheet): 38% opacity, no hover. */
+.select:disabled,
+.toggle:disabled,
+.numberControl[data-disabled] {
+  opacity: 0.38;
+}
+
+.select:disabled,
+.toggle:disabled,
+.numberControl[data-disabled] .label {
+  cursor: default;
+}
+
+/* A number field and its error message under it. */
+.numberControl {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+/* The field's box: the input, "Mixed" over it, and the scrub read-out above it. */
+.field {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Dragging the label scrubs the value. */
+.label[data-scrub] {
+  cursor: ew-resize;
+  touch-action: none;
+  user-select: none;
+}
+
+/* A mixed value reads "Mixed" in the field; once the field has focus, it is blank with its
+   placeholder, ready for the value to apply to all. */
+.number[data-mixed]:not(:focus)::placeholder {
+  color: transparent;
+}
+
+.mixed {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--space-2) + 1px);
+  display: flex;
+  align-items: center;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  pointer-events: none;
+}
+
+.number:focus ~ .mixed,
+.number:not(:placeholder-shown) ~ .mixed {
+  display: none;
+}
+
+/* The scrub read-out over a focused number field: its value, or where the drag took it, and
+   how to scrub. */
+.scrubReadOut {
+  position: absolute;
+  z-index: 1;
+  bottom: calc(100% + var(--space-1));
+  left: 0;
+  display: none;
+  gap: var(--space-2);
+  padding: 2px var(--space-1);
+  border-radius: var(--radius-control);
+  background: var(--color-action-fill);
+  color: var(--color-action-on);
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.scrubHint {
+  color: inherit;
+}
+
+.field:focus-within .scrubReadOut,
+.field[data-scrubbing] .scrubReadOut {
+  display: flex;
+}
+
+/* A value the field cannot take (the control states sheet): the red pencil's edge, and under
+   the field what it accepts, marked in red pencil. The message itself is in primary ink: red
+   pencil text at caption size is under 4.5:1 on the Graphite sheet. */
+.number[aria-invalid='true'] {
+  border-color: var(--color-mark-red-pencil);
+}
+
+.fieldError {
+  display: flex;
+  gap: var(--space-1);
+  align-items: baseline;
+  padding-left: calc(72px + var(--space-2));
+  color: var(--color-ink-primary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.fieldError::before {
+  content: '';
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-mark-red-pencil);
+}
+
+.fieldError:empty {
+  display: none;
+}
+
+/* A compact field (the layout's X, Y, W, H and rotation): a one-letter label, and its
+   message under the field. */
+.numberControl[data-compact] .label {
+  flex: 0 0 auto;
+  min-width: var(--space-3);
+}
+
+.numberControl[data-compact] .fieldError {
+  padding-left: 0;
+}
+
+/* A field without a visible label (a gradient stop's row): its message starts under it. */
+.numberControl[data-label-hidden] .fieldError {
+  padding-left: 0;
+}
+
+.slider {
+  /* Takes the room the label and the read-out leave: a range input's own width (129 px in
+     Chrome) is not a size its row should ask for. */
+  flex: 1 1 0;
+  width: 0;
+  min-width: 0;
+  accent-color: var(--color-action-fill);
+}
+
+.readOut {
+  flex: 0 0 40px;
+  color: var(--color-ink-secondary);
+  font: var(--text-mono-value);
+  letter-spacing: var(--text-mono-value-tracking);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.button {
+  height: 28px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-sheet);
+  color: var(--color-ink-primary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  cursor: pointer;
+}
+
+.button:disabled,
+.button[aria-disabled='true'] {
+  color: var(--color-ink-secondary);
+  cursor: default;
+}
+
+/* "Mixed" beside a striped swatch (the design's mixed-selection frame). */
+.mixedCaption {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/* A short note under a control: why it does nothing, or what an image lacks. */
+.hint {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/*
+ * Ink is drawn half the light theme's ink, half the dark theme's, whatever
+ * the panel's own theme, so it reads as "follows the theme": its background is set inline from
+ * the themes' `ink/primary` tokens (`inkSwatchBackground`).
+ */
+.ink {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  cursor: pointer;
+}
+
+.ink[aria-pressed='true'] {
+  outline: 2px solid var(--color-action-fill);
+  outline-offset: 1px;
+}
+
+.ink:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.swatch[data-state='ink'] input {
+  /* The swatch's own inline background shows the two inks; the picker stays clickable. */
+  opacity: 0;
+}
+
+/* A colour field that offers the board's colour tokens: its token line and its list
+   (`token-parts.module.css`) wrap under the row, lined up under the swatch, past the label. */
+.colourControl {
+  composes: control;
+  flex-wrap: wrap;
+  row-gap: var(--space-1);
+}
+
+.colourControl [data-token-part] {
+  padding-inline-start: calc(72px + var(--space-2));
+}

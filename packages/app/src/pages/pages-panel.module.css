@@ -1,0 +1,138 @@
+.panel {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  max-height: 168px;
+  background: var(--color-surface-sheet);
+}
+
+/* The Pages and Layers sections match (item 13): the same header, heading, action button
+   (+ here, × there) and row look, composed from the layers panel's and the drawer's rules. */
+.header {
+  composes: header from '../panels/layers/layers.module.css';
+}
+
+.heading {
+  composes: heading from '../panels/layers/layers.module.css';
+}
+
+.add {
+  composes: close from '../shell/layers-drawer.module.css';
+}
+
+.list {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 0;
+  padding: 2px var(--space-1);
+  overflow-y: auto;
+  overscroll-behavior-x: none;
+  list-style: none;
+}
+
+/* The whiteboard dropdown's last row: Add page, a row's height and look under a
+   hairline, in the secondary ink until hovered or focused. */
+.addRow {
+  display: flex;
+  flex: none;
+  gap: var(--space-1);
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 28px;
+  margin-top: var(--space-1);
+  padding: 0 var(--space-2);
+  border: 0;
+  border-top: 1px solid var(--color-line-hairline);
+  background: transparent;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  text-align: left;
+  cursor: pointer;
+}
+
+.addRow:hover,
+.addRow:focus-visible {
+  background: var(--color-surface-pressed);
+  color: var(--color-ink-primary);
+  outline: none;
+}
+
+/* A page row: 28 px, as a layer row is. */
+.row {
+  composes: rowLook from '../panels/layers/layers.module.css';
+  height: 28px;
+}
+
+.row:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.row[data-drop='true'] {
+  box-shadow: inset 0 2px 0 var(--color-action-fill);
+}
+
+.name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.input {
+  flex: 1 1 auto;
+  min-width: 0;
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+}
+
+.menu {
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  min-width: 168px;
+  padding: var(--space-1) 0;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-raised);
+  box-shadow: var(--shadow-float);
+}
+
+.item {
+  padding: var(--space-1) var(--space-3);
+  border: 0;
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-caption);
+  text-align: left;
+  cursor: pointer;
+}
+
+.item:hover:not(:disabled) {
+  background: var(--color-surface-pressed);
+}
+
+.item:disabled {
+  color: var(--color-ink-secondary);
+  cursor: default;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 30;
+  inset: 0;
+}
+
+.question {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}

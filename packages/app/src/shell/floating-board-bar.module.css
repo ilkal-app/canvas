@@ -1,0 +1,102 @@
+/* The floating board bar (design board, Whiteboard frame A): the bar-shaped floating
+   sheet (controls/floating-sheet), its height and edge from there; it hugs its contents. */
+.bar {
+  flex: none;
+}
+
+/* Home, Search and the board menu: the Library's IconButton, 28 px with a 20 px glyph 4 px in
+   and 4 px corners; open (`aria-expanded`) is its active state, surface/pressed. Hover, which
+   the Library does not draw, lifts it to surface/raised, as the dock's buttons do. */
+.iconButton {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  cursor: pointer;
+}
+
+.iconButton:hover:not(:disabled) {
+  background: var(--color-surface-raised);
+}
+
+/* On its way (the phone's Add page before the engine mounts): no hover, no pointer. */
+.iconButton:disabled {
+  cursor: default;
+}
+
+.iconButton[aria-expanded='true'] {
+  background: var(--color-surface-pressed);
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* The name over its mode and last edit: 150 px, 2 px apart. */
+.title {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 2px;
+  width: 150px;
+  min-width: 0;
+}
+
+/* The name: the label style at 500 (Medium), cut with an ellipsis (its tooltip holds it whole). */
+.name {
+  overflow: hidden;
+  margin: 0;
+  font: var(--text-label);
+  font-weight: 500;
+  letter-spacing: var(--text-label-tracking);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.subtitle {
+  overflow: hidden;
+  margin: 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Below 768 px wide: flat inside the compact top bar (shell/top-bars.module.css, one
+   374 px sheet with the presence bar), filling it; Home and the board menu 48 px targets, the
+   name taking the room between them. */
+.bar[data-compact][data-shape='bar'] {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.bar[data-compact] .iconButton {
+  width: 48px;
+  height: 48px;
+}
+
+.bar[data-compact] .title {
+  flex: 1 1 auto;
+  width: auto;
+}
+
+/* With no way home (the standalone shell), the name keeps the bar's inner margin, as the classic
+   compact bar's does (item 13). */
+.bar[data-compact] > .title:first-child {
+  margin-left: var(--space-3);
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "@ilkal/sdk",
+  "entryPoints": ["packages/sdk/src/index.ts"],
+  "tsconfig": "packages/sdk/tsconfig.json",
+  "readme": "README.md",
+  "out": "docs/api",
+  // Every export carries TSDoc; a gap fails `pnpm run docs`.
+  "validation": { "notExported": true, "invalidLink": true, "notDocumented": true },
+  "treatWarningsAsErrors": true
+}

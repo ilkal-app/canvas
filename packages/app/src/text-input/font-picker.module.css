@@ -1,0 +1,106 @@
+.picker {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.browse {
+  justify-self: end;
+}
+.picker button,
+.browser input,
+.browser select {
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-sheet);
+  color: var(--color-ink-primary);
+  font: var(--text-caption);
+  padding: var(--space-2);
+  min-height: 28px;
+}
+.picker button {
+  cursor: pointer;
+}
+.picker button:hover {
+  background: var(--color-surface-raised);
+}
+.picker button:focus-visible,
+.browser input:focus-visible,
+.browser select:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+.browser {
+  display: grid;
+  gap: var(--space-2);
+  padding-block: var(--space-2);
+}
+.browser input,
+.browser select {
+  width: 100%;
+  min-width: 0;
+}
+.browser p {
+  margin: 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+}
+.sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+.sources button[aria-pressed='true'] {
+  background: var(--color-surface-pressed);
+}
+.results {
+  grid-auto-rows: max-content;
+  max-height: 260px;
+  overflow-y: auto;
+  display: grid;
+  gap: var(--space-1);
+}
+.choice {
+  display: grid;
+  gap: var(--space-1);
+  text-align: start;
+  min-width: 0;
+}
+.choice > span:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.choice small {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+}
+.preview {
+  font: var(--text-body);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (pointer: coarse) {
+  .picker button,
+  .browser input,
+  .browser select {
+    min-height: 44px;
+  }
+}
+
+.browser input::placeholder {
+  color: var(--color-ink-secondary);
+  opacity: 1;
+}
+
+/* Under the whiteboard's floating chrome a focused field is one amber box (item 7): its
+   own 1 px edge takes the focus colour, with no outline ring beside it (an invalid field keeps its
+   red edge and the ring). The attribute outranks the site's `.frame input:focus-visible`. */
+:is([data-whiteboard-chrome='floating'], [data-whiteboard-chrome-scope='floating'])
+  .browser
+  input:focus-visible:not([aria-invalid='true']) {
+  outline: none;
+  outline-offset: 0;
+  border-color: var(--color-focus-ring);
+}

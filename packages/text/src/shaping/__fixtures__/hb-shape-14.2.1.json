@@ -1,0 +1,556 @@
+{
+  "harfBuzzVersion": "14.2.1",
+  "command": "hb-shape --output-format=json --no-glyph-names --show-flags --shapers=ot --cluster-level=0 --font-file=F --text=T",
+  "clusterConvention": "hb-shape default Unicode scalar indices (no --utf8-clusters); convert to UTF-16 in the test",
+  "samples": [
+    {
+      "name": "eb-garamond",
+      "fontPath": "packages/app/assets/fonts/library/ebgaramond/400.ttf",
+      "family": "EB Garamond",
+      "text": "office affine fluff",
+      "glyphs": [
+        {
+          "g": 473,
+          "cl": 0,
+          "dx": 0,
+          "dy": 0,
+          "ax": 495,
+          "ay": 0
+        },
+        {
+          "g": 924,
+          "cl": 1,
+          "dx": 0,
+          "dy": 0,
+          "ax": 776,
+          "ay": 0
+        },
+        {
+          "g": 413,
+          "cl": 4,
+          "dx": 0,
+          "dy": 0,
+          "ax": 387,
+          "ay": 0
+        },
+        {
+          "g": 423,
+          "cl": 5,
+          "dx": 0,
+          "dy": 0,
+          "ax": 390,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 1745,
+          "cl": 6,
+          "dx": 0,
+          "dy": 0,
+          "ax": 200,
+          "ay": 0
+        },
+        {
+          "g": 398,
+          "cl": 7,
+          "dx": 0,
+          "dy": 0,
+          "ax": 399,
+          "ay": 0
+        },
+        {
+          "g": 924,
+          "cl": 8,
+          "dx": 0,
+          "dy": 0,
+          "ax": 776,
+          "ay": 0
+        },
+        {
+          "g": 467,
+          "cl": 11,
+          "dx": 0,
+          "dy": 0,
+          "ax": 528,
+          "ay": 0
+        },
+        {
+          "g": 423,
+          "cl": 12,
+          "dx": 0,
+          "dy": 0,
+          "ax": 390,
+          "ay": 0
+        },
+        {
+          "g": 1745,
+          "cl": 13,
+          "dx": 0,
+          "dy": 0,
+          "ax": 200,
+          "ay": 0
+        },
+        {
+          "g": 927,
+          "cl": 14,
+          "dx": 0,
+          "dy": 0,
+          "ax": 506,
+          "ay": 0
+        },
+        {
+          "g": 502,
+          "cl": 16,
+          "dx": 0,
+          "dy": 0,
+          "ax": 527,
+          "ay": 0
+        },
+        {
+          "g": 923,
+          "cl": 17,
+          "dx": 0,
+          "dy": 0,
+          "ax": 575,
+          "ay": 0
+        }
+      ]
+    },
+    {
+      "name": "dm-sans",
+      "fontPath": "packages/app/assets/fonts/library/dmsans/400.ttf",
+      "family": "DM Sans",
+      "text": "AV To fi fl Wave",
+      "glyphs": [
+        {
+          "g": 1,
+          "cl": 0,
+          "dx": 0,
+          "dy": 0,
+          "ax": 567,
+          "ay": 0
+        },
+        {
+          "g": 107,
+          "cl": 1,
+          "dx": 0,
+          "dy": 0,
+          "ax": 669,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 279,
+          "cl": 2,
+          "dx": 0,
+          "dy": 0,
+          "ax": 266,
+          "ay": 0
+        },
+        {
+          "g": 92,
+          "cl": 3,
+          "dx": 0,
+          "dy": 0,
+          "ax": 471,
+          "ay": 0
+        },
+        {
+          "g": 193,
+          "cl": 4,
+          "dx": 0,
+          "dy": 0,
+          "ax": 593,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 279,
+          "cl": 5,
+          "dx": 0,
+          "dy": 0,
+          "ax": 266,
+          "ay": 0
+        },
+        {
+          "g": 249,
+          "cl": 6,
+          "dx": 0,
+          "dy": 0,
+          "ax": 563,
+          "ay": 0
+        },
+        {
+          "g": 279,
+          "cl": 8,
+          "dx": 0,
+          "dy": 0,
+          "ax": 266,
+          "ay": 0
+        },
+        {
+          "g": 250,
+          "cl": 9,
+          "dx": 0,
+          "dy": 0,
+          "ax": 563,
+          "ay": 0
+        },
+        {
+          "g": 279,
+          "cl": 11,
+          "dx": 0,
+          "dy": 0,
+          "ax": 266,
+          "ay": 0
+        },
+        {
+          "g": 108,
+          "cl": 12,
+          "dx": 0,
+          "dy": 0,
+          "ax": 919,
+          "ay": 0
+        },
+        {
+          "g": 124,
+          "cl": 13,
+          "dx": 0,
+          "dy": 0,
+          "ax": 525,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 232,
+          "cl": 14,
+          "dx": 0,
+          "dy": 0,
+          "ax": 502,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 146,
+          "cl": 15,
+          "dx": 0,
+          "dy": 0,
+          "ax": 568,
+          "ay": 0,
+          "fl": 1
+        }
+      ]
+    },
+    {
+      "name": "liberation-sans",
+      "fontPath": "packages/engine/assets/fonts/LiberationSans-Regular.ttf",
+      "family": "Liberation Sans",
+      "text": "Hello AV",
+      "glyphs": [
+        {
+          "g": 43,
+          "cl": 0,
+          "dx": 0,
+          "dy": 0,
+          "ax": 1479,
+          "ay": 0
+        },
+        {
+          "g": 72,
+          "cl": 1,
+          "dx": 0,
+          "dy": 0,
+          "ax": 1139,
+          "ay": 0
+        },
+        {
+          "g": 79,
+          "cl": 2,
+          "dx": 0,
+          "dy": 0,
+          "ax": 455,
+          "ay": 0
+        },
+        {
+          "g": 79,
+          "cl": 3,
+          "dx": 0,
+          "dy": 0,
+          "ax": 455,
+          "ay": 0
+        },
+        {
+          "g": 82,
+          "cl": 4,
+          "dx": 0,
+          "dy": 0,
+          "ax": 1139,
+          "ay": 0
+        },
+        {
+          "g": 3,
+          "cl": 5,
+          "dx": 0,
+          "dy": 0,
+          "ax": 456,
+          "ay": 0
+        },
+        {
+          "g": 36,
+          "cl": 6,
+          "dx": 0,
+          "dy": 0,
+          "ax": 1214,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 57,
+          "cl": 7,
+          "dx": 0,
+          "dy": 0,
+          "ax": 1366,
+          "ay": 0,
+          "fl": 1
+        }
+      ]
+    },
+    {
+      "name": "noto-sans-arabic",
+      "fontPath": "packages/app/assets/fonts/script-coverage/notosansarabic/400.ttf",
+      "family": "Noto Sans Arabic",
+      "text": "مرحبا بالعالم",
+      "glyphs": [
+        {
+          "g": 77,
+          "cl": 12,
+          "dx": 0,
+          "dy": 0,
+          "ax": 562,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 72,
+          "cl": 11,
+          "dx": 0,
+          "dy": 0,
+          "ax": 260,
+          "ay": 0
+        },
+        {
+          "g": 9,
+          "cl": 10,
+          "dx": 0,
+          "dy": 0,
+          "ax": 291,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 48,
+          "cl": 9,
+          "dx": 0,
+          "dy": 0,
+          "ax": 521,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 72,
+          "cl": 8,
+          "dx": 0,
+          "dy": 0,
+          "ax": 260,
+          "ay": 0
+        },
+        {
+          "g": 9,
+          "cl": 7,
+          "dx": 0,
+          "dy": 0,
+          "ax": 291,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 315,
+          "cl": 6,
+          "dx": 31,
+          "dy": -3,
+          "ax": 0,
+          "ay": 0
+        },
+        {
+          "g": 19,
+          "cl": 6,
+          "dx": 0,
+          "dy": 0,
+          "ax": 269,
+          "ay": 0
+        },
+        {
+          "g": 3,
+          "cl": 5,
+          "dx": 0,
+          "dy": 0,
+          "ax": 260,
+          "ay": 0
+        },
+        {
+          "g": 9,
+          "cl": 4,
+          "dx": 0,
+          "dy": 0,
+          "ax": 291,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 315,
+          "cl": 3,
+          "dx": 94,
+          "dy": -3,
+          "ax": 0,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 16,
+          "cl": 3,
+          "dx": 0,
+          "dy": 0,
+          "ax": 343,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 27,
+          "cl": 2,
+          "dx": 0,
+          "dy": 0,
+          "ax": 589,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 31,
+          "cl": 1,
+          "dx": -40,
+          "dy": 0,
+          "ax": 356,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 79,
+          "cl": 0,
+          "dx": 0,
+          "dy": 0,
+          "ax": 525,
+          "ay": 0
+        }
+      ]
+    },
+    {
+      "name": "noto-sans-devanagari",
+      "fontPath": "packages/app/assets/fonts/script-coverage/notosansdevanagari/400.ttf",
+      "family": "Noto Sans Devanagari",
+      "text": "नमस्ते दुनिया",
+      "glyphs": [
+        {
+          "g": 75,
+          "cl": 0,
+          "dx": 0,
+          "dy": 0,
+          "ax": 555,
+          "ay": 0
+        },
+        {
+          "g": 80,
+          "cl": 1,
+          "dx": 0,
+          "dy": 0,
+          "ax": 598,
+          "ay": 0
+        },
+        {
+          "g": 256,
+          "cl": 2,
+          "dx": 0,
+          "dy": 0,
+          "ax": 389,
+          "ay": 0
+        },
+        {
+          "g": 71,
+          "cl": 4,
+          "dx": 0,
+          "dy": 0,
+          "ax": 570,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 40,
+          "cl": 4,
+          "dx": 0,
+          "dy": 0,
+          "ax": 0,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 3,
+          "cl": 6,
+          "dx": 0,
+          "dy": 0,
+          "ax": 260,
+          "ay": 0
+        },
+        {
+          "g": 487,
+          "cl": 7,
+          "dx": 0,
+          "dy": 0,
+          "ax": 531,
+          "ay": 0
+        },
+        {
+          "g": 542,
+          "cl": 9,
+          "dx": 0,
+          "dy": 0,
+          "ax": 259,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 75,
+          "cl": 9,
+          "dx": 0,
+          "dy": 0,
+          "ax": 555,
+          "ay": 0,
+          "fl": 1
+        },
+        {
+          "g": 81,
+          "cl": 11,
+          "dx": 0,
+          "dy": 0,
+          "ax": 580,
+          "ay": 0
+        },
+        {
+          "g": 31,
+          "cl": 11,
+          "dx": 0,
+          "dy": 0,
+          "ax": 259,
+          "ay": 0
+        }
+      ]
+    }
+  ]
+}

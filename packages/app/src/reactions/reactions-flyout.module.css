@@ -1,0 +1,59 @@
+/* The Reactions flyout (the design board's frame B and "Whiteboard · tool panels"): a
+   284 × 44 tool panel of eight 32 × 32 cells 2 px apart, 7 px in (6 px inside its 1 px border,
+   where the other tool panels sit 9 px in),
+   the emoji in the Title style (15 px), and "+1" last. Placed as every tool panel (tool-panel-host.module.css).
+   Theme tokens only. */
+
+.flyout[data-shape='toolbar'][data-reactions-flyout] {
+  padding: 0 6px;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.cell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-sheet);
+  background: none;
+  color: var(--color-ink-primary);
+  font: var(--text-title);
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background: var(--color-surface-raised);
+}
+
+.cell[aria-pressed='true'] {
+  background: var(--color-surface-pressed);
+}
+
+.cell:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.cell:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Below 768 px wide, a bottom sheet: 48 px cells, wrapping onto a second row. */
+.flyout[data-sheet] .items {
+  flex-wrap: wrap;
+}
+
+.flyout[data-sheet] .cell {
+  width: 48px;
+  height: 48px;
+}

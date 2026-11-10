@@ -1,0 +1,106 @@
+/* The Toast component (Figma 35:1785): theme tokens only (theme/token-usage.test.ts). */
+
+/* Nothing to say: the live region stays in the page, taking no space. */
+.toast {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.toast[data-kind] {
+  align-self: center;
+  max-width: 100%;
+  padding: 9px var(--space-2) 9px var(--space-3);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: 8px;
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  color: var(--color-ink-primary);
+}
+
+.dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-ink-secondary);
+}
+
+.toast[data-kind='success'] .dot {
+  background: var(--color-mark-live);
+}
+
+.toast[data-kind='error'] .dot {
+  background: var(--color-mark-red-pencil);
+}
+
+.message {
+  min-width: 0;
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  overflow-wrap: anywhere;
+}
+
+/* Retry, Undo and Dismiss: text buttons in the secondary ink (the sheet's "Undo", "Retry"). */
+.action {
+  flex: none;
+  padding: 2px var(--space-1);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-secondary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  cursor: pointer;
+}
+
+.action:hover {
+  color: var(--color-ink-primary);
+}
+
+.action:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* An action whose feature is not built: in the focus order, doing nothing. */
+.action[aria-disabled='true'] {
+  cursor: default;
+}
+
+.action[aria-disabled='true']:hover {
+  color: var(--color-ink-secondary);
+}
+
+/* Inverse (home's "moved to Trash", frame H4): the action fill and its ink, 44 px tall,
+   the site's surface corners (12 px), the message in body text and the action in the hand's amber, 20 px apart. */
+.toast[data-tone='inverse'] {
+  box-sizing: border-box;
+  gap: 20px;
+  min-height: 44px;
+  padding: var(--space-2) 18px;
+  border-color: var(--color-action-fill);
+  border-radius: var(--radius-site-surface);
+  background: var(--color-action-fill);
+  color: var(--color-action-on);
+}
+
+.toast[data-tone='inverse'] .message {
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+}
+
+/* Graphite's fill is light, where its bright amber reads at 1.4:1: the amber is darkened toward
+   the action ink until it reads at 5:1. Vellum's dark fill takes its amber as it is (4.8:1). */
+.toast[data-tone='inverse'] .action,
+.toast[data-tone='inverse'] .action:hover {
+  padding: 2px 0;
+  color: color-mix(in srgb, var(--color-hand-you) 45%, var(--color-action-on));
+  font: var(--text-action);
+  letter-spacing: var(--text-action-tracking);
+}
+
+[data-theme='light'] .toast[data-tone='inverse'] .action,
+[data-theme='light'] .toast[data-tone='inverse'] .action:hover {
+  color: var(--color-hand-you);
+}

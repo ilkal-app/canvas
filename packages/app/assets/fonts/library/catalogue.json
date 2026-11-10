@@ -1,0 +1,1162 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "family": "Geist",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/geist",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "geist/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/geist/v5/gyBjhwUxId8gMEwZAluvzlxA9ojEVKDQ3pnf.ttf",
+          "sha256": "7b28fb7b7db4e2dbff1eee20ab37bd52a99b2936aa34873b7a3a6e13cd266f76"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "geist/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/geist/v5/gyBjhwUxId8gMEwZAluvzlxA9ojEVKA32Znf.ttf",
+          "sha256": "9c4f2aa814878782f7403f4abaef284952b4dcf5734d2090856e5ec5a0cb4f3f"
+        },
+        {
+          "weight": 300,
+          "isItalic": false,
+          "url": "geist/300.ttf",
+          "source": "https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_RwuM4nQ.ttf",
+          "sha256": "dfd8bfa490bf2100bf3ef27aabffdf341d2d2c6f3d91af120eb525542756e842"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "geist/400.ttf",
+          "source": "https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_RnOM4nQ.ttf",
+          "sha256": "ccce59465ae5c61930ada5453834f60500fbd95084d85db63e0e65fad0125455"
+        },
+        {
+          "weight": 500,
+          "isItalic": false,
+          "url": "geist/500.ttf",
+          "source": "https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_RruM4nQ.ttf",
+          "sha256": "a8eefb873ba9c9020665f8a98302697ce1f3b79ab2deef6ee508c0ca6a82e876"
+        },
+        {
+          "weight": 600,
+          "isItalic": false,
+          "url": "geist/600.ttf",
+          "source": "https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_RQuQ4nQ.ttf",
+          "sha256": "7171f481b121803d007f5c6c76cd9988c0d41cce4202db9a18dff9945505d36d"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "geist/700.ttf",
+          "source": "https://fonts.gstatic.com/s/geist/v5/gyBhhwUxId8gMGYQMKR3pzfaWI_Re-Q4nQ.ttf",
+          "sha256": "1a9874b3be0fc168692a3d2327bccb4d28835653d3b91537a755296a467a83e3"
+        }
+      ],
+      "licenceFile": "geist/LICENSE.txt"
+    },
+    {
+      "family": "Inter",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": [
+        "cyrillic",
+        "cyrillic-ext",
+        "greek",
+        "greek-ext",
+        "latin",
+        "latin-ext",
+        "vietnamese"
+      ],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "inter/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/inter/v20/UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTc2dthjQ.ttf",
+          "sha256": "ef8f755d933b9310804cc9152f1f18cb2ac460d6b05054ec913d889c9f11f79e"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "inter/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/inter/v20/UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcPtxhjQ.ttf",
+          "sha256": "c1811d32ac0f6eed1bbf57529f2ecdfc6c717d48a969dd864942436315a1b198"
+        },
+        {
+          "weight": 300,
+          "isItalic": false,
+          "url": "inter/300.ttf",
+          "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuOKfMZg.ttf",
+          "sha256": "d0f4bc7faca468376e3db9b5e57afcdc2192134c9ac82a9511f32767b56853a4"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "inter/400.ttf",
+          "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+          "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+        },
+        {
+          "weight": 500,
+          "isItalic": false,
+          "url": "inter/500.ttf",
+          "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+          "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63"
+        },
+        {
+          "weight": 600,
+          "isItalic": false,
+          "url": "inter/600.ttf",
+          "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+          "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "inter/700.ttf",
+          "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+          "sha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c"
+        }
+      ],
+      "licenceFile": "inter/LICENSE.txt"
+    },
+    {
+      "family": "Roboto",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": [
+        "cyrillic",
+        "cyrillic-ext",
+        "greek",
+        "greek-ext",
+        "latin",
+        "latin-ext",
+        "math",
+        "symbols",
+        "vietnamese"
+      ],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/roboto",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "roboto/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLoHQiA8.ttf",
+          "sha256": "4d3035883c531846bd1ce2dc89f36d932e72dc114f56062c7e3a9cdd74f3d3ea"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "roboto/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/roboto/v51/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLmbXiA8.ttf",
+          "sha256": "be7639306a4fc4a02ce2ae2ff59eb1335e4db4a7379dd0a384ed7cc053817789"
+        },
+        {
+          "weight": 300,
+          "isItalic": false,
+          "url": "roboto/300.ttf",
+          "source": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabWmT.ttf",
+          "sha256": "396e242e054f351378358eca1302b6a1a34c8fc59a3d848c49deb49dc4a4ef87"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "roboto/400.ttf",
+          "source": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbWmT.ttf",
+          "sha256": "dece7c71bbe61710787f0839c722c65e87355dd2eb4a823e6b5488121ff81e4b"
+        },
+        {
+          "weight": 500,
+          "isItalic": false,
+          "url": "roboto/500.ttf",
+          "source": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bWmT.ttf",
+          "sha256": "4d984240cefb093a74300bcae4b5dbd49f700e0af501eaaa079c56aa64142d2f"
+        },
+        {
+          "weight": 600,
+          "isItalic": false,
+          "url": "roboto/600.ttf",
+          "source": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuYaammT.ttf",
+          "sha256": "f478ba88b0292e685e487901dfbb1401457d32d6ebee4030cdfd5698235bffa8"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "roboto/700.ttf",
+          "source": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuYjammT.ttf",
+          "sha256": "35757eaa996b3359022f47f164a67ee9eac04971af24c5b8fbd4b89e844ff190"
+        }
+      ],
+      "licenceFile": "roboto/LICENSE.txt"
+    },
+    {
+      "family": "Open Sans",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": [
+        "cyrillic",
+        "cyrillic-ext",
+        "greek",
+        "greek-ext",
+        "hebrew",
+        "latin",
+        "latin-ext",
+        "math",
+        "symbols",
+        "vietnamese"
+      ],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/opensans",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "opensans/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkaVc.ttf",
+          "sha256": "1bc0594a83762b2c25d38915a34464b7fec6088298ca22d151757bf98d6700ec"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "opensans/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjaVc.ttf",
+          "sha256": "6d3884d0d57c1b67e9c50c54eca7b69c535c114e76bd7a9cfda0258588185553"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "opensans/400.ttf",
+          "source": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf",
+          "sha256": "47ed1cfaa7ffca04a04ab850b2938fd52c09d1b44cfa3e2980878e166b0cbd87"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "opensans/700.ttf",
+          "source": "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4n.ttf",
+          "sha256": "75367e6da7d914eaed87883ba51b2a2b5816b5cdbb39f96ec5c81a5b032bfd5a"
+        }
+      ],
+      "licenceFile": "opensans/LICENSE.txt"
+    },
+    {
+      "family": "Lato",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": [
+        "cyrillic",
+        "cyrillic-ext",
+        "greek",
+        "greek-ext",
+        "latin",
+        "latin-ext",
+        "vietnamese"
+      ],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/lato",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "lato/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHjxsAUi-v.ttf",
+          "sha256": "e8dabba26c7c474f442aed1f1a810312ea9236385d8df55c667ac90a1e1f994d"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "lato/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI5wq_FQfo.ttf",
+          "sha256": "55bfd6c50f94187065c8c9003fe6ed3e660db04b355f9d9ddb3cf0437cdf0c53"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "lato/400.ttf",
+          "source": "https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjxAwWw.ttf",
+          "sha256": "2c97398131b4d0524e7799ac79d2a23d8cdf39d0a4c26af7833cc6284f417db7"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "lato/700.ttf",
+          "source": "https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwaPHA.ttf",
+          "sha256": "22f6c02ba4d7619cf2602147f7fa79e67ac6d283b14dab08f678d99295865566"
+        }
+      ],
+      "licenceFile": "lato/LICENSE.txt"
+    },
+    {
+      "family": "Montserrat",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/montserrat",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "montserrat/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aX8.ttf",
+          "sha256": "afb8986a68a0d5189122bd11ed236bd4087abb2b4415b5df1e2bc2579f5d1241"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "montserrat/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aX8.ttf",
+          "sha256": "24ffadc3cd172e73f8205c11b3136baf8daec40b97855eb710c8c5074747eb1b"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "montserrat/400.ttf",
+          "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf",
+          "sha256": "84f3d3275dfb159dd311c61828fd754a82ec31c377120518e2cd3e7d34394e96"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "montserrat/700.ttf",
+          "source": "https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf",
+          "sha256": "247f052d2f5b84a5bbe7831c3b08a71ca391ff54f1dfb9be88a3d3da569e3a38"
+        }
+      ],
+      "licenceFile": "montserrat/LICENSE.txt"
+    },
+    {
+      "family": "Poppins",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["devanagari", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/poppins",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "poppins/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrJJLedw.ttf",
+          "sha256": "d455310e3d1e4393723dbe5836cb27c351751123b89a74c7034ec60c861d5556"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "poppins/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmy15lEA.ttf",
+          "sha256": "733b74494c0b5856045e34eea8b899f02458ca8e0b7ebd2a887a86b64d99b0d0"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "poppins/400.ttf",
+          "source": "https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf",
+          "sha256": "cdedb1729acac414ed01744a11da7badb86adf13108e7bd3fa161b9323f7fe54"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "poppins/700.ttf",
+          "source": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1s.ttf",
+          "sha256": "1984efdda0fbe207d7ac20feac2ba7c2768c92a90094b02a206c9d58cc30ff2e"
+        }
+      ],
+      "licenceFile": "poppins/LICENSE.txt"
+    },
+    {
+      "family": "DM Sans",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "dmsans/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/dmsans/v17/rP2rp2ywxg089UriCZaSExd86J3t9jz86Mvy4qCRAL19DksVat-JDV36TGI.ttf",
+          "sha256": "2d4fe8c4552d7572ce446c2230dab4fc8f7a259200bae1dab025d5993a1bc89e"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "dmsans/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/dmsans/v17/rP2rp2ywxg089UriCZaSExd86J3t9jz86Mvy4qCRAL19DksVat9uCl36TGI.ttf",
+          "sha256": "6b9552ba1c467196611a6bd64e73b2a5953150345c5d2c9d6dbf77dbfcb434a7"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "dmsans/400.ttf",
+          "source": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxRR23z.ttf",
+          "sha256": "5d97d9d61ae81776c0631a13db4775a0a46defa4a787f9bec0124017e179dc6c"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "dmsans/700.ttf",
+          "source": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwARZtRR23z.ttf",
+          "sha256": "5383b8843668f37253118880c773ca7d7afb3ddf6f685878688951deb3b2164b"
+        }
+      ],
+      "licenceFile": "dmsans/LICENSE.txt"
+    },
+    {
+      "family": "Work Sans",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/worksans",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "worksans/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/worksans/v24/QGY9z_wNahGAdqQ43Rh_ebrnlwyYfEPxPoGU3msJow.ttf",
+          "sha256": "d38632ddd219dea11541e99bcbcf9b0569ca6aa3fcdb942fbddbaf79cc3a6a99"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "worksans/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/worksans/v24/QGY9z_wNahGAdqQ43Rh_ebrnlwyYfEPxPoGUOWwJow.ttf",
+          "sha256": "2907c2e697650caf6cd7dde599e3a7471d3e8713ce5c694f838a0296f464d6d6"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "worksans/400.ttf",
+          "source": "https://fonts.gstatic.com/s/worksans/v24/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXNig.ttf",
+          "sha256": "a131e7022b34ef1950a9d6bdda16f5d4509cc1fe1af5991a4552febd2a4027e5"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "worksans/700.ttf",
+          "source": "https://fonts.gstatic.com/s/worksans/v24/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K67QNig.ttf",
+          "sha256": "e8398b22225a1f971df9bb12fa8fb9dd4c76e80aa4d67d45bde60ebbc6c5ad81"
+        }
+      ],
+      "licenceFile": "worksans/LICENSE.txt"
+    },
+    {
+      "family": "Manrope",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["cyrillic", "cyrillic-ext", "greek", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/manrope",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "manrope/400.ttf",
+          "source": "https://fonts.gstatic.com/s/manrope/v20/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FO_F.ttf",
+          "sha256": "a13d9b41b0a471ce58f0e46d377fa3cc76615e4632c3b15eb397caadf7a13f0a"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "manrope/700.ttf",
+          "source": "https://fonts.gstatic.com/s/manrope/v20/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE-_F.ttf",
+          "sha256": "b9584e099e0e7f1e1e914c3037aabb9010c50346a3ce8df5eeeeecc0563044d8"
+        }
+      ],
+      "licenceFile": "manrope/LICENSE.txt"
+    },
+    {
+      "family": "Nunito",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/nunito",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "nunito/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/nunito/v32/XRXK3I6Li01BKofIMPyPbj8d7IEAGXNirXA3ig.ttf",
+          "sha256": "49a2a2cbe1e0b58a4313217cc74fc122c8a4e5ba1539e67f2a87e0832d881281"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "nunito/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/nunito/v32/XRXK3I6Li01BKofIMPyPbj8d7IEAGXNiSnc3ig.ttf",
+          "sha256": "4d6c0d42a74b753d33fba2c33f117264ca8c0e3f40df7a4313419ad5e6c95eae"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "nunito/400.ttf",
+          "source": "https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshRTM.ttf",
+          "sha256": "9ecbdba35fa74f10a1a916c31649b802a12deb9e66c7b1fe4650afcfd4d16971"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "nunito/700.ttf",
+          "source": "https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDFwmRTM.ttf",
+          "sha256": "1a025dfce6e6e03bbe31ba82277ec5ed96df8b8dd58b3df6267269490b90b1dc"
+        }
+      ],
+      "licenceFile": "nunito/LICENSE.txt"
+    },
+    {
+      "family": "IBM Plex Sans",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["cyrillic", "cyrillic-ext", "greek", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsans",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "ibmplexsans/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXEKVElMYYaJe8bpLHnCwDKhdTEG46kmUZQCX598fQbM4jw8V78x9OWIhqbQ6g9.ttf",
+          "sha256": "20cce584e83aebf7f7188abf9e3b47c20d84d7cfdd3450b2f97063c187a85aae"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "ibmplexsans/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXEKVElMYYaJe8bpLHnCwDKhdTEG46kmUZQCX598fQbM4jw8V78x9OWIhp8RKg9.ttf",
+          "sha256": "300315cc82352dc2fad308be7b94afc099515692c6a460a3551ee424d212a9ee"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "ibmplexsans/400.ttf",
+          "source": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXGKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1swZSAXcomDVmadSD6llzAA.ttf",
+          "sha256": "6dbe082463cf749cfa057d45c3048c90f4df031496498e5b5bdfd0b6babb9d16"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "ibmplexsans/700.ttf",
+          "source": "https://fonts.gstatic.com/s/ibmplexsans/v23/zYXGKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1swZSAXcomDVmadSDDV5zAA.ttf",
+          "sha256": "e129a20e8ff7c907ffd07124b573e88c323b7b18afc934d4aa539a3e0f2fe100"
+        }
+      ],
+      "licenceFile": "ibmplexsans/LICENSE.txt"
+    },
+    {
+      "family": "Source Serif 4",
+      "licence": "OFL-1.1",
+      "category": "serif",
+      "subsets": ["cyrillic", "cyrillic-ext", "greek", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/sourceserif4",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "sourceserif4/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9dCw.ttf",
+          "sha256": "eb04ae6974781ab7145f7ea57838bf0248b6fc0280a5a5e803c1b56f687e7621"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "sourceserif4/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98poVhdCw.ttf",
+          "sha256": "c1ad73c368fd9ae22df53fbd75ee3b81d9900885a607491586fe182584b03a13"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "sourceserif4/400.ttf",
+          "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEFy2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6OAVIJmeUDygwjihdqrhw.ttf",
+          "sha256": "f01900495012279f1e95d721c59363395eeffb79ef806eaa4dfa8bd923ccec0b"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "sourceserif4/700.ttf",
+          "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEFy2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6OAVIJmeUDygwjivBtrhw.ttf",
+          "sha256": "0efc0b44578e439999fc8654670925d7abc22d17b557588487acd673ff07c068"
+        }
+      ],
+      "licenceFile": "sourceserif4/LICENSE.txt"
+    },
+    {
+      "family": "Merriweather",
+      "licence": "OFL-1.1",
+      "category": "serif",
+      "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/merriweather",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "merriweather/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/merriweather/v33/u-4B0qyriQwlOrhSvowK_l5-eTxCVx0ZbwLvKH2Gk9hLmp0v5yA-xXPqCzLvPee1XYk_XSf-FmTCUF3w.ttf",
+          "sha256": "afff81272b7653417bb6f8bef57add055b1f9fda36f27eba5f32b40752bd08da"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "merriweather/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/merriweather/v33/u-4B0qyriQwlOrhSvowK_l5-eTxCVx0ZbwLvKH2Gk9hLmp0v5yA-xXPqCzLvPee1XYk_XSf-FmQlV13w.ttf",
+          "sha256": "e9864a6790bf712a04e20f3662b206a1535186ed3e877fd859dd5fb9682335df"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "merriweather/400.ttf",
+          "source": "https://fonts.gstatic.com/s/merriweather/v33/u-4D0qyriQwlOrhSvowK_l5UcA6zuSYEqOzpPe3HOZJ5eX1WtLaQwmYiScCmDxhtNOKl8yDr3icqEw.ttf",
+          "sha256": "e029d3b71e5bae3877c73f4f2b15af28db16593d49b0aed2a328d37ff7075846"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "merriweather/700.ttf",
+          "source": "https://fonts.gstatic.com/s/merriweather/v33/u-4D0qyriQwlOrhSvowK_l5UcA6zuSYEqOzpPe3HOZJ5eX1WtLaQwmYiScCmDxhtNOKl8yDrOSAqEw.ttf",
+          "sha256": "90b7db4460fcd1a5ca49575c2668a793f3cd6447664d312a068d690e1c01e6bc"
+        }
+      ],
+      "licenceFile": "merriweather/LICENSE.txt"
+    },
+    {
+      "family": "Lora",
+      "licence": "OFL-1.1",
+      "category": "serif",
+      "subsets": [
+        "cyrillic",
+        "cyrillic-ext",
+        "latin",
+        "latin-ext",
+        "math",
+        "symbols",
+        "vietnamese"
+      ],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/lora",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "lora/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-MoFkqg.ttf",
+          "sha256": "26243fda8cd938cc2734f46d20d7464822d89378c7f375e187e39f9ed3f20907"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "lora/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-C0Ckqg.ttf",
+          "sha256": "467b540c3c722fc6b1eb483cbf18db45bcb54ab3cdafe07ceb90a55dfb03f779"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "lora/400.ttf",
+          "source": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuyJG.ttf",
+          "sha256": "1d37d1e34c77be80f0119754ad78df9aad30d5b1c78132a4cbdac0fe567f5d4f"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "lora/700.ttf",
+          "source": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787z5vCJG.ttf",
+          "sha256": "ac3145cd8846b6ab3522ac0579a4f5378271f6a93896cb800d27f301fa9f7758"
+        }
+      ],
+      "licenceFile": "lora/LICENSE.txt"
+    },
+    {
+      "family": "Playfair Display",
+      "licence": "OFL-1.1",
+      "category": "serif",
+      "subsets": ["cyrillic", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/playfairdisplay",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "playfairdisplay/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtY.ttf",
+          "sha256": "6021680663c58b344d8404c289c755aadc662a02189ffe4f5ca79378f9e97840"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "playfairdisplay/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_k-UbtY.ttf",
+          "sha256": "954e20ee10ae685d0a5a6e6ee380165ea9c8eb329c0e22a58739496714f66991"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "playfairdisplay/400.ttf",
+          "source": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDQ.ttf",
+          "sha256": "1609a54fa3ad1abc8d0037132f73700333241ea0b65672079998e352f151dea7"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "playfairdisplay/700.ttf",
+          "source": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiukDQ.ttf",
+          "sha256": "adefc53e7b3d483f1fa5e85edd82b7689ca79db25a1f6786bd7949cdcfeec601"
+        }
+      ],
+      "licenceFile": "playfairdisplay/LICENSE.txt"
+    },
+    {
+      "family": "EB Garamond",
+      "licence": "OFL-1.1",
+      "category": "serif",
+      "subsets": [
+        "cyrillic",
+        "cyrillic-ext",
+        "greek",
+        "greek-ext",
+        "latin",
+        "latin-ext",
+        "vietnamese"
+      ],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "ebgaramond/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGFmQSNjdsmc35JDF1K5GRwUjcdlttVFm-rI7e8QI96.ttf",
+          "sha256": "9d2ca86044b885d085059c7e3bed21d6e31456a81a47761e7ade8cd390ebe71d"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "ebgaramond/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGFmQSNjdsmc35JDF1K5GRwUjcdlttVFm-rI7dbR496.ttf",
+          "sha256": "0091630894dabe073cfaecc65c10425d9e74dbf242943ea11f1c3cb533695dff"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "ebgaramond/400.ttf",
+          "source": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-6_RUAw.ttf",
+          "sha256": "934aa932b4bc1a75d883f7c3d4d5bbc8278e5e7fcc96d5440bbffd61050cf958"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "ebgaramond/700.ttf",
+          "source": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-DPNUAw.ttf",
+          "sha256": "40b4eb8a3c92f651728bc285ac3acacec1005ef5436cf33a337ab5ffe86daf29"
+        }
+      ],
+      "licenceFile": "ebgaramond/LICENSE.txt"
+    },
+    {
+      "family": "Fraunces",
+      "licence": "OFL-1.1",
+      "category": "serif",
+      "subsets": ["latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/fraunces",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "fraunces/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/fraunces/v38/6NVf8FyLNQOQZAnv9ZwNjucMHVn85Ni7emAe9lKqZTnbB-gzTK0K1ChJdt9vIVYX9G37lvd9sPEKsxx664UJf1hLTf7W.ttf",
+          "sha256": "c3c6d103fb2c493812567ec8d25abf081204c4124e704eb85801256f0f09d7fa"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "fraunces/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/fraunces/v38/6NVf8FyLNQOQZAnv9ZwNjucMHVn85Ni7emAe9lKqZTnbB-gzTK0K1ChJdt9vIVYX9G37lvd9sPEKsxx664UJf1isSv7W.ttf",
+          "sha256": "eb4f817129891254d0cd040afa5e08515934d60fdf85601b440429f6529043c9"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "fraunces/400.ttf",
+          "source": "https://fonts.gstatic.com/s/fraunces/v38/6NUh8FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0K7iN7hzFUPJH58nib1603gg7S2nfgRYIctxujDg.ttf",
+          "sha256": "3eb6cf0a14feb1876cc464fa093af4e0c5b05dc46dec65619c1d95f2a1ab5aa7"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "fraunces/700.ttf",
+          "source": "https://fonts.gstatic.com/s/fraunces/v38/6NUh8FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0K7iN7hzFUPJH58nib1603gg7S2nfgRYIcUByjDg.ttf",
+          "sha256": "f0a9d39b9f14079c55070189562da36c794f824cbcf514b50a0ad0ef20c69379"
+        }
+      ],
+      "licenceFile": "fraunces/LICENSE.txt"
+    },
+    {
+      "family": "IBM Plex Serif",
+      "licence": "OFL-1.1",
+      "category": "serif",
+      "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexserif",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "ibmplexserif/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/ibmplexserif/v20/jizBREVNn1dOx-zrZ2X3pZvkTiUa2zI.ttf",
+          "sha256": "16a72d312126a292dbf5e762cfb58ad0e00714f12af6f3e1a3ab5a0c37a4e93f"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "ibmplexserif/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/ibmplexserif/v20/jizGREVNn1dOx-zrZ2X3pZvkTiUa4442q14.ttf",
+          "sha256": "1f8fde1841817f44e5fda7f62d6ef543d2a3d3acb64f8222181cf38b3ed4a4ce"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "ibmplexserif/400.ttf",
+          "source": "https://fonts.gstatic.com/s/ibmplexserif/v20/jizDREVNn1dOx-zrZ2X3pZvkThUY.ttf",
+          "sha256": "f465fe7b08b7668e2255d26bb85fdd56cfdd5fc86e1f8fd73f48254e3c287a49"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "ibmplexserif/700.ttf",
+          "source": "https://fonts.gstatic.com/s/ibmplexserif/v20/jizAREVNn1dOx-zrZ2X3pZvkTi2k_hIz.ttf",
+          "sha256": "dd85783f5591eec5a12f3ead6c2a4885099b53f43f2533bc1d71d8450cd01b41"
+        }
+      ],
+      "licenceFile": "ibmplexserif/LICENSE.txt"
+    },
+    {
+      "family": "Geist Mono",
+      "licence": "OFL-1.1",
+      "category": "mono",
+      "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "symbols2", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/geistmono",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "geistmono/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/geistmono/v6/or3wQ6H-1_WfwkMZI_qYFrIHlDMSVteuavT1a3YQ5Cw.ttf",
+          "sha256": "6ba473558209a25056e1ded05ae1371c19417f1e844d5a6b212c270d7ce6f969"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "geistmono/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/geistmono/v6/or3wQ6H-1_WfwkMZI_qYFrIHlDMSVteuavT1a5EX5Cw.ttf",
+          "sha256": "3e9581a4f0014099a15d6adf6b319b8d0cda279423fcf361236e30e5a5216217"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "geistmono/400.ttf",
+          "source": "https://fonts.gstatic.com/s/geistmono/v6/or3yQ6H-1_WfwkMZI_qYPLs1a-t7PU0AbeE9KJ5T.ttf",
+          "sha256": "7022da390e9b401ea35b722f8ed2376948e70add10954bc798839b4bfe17ef3f"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "geistmono/700.ttf",
+          "source": "https://fonts.gstatic.com/s/geistmono/v6/or3yQ6H-1_WfwkMZI_qYPLs1a-t7PU0AbeHaL55T.ttf",
+          "sha256": "cc5aed02985feb352698b1963ce9234546ace8e46eceb61e1128f4e2a3bb9fec"
+        }
+      ],
+      "licenceFile": "geistmono/LICENSE.txt"
+    },
+    {
+      "family": "JetBrains Mono",
+      "licence": "OFL-1.1",
+      "category": "mono",
+      "subsets": ["cyrillic", "cyrillic-ext", "greek", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/jetbrainsmono",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "jetbrainsmono/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDba2o-flEEny0FZhsfKu5WU4xD-IQ-PuZJJXxfpAO-LflOQ.ttf",
+          "sha256": "f3ad0f703a734b38b49b3ee2d8121ef2718fba185198c3482e81a618272cb4af"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "jetbrainsmono/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDba2o-flEEny0FZhsfKu5WU4xD-IQ-PuZJJXxfpAO9seVOQ.ttf",
+          "sha256": "cc17f1489da4f8a376839e183f61c8e5256d0a974aaa99a196c847455b6116d0"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "jetbrainsmono/400.ttf",
+          "source": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPQ.ttf",
+          "sha256": "44ce4a84f20d60f24539bd0cef11f79c29e38609e0f8adf18551c9794a5d9dc3"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "jetbrainsmono/700.ttf",
+          "source": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8L6tjPQ.ttf",
+          "sha256": "a1d92abc6b02a87faed23d98067ab1027e8e95242fd7c9978a072ea383b89d1a"
+        }
+      ],
+      "licenceFile": "jetbrainsmono/LICENSE.txt"
+    },
+    {
+      "family": "IBM Plex Mono",
+      "licence": "OFL-1.1",
+      "category": "mono",
+      "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "symbols2", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": true,
+          "url": "ibmplexmono/400i.ttf",
+          "source": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F6pfjptAgt5VM-kVkqdyU8n1ioq0g.ttf",
+          "sha256": "b8282cd74fb0321912a5f74aae7c0a50ef94af598fae65e6e8c4ad941d9a1fa9"
+        },
+        {
+          "weight": 700,
+          "isItalic": true,
+          "url": "ibmplexmono/700i.ttf",
+          "source": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F6sfjptAgt5VM-kVkqdyU8n1ioSblJFhw.ttf",
+          "sha256": "2eb90cf4f718e6e0f1e1e0c54ae35d6f479279cafcc941185109582f8ff23772"
+        },
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "ibmplexmono/400.ttf",
+          "source": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n5ig.ttf",
+          "sha256": "a7fdc993f9f0387caedba4e42521136fa97e4c0837ae6239bf0413ccf8af00c2"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "ibmplexmono/700.ttf",
+          "source": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3pQP8lc.ttf",
+          "sha256": "5b2232ff598dd39860f606526399f64be06f0c286a638bad8a83e98c44c41ff6"
+        }
+      ],
+      "licenceFile": "ibmplexmono/LICENSE.txt"
+    },
+    {
+      "family": "Fira Code",
+      "licence": "OFL-1.1",
+      "category": "mono",
+      "subsets": [
+        "cyrillic",
+        "cyrillic-ext",
+        "greek",
+        "greek-ext",
+        "latin",
+        "latin-ext",
+        "symbols2"
+      ],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/firacode",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "firacode/400.ttf",
+          "source": "https://fonts.gstatic.com/s/firacode/v27/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_D1sFVc.ttf",
+          "sha256": "edc273e94e72c8ee4279c8406f65373d96c518e3fea9cc3f121fed51283e0e70"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "firacode/700.ttf",
+          "source": "https://fonts.gstatic.com/s/firacode/v27/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_NprFVc.ttf",
+          "sha256": "67941ae3787edeffd80ab437e8ba99667002d9fae22c2cbb80c1553f2d90ab79"
+        }
+      ],
+      "licenceFile": "firacode/LICENSE.txt"
+    },
+    {
+      "family": "Space Grotesk",
+      "licence": "OFL-1.1",
+      "category": "display",
+      "subsets": ["latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/spacegrotesk",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "spacegrotesk/400.ttf",
+          "source": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUUsj.ttf",
+          "sha256": "ec926d5065eaca49a48f96e312bbae0bbc5733c24215cf5dfabbdccee926fef7"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "spacegrotesk/700.ttf",
+          "source": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj4PVksj.ttf",
+          "sha256": "3e756954468ff1cb302dae0414262e72f76a67d87bef3fa1f3226cd0fb9b2d85"
+        }
+      ],
+      "licenceFile": "spacegrotesk/LICENSE.txt"
+    },
+    {
+      "family": "Oswald",
+      "licence": "OFL-1.1",
+      "category": "display",
+      "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/oswald",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "oswald/400.ttf",
+          "source": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvgUE.ttf",
+          "sha256": "bd6ff5a83bcdc92d7aac6dbb16e4dd2b0b0320bec6402bb81f5dd9735b500e46"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "oswald/700.ttf",
+          "source": "https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZogUE.ttf",
+          "sha256": "a6ee8b91ec269a6f48631ba4ba1a3ab7e5039e5482dda8dc9672ee4620d7bd68"
+        }
+      ],
+      "licenceFile": "oswald/LICENSE.txt"
+    },
+    {
+      "family": "Bebas Neue",
+      "licence": "OFL-1.1",
+      "category": "display",
+      "subsets": ["latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/bebasneue",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "bebasneue/400.ttf",
+          "source": "https://fonts.gstatic.com/s/bebasneue/v16/JTUSjIg69CK48gW7PXoo9Wdhzg.ttf",
+          "sha256": "df57625ebbc0961c1218edb05963706798568b2a7cef938ec3b78564aab7a9f6"
+        }
+      ],
+      "licenceFile": "bebasneue/LICENSE.txt"
+    },
+    {
+      "family": "Archivo Black",
+      "licence": "OFL-1.1",
+      "category": "display",
+      "subsets": ["latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/archivoblack",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "archivoblack/400.ttf",
+          "source": "https://fonts.gstatic.com/s/archivoblack/v23/HTxqL289NzCGg4MzN6KJ7eW6CYKF-w.ttf",
+          "sha256": "b3b9bc1f365666e725b834517d257fbe516585f80b45ca2233590016fb1a5602"
+        }
+      ],
+      "licenceFile": "archivoblack/LICENSE.txt"
+    },
+    {
+      "family": "Caveat",
+      "licence": "OFL-1.1",
+      "category": "handwriting",
+      "subsets": ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/caveat",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "caveat/400.ttf",
+          "source": "https://fonts.gstatic.com/s/caveat/v23/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9SII.ttf",
+          "sha256": "012f33f9814bf9614973983335c3a375fe267c094e7c09a02a276cd1dcd4180a"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "caveat/700.ttf",
+          "source": "https://fonts.gstatic.com/s/caveat/v23/WnznHAc5bAfYB2QRah7pcpNvOx-pjRV6SII.ttf",
+          "sha256": "f4365d9874c1b64026aca48786cf835a5decf2c740c06de04dbb05ce8c93ff37"
+        }
+      ],
+      "licenceFile": "caveat/LICENSE.txt"
+    },
+    {
+      "family": "Kalam",
+      "licence": "OFL-1.1",
+      "category": "handwriting",
+      "subsets": ["devanagari", "latin", "latin-ext"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/kalam",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "kalam/400.ttf",
+          "source": "https://fonts.gstatic.com/s/kalam/v18/YA9dr0Wd4kDdMuhW.ttf",
+          "sha256": "f20e9de66ca054e1d1376b3c811d2240b1b5ef831474bda9fbbaf28d67e67902"
+        },
+        {
+          "weight": 700,
+          "isItalic": false,
+          "url": "kalam/700.ttf",
+          "source": "https://fonts.gstatic.com/s/kalam/v18/YA9Qr0Wd4kDdMtDqHQLL.ttf",
+          "sha256": "7463b42e3630f003f355b3f37e1cf8e2c0b0855374d483aef580ff45fdac3ba4"
+        }
+      ],
+      "licenceFile": "kalam/LICENSE.txt"
+    },
+    {
+      "family": "Patrick Hand",
+      "licence": "OFL-1.1",
+      "category": "handwriting",
+      "subsets": ["latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/patrickhand",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "patrickhand/400.ttf",
+          "source": "https://fonts.gstatic.com/s/patrickhand/v25/LDI1apSQOAYtSuYWp8ZhfYeMWQ.ttf",
+          "sha256": "8a384204c8ab3e9ed82954d46d8110a66fb5d7acf8f6b64c6f3980c1d0c01993"
+        }
+      ],
+      "licenceFile": "patrickhand/LICENSE.txt"
+    },
+    {
+      "family": "Indie Flower",
+      "licence": "OFL-1.1",
+      "category": "handwriting",
+      "subsets": ["latin", "latin-ext", "vietnamese"],
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/indieflower",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "indieflower/400.ttf",
+          "source": "https://fonts.gstatic.com/s/indieflower/v24/m8JVjfNVeKWVnh3QMuKkFcZVZ0uC.ttf",
+          "sha256": "af26b110d2a6d6fd4e1f60654f98bc93327dd809979e8ef7372f2e2d89684076"
+        }
+      ],
+      "licenceFile": "indieflower/LICENSE.txt"
+    },
+    {
+      "family": "Inter Variable",
+      "licence": "OFL-1.1",
+      "category": "sans",
+      "subsets": ["latin"],
+      "source": "https://raw.githubusercontent.com/google/fonts/0b58fb370093f9a9f4ff785d94405710b79de67c/ofl/inter",
+      "faces": [
+        {
+          "weight": 400,
+          "isItalic": false,
+          "url": "intervariable/400.ttf",
+          "source": "https://raw.githubusercontent.com/google/fonts/0b58fb370093f9a9f4ff785d94405710b79de67c/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf",
+          "sha256": "240e4d56efec30b2efdb66088fb1180bb0bd163eec0bf932bf03a1f3b54d5e81"
+        }
+      ],
+      "licenceFile": "intervariable/LICENSE.txt",
+      "upstream": {
+        "url": "https://raw.githubusercontent.com/google/fonts/0b58fb370093f9a9f4ff785d94405710b79de67c/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf",
+        "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+        "version": "4.001",
+        "subset": "latin"
+      }
+    }
+  ]
+}

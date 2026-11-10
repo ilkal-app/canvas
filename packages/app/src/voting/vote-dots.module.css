@@ -1,0 +1,47 @@
+/* The dots on voted stickies (the design's frame B): 10 px dots in the accent, 13 px
+   apart, growing left from 8 px inside a sticky's right edge and 10 px above its bottom edge.
+   Theme tokens only. */
+
+.layer {
+  position: absolute;
+  overflow: hidden;
+  inset: 0;
+  pointer-events: none;
+}
+
+.dots {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 3px;
+  padding: 0;
+  border: none;
+  background: none;
+  transform: translate(-100%, -100%);
+}
+
+button.dots {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+button.dots:focus-visible {
+  border-radius: 6px;
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-hand-you);
+}
+
+/* More votes than dots: the rest as a count, before them. */
+.more {
+  color: var(--color-ink-primary);
+  font: var(--text-mono-value);
+  letter-spacing: var(--text-mono-value-tracking);
+}

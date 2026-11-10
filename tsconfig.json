@@ -1,0 +1,15 @@
+{
+  // Solution file: `pnpm typecheck` runs `tsc -b` here, which builds every referenced project.
+  "files": [],
+  "references": [
+    { "path": "packages/schema" },
+    { "path": "packages/text" },
+    { "path": "packages/document" },
+    { "path": "packages/engine" },
+    { "path": "packages/collab" },
+    { "path": "packages/tools" },
+    { "path": "packages/app" },
+    { "path": "packages/sdk" },
+    { "path": "tooling/eslint-config" }
+  ]
+}

@@ -1,0 +1,50 @@
+/* The floating sheet of the whiteboard's chrome (the design board's Whiteboard page):
+   the sheet surface, a hairline edge and the Float shadow; theme tokens only
+   (theme/token-usage.test.ts). The 1 px border is inside each size: a 40 px toolbar is
+   1 + 38 + 1. */
+
+.sheet {
+  box-sizing: border-box;
+  border: 1px solid var(--color-line-hairline);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-sheet);
+  color: var(--color-ink-primary);
+}
+
+/* The properties popover's row and the tool panels: 40 px tall, 8 px corners, items 4 px apart
+   and 7 px in from the edge (6 + the border). */
+.sheet[data-shape='toolbar'] {
+  display: flex;
+  gap: var(--space-1);
+  align-items: center;
+  height: 40px;
+  padding: 0 6px;
+  border-radius: 8px;
+}
+
+/* The board bar and the bars at the top right: 44 px tall, 6 px corners, 9 px in. */
+.sheet[data-shape='bar'] {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  height: 44px;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sheet);
+}
+
+/* Menus and lists: a column of 28 px rows 2 px apart, 9 px in, 8 px corners. */
+.sheet[data-shape='stack'] {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-2);
+  border-radius: 8px;
+}
+
+/* A finger needs 48 px: the bars grow to it on a touch screen. */
+@media (pointer: coarse) {
+  .sheet[data-shape='toolbar'],
+  .sheet[data-shape='bar'] {
+    height: 48px;
+  }
+}

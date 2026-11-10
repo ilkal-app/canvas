@@ -1,0 +1,474 @@
+/* It hugs its content (item 6), right-aligned in the bars' row, so it grows leftwards as
+   avatars come and leaves no gap when nobody else is here. */
+.bar {
+  display: flex;
+  flex: none;
+  gap: var(--space-2);
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 38px;
+  margin-left: auto;
+  padding: var(--space-1) var(--space-1) var(--space-1) var(--space-3);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  color: var(--color-ink-secondary);
+  user-select: none;
+}
+
+.state {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  white-space: nowrap;
+}
+
+.dot {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--color-ink-secondary);
+  border-radius: 50%;
+}
+
+.state[data-state='connected'] .dot {
+  border-color: var(--color-mark-live);
+  background: var(--color-mark-live);
+}
+
+.state[data-state='connected'][data-local-only] .dot {
+  border-color: var(--color-ink-secondary);
+  background: none;
+}
+
+.state[data-state='connecting'] .dot,
+.state[data-state='reconnecting'] .dot {
+  background: var(--color-ink-secondary);
+}
+
+.divider {
+  flex: none;
+  width: 1px;
+  height: 18px;
+  background: var(--color-line-hairline);
+}
+
+.avatars {
+  display: flex;
+  align-items: center;
+}
+
+.avatarList {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.avatarItem {
+  display: flex;
+  margin-right: -4px;
+}
+
+.avatar,
+.agent {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 26px;
+  height: 26px;
+}
+
+.avatar {
+  border: 2px solid var(--color-surface-sheet);
+  border-radius: 50%;
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+}
+
+/* The initials' ink (`avatarColorsOf`): the theme's darkest or lightest text. Graphite's dark
+   text is the action ink, Vellum's its primary ink, and the other way round for light. */
+.avatar[data-ink='dark'],
+[data-theme='light'] .avatar[data-ink='light'] {
+  color: var(--color-action-on);
+}
+
+.avatar[data-ink='light'],
+[data-theme='light'] .avatar[data-ink='dark'] {
+  color: var(--color-ink-primary);
+}
+
+/* The people last seen, while the board is away from the relay: a person's
+   colour faded to 35% over the sheet, under initials in primary ink, so they keep 4.5:1 (the
+   design's 35% opacity would fade the initials too); an agent's mark, which is no text, faded
+   whole. The "+N" beside them keeps its contrast. */
+.avatars[data-dimmed] .avatar {
+  position: relative;
+  isolation: isolate;
+  color: var(--color-ink-primary);
+}
+
+.avatars[data-dimmed] .avatar::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--color-surface-sheet);
+  opacity: 0.65;
+}
+
+.avatars[data-dimmed] .agent {
+  opacity: 0.35;
+}
+
+.agent {
+  border: 1.5px dashed var(--color-hand-agent);
+  border-radius: 7px;
+  background: var(--color-surface-sheet);
+  color: var(--color-hand-agent);
+}
+
+/* The phone's avatars (frame P1): one button over them and the "+N" that raises the
+   people sheet (P2), 44 px tall for a finger. */
+.peopleButton {
+  display: inline-flex;
+  gap: var(--space-2);
+  align-items: center;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.peopleButton .more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.peopleButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.anchor {
+  position: relative;
+  display: flex;
+  margin-left: var(--space-2);
+}
+
+.more {
+  min-width: 26px;
+  height: 26px;
+  padding: 0 var(--space-1);
+  border: 1px solid var(--color-line-control);
+  border-radius: 13px;
+  background: var(--color-surface-raised);
+  color: var(--color-ink-primary);
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+  cursor: pointer;
+}
+
+.more:focus-visible,
+.share:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.popup {
+  position: absolute;
+  z-index: 2;
+  top: calc(100% + var(--space-3));
+  right: 0;
+  min-width: 200px;
+  max-height: 320px;
+  padding: var(--space-1);
+  overflow-y: auto;
+  overscroll-behavior-x: none;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.option {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  min-height: 32px;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-control);
+  color: var(--color-ink-primary);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+}
+
+.option:focus {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -2px;
+  background: var(--color-surface-raised);
+}
+
+.name {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kind {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.shareSlot {
+  display: flex;
+}
+
+/* Share with Copy link attached: one primary control, a thin seam between its two
+   targets. Copying the link is the repeated action, so it takes one click. */
+.shareSlot[role='group'] .share {
+  border-radius: var(--radius-control) 0 0 var(--radius-control);
+}
+
+.copyLink {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid color-mix(in srgb, var(--color-action-on) 32%, transparent);
+  border-radius: 0 var(--radius-control) var(--radius-control) 0;
+  background: var(--color-action-fill);
+  color: var(--color-action-on);
+  cursor: pointer;
+}
+
+.copyLink:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.share {
+  height: 28px;
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: var(--color-action-fill);
+  color: var(--color-action-on);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  cursor: pointer;
+}
+
+/* Under the whiteboard's floating chrome (design board, Whiteboard frame A): the
+   bar-shaped floating sheet (controls/floating-sheet), its height, edge and shadow from there,
+   items 12 px apart, 13 px in on the left and 9 px on the right (the padding and the border).
+   The attributes outrank the sheet's own shape rule. */
+.floating[data-floating-sheet][data-shape='bar'] {
+  flex: none;
+  gap: var(--space-3);
+  margin-left: auto;
+  padding: 0 var(--space-2) 0 var(--space-3);
+  color: var(--color-ink-secondary);
+  user-select: none;
+}
+
+.floating .divider {
+  height: 20px;
+}
+
+/* The design's people: 24 px, no ring, each 18 px after the last (a -6 px overlap); the last
+   one flush with the group's edge, so the 12 px gap to Share is what it shows. */
+.floating .avatarItem {
+  margin-right: -6px;
+}
+
+.floating .avatarItem:last-child {
+  margin-right: 0;
+}
+
+.floating .avatar,
+.floating .agent {
+  width: 24px;
+  height: 24px;
+}
+
+.floating .avatar {
+  border: 0;
+}
+
+.floating .anchor {
+  margin-left: var(--space-1);
+}
+
+/* The fonts are said again here: the site's `.frame button { font: inherit }` outranks the
+   buttons' own classes (site/site.module.css), and the design's labels are 12 px Label and Mono/Key. */
+.floating .more {
+  min-width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+}
+
+/* The signed-in person's account button (item 9): an avatar as the people's are, 24 px,
+   no edge, Mono/Key initials; said at this rank so the site's `.frame button { font: inherit }`
+   does not turn the initials into Body. */
+.floating [data-account] {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+}
+
+/* The Library's primary Button: 76 px wide at least, 28 px tall, in Label. */
+.floating .share {
+  min-width: 76px;
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+/* Below 768 px wide: the right part of the compact top bar, its own sheet
+   gone. The connection's state moves under the board's name (`compactStatusOf`); its live region
+   stays here, read by a screen reader and not shown. The people are 28 px, Share 32 px tall. */
+@media (width < 768px) {
+  .bar {
+    min-height: 0;
+    margin-left: 0;
+    padding: 0 var(--space-2) 0 0;
+    border: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .state {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .avatar,
+  .agent {
+    width: 28px;
+    height: 28px;
+  }
+
+  .share,
+  .copyLink {
+    height: 32px;
+  }
+}
+
+/* A collaborator's avatar as a menu button (frame F1): the avatar itself, ringed while
+   followed. */
+.personAnchor {
+  position: relative;
+  display: flex;
+}
+
+.personButton {
+  display: flex;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.personButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.personButton[data-following] {
+  box-shadow:
+    0 0 0 2px var(--color-surface-sheet),
+    0 0 0 4px var(--color-focus-ring);
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: var(--space-1) var(--space-2) var(--space-2);
+  border-bottom: 1px solid var(--color-line-hairline);
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--space-1);
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 32px;
+  padding: var(--space-1) var(--space-2);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+  text-align: start;
+  cursor: pointer;
+}
+
+.menuItem:hover,
+.menuItem:focus-visible {
+  background: var(--color-surface-raised);
+}
+
+.menuItem:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -2px;
+}
+
+.menuItem[aria-disabled='true'] {
+  color: var(--color-ink-faint);
+  cursor: default;
+}
+
+.menuItem[aria-disabled='true']:hover {
+  background: transparent;
+}
+
+.menuDetail {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}

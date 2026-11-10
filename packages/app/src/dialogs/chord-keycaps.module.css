@@ -1,0 +1,16 @@
+.keycaps {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.keycap {
+  min-width: 20px;
+  padding: 1px var(--space-1);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-sheet);
+  color: var(--color-ink-primary);
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+  text-align: center;
+}

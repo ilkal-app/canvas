@@ -1,0 +1,35 @@
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.swatch {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  /* The swatch's own colour may not stand out from the panel: its border does, 3:1 or more. */
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  cursor: pointer;
+}
+
+.swatch[aria-pressed='true'] {
+  outline: 2px solid var(--color-action-fill);
+  outline-offset: 1px;
+}
+
+.swatch:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* The note colour's board colour tokens: Tokens, a token's name and Detach colour, and
+   the list under them. */
+.tokens {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}

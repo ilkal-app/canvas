@@ -1,0 +1,29 @@
+.shell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-ground-mat);
+  color: var(--color-ink-primary);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+}
+
+/* The chrome's fonts are loaded in Regular and Medium only: headings, table heads and strong text,
+   which browsers set bold, are Medium. */
+.shell :where(h1, h2, h3, h4, h5, h6, th, b, strong) {
+  font-weight: 500;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.workspace {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+}

@@ -1,0 +1,5 @@
+/* The editing popover's row: no box of its own, so the controls sit in the sheet's
+   own row and gap; it only listens for focus moving into the controls. */
+.row {
+  display: contents;
+}

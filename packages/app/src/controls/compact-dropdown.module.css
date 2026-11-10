@@ -1,0 +1,57 @@
+/* The compact dropdown's trigger (the properties popover's font and size, the
+   Library page's Select): theme tokens only (theme/token-usage.test.ts). */
+
+.trigger {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  box-sizing: border-box;
+  height: 28px;
+  /* The design's 8 px before the value and 2 px after the chevron, from the outer edge: the 1 px
+     edge (transparent when quiet) is part of them. */
+  padding: 0 1px 0 calc(var(--space-2) - 1px);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* The Library's Select: a field's edge and the raised surface. */
+.trigger[data-variant='field'] {
+  border-color: var(--color-line-control);
+  background: var(--color-surface-raised);
+}
+
+.trigger:hover:not(:disabled),
+.trigger[aria-expanded='true'] {
+  background: var(--color-surface-pressed);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.trigger:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.value {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-align: start;
+  text-overflow: ellipsis;
+}
+
+/* A finger needs 48 px. */
+@media (pointer: coarse) {
+  .trigger {
+    height: 48px;
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "@canvas/engine",
+  "private": true,
+  "type": "module"
+}

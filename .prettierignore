@@ -1,0 +1,9 @@
+pnpm-lock.yaml
+dist
+coverage
+# Generated: the engine's shader modules (`pnpm --filter @canvas/engine shaders`) and the SDK's
+# third-party licence list (`pnpm --filter @ilkal/sdk licenses`).
+packages/engine/src/gpu/shaders/*.generated.ts
+packages/sdk/THIRD_PARTY_LICENSES.md
+docs/api
+_site

@@ -1,0 +1,152 @@
+/* The account button and its menu (item 7), at the presence/share bar's right end. The
+   menu stacks with the bars, above the drawers (`--layer-bars`, theme/layer-tokens.ts). */
+.anchor {
+  position: relative;
+  display: flex;
+  flex: none;
+}
+
+/* The person's own avatar: their initials in a 28 px circle, as tall as Share beside it. */
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--color-line-control);
+  border-radius: 50%;
+  background: var(--color-surface-pressed);
+  color: var(--color-ink-primary);
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+  cursor: pointer;
+}
+
+.avatar:hover,
+.avatar[aria-expanded='true'] {
+  background: var(--color-surface-raised);
+}
+
+.avatar:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* The menu under the bar, its right edge on the button's. */
+.popup {
+  position: absolute;
+  top: calc(100% + var(--space-3));
+  right: 0;
+  min-width: 220px;
+  max-width: 280px;
+  padding: var(--space-1);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  color: var(--color-ink-primary);
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: var(--space-2) var(--space-2) var(--space-1);
+}
+
+.name,
+.email {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.name {
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+.email {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.separator {
+  height: 1px;
+  margin: var(--space-1) 0;
+  background: var(--color-line-hairline);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 32px;
+  padding: 0 var(--space-2);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: inherit;
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+  text-align: start;
+  cursor: pointer;
+}
+
+@media (pointer: coarse) {
+  .item {
+    min-height: 44px;
+  }
+}
+
+.item:hover,
+.item:focus-visible {
+  background: var(--color-surface-raised);
+}
+
+/* Inside its menu, which would clip a ring drawn outside the item. */
+.item:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -2px;
+}
+
+/* Delete account…: the menu's one destructive entry, in red. */
+.danger {
+  color: var(--color-ink-danger);
+}
+
+/* Spotlight me (frame F2): its name over a line saying what it does, or why it cannot. */
+.entryName {
+  display: block;
+}
+
+.entryDetail {
+  display: block;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.item:has(.entryDetail) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-block: var(--space-1);
+}
+
+.item[aria-disabled='true'] {
+  color: var(--color-ink-faint);
+  cursor: default;
+}
+
+.item[aria-disabled='true']:hover {
+  background: transparent;
+}

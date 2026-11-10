@@ -1,0 +1,30 @@
+/* Collaborators' selections (item 14): the engine outlines the objects; this layer holds
+   each peer's name tag on the selection's top-left corner, above it, in their presence colour as
+   the avatars take it. Theme tokens only. */
+.layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.tag {
+  position: absolute;
+  padding: 1px 6px;
+  border-radius: var(--radius-control);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  white-space: nowrap;
+  transform: translate(-2px, calc(-100% - 3px));
+}
+
+/* The tag's ink (`avatarColorsOf`): the theme's darkest or lightest text, as the avatars take. */
+.tag[data-ink='dark'],
+[data-theme='light'] .tag[data-ink='light'] {
+  color: var(--color-action-on);
+}
+
+.tag[data-ink='light'],
+[data-theme='light'] .tag[data-ink='dark'] {
+  color: var(--color-ink-primary);
+}

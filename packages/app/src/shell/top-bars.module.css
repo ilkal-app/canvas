@@ -1,0 +1,342 @@
+@value dockInset, compactInset from '../toolbar/dock.module.css';
+
+/* The compact top bar's bottom edge below 768 px wide: 8 px down (and the
+   device's safe area) and 60 px tall. The toast region and the sheets place themselves by it. */
+@value compactTopBarHeight: 60px;
+@value compactTopBarTop: calc(compactInset + env(safe-area-inset-top, 0px));
+@value compactTopBarBottom: calc(compactTopBarTop + compactTopBarHeight);
+
+/* The top bars (the design's board frame): the board-name bar over the canvas's top-left
+   corner and the presence/share bar over its top-right corner, 16 px in (`dockInset`, the shell's
+   one inset, so the board-name bar's left edge is the layers drawer's and the zoom control's;
+   item 10). They float: the canvas keeps its whole size beneath them. Only the bars take
+   the pointer. */
+.topBars {
+  position: absolute;
+  z-index: var(--layer-bars);
+  top: dockInset;
+  left: dockInset;
+  /* The canvas fills the workspace: the right-hand drawer floats over it. */
+  right: dockInset;
+  display: flex;
+  /* Wrapping as when it held the offline banner's row, which moved to the toast region;
+     nothing wraps now. */
+  flex-wrap: wrap;
+  column-gap: var(--space-2);
+  align-items: flex-start;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.topBars [data-top-bar] {
+  pointer-events: auto;
+}
+
+/* A wrapper that only carries `inert`: it takes no box of its own. */
+.contents {
+  display: contents;
+}
+
+/* The board-name bar: the way home flush with its left edge and the board menu's button flush with
+   its right, both its full height (items 2 and 5), the name between them. It holds the
+   rename's hints, which float under it (`site/board-bar.module.css`). */
+.boardBar {
+  position: relative;
+  display: flex;
+  flex: none;
+  gap: var(--space-2);
+  align-items: stretch;
+  box-sizing: border-box;
+  width: 261px;
+  min-height: 42px;
+  padding: 0;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  color: var(--color-ink-primary);
+}
+
+/* While the live board loads, the bar grows to hold the subtitle that says
+   so. A rename keeps its size (item 4). */
+.boardBar[data-loading-live] {
+  width: auto;
+  min-width: 261px;
+  max-width: 100%;
+}
+
+/* The live board's progress line: 2 px along the workspace's top edge, a
+   segment of 220 px of 1440 running along the track. A cancelled animation (a still capture)
+   and reduced motion leave the segment where the design draws it. */
+.progress {
+  position: absolute;
+  z-index: var(--layer-bars);
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 2px;
+  overflow: hidden;
+  background: var(--color-surface-pressed);
+  pointer-events: none;
+}
+
+.progressSegment {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 32%;
+  width: 15.3%;
+  background: var(--color-ink-secondary);
+  animation: progress-run 1.6s ease-in-out infinite;
+}
+
+@keyframes progress-run {
+  from {
+    left: -15.3%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progressSegment {
+    animation: none;
+  }
+}
+
+/* With no way home (the standalone shell), the name keeps the bar's inner margin. */
+.boardBar > .title:first-child {
+  margin-left: var(--space-3);
+}
+
+.title {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+/* The name, in the larger title style (item 3), centred in the bar. */
+.titleText {
+  overflow: hidden;
+  margin: 0;
+  font: var(--text-title);
+  letter-spacing: var(--text-title-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subtitle {
+  display: flex;
+  gap: var(--space-1);
+  align-items: center;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  white-space: nowrap;
+}
+
+.subtitle > * + *::before {
+  content: '·';
+  margin-right: var(--space-1);
+}
+
+.badge {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.divider {
+  flex: none;
+  align-self: center;
+  width: 1px;
+  height: 18px;
+  background: var(--color-line-hairline);
+}
+
+.iconButton {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-secondary);
+  cursor: pointer;
+}
+
+.iconButton:hover,
+.iconButton[aria-expanded='true'] {
+  background: var(--color-surface-raised);
+  color: var(--color-ink-primary);
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -2px;
+}
+
+.anchor {
+  position: relative;
+  display: flex;
+  flex: none;
+}
+
+/* The board menu's button at the bar's right end: its full height, flush with its edge, its
+   hover and pressed fill reaching the edge and the rounded corner inside the 1 px border. The
+   focus ring is drawn inside, where the bar's edge would hide one outside. */
+.edgeButton {
+  composes: iconButton;
+  width: 40px;
+  height: auto;
+  border-radius: 0 calc(var(--radius-sheet) - 1px) calc(var(--radius-sheet) - 1px) 0;
+}
+
+.menu {
+  position: absolute;
+  z-index: 2;
+  top: calc(100% + var(--space-2));
+  left: 0;
+  min-width: 200px;
+  padding: var(--space-1);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  color: var(--color-ink-primary);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+}
+
+.separator {
+  height: 1px;
+  margin: var(--space-1) 0;
+  background: var(--color-line-hairline);
+}
+
+.menuItem {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  width: 100%;
+  min-height: 32px;
+  padding: 0 var(--space-3) 0 var(--space-2);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+@media (pointer: coarse) {
+  .menuItem {
+    min-height: 44px;
+  }
+}
+
+.menuItem:hover,
+.menuItem:focus-visible {
+  background: var(--color-surface-raised);
+}
+
+.menuItem:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -2px;
+}
+
+.menuLabel {
+  flex: 1 1 auto;
+}
+
+.menuHint {
+  color: var(--color-ink-secondary);
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+}
+
+/* The tick of a checked entry, drawn in the text colour: a box's two borders, turned. */
+.check {
+  flex: none;
+  box-sizing: border-box;
+  width: 6px;
+  height: 10px;
+  margin: 0 var(--space-1) 2px;
+  transform: rotate(45deg);
+  border-right: 1.5px solid transparent;
+  border-bottom: 1.5px solid transparent;
+}
+
+[aria-checked='true'] > .check {
+  border-color: currentcolor;
+}
+
+/* The compact top bar's line under the name (`compactStatusOf`): only below 768 px wide. */
+.compactStatus {
+  display: none;
+  overflow: hidden;
+  margin: 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Below 768 px wide (the design's mobile frames): the two bars are one compact top bar, 374 px (the
+   frames' width less their margins; narrower only on a narrower screen) and 60 px tall, the way
+   home and the board menu 48 px targets, the name over the connection's state and who is here. */
+@media (width < 768px) {
+  .topBars {
+    top: compactTopBarTop;
+    right: auto;
+    left: 50%;
+    flex-wrap: nowrap;
+    column-gap: 0;
+    align-items: stretch;
+    box-sizing: border-box;
+    width: min(374px, calc(100% - 2 * compactInset));
+    min-height: compactTopBarHeight;
+    border: 1px solid var(--color-line-hairline);
+    border-radius: 10px;
+    background: var(--color-surface-sheet);
+    box-shadow: var(--shadow-float);
+    transform: translateX(-50%);
+    pointer-events: auto;
+  }
+
+  .boardBar,
+  .boardBar[data-loading-live] {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    min-height: 0;
+    border: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .boardBar > .divider,
+  .loadingBadge {
+    display: none;
+  }
+
+  .compactStatus {
+    display: block;
+  }
+
+  .edgeButton {
+    width: 48px;
+    border-radius: 0;
+  }
+}

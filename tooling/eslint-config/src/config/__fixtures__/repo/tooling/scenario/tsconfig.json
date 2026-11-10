@@ -1,0 +1,17 @@
+{
+  // A self-contained stand-in for tooling/scenario's tsconfig; `paths` plays pnpm's links.
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "types": [],
+    "noEmit": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@canvas/app": ["../../packages/app/src/index.ts"]
+    }
+  },
+  "include": ["src"]
+}

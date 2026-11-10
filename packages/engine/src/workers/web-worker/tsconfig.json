@@ -1,0 +1,13 @@
+{
+  // The Web Worker adapters of the job protocol: like gpu/ and host/web/, a project that sees a
+  // browser lib, so the engine core does not (Global Constraint 2). WebWorker rather than DOM,
+  // because the engine itself may run in a worker and must start job workers from there.
+  "extends": "../../../../../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "WebWorker"],
+    "rootDir": ".",
+    "outDir": "../../../dist/workers/web-worker",
+    "tsBuildInfoFile": "../../../dist/workers/web-worker/tsconfig.tsbuildinfo"
+  },
+  "include": ["."]
+}

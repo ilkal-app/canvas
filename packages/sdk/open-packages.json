@@ -1,0 +1,13 @@
+{
+  "license": "Apache-2.0",
+  "packages": [
+    "packages/sdk",
+    "packages/app",
+    "packages/tools",
+    "packages/engine",
+    "packages/text",
+    "packages/schema",
+    "packages/document",
+    "packages/collab"
+  ]
+}

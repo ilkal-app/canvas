@@ -1,0 +1,251 @@
+/* The token sheet: one page with every surface, line, ink, text style and the float
+   shadow of the theme it is in, for the shell's screenshot baselines and axe. Tokens only. */
+
+.sheet {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: var(--space-6);
+  background: var(--color-ground-mat);
+  color: var(--color-ink-primary);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+
+.title {
+  margin: 0;
+  font: var(--text-title);
+  letter-spacing: var(--text-title-tracking);
+}
+
+.section {
+  margin: 0 0 var(--space-2);
+  color: var(--color-ink-secondary);
+  font: var(--text-section);
+  letter-spacing: var(--text-section-tracking);
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.surface {
+  width: 160px;
+  padding: var(--space-3);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+}
+
+.surface p {
+  margin: 0;
+}
+
+.secondary {
+  color: var(--color-ink-secondary);
+}
+
+.mat {
+  composes: surface;
+  background: var(--color-ground-mat);
+}
+
+.grid {
+  composes: surface;
+  background: var(--color-ground-grid);
+}
+
+.sheetSurface {
+  composes: surface;
+  background: var(--color-surface-sheet);
+}
+
+.raised {
+  composes: surface;
+  background: var(--color-surface-raised);
+}
+
+.pressed {
+  composes: surface;
+  background: var(--color-surface-pressed);
+}
+
+.line {
+  width: 160px;
+  padding-bottom: var(--space-2);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+.hairline {
+  composes: line;
+  border-bottom-color: var(--color-line-hairline);
+}
+
+.strong {
+  composes: line;
+  border-bottom-color: var(--color-line-strong);
+}
+
+.control {
+  composes: line;
+  border-bottom-color: var(--color-line-control);
+}
+
+.swatch {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.you {
+  composes: dot;
+  background: var(--color-hand-you);
+}
+
+.agent {
+  composes: dot;
+  background: var(--color-hand-agent);
+}
+
+.redPencil {
+  composes: dot;
+  background: var(--color-mark-red-pencil);
+}
+
+.live {
+  composes: dot;
+  background: var(--color-mark-live);
+}
+
+.mira {
+  composes: dot;
+  background: var(--color-peer-mira);
+}
+
+.jonas {
+  composes: dot;
+  background: var(--color-peer-jonas);
+}
+
+.button {
+  height: 28px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-sheet);
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  cursor: pointer;
+}
+
+.button:disabled {
+  border-color: var(--color-line-hairline);
+  color: var(--color-ink-faint);
+  cursor: default;
+}
+
+.primary {
+  composes: button;
+  border-color: var(--color-action-fill);
+  background: var(--color-action-fill);
+  color: var(--color-action-on);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.styles {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-2) var(--space-4);
+  margin: 0 0 var(--space-5);
+}
+
+.pair {
+  display: contents;
+}
+
+.styles dt {
+  color: var(--color-ink-secondary);
+  font: var(--text-mono-value);
+  letter-spacing: var(--text-mono-value-tracking);
+}
+
+.styles dd {
+  margin: 0;
+}
+
+.textTitle {
+  font: var(--text-title);
+  letter-spacing: var(--text-title-tracking);
+}
+
+.textBody {
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+}
+
+.textLabel {
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+.textSection {
+  font: var(--text-section);
+  letter-spacing: var(--text-section-tracking);
+  text-transform: uppercase;
+}
+
+.textCaption {
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.textMonoValue {
+  font: var(--text-mono-value);
+  letter-spacing: var(--text-mono-value-tracking);
+}
+
+.textMonoKey {
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+}
+
+.textStrong {
+  font: var(--text-strong);
+  letter-spacing: var(--text-strong-tracking);
+}
+
+.textMonoCode {
+  font: var(--text-mono-code);
+  letter-spacing: var(--text-mono-code-tracking);
+}
+
+.float {
+  width: 240px;
+  margin-bottom: var(--space-5);
+  padding: var(--space-4);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+}

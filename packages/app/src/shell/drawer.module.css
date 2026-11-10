@@ -1,0 +1,228 @@
+@value dockInset from '../toolbar/dock.module.css';
+
+/* The right-hand drawer slot (the design's inspector frames): 296 px wide, from 8 px under the
+   presence/share bar (16 px in, 38 px tall) to 16 px above the
+   bottom edge, 16 px in from the right. It floats: the canvas keeps its whole size beneath it.
+   The inspector, the comments panel and the history panel take it one at a time. */
+.slot {
+  position: absolute;
+  z-index: var(--layer-drawer);
+  top: calc(dockInset + 38px + var(--space-2));
+  right: dockInset;
+  bottom: dockInset;
+  box-sizing: border-box;
+  width: 296px;
+  max-width: calc(100% - 2 * var(--space-4));
+}
+
+/* Holding an open modal dialog (a history preview), the slot rises over the bars and the dock,
+   so the dialog's backdrop covers the whole shell (theme/layer-tokens.ts). */
+.slot:has([aria-modal='true']) {
+  z-index: var(--layer-dialog);
+}
+
+/* A sheet in the slot: the drawer's own edge, fill and shadow. */
+.sheet {
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  color: var(--color-ink-primary);
+}
+
+/* The shell's right-hand column in the slot, holding the inspector (the layers panel is in its
+   own drawer on the left). Only the sheets take the pointer. */
+.column {
+  composes: slot;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  pointer-events: none;
+}
+
+.column > * {
+  pointer-events: auto;
+}
+
+/* The inspector: nothing while closed (item 11; alt+8 opens it). */
+.inspector {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+/* Open, the inspector is the drawer's sheet in the slot: full height below 768 px wide (the sheet
+   from the bottom edge), hugging its content at 768 px and more (below). */
+.inspector[data-open] {
+  flex: 1 1 auto;
+  align-self: stretch;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+}
+
+/* At 768 px wide and more: the inspector hugs its content, as tall as its sections up to
+   the slot's height, then its panel scrolls; no empty sheet under its last section. */
+@media (width >= 768px) {
+  .inspector[data-open] {
+    flex: 0 1 auto;
+  }
+}
+
+.drawer {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  border-radius: inherit;
+}
+
+.drawer:focus {
+  outline: none;
+}
+
+.drawer:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* The toggle, shown only while the drawer is open: in its top-right corner, beside the panel's
+   heading. */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  color: var(--color-ink-secondary);
+  cursor: pointer;
+}
+
+.inspector[data-open] .toggle {
+  position: absolute;
+  z-index: 1;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 28px;
+  height: 28px;
+  border-color: transparent;
+  border-radius: var(--radius-control);
+  box-shadow: none;
+}
+
+.toggle:hover {
+  background: var(--color-surface-raised);
+  color: var(--color-ink-primary);
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* The drawer's header (Figma "Inspector by selection"): what is selected over, more
+   quietly, a count or caption; at its right the lock and the "more" menu, clear of the toggle in
+   the corner. */
+.header {
+  display: flex;
+  flex: none;
+  gap: var(--space-2);
+  align-items: center;
+  justify-content: space-between;
+  min-height: 32px;
+  padding: 10px calc(var(--space-3) + 28px + var(--space-2)) 10px var(--space-3);
+  border-bottom: 1px solid var(--color-line-hairline);
+}
+
+.summary {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.title {
+  overflow: hidden;
+  margin: 0;
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Secondary, not Figma's faint ink: faint text is under 4.5:1 on the sheet. */
+.detail {
+  overflow: hidden;
+  margin: 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Below 768 px wide: the slot is a sheet risen from the bottom edge, the full
+   width and up to 404 px tall, over the compact bottom bar and its pills, with a grabber at its
+   top; its close button and the header's actions are 48 px touch targets. The comments and
+   history panels, which share the slot, take the same form. */
+@media (width < 768px) {
+  .slot {
+    z-index: var(--layer-bars);
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    max-width: none;
+    height: min(404px, 60%);
+  }
+
+  .inspector[data-open] {
+    padding-top: var(--space-4);
+    border-width: 1px 0 0;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .inspector[data-open]::before {
+    position: absolute;
+    top: var(--space-2);
+    left: 50%;
+    width: 36px;
+    height: 5px;
+    border-radius: 3px;
+    background: var(--color-line-control);
+    content: '';
+    transform: translateX(-50%);
+  }
+
+  .inspector[data-open] .toggle {
+    top: var(--space-4);
+    right: var(--space-2);
+    width: 48px;
+    height: 48px;
+  }
+
+  .header {
+    min-height: 48px;
+    padding-right: calc(var(--space-2) + 48px + var(--space-2));
+  }
+}
+
+/* Below 768 px wide, while a text is edited, the format bar on the keyboard takes the sheet's
+   place (Figma MX1). */
+@media (width < 768px) {
+  .column[data-text-editing] {
+    display: none;
+  }
+}

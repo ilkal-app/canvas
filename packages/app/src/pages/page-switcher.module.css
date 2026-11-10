@@ -1,0 +1,113 @@
+/* The floating board bar's pages; theme tokens only (theme/token-usage.test.ts).
+   Add page: the bar's last control, 28 px with 4 px corners like its icon buttons, quieter than
+   them in the secondary ink. */
+.add {
+  display: inline-flex;
+  flex: none;
+  gap: var(--space-1);
+  align-items: center;
+  box-sizing: border-box;
+  height: 28px;
+  padding: 0 var(--space-2) 0 var(--space-1);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.add:hover:not(:disabled) {
+  background: var(--color-surface-raised);
+  color: var(--color-ink-primary);
+}
+
+/* On its way (the engine not mounted yet): in its place, so the bar does not grow as it mounts. */
+.add:disabled {
+  cursor: default;
+}
+
+/* The page dropdown: in Add page's place from two pages on, 28 px with 4 px corners, the page
+   shown's name in the label style and a text caret; open (`aria-expanded`) is its pressed state. */
+.trigger {
+  display: inline-flex;
+  flex: none;
+  gap: var(--space-1);
+  align-items: center;
+  box-sizing: border-box;
+  height: 28px;
+  padding: 0 var(--space-2);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.trigger:hover {
+  background: var(--color-surface-raised);
+}
+
+.trigger[aria-expanded='true'] {
+  background: var(--color-surface-pressed);
+}
+
+/* On a phone's compact bar: a 48 px tall target, as the bar's others are. */
+[data-compact] > .trigger {
+  height: 48px;
+}
+
+.add:focus-visible,
+.trigger:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* The page's name, cut at 120 px (the tooltip holds it whole). */
+.triggerName {
+  overflow: hidden;
+  max-width: 120px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* The page list: a stack-shaped floating sheet 8 px under the bar, as Search's is, 240 px wide;
+   the list inside scrolls past 320 px. The attributes outrank the stack shape's own padding. */
+.sheet[data-floating-sheet][data-shape='stack'] {
+  position: fixed;
+  z-index: 1;
+  width: 240px;
+  padding: var(--space-1);
+}
+
+.sheet > section {
+  max-height: 320px;
+  background: transparent;
+}
+
+/* On a phone (below 768 px): as wide as the top bar, its rows 44 px touch targets. */
+.sheet[data-floating-sheet][data-compact] {
+  width: min(374px, calc(100vw - 2 * var(--space-4)));
+}
+
+.sheet[data-compact] > section {
+  max-height: 60vh;
+}
+
+.sheet[data-compact] li {
+  height: 44px;
+}
+
+/* On a phone's compact bar the name gives the bar's other controls their room. */
+[data-compact] > .trigger .triggerName {
+  max-width: 80px;
+}
+
+.sheet[data-compact] [data-add-page-row] {
+  height: 44px;
+}

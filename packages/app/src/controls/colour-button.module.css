@@ -1,0 +1,136 @@
+/* The colour button and its palette (the properties popover's colour, the Library's
+   Swatch): theme tokens only (theme/token-usage.test.ts); the swatches' fills are the colours
+   they stand for, set inline. A swatch's edge is the control line, not the design's hairline:
+   a control's edge must be seen at 3:1 (item 3), as the inspector's swatches have it. */
+
+.trigger {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  box-sizing: border-box;
+  width: 46px;
+  height: 28px;
+  padding: 0 0 0 var(--space-1);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  cursor: pointer;
+}
+
+.trigger:hover:not(:disabled),
+.trigger[aria-expanded='true'] {
+  background: var(--color-surface-pressed);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.trigger:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+/* The current colour, inside the trigger. */
+.current {
+  flex: none;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+}
+
+/* A selection whose colours differ: an empty swatch crossed by one diagonal. */
+.current[data-mixed] {
+  background: linear-gradient(
+    to top right,
+    transparent calc(50% - 0.75px),
+    var(--color-ink-secondary) calc(50% - 0.75px) calc(50% + 0.75px),
+    transparent calc(50% + 0.75px)
+  );
+}
+
+/* No colour: a checkerboard of the theme's surfaces, not what is behind the swatch. */
+.current[data-none],
+.swatch[data-none] {
+  background: repeating-conic-gradient(
+      var(--color-surface-pressed) 0 25%,
+      var(--color-surface-sheet) 0 50%
+    )
+    50% / 8px 8px;
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.heading {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/* Six 20 px swatches to a row, 8 px apart. */
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(6, 20px);
+  gap: var(--space-2);
+}
+
+.swatch {
+  position: relative;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  cursor: pointer;
+}
+
+/* The current colour: a ring of the primary ink just outside its edge. */
+.swatch[aria-pressed='true'] {
+  box-shadow:
+    0 0 0 2px var(--color-surface-sheet),
+    0 0 0 3px var(--color-ink-primary);
+}
+
+.swatch:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* A finger needs 48 px: the trigger and the swatches take presses around them. */
+@media (pointer: coarse) {
+  .trigger {
+    height: 48px;
+  }
+
+  .swatches {
+    grid-template-columns: repeat(6, 32px);
+    gap: var(--space-4);
+  }
+
+  .swatch {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* 32 px drawn, 48 px taken: 8 px around each, which the 16 px gaps leave room for. */
+  .swatch::before {
+    position: absolute;
+    inset: -8px;
+    content: '';
+  }
+}

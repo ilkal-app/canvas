@@ -1,0 +1,36 @@
+/* The Board colours section: a row per colour token, its name, its light and dark
+   values and its reset or delete, then Add colour. Theme tokens only
+   (theme/token-usage.test.ts). */
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.token {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-height: 28px;
+}
+
+.name {
+  overflow: hidden;
+  color: var(--color-ink-primary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nameField {
+  flex: 1 1 auto;
+  min-width: 0;
+}

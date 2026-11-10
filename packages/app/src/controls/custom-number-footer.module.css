@@ -1,0 +1,67 @@
+/* A dropdown menu's Custom row (frame A: the font size: the stroke width): a
+   rule, then "Custom" 32 px in and a 56 px number field at the end; theme tokens only
+   (theme/token-usage.test.ts). */
+
+.rule {
+  height: 1px;
+  margin: 2px 0;
+  background: var(--color-line-hairline);
+}
+
+.custom {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  box-sizing: border-box;
+  height: 28px;
+  padding: 0 var(--space-1) 0 32px;
+}
+
+.label {
+  flex: 1 1 auto;
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+.field {
+  box-sizing: border-box;
+  width: 56px;
+  height: 24px;
+  padding: 0 7px 0 9px;
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-raised);
+  color: var(--color-ink-primary);
+  font: var(--text-mono-value);
+  letter-spacing: var(--text-mono-value-tracking);
+}
+
+.field[aria-invalid='true'] {
+  border-color: var(--color-mark-red-pencil);
+}
+
+.field:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .custom {
+    height: 48px;
+  }
+
+  .field {
+    height: 40px;
+  }
+}
+
+/* Under the whiteboard's floating chrome a focused field is one amber box (item 7): its
+   own 1 px edge takes the focus colour, with no outline ring beside it (an invalid field keeps its
+   red edge and the ring). The attribute outranks the site's `.frame input:focus-visible`. */
+:is([data-whiteboard-chrome='floating'], [data-whiteboard-chrome-scope='floating'])
+  .field:focus-visible:not([aria-invalid='true']) {
+  outline: none;
+  outline-offset: 0;
+  border-color: var(--color-focus-ring);
+}

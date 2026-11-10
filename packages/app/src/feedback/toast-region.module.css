@@ -1,0 +1,74 @@
+@value dockTop from '../toolbar/dock.module.css';
+@value compactTopBarBottom from '../shell/top-bars.module.css';
+
+/* The one toast region (UI-18, item 4): theme tokens only (theme/token-usage.test.ts). */
+
+/* A home: over its positioned container's bottom centre, a spacing step from the bottom edge (a
+   shell's: from the dock's `dockTop`, below); a
+   spacing step above the dock while one is registered, which toast-placement.ts sets on the
+   element from the dock's measured offset and height, so a change to either moves the toasts
+   with it. It takes no input; its toasts do. Over the drawers, the dock, the top bars, their
+   menus and the context menu, under a dialog's backdrop (`--layer-notice`, theme/layer-tokens.ts). */
+.home {
+  position: absolute;
+  z-index: var(--layer-notice);
+  bottom: var(--space-4);
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  max-width: min(480px, calc(100% - 2 * var(--space-3)));
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* A shell's home, before the dock is measured (or with none registered): a spacing step above
+   where the dock sits, from the dock's own values. */
+.home[data-toast-home='home'] {
+  bottom: calc(dockTop + var(--space-3));
+}
+
+/* Below 768 px wide (Figma MX2): a shell's toasts show under the compact top bar, clear
+   of the bottom bar and the pills over the bottom edge (no dock is registered there). */
+@media (width < 768px) {
+  .home[data-toast-home='home'] {
+    top: calc(compactTopBarBottom + var(--space-2));
+    bottom: auto;
+  }
+}
+
+/* An open dialog's place (item 7): in the dialog's subtree, so its toasts stay in the
+   focus trap, but over the bottom centre of the dialog's backdrop, the screen, where every other
+   toast shows, a spacing step from its bottom edge; not at the dialog's foot. A compact sheet or
+   page (dialog.module.css) is itself positioned and meets the bottom edge, so there it is the
+   same place. It takes no input; its toasts do. Nothing while empty. */
+.host {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  max-width: min(480px, calc(100% - 2 * var(--space-3)));
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.host:empty {
+  display: none;
+}
+
+/* The toasts, oldest at the top, the newest nearest the dock. */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: center;
+  max-width: 100%;
+}
+
+.stack > * {
+  pointer-events: auto;
+}

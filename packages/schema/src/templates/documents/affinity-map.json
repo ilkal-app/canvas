@@ -1,0 +1,829 @@
+{
+  "format": "canvas.board",
+  "schemaVersion": 39,
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Affinity map",
+      "order": "a0"
+    }
+  ],
+  "objects": [
+    {
+      "id": "affinity-map-0",
+      "parentId": null,
+      "pageId": "page-1",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 1600,
+      "height": 1000,
+      "name": "Affinity map",
+      "clip": false,
+      "background": null,
+      "showName": false,
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "cornerRadius": 16
+    },
+    {
+      "id": "affinity-map-1",
+      "parentId": "affinity-map-0",
+      "pageId": null,
+      "x": 48,
+      "y": 40,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "title",
+      "type": "text",
+      "width": 900,
+      "height": 40,
+      "text": "Affinity map",
+      "runs": [
+        {
+          "length": 12,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 32,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "affinity-map-10",
+      "parentId": "affinity-map-3",
+      "pageId": null,
+      "x": 240,
+      "y": 488,
+      "rotation": 0,
+      "z": "a6",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "observation",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Add an observation",
+      "runs": [
+        {
+          "length": 18,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9647058823529412, 0.8901960784313725, 0.6039215686274509, 1]
+    },
+    {
+      "id": "affinity-map-11",
+      "parentId": "affinity-map-0",
+      "pageId": null,
+      "x": 520,
+      "y": 140,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 328,
+      "height": 812,
+      "name": "Group 1",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "affinity-map-12",
+      "parentId": "affinity-map-11",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 280,
+      "height": 25,
+      "text": "Name this group",
+      "runs": [
+        {
+          "length": 15,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "affinity-map-13",
+      "parentId": "affinity-map-11",
+      "pageId": null,
+      "x": 24,
+      "y": 56,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "prompt",
+      "type": "text",
+      "width": 280,
+      "height": 17.5,
+      "text": "What do these have in common?",
+      "runs": [
+        {
+          "length": 29,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "affinity-map-14",
+      "parentId": "affinity-map-11",
+      "pageId": null,
+      "x": 24,
+      "y": 100,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "grouped note",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Drag a note here",
+      "runs": [
+        {
+          "length": 16,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "affinity-map-15",
+      "parentId": "affinity-map-0",
+      "pageId": null,
+      "x": 872,
+      "y": 140,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 328,
+      "height": 812,
+      "name": "Group 2",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "affinity-map-16",
+      "parentId": "affinity-map-15",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 280,
+      "height": 25,
+      "text": "Name this group",
+      "runs": [
+        {
+          "length": 15,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "affinity-map-17",
+      "parentId": "affinity-map-15",
+      "pageId": null,
+      "x": 24,
+      "y": 56,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "prompt",
+      "type": "text",
+      "width": 280,
+      "height": 17.5,
+      "text": "What do these have in common?",
+      "runs": [
+        {
+          "length": 29,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "affinity-map-18",
+      "parentId": "affinity-map-15",
+      "pageId": null,
+      "x": 24,
+      "y": 100,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "grouped note",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Drag a note here",
+      "runs": [
+        {
+          "length": 16,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1]
+    },
+    {
+      "id": "affinity-map-19",
+      "parentId": "affinity-map-0",
+      "pageId": null,
+      "x": 1224,
+      "y": 140,
+      "rotation": 0,
+      "z": "a5",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 328,
+      "height": 812,
+      "name": "Group 3",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "affinity-map-2",
+      "parentId": "affinity-map-0",
+      "pageId": null,
+      "x": 48,
+      "y": 88,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "subtitle",
+      "type": "text",
+      "width": 900,
+      "height": 20,
+      "text": "Capture everything first, then drag notes into groups that belong together.",
+      "runs": [
+        {
+          "length": 75,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "affinity-map-20",
+      "parentId": "affinity-map-19",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 280,
+      "height": 25,
+      "text": "Name this group",
+      "runs": [
+        {
+          "length": 15,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "affinity-map-21",
+      "parentId": "affinity-map-19",
+      "pageId": null,
+      "x": 24,
+      "y": 56,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "prompt",
+      "type": "text",
+      "width": 280,
+      "height": 17.5,
+      "text": "What do these have in common?",
+      "runs": [
+        {
+          "length": 29,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "affinity-map-22",
+      "parentId": "affinity-map-19",
+      "pageId": null,
+      "x": 24,
+      "y": 100,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "grouped note",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Drag a note here",
+      "runs": [
+        {
+          "length": 16,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9529411764705882, 0.7647058823529411, 0.8117647058823529, 1]
+    },
+    {
+      "id": "affinity-map-3",
+      "parentId": "affinity-map-0",
+      "pageId": null,
+      "x": 48,
+      "y": 140,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 440,
+      "height": 812,
+      "name": "Inbox",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "affinity-map-4",
+      "parentId": "affinity-map-3",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 392,
+      "height": 25,
+      "text": "Inbox",
+      "runs": [
+        {
+          "length": 5,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "affinity-map-5",
+      "parentId": "affinity-map-3",
+      "pageId": null,
+      "x": 24,
+      "y": 72,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "observation",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Add an observation",
+      "runs": [
+        {
+          "length": 18,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9647058823529412, 0.8901960784313725, 0.6039215686274509, 1]
+    },
+    {
+      "id": "affinity-map-6",
+      "parentId": "affinity-map-3",
+      "pageId": null,
+      "x": 240,
+      "y": 72,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "observation",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Add an observation",
+      "runs": [
+        {
+          "length": 18,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9647058823529412, 0.8901960784313725, 0.6039215686274509, 1]
+    },
+    {
+      "id": "affinity-map-7",
+      "parentId": "affinity-map-3",
+      "pageId": null,
+      "x": 24,
+      "y": 280,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "observation",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Add an observation",
+      "runs": [
+        {
+          "length": 18,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9647058823529412, 0.8901960784313725, 0.6039215686274509, 1]
+    },
+    {
+      "id": "affinity-map-8",
+      "parentId": "affinity-map-3",
+      "pageId": null,
+      "x": 240,
+      "y": 280,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "observation",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Add an observation",
+      "runs": [
+        {
+          "length": 18,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9647058823529412, 0.8901960784313725, 0.6039215686274509, 1]
+    },
+    {
+      "id": "affinity-map-9",
+      "parentId": "affinity-map-3",
+      "pageId": null,
+      "x": 24,
+      "y": 488,
+      "rotation": 0,
+      "z": "a5",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "observation",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Add an observation",
+      "runs": [
+        {
+          "length": 18,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9647058823529412, 0.8901960784313725, 0.6039215686274509, 1]
+    }
+  ]
+}

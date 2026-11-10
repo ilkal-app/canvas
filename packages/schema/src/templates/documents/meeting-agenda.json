@@ -1,0 +1,1361 @@
+{
+  "format": "canvas.board",
+  "schemaVersion": 39,
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Meeting agenda",
+      "order": "a0"
+    }
+  ],
+  "objects": [
+    {
+      "id": "meeting-agenda-0",
+      "parentId": null,
+      "pageId": "page-1",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 1600,
+      "height": 1000,
+      "name": "Meeting agenda",
+      "clip": false,
+      "background": null,
+      "showName": false,
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "cornerRadius": 16
+    },
+    {
+      "id": "meeting-agenda-1",
+      "parentId": "meeting-agenda-0",
+      "pageId": null,
+      "x": 48,
+      "y": 40,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "title",
+      "type": "text",
+      "width": 900,
+      "height": 40,
+      "text": "Meeting agenda",
+      "runs": [
+        {
+          "length": 14,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 32,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-10",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 44,
+      "y": 200,
+      "rotation": 0,
+      "z": "a6",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "time",
+      "type": "shape",
+      "width": 88,
+      "height": 40,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1],
+      "cornerRadius": 20,
+      "sides": 4,
+      "label": {
+        "text": "15 min",
+        "runs": [
+          {
+            "length": 6,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": "ink",
+              "weight": 500,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "meeting-agenda-11",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 152,
+      "y": 194,
+      "rotation": 0,
+      "z": "a7",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "topic",
+      "type": "text",
+      "width": 520,
+      "height": 22.5,
+      "text": "Add a topic",
+      "runs": [
+        {
+          "length": 11,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-12",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 152,
+      "y": 222,
+      "rotation": 0,
+      "z": "a8",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lead",
+      "type": "text",
+      "width": 520,
+      "height": 17.5,
+      "text": "Who leads it?",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-13",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 24,
+      "y": 280,
+      "rotation": 0,
+      "z": "a9",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "item",
+      "type": "shape",
+      "width": 672,
+      "height": 88,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": null,
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "meeting-agenda-14",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 44,
+      "y": 304,
+      "rotation": 0,
+      "z": "aA",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "time",
+      "type": "shape",
+      "width": 88,
+      "height": 40,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1],
+      "cornerRadius": 20,
+      "sides": 4,
+      "label": {
+        "text": "15 min",
+        "runs": [
+          {
+            "length": 6,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": "ink",
+              "weight": 500,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "meeting-agenda-15",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 152,
+      "y": 298,
+      "rotation": 0,
+      "z": "aB",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "topic",
+      "type": "text",
+      "width": 520,
+      "height": 22.5,
+      "text": "Add a topic",
+      "runs": [
+        {
+          "length": 11,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-16",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 152,
+      "y": 326,
+      "rotation": 0,
+      "z": "aC",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lead",
+      "type": "text",
+      "width": 520,
+      "height": 17.5,
+      "text": "Who leads it?",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-17",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 24,
+      "y": 384,
+      "rotation": 0,
+      "z": "aD",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "item",
+      "type": "shape",
+      "width": 672,
+      "height": 88,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": null,
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "meeting-agenda-18",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 44,
+      "y": 408,
+      "rotation": 0,
+      "z": "aE",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "time",
+      "type": "shape",
+      "width": 88,
+      "height": 40,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1],
+      "cornerRadius": 20,
+      "sides": 4,
+      "label": {
+        "text": "5 min",
+        "runs": [
+          {
+            "length": 5,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": "ink",
+              "weight": 500,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "meeting-agenda-19",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 152,
+      "y": 402,
+      "rotation": 0,
+      "z": "aF",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "topic",
+      "type": "text",
+      "width": 520,
+      "height": 22.5,
+      "text": "Wrap up and next steps",
+      "runs": [
+        {
+          "length": 22,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-2",
+      "parentId": "meeting-agenda-0",
+      "pageId": null,
+      "x": 48,
+      "y": 88,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "subtitle",
+      "type": "text",
+      "width": 900,
+      "height": 20,
+      "text": "What should we leave this meeting with?",
+      "runs": [
+        {
+          "length": 39,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-20",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 152,
+      "y": 430,
+      "rotation": 0,
+      "z": "aG",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lead",
+      "type": "text",
+      "width": 520,
+      "height": 17.5,
+      "text": "Who leads it?",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-21",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 24,
+      "y": 520,
+      "rotation": 0,
+      "z": "aH",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "parking lot heading",
+      "type": "text",
+      "width": 672,
+      "height": 22.5,
+      "text": "Parking lot",
+      "runs": [
+        {
+          "length": 11,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-22",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 24,
+      "y": 548,
+      "rotation": 0,
+      "z": "aI",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "parking lot prompt",
+      "type": "text",
+      "width": 672,
+      "height": 17.5,
+      "text": "Good points to come back to later",
+      "runs": [
+        {
+          "length": 33,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-23",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 24,
+      "y": 588,
+      "rotation": 0,
+      "z": "aJ",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "parked",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Park a topic",
+      "runs": [
+        {
+          "length": 12,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9568627450980393, 0.8117647058823529, 0.6509803921568628, 1]
+    },
+    {
+      "id": "meeting-agenda-24",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 224,
+      "y": 588,
+      "rotation": 0,
+      "z": "aK",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "parked",
+      "type": "sticky",
+      "width": 176,
+      "height": 176,
+      "text": "Park a topic",
+      "runs": [
+        {
+          "length": 12,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9568627450980393, 0.8117647058823529, 0.6509803921568628, 1]
+    },
+    {
+      "id": "meeting-agenda-25",
+      "parentId": "meeting-agenda-0",
+      "pageId": null,
+      "x": 800,
+      "y": 140,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 752,
+      "height": 470,
+      "name": "Notes",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "meeting-agenda-26",
+      "parentId": "meeting-agenda-25",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 704,
+      "height": 25,
+      "text": "Notes",
+      "runs": [
+        {
+          "length": 5,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-27",
+      "parentId": "meeting-agenda-25",
+      "pageId": null,
+      "x": 24,
+      "y": 72,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "note",
+      "type": "sticky",
+      "width": 200,
+      "height": 200,
+      "text": "Add a note",
+      "runs": [
+        {
+          "length": 10,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "meeting-agenda-28",
+      "parentId": "meeting-agenda-25",
+      "pageId": null,
+      "x": 256,
+      "y": 72,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "note",
+      "type": "sticky",
+      "width": 200,
+      "height": 200,
+      "text": "Add a note",
+      "runs": [
+        {
+          "length": 10,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "meeting-agenda-29",
+      "parentId": "meeting-agenda-25",
+      "pageId": null,
+      "x": 488,
+      "y": 72,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "note",
+      "type": "sticky",
+      "width": 200,
+      "height": 200,
+      "text": "Add a note",
+      "runs": [
+        {
+          "length": 10,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "meeting-agenda-3",
+      "parentId": "meeting-agenda-0",
+      "pageId": null,
+      "x": 48,
+      "y": 140,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 720,
+      "height": 812,
+      "name": "Agenda",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "meeting-agenda-30",
+      "parentId": "meeting-agenda-0",
+      "pageId": null,
+      "x": 800,
+      "y": 626,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 752,
+      "height": 326,
+      "name": "Action items",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "meeting-agenda-31",
+      "parentId": "meeting-agenda-30",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 704,
+      "height": 25,
+      "text": "Action items",
+      "runs": [
+        {
+          "length": 12,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-32",
+      "parentId": "meeting-agenda-30",
+      "pageId": null,
+      "x": 24,
+      "y": 80,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "checkbox",
+      "type": "shape",
+      "width": 22,
+      "height": 22,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "muted"
+        },
+        "width": 2
+      },
+      "fill": null,
+      "cornerRadius": 5,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "meeting-agenda-33",
+      "parentId": "meeting-agenda-30",
+      "pageId": null,
+      "x": 62,
+      "y": 80,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "action",
+      "type": "text",
+      "width": 660,
+      "height": 20,
+      "text": "Add an action, its owner and a date",
+      "runs": [
+        {
+          "length": 35,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-34",
+      "parentId": "meeting-agenda-30",
+      "pageId": null,
+      "x": 24,
+      "y": 136,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "checkbox",
+      "type": "shape",
+      "width": 22,
+      "height": 22,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "muted"
+        },
+        "width": 2
+      },
+      "fill": null,
+      "cornerRadius": 5,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "meeting-agenda-35",
+      "parentId": "meeting-agenda-30",
+      "pageId": null,
+      "x": 62,
+      "y": 136,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "action",
+      "type": "text",
+      "width": 660,
+      "height": 20,
+      "text": "Add an action, its owner and a date",
+      "runs": [
+        {
+          "length": 35,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-36",
+      "parentId": "meeting-agenda-30",
+      "pageId": null,
+      "x": 24,
+      "y": 192,
+      "rotation": 0,
+      "z": "a5",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "checkbox",
+      "type": "shape",
+      "width": 22,
+      "height": 22,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "muted"
+        },
+        "width": 2
+      },
+      "fill": null,
+      "cornerRadius": 5,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "meeting-agenda-37",
+      "parentId": "meeting-agenda-30",
+      "pageId": null,
+      "x": 62,
+      "y": 192,
+      "rotation": 0,
+      "z": "a6",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "action",
+      "type": "text",
+      "width": 660,
+      "height": 20,
+      "text": "Add an action, its owner and a date",
+      "runs": [
+        {
+          "length": 35,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-4",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 672,
+      "height": 25,
+      "text": "Agenda",
+      "runs": [
+        {
+          "length": 6,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-5",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 24,
+      "y": 72,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "item",
+      "type": "shape",
+      "width": 672,
+      "height": 88,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": null,
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "meeting-agenda-6",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 44,
+      "y": 96,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "time",
+      "type": "shape",
+      "width": 88,
+      "height": 40,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1],
+      "cornerRadius": 20,
+      "sides": 4,
+      "label": {
+        "text": "10 min",
+        "runs": [
+          {
+            "length": 6,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": "ink",
+              "weight": 500,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "meeting-agenda-7",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 152,
+      "y": 90,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "topic",
+      "type": "text",
+      "width": 520,
+      "height": 22.5,
+      "text": "Add a topic",
+      "runs": [
+        {
+          "length": 11,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-8",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 152,
+      "y": 118,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lead",
+      "type": "text",
+      "width": 520,
+      "height": 17.5,
+      "text": "Who leads it?",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "meeting-agenda-9",
+      "parentId": "meeting-agenda-3",
+      "pageId": null,
+      "x": 24,
+      "y": 176,
+      "rotation": 0,
+      "z": "a5",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "item",
+      "type": "shape",
+      "width": 672,
+      "height": 88,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": null,
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": null
+    }
+  ]
+}

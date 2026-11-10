@@ -1,0 +1,1161 @@
+{
+  "format": "canvas.board",
+  "schemaVersion": 39,
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Mind map",
+      "order": "a0"
+    }
+  ],
+  "objects": [
+    {
+      "id": "mind-map-0",
+      "parentId": null,
+      "pageId": "page-1",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 1600,
+      "height": 1000,
+      "name": "Mind map",
+      "clip": false,
+      "background": null,
+      "showName": false,
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "cornerRadius": 16
+    },
+    {
+      "id": "mind-map-1",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 48,
+      "y": 40,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "title",
+      "type": "text",
+      "width": 900,
+      "height": 40,
+      "text": "Mind map",
+      "runs": [
+        {
+          "length": 8,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 32,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "mind-map-10",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 1360,
+      "y": 150,
+      "rotation": 0,
+      "z": "a9",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "detail",
+      "type": "shape",
+      "width": 180,
+      "height": 52,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 26,
+      "sides": 4,
+      "label": {
+        "text": "Add a detail",
+        "runs": [
+          {
+            "length": 12,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": {
+                "token": "muted"
+              },
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mind-map-11",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 1360,
+      "y": 320,
+      "rotation": 0,
+      "z": "aA",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "detail",
+      "type": "shape",
+      "width": 180,
+      "height": 52,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 26,
+      "sides": 4,
+      "label": {
+        "text": "Add a detail",
+        "runs": [
+          {
+            "length": 12,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": {
+                "token": "muted"
+              },
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mind-map-12",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 60,
+      "y": 700,
+      "rotation": 0,
+      "z": "aB",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "detail",
+      "type": "shape",
+      "width": 180,
+      "height": 52,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 26,
+      "sides": 4,
+      "label": {
+        "text": "Add a detail",
+        "runs": [
+          {
+            "length": 12,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": {
+                "token": "muted"
+              },
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mind-map-13",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 60,
+      "y": 870,
+      "rotation": 0,
+      "z": "aC",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "detail",
+      "type": "shape",
+      "width": 180,
+      "height": 52,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 26,
+      "sides": 4,
+      "label": {
+        "text": "Add a detail",
+        "runs": [
+          {
+            "length": 12,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": {
+                "token": "muted"
+              },
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mind-map-14",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 1360,
+      "y": 700,
+      "rotation": 0,
+      "z": "aD",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "detail",
+      "type": "shape",
+      "width": 180,
+      "height": 52,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 26,
+      "sides": 4,
+      "label": {
+        "text": "Add a detail",
+        "runs": [
+          {
+            "length": 12,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": {
+                "token": "muted"
+              },
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mind-map-15",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 1360,
+      "y": 870,
+      "rotation": 0,
+      "z": "aE",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "detail",
+      "type": "shape",
+      "width": 180,
+      "height": 52,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 26,
+      "sides": 4,
+      "label": {
+        "text": "Add a detail",
+        "runs": [
+          {
+            "length": 12,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": {
+                "token": "muted"
+              },
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mind-map-16",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aF",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "link",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "mind-map-3",
+        "anchor": null
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "mind-map-4",
+        "anchor": null
+      },
+      "route": "curved",
+      "stroke": {
+        "color": {
+          "token": "muted"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "mind-map-17",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aG",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "link",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "mind-map-3",
+        "anchor": null
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "mind-map-5",
+        "anchor": null
+      },
+      "route": "curved",
+      "stroke": {
+        "color": {
+          "token": "muted"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "mind-map-18",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aH",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "link",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "mind-map-3",
+        "anchor": null
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "mind-map-6",
+        "anchor": null
+      },
+      "route": "curved",
+      "stroke": {
+        "color": {
+          "token": "muted"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "mind-map-19",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aI",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "link",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "mind-map-3",
+        "anchor": null
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "mind-map-7",
+        "anchor": null
+      },
+      "route": "curved",
+      "stroke": {
+        "color": {
+          "token": "muted"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "mind-map-2",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 48,
+      "y": 88,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "subtitle",
+      "type": "text",
+      "width": 900,
+      "height": 20,
+      "text": "Start in the middle and branch out.",
+      "runs": [
+        {
+          "length": 35,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "mind-map-20",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aJ",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "link",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "mind-map-4",
+        "anchor": null
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "mind-map-8",
+        "anchor": null
+      },
+      "route": "curved",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "mind-map-21",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aK",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "link",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "mind-map-4",
+        "anchor": null
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "mind-map-9",
+        "anchor": null
+      },
+      "route": "curved",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "mind-map-22",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aL",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "link",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "mind-map-5",
+        "anchor": null
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "mind-map-10",
+        "anchor": null
+      },
+      "route": "curved",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "mind-map-23",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aM",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "link",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "mind-map-5",
+        "anchor": null
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "mind-map-11",
+        "anchor": null
+      },
+      "route": "curved",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "mind-map-24",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aN",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "link",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "mind-map-6",
+        "anchor": null
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "mind-map-12",
+        "anchor": null
+      },
+      "route": "curved",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "mind-map-25",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aO",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "link",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "mind-map-6",
+        "anchor": null
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "mind-map-13",
+        "anchor": null
+      },
+      "route": "curved",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "mind-map-26",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aP",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "link",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "mind-map-7",
+        "anchor": null
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "mind-map-14",
+        "anchor": null
+      },
+      "route": "curved",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "mind-map-27",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aQ",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "link",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "mind-map-7",
+        "anchor": null
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "mind-map-15",
+        "anchor": null
+      },
+      "route": "curved",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "mind-map-3",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 660,
+      "y": 480,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "central topic",
+      "type": "shape",
+      "width": 280,
+      "height": 120,
+      "kind": "ellipse",
+      "stroke": {
+        "color": "ink",
+        "width": 2
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 0,
+      "sides": 4,
+      "label": {
+        "text": "Central topic",
+        "runs": [
+          {
+            "length": 13,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 22,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mind-map-4",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 300,
+      "y": 220,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "branch",
+      "type": "shape",
+      "width": 220,
+      "height": 72,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1],
+      "cornerRadius": 36,
+      "sides": 4,
+      "label": {
+        "text": "Add a branch",
+        "runs": [
+          {
+            "length": 12,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mind-map-5",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 1080,
+      "y": 220,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "branch",
+      "type": "shape",
+      "width": 220,
+      "height": 72,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1],
+      "cornerRadius": 36,
+      "sides": 4,
+      "label": {
+        "text": "Add a branch",
+        "runs": [
+          {
+            "length": 12,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mind-map-6",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 300,
+      "y": 760,
+      "rotation": 0,
+      "z": "a5",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "branch",
+      "type": "shape",
+      "width": 220,
+      "height": 72,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.9529411764705882, 0.7647058823529411, 0.8117647058823529, 1],
+      "cornerRadius": 36,
+      "sides": 4,
+      "label": {
+        "text": "Add a branch",
+        "runs": [
+          {
+            "length": 12,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mind-map-7",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 1080,
+      "y": 760,
+      "rotation": 0,
+      "z": "a6",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "branch",
+      "type": "shape",
+      "width": 220,
+      "height": 72,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1],
+      "cornerRadius": 36,
+      "sides": 4,
+      "label": {
+        "text": "Add a branch",
+        "runs": [
+          {
+            "length": 12,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mind-map-8",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 60,
+      "y": 150,
+      "rotation": 0,
+      "z": "a7",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "detail",
+      "type": "shape",
+      "width": 180,
+      "height": 52,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 26,
+      "sides": 4,
+      "label": {
+        "text": "Add a detail",
+        "runs": [
+          {
+            "length": 12,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": {
+                "token": "muted"
+              },
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "mind-map-9",
+      "parentId": "mind-map-0",
+      "pageId": null,
+      "x": 60,
+      "y": 320,
+      "rotation": 0,
+      "z": "a8",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "detail",
+      "type": "shape",
+      "width": 180,
+      "height": 52,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 26,
+      "sides": 4,
+      "label": {
+        "text": "Add a detail",
+        "runs": [
+          {
+            "length": 12,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "color": {
+                "token": "muted"
+              },
+              "weight": 400,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

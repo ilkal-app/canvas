@@ -1,0 +1,203 @@
+@value compactBarHeight, compactBarBottom from '../toolbar/dock.module.css';
+
+/* The selection's properties popover (the design's frame A): a layer over the canvas
+   that takes no presses, and the popover in it, placed by its offsets once the camera settles
+   (never a transform, which would capture its fixed popups); theme tokens only (theme/token-usage.test.ts). */
+
+.layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: auto;
+}
+
+/* Hidden while it is placed, while the camera moves and while a press on the canvas lasts:
+   still laid out, so it can be measured. */
+.popover[data-hidden] {
+  visibility: hidden;
+}
+
+/* Never wider than the canvas less 8 px a side (item 13): a long row (several objects of
+   one type, with arrange and Group, on a tablet's 40 px targets) wraps onto another row rather
+   than running off the edge. One row keeps its 40 px (48 px on a touch screen): the 1 px border
+   and 5 px (3 px) above and below its 28 px (40 px) items. Its width is its row's, not what is
+   left right of where it was placed, so the placement can move it in from the edge. */
+.popover:not([data-sheet])[data-shape='toolbar'] {
+  flex-wrap: wrap;
+  width: max-content;
+  max-width: calc(100% - 2 * var(--space-2));
+  height: auto;
+  min-height: 40px;
+  padding-block: 5px;
+}
+
+@media (pointer: coarse) {
+  .popover:not([data-sheet])[data-shape='toolbar'] {
+    min-height: 48px;
+    padding-block: 3px;
+  }
+}
+
+/* An icon button in the popover's row: 28 px, the pressed surface on hover. */
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  cursor: pointer;
+}
+
+.iconButton:hover,
+.iconButton[aria-expanded='true'],
+.iconButton[aria-pressed='true'],
+.glyphButton:hover,
+.glyphButton[aria-pressed='true'] {
+  background: var(--color-surface-pressed);
+}
+
+/* A control not built yet, or not usable now (Vote outside a dot vote): faded, no hover. */
+.iconButton[aria-disabled='true'] {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.iconButton[aria-disabled='true']:hover {
+  background: transparent;
+}
+
+/* The text row's Bold and Italic: 28 px toggles with a 12/16 semibold glyph (the TEXT card). */
+.glyphButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  /* The design's UI/Strong: the label's 12/16 at the title's 600 weight. */
+  font: var(--text-label);
+  font-weight: var(--text-title-weight);
+  letter-spacing: var(--text-label-tracking);
+  cursor: pointer;
+}
+
+/* A button that names its action in words (the link card row's Open ↗, To text link and
+   Retry): 28 px tall, the label type, its icon after the words. */
+.wordButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  box-sizing: border-box;
+  height: 28px;
+  padding: 0 var(--space-2);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  font-weight: var(--text-title-weight);
+  letter-spacing: var(--text-label-tracking);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.wordButton:hover {
+  background: var(--color-surface-pressed);
+}
+
+.wordButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* The several-objects row's "3 selected" (the SEVERAL OBJECTS card): UI/Label in the
+   secondary ink, 72 px before the row's first rule. */
+.count {
+  box-sizing: border-box;
+  min-width: 72px;
+  color: var(--color-ink-secondary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  white-space: nowrap;
+}
+
+.glyphButton[data-glyph='italic'] {
+  font-style: italic;
+}
+
+.glyphButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* A rule between the popover's groups: 1 × 20 px, the hairline (frame A). */
+.divider {
+  flex: none;
+  width: 1px;
+  height: 20px;
+  background: var(--color-line-hairline);
+}
+
+/* A finger needs 48 px. */
+@media (pointer: coarse) {
+  .iconButton,
+  .glyphButton {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Below 768 px wide: a bottom sheet over the compact bar, as the tool panels' sheets
+   (toolbar/tool-panels/tool-panel-host.module.css), 16 px in from the sides and 8 px above the
+   bar; its controls 48 px targets that wrap onto more rows. Never a transform (its popups). */
+.popover[data-sheet] {
+  top: auto;
+  right: max(var(--space-4), env(safe-area-inset-right, 0px));
+  bottom: calc(compactBarBottom + compactBarHeight + var(--space-2));
+  left: max(var(--space-4), env(safe-area-inset-left, 0px));
+}
+
+.popover[data-sheet][data-shape='toolbar'] {
+  flex-wrap: wrap;
+  height: auto;
+  padding: var(--space-1) var(--space-2);
+}
+
+.popover[data-sheet] button {
+  min-width: 48px;
+  min-height: 48px;
+}
+
+/* Over the pills beside the compact bar (the undo pill, the Facilitate pill), as the tool panels'
+   sheets are. */
+.layer:has(> .popover[data-sheet]) {
+  z-index: calc(var(--layer-controls) + 1);
+}
+
+/* The open tool comes first: hidden while a tool panel's or the reactions' sheet is open. */
+body:has([data-tool-panel][data-sheet], [data-reactions-flyout][data-sheet]) .popover[data-sheet] {
+  display: none;
+}

@@ -1,0 +1,50 @@
+/* Reactions over the board: each emoji at its board point, the Title style drawn twice
+   its size, floating 48 px up and fading over its 1.6 s; under reduced motion it only fades.
+   Theme tokens only. Set at the size it shows, never scaled up: a browser draws an
+   animated layer once at its own size, so an emoji scaled 2x was a bitmap stretched, soft on a
+   2x or 3x screen, while text set at its size is drawn at the device's resolution. */
+
+.layer {
+  position: absolute;
+  overflow: hidden;
+  inset: 0;
+  pointer-events: none;
+}
+
+.reaction {
+  position: absolute;
+  font: var(--text-title);
+  font-size: var(--reaction-size);
+  line-height: var(--reaction-line-height);
+  letter-spacing: 0;
+  transform: translate(-50%, -50%);
+  animation: rise 1600ms ease-out forwards;
+}
+
+@keyframes rise {
+  from {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  to {
+    opacity: 0;
+    translate: 0 -48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reaction {
+    animation-name: fade;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

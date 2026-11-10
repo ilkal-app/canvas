@@ -1,0 +1,352 @@
+/* The floating text bar (Figma "States" E1, node 36:1983): over the note being edited,
+   with "Esc to finish" beside it. */
+.layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* The bar at its left edge (centred on the object, kept on the canvas), the hint after it. */
+.anchor {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translate(0, -100%);
+}
+
+.anchor[data-side='below'] {
+  transform: none;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: 8px;
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  pointer-events: auto;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  cursor: pointer;
+}
+
+.item:hover {
+  background: var(--color-surface-raised);
+}
+
+.item[aria-pressed='true'] {
+  background: var(--color-surface-pressed);
+}
+
+.item[aria-disabled='true'] {
+  color: var(--color-ink-faint);
+  cursor: default;
+}
+
+.item[aria-disabled='true']:hover {
+  background: transparent;
+}
+
+.item:focus-visible,
+.swatch:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.size {
+  appearance: none;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+/* The list control and its menu (frame A2): the menu hangs below the button. */
+.listControl {
+  position: relative;
+  display: inline-flex;
+}
+
+.listMixed {
+  width: 20px;
+  text-align: center;
+}
+
+.listMenu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  padding: 4px;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: 8px;
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+}
+
+.listSheetTitle {
+  display: none;
+}
+
+.listLevels {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px solid var(--color-line-hairline);
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 28px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  text-align: left;
+  cursor: pointer;
+}
+
+.listItem:hover,
+.listItem[aria-checked='true'] {
+  background: var(--color-surface-raised);
+}
+
+.listItem[aria-disabled='true'] {
+  color: var(--color-ink-faint);
+  cursor: default;
+}
+
+.listItem:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -2px;
+}
+
+.listMark {
+  display: inline-flex;
+  justify-content: center;
+  width: 20px;
+}
+
+.listLabel {
+  flex: 1 1 auto;
+}
+
+.listHint {
+  color: var(--color-ink-secondary);
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+}
+
+.listCheck {
+  display: none;
+}
+
+.divider {
+  flex: none;
+  width: 1px;
+  height: 18px;
+  background: var(--color-line-hairline);
+}
+
+.swatches {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px;
+}
+
+.swatch {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.swatch[aria-pressed='true'] {
+  box-shadow:
+    0 0 0 2px var(--color-surface-sheet),
+    0 0 0 3px var(--color-ink-primary);
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.key {
+  padding: 2px 6px;
+  border-radius: var(--radius-control);
+  background: var(--color-surface-raised);
+  color: var(--color-ink-secondary);
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+}
+
+/* Figma has faint ink here; secondary ink keeps the hint at 4.5:1 on the mat (axe). */
+.hintText {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/* Below 768 px wide (Figma MX1): the format bar docked on the on-screen keyboard, the
+   full width, its controls finger-sized and Done at its right end. Its bottom is set from the
+   keyboard's inset (`useKeyboardInset`). */
+.dockedBar {
+  position: absolute;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  box-sizing: border-box;
+  min-height: 48px;
+  padding: 2px var(--space-2) 2px var(--space-3);
+  border-top: 1px solid var(--color-line-hairline);
+  background: var(--color-surface-sheet);
+  pointer-events: auto;
+}
+
+.dockedBar .item {
+  flex: none;
+  justify-content: center;
+  min-width: 40px;
+  height: 44px;
+}
+
+/* On a phone the list menu is a sheet over the docked bar (frame M2): no typing
+   hints, a check on the chosen list, indent and outdent side by side. */
+.dockedBar .listControl {
+  position: static;
+}
+
+.dockedBar .listMenu {
+  top: auto;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  min-width: 0;
+  padding: var(--space-2) var(--space-3) var(--space-3);
+  border-width: 1px 0 0;
+  border-radius: 12px 12px 0 0;
+}
+
+.dockedBar .listSheetTitle {
+  display: block;
+  padding: var(--space-1) 0 var(--space-2);
+  font: var(--text-label);
+  font-weight: 500;
+}
+
+.dockedBar .listItem {
+  height: 44px;
+}
+
+.dockedBar .listHint {
+  display: none;
+}
+
+.dockedBar .listItem[aria-checked='true'] .listCheck {
+  display: inline-flex;
+}
+
+.dockedBar .listLevels {
+  flex-direction: row;
+  gap: var(--space-2);
+  border-top: 0;
+}
+
+.dockedBar .listLevels .listItem {
+  flex: 1 1 0;
+  justify-content: center;
+  background: var(--color-surface-raised);
+}
+
+.dockedBar .listLevels .listLabel {
+  flex: none;
+}
+
+/* What is not built yet (link) and the dividers are left out at this width. */
+.dockedBar .item[aria-disabled='true'],
+.dockedBar .divider {
+  display: none;
+}
+
+/* The note's colours take the room left and scroll sideways when they need more, so Done always
+   shows. */
+.dockedBar .swatches {
+  flex: 1 1 auto;
+  gap: var(--space-2);
+  min-width: 0;
+  min-height: 44px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.dockedBar .swatch {
+  flex: none;
+  width: 22px;
+  height: 22px;
+}
+
+.done {
+  flex: none;
+  min-width: 48px;
+  height: 44px;
+  margin-left: auto;
+  padding: 0 var(--space-2);
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  font-weight: 500;
+  letter-spacing: var(--text-label-tracking);
+  cursor: pointer;
+}
+
+.done:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}

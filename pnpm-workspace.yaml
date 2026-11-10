@@ -1,0 +1,14 @@
+packages:
+  - packages/*
+  - tooling/*
+# unrs-resolver's native binding arrives through its optional platform dependency.
+ignoredBuiltDependencies:
+  - unrs-resolver
+# pnpm 10 runs no dependency install scripts unless listed here. esbuild's postinstall verifies
+# its platform binary (used by Vite and Vitest).
+onlyBuiltDependencies:
+  - esbuild
+# The Brotli decoder refuses a block that would write past the output buffer, rather than growing
+# the buffer without bound.
+patchedDependencies:
+  brotli@1.3.3: patches/brotli@1.3.3.patch

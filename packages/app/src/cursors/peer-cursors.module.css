@@ -1,0 +1,130 @@
+/* Collaborators' live cursors over the board: a
+   round cursor in the peer's colourway, centred on their pointer, and their name on a tag beside
+   it, white on the colourway (the brand's "text on colour is white"), after a ✦ for an agent. The
+   layer writes each cursor's transform; theme tokens only. */
+
+.layer {
+  position: absolute;
+  overflow: hidden;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.cursor[hidden] {
+  display: none;
+}
+
+/* The round cursor: 14 px, its centre on the pointer's spot. Woven as the mark is, at a size its
+   two threads would fall under a pixel: the colourway's light body, one white thread where the
+   mark's lower thread runs (64 of 96) and the dark below it, like a pallu. A 2 px rim in the
+   sheet's colour keeps it apart from objects of its own colour. */
+.dot {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--color-surface-sheet);
+}
+
+/* The tag sits below and right of the cursor, clear of it. Its fill is the colourway's label
+   fill: its dark, deepened where white would fall under 4.5:1 on it (`colourwayLabelOf`). */
+.name {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  padding: 1px 7px;
+  border-radius: var(--radius-site-pill);
+  color: var(--brand-white);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  white-space: nowrap;
+}
+
+/* An agent's ✦ before its name, in the tag's own white, centred on the name's line. */
+.agentMark {
+  line-height: 1;
+}
+
+.cursor[data-colourway='gulabi'] .dot {
+  background: linear-gradient(
+    var(--brand-gulabi-light) 0 63%,
+    var(--brand-white) 63% 71%,
+    var(--brand-gulabi-dark) 71%
+  );
+}
+
+.cursor[data-colourway='gulabi'] .name {
+  background: var(--brand-gulabi-label);
+}
+
+.cursor[data-colourway='kesari'] .dot {
+  background: linear-gradient(
+    var(--brand-kesari-light) 0 63%,
+    var(--brand-white) 63% 71%,
+    var(--brand-kesari-dark) 71%
+  );
+}
+
+.cursor[data-colourway='kesari'] .name {
+  background: var(--brand-kesari-label);
+}
+
+.cursor[data-colourway='neeli'] .dot {
+  background: linear-gradient(
+    var(--brand-neeli-light) 0 63%,
+    var(--brand-white) 63% 71%,
+    var(--brand-neeli-dark) 71%
+  );
+}
+
+.cursor[data-colourway='neeli'] .name {
+  background: var(--brand-neeli-label);
+}
+
+.cursor[data-colourway='kempu'] .dot {
+  background: linear-gradient(
+    var(--brand-kempu-light) 0 63%,
+    var(--brand-white) 63% 71%,
+    var(--brand-kempu-dark) 71%
+  );
+}
+
+.cursor[data-colourway='kempu'] .name {
+  background: var(--brand-kempu-label);
+}
+
+.cursor[data-colourway='nerale'] .dot {
+  background: linear-gradient(
+    var(--brand-nerale-light) 0 63%,
+    var(--brand-white) 63% 71%,
+    var(--brand-nerale-dark) 71%
+  );
+}
+
+.cursor[data-colourway='nerale'] .name {
+  background: var(--brand-nerale-label);
+}
+
+.cursor[data-colourway='hasiru'] .dot {
+  background: linear-gradient(
+    var(--brand-hasiru-light) 0 63%,
+    var(--brand-white) 63% 71%,
+    var(--brand-hasiru-dark) 71%
+  );
+}
+
+.cursor[data-colourway='hasiru'] .name {
+  background: var(--brand-hasiru-label);
+}

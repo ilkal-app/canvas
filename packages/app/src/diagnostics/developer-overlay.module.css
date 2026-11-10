@@ -1,0 +1,81 @@
+/* Under the top bars, which float over the canvas's top since removed the toolbar above
+   it. `useBelowTopBars` places it from the bars' measured height (a rename form makes them
+   taller); these are the values for the bars at rest, until it has measured. */
+.overlay {
+  position: absolute;
+  top: calc(var(--space-4) + 42px + var(--space-2));
+  left: var(--space-3);
+  box-sizing: border-box;
+  max-width: 320px;
+  max-height: calc(100% - var(--space-4) - 42px - var(--space-2) - var(--space-3));
+  overflow: hidden;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  color: var(--color-ink-primary);
+  font: var(--text-mono-value);
+  letter-spacing: var(--text-mono-value-tracking);
+  /* Diagnostics sit over the canvas without taking its pointer input. */
+  pointer-events: none;
+}
+
+.heading {
+  margin: 0 0 var(--space-1);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+.note {
+  margin: 0 0 var(--space-2);
+  color: var(--color-ink-secondary);
+}
+
+.table {
+  width: 100%;
+  margin-bottom: var(--space-2);
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.table th,
+.table td {
+  padding: 0 0 0 var(--space-2);
+  font-weight: var(--text-body-weight);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.table thead th {
+  color: var(--color-ink-secondary);
+}
+
+.caption {
+  padding-bottom: var(--space-1);
+  font-family: var(--font-ui);
+  font-weight: var(--text-label-weight);
+  text-align: left;
+}
+
+.table .label {
+  padding-left: 0;
+  text-align: left;
+}
+
+/* The one control: it takes the pointer the overlay lets through. */
+.toggle {
+  margin: 0 0 var(--space-2);
+  padding: 0 var(--space-2);
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-raised);
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  pointer-events: auto;
+}
+
+.toggle[aria-pressed='true'] {
+  background: var(--color-surface-pressed);
+}

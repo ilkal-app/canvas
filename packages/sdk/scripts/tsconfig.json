@@ -1,0 +1,17 @@
+{
+  // The SDK's release scripts (the third-party licence list) run by Node with type stripping
+  // (`node --experimental-strip-types`), so they use erasable syntax only. Type-checked by
+  // `tsc -b` through the SDK's references; only declarations are emitted, into dist/scripts.
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "erasableSyntaxOnly": true,
+    // Node runs the scripts as .ts files, so their relative imports name the .ts file.
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
+    "rootDir": ".",
+    "outDir": "../dist/scripts",
+    "tsBuildInfoFile": "../dist/scripts/tsconfig.tsbuildinfo"
+  },
+  "include": ["."]
+}

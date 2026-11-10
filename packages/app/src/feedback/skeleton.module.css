@@ -1,0 +1,16 @@
+/* The Skeleton (Figma 35:1768): the raised surface, static, no shimmer. Theme tokens only. */
+.skeleton {
+  display: block;
+  max-width: 100%;
+  border-radius: var(--radius-control);
+  background: var(--color-surface-raised);
+}
+
+.skeleton[data-shape='block'] {
+  border-radius: var(--radius-sheet);
+}
+
+.skeleton[data-inline] {
+  display: inline-block;
+  vertical-align: middle;
+}

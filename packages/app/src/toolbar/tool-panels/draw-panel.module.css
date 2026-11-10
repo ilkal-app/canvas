@@ -1,0 +1,122 @@
+/* The Draw panel (the design's DRAW card, panel · draw): four 28 px sub-tool buttons
+   (IconButton: 4 px corners, 4 px in, a 20 px icon), a 1 × 20 divider, five 20 px colour swatches
+   (4 px corners, a 1 px edge inside), a divider and three 28 px size buttons with 4, 7 and
+   11 px dots, every item 4 px apart. Pressed is surface/pressed. Hover, focus and disabled are
+   the app's ghost button's (controls/button.module.css): the design has none. Theme
+   tokens only (theme/token-usage.test.ts). */
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.tool,
+.size {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  padding: var(--space-1);
+  border: none;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  cursor: pointer;
+}
+
+.tool:hover,
+.size:not([aria-disabled='true']):hover {
+  background: var(--color-surface-raised);
+}
+
+.tool[aria-pressed='true'],
+.size[aria-pressed='true'] {
+  background: var(--color-surface-pressed);
+}
+
+.tool:focus-visible,
+.size:focus-visible,
+.swatch:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.swatch {
+  flex: none;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  /* The design's edge is the hairline; a control's edge is the 3:1 control line (
+     theme/token-usage.test.ts), so a swatch is told from the sheet. */
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  cursor: pointer;
+}
+
+/* Each swatch's design token, in the theme in use. */
+.swatch[data-colour='ink'] {
+  background: var(--color-ink-primary);
+}
+
+.swatch[data-colour='red'] {
+  background: var(--color-mark-red-pencil);
+}
+
+.swatch[data-colour='blue'] {
+  background: var(--color-hand-agent);
+}
+
+.swatch[data-colour='green'] {
+  background: var(--color-mark-live);
+}
+
+.swatch[data-colour='amber'] {
+  background: var(--color-hand-you);
+}
+
+/* The chosen colour (the design has no selected swatch): a ring of ink just outside it. */
+.swatch[aria-pressed='true'] {
+  box-shadow:
+    0 0 0 1px var(--color-surface-sheet),
+    0 0 0 2px var(--color-ink-primary);
+}
+
+/* While the eraser is in use the colours and sizes stay in place, faded, and do nothing. */
+.swatch[aria-disabled='true'],
+.size[aria-disabled='true'] {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.dot {
+  display: block;
+  border-radius: 50%;
+  background: currentcolor;
+}
+
+.dot[data-size='0'] {
+  width: 4px;
+  height: 4px;
+}
+
+.dot[data-size='1'] {
+  width: 7px;
+  height: 7px;
+}
+
+.dot[data-size='2'] {
+  width: 11px;
+  height: 11px;
+}
+
+.divider {
+  flex: none;
+  width: 1px;
+  height: 20px;
+  background: var(--color-line-hairline);
+}

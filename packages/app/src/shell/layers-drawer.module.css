@@ -1,0 +1,101 @@
+@value dockInset, zoomTop from '../toolbar/dock.module.css';
+
+/* The layers drawer (Figma "06 · Layers drawer", 8:526): a sheet over the canvas's left
+   side, 261 px as the board-name bar is, 8 px under it (`dockInset` in, 42 px tall:
+   top-bars.module.css) and 8 px above the zoom control (its top edge, `zoomTop` from
+   dock.module.css), which keeps its place whether the drawer is open or not. Its left edge is the
+   bar's and the zoom control's: the one `dockInset` (item 10). */
+.drawer {
+  position: absolute;
+  z-index: var(--layer-drawer);
+  top: calc(dockInset + 42px + var(--space-2));
+  bottom: calc(zoomTop + var(--space-2));
+  left: dockInset;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 261px;
+  overflow: hidden;
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+  box-shadow: var(--shadow-float);
+  color: var(--color-ink-primary);
+}
+
+/* Holding an open modal dialog (deleting a page), the drawer rises over the bars and the dock,
+   so the dialog's backdrop covers the whole shell (theme/layer-tokens.ts). */
+.drawer:has([aria-modal='true']) {
+  z-index: var(--layer-dialog);
+}
+
+/* The anchor the drawer keeps while closed: no box of its own. */
+.scope {
+  display: contents;
+}
+
+/* The board's page list above the layers, once pages exist. */
+.pages {
+  flex: none;
+  border-bottom: 1px solid var(--color-line-hairline);
+}
+
+.close {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-secondary);
+  cursor: pointer;
+}
+
+.close:hover {
+  background: var(--color-surface-raised);
+  color: var(--color-ink-primary);
+}
+
+.close:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -2px;
+}
+
+/* Below 768 px wide: a sheet risen from the bottom edge, the full width and
+   up to 542 px tall (the frame's), over the compact bottom bar, with a grabber at its top and a
+   48 px close button. */
+@media (width < 768px) {
+  .drawer {
+    z-index: var(--layer-bars);
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: min(542px, 70%);
+    padding-top: var(--space-4);
+    border-width: 1px 0 0;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .drawer::before {
+    position: absolute;
+    top: var(--space-2);
+    left: 50%;
+    width: 36px;
+    height: 5px;
+    border-radius: 3px;
+    background: var(--color-line-control);
+    content: '';
+    transform: translateX(-50%);
+  }
+
+  .close {
+    width: 48px;
+    height: 48px;
+  }
+}

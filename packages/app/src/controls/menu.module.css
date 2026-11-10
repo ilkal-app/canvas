@@ -1,0 +1,129 @@
+/* A menu of the whiteboard's chrome (the design's board menu and font size menu), in
+   a stack-shaped floating sheet: theme tokens only (theme/token-usage.test.ts). */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 222px;
+}
+
+/* A dropdown's menu: the font size menu is 184 px wide. A long one (the font menu) scrolls by
+   wheel, touch and keys with no scrollbar drawn. */
+.list[data-variant='compact'] {
+  min-width: 166px;
+  scrollbar-width: none;
+}
+
+.list[data-variant='compact']::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 28px;
+  padding: 0 var(--space-2);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  text-align: start;
+  cursor: pointer;
+}
+
+/* The check column sits 4 px in. */
+.item[data-variant='compact'] {
+  padding-inline-start: var(--space-1);
+}
+
+/* The chosen value of a compact menu (the font size) keeps the pressed surface, as the design
+   draws it. */
+.item:hover,
+.item[aria-expanded='true'],
+.item[aria-checked='true'] {
+  background: var(--color-surface-pressed);
+}
+
+/* Inside the sheet's edge: a ring outside would be clipped by its neighbours. */
+.item:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -2px;
+  background: var(--color-surface-pressed);
+}
+
+.item[aria-disabled='true'] {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.item[aria-disabled='true']:hover {
+  background: transparent;
+}
+
+/* A danger item (Delete board): its words in the danger ink, nothing before them. The
+   design writes them in the red pencil, under 4.5:1 for small text on these surfaces; the danger
+   ink is that red adjusted to meet it. */
+.item[data-danger] {
+  color: var(--color-ink-danger);
+}
+
+.check {
+  display: inline-flex;
+  flex: none;
+  width: 20px;
+  height: 20px;
+}
+
+.label {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* A shortcut, a value or a submenu's ›, at the end. The design's faint ink is under 4.5:1 for
+   small text, so it takes the secondary ink. */
+.meta {
+  flex: none;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/* On the chosen row's pressed surface the secondary ink falls under 4.5:1 in Graphite. */
+.item[aria-checked='true'] .meta {
+  color: var(--color-ink-primary);
+}
+
+.item[data-variant='compact'] .meta {
+  font: var(--text-mono-value);
+  letter-spacing: var(--text-mono-value-tracking);
+}
+
+/* The secondary ink is under 4.5:1 on the pressed surface in Graphite: an active row's meta
+   takes the primary ink, as the select's descriptions do. */
+.item:hover .meta,
+.item:focus-visible .meta,
+.item[aria-expanded='true'] .meta {
+  color: var(--color-ink-primary);
+}
+
+.separator {
+  flex: none;
+  height: 1px;
+  background: var(--color-line-hairline);
+}
+
+/* A finger needs 48 px. */
+@media (pointer: coarse) {
+  .item {
+    height: 48px;
+  }
+}

@@ -1,0 +1,252 @@
+.panel {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--color-surface-sheet);
+}
+
+/* The header (Figma "06 · Layers drawer", 8:604): the heading and, at its end, the drawer's close
+   button, over a hairline that divides it from the list. The page list's header above it takes
+   the same (pages/pages-panel.module.css composes it; item 13). */
+.header {
+  display: flex;
+  flex: none;
+  gap: var(--space-2);
+  align-items: center;
+  min-height: 32px;
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-line-hairline);
+}
+
+.heading {
+  flex: 1 1 auto;
+  margin: 0;
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+.empty {
+  margin: 0;
+  padding: var(--space-2) var(--space-3) 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.list {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  /* Room for a focused row's ring, which is drawn outside the row (the Control states sheet). */
+  padding: 2px 0;
+  overflow-y: auto;
+  overscroll-behavior-x: none;
+}
+
+.list:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -2px;
+}
+
+.rows {
+  position: relative;
+  margin: 0 var(--space-1);
+}
+
+/* A row's look (Figma 8:621): body text, inset from the drawer's edges so its focus ring shows,
+   the raised surface on hover and the selected treatment below. The page list's rows take it too
+   (pages/pages-panel.module.css composes it; item 13); a page row is selected when it is
+   the page shown. */
+.rowLook {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-control);
+  color: var(--color-ink-primary);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+  cursor: default;
+  user-select: none;
+}
+
+/* A layer row: 28 px, placed by the virtualised list. */
+.row {
+  composes: rowLook;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+/* Hover: the raised surface alone. */
+.rowLook:hover {
+  background: var(--color-surface-raised);
+}
+
+/* Selected: the pressed surface and, at the leading edge, a 2 px bar in the person's hand colour,
+   which keeps 3:1 against the drawer in both themes, so selected never reads as hover. */
+.rowLook[aria-selected='true'],
+.rowLook[aria-current='page'] {
+  background: var(--color-surface-pressed);
+  color: var(--color-action-fill);
+}
+
+.rowLook[aria-selected='true']::before,
+.rowLook[aria-current='page']::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  border-radius: var(--radius-control) 0 0 var(--radius-control);
+  background: var(--color-hand-you);
+  content: '';
+}
+
+/* The group the select tool entered: an accent bar at its leading edge. */
+.row[aria-current='true'] {
+  box-shadow: inset 3px 0 0 var(--color-action-fill);
+}
+
+/* Keyboard focus: the 2 px ring in the person's hand colour (the focus ring) just outside the row
+   (the Control states sheet), above its neighbours, which sit flush against it. */
+.row:focus-visible {
+  z-index: 1;
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 0;
+}
+
+.indent {
+  flex: none;
+}
+
+.disclosure,
+.lock {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-secondary);
+}
+
+.disclosure:hover,
+.lock:hover {
+  background: var(--color-surface-raised);
+  color: var(--color-ink-primary);
+}
+
+.name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* A frame's or main's name edited in place: the name's room, a control's look. */
+.nameInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 22px;
+  padding: 0 var(--space-1);
+  border: 1px solid var(--color-focus-ring);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-sheet);
+  color: var(--color-ink-primary);
+  font: inherit;
+  letter-spacing: inherit;
+  user-select: text;
+}
+
+/* The lock shows while the row is hovered or focused, and always on a locked object. */
+.lock {
+  opacity: 0;
+}
+
+.row:hover .lock,
+.row:focus-within .lock,
+.lock[aria-pressed='true'] {
+  opacity: 1;
+}
+
+/* A hidden layer's row dims its icon and name, as Figma does. */
+.row[data-hidden='true'] > :not(button) {
+  opacity: 0.5;
+}
+
+/* While the board loads (Figma "Skeleton", 35:1768): static bars, no shimmer, one per row. */
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  margin: 0 var(--space-1);
+}
+
+.skeletonRow {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-2);
+}
+
+/* A drag of rows: the list shows the grabbing hand, and where the drop lands. */
+.list[data-dragging],
+.list[data-dragging] .row {
+  cursor: grabbing;
+}
+
+/* The drop between rows: a 2 px line in the action colour, indented to the level it lands at. */
+.dropLine {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--color-action-fill);
+  pointer-events: none;
+}
+
+/* The drop into a frame or group: an outline around its row. */
+.dropInto {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  left: 0;
+  border: 2px solid var(--color-action-fill);
+  border-radius: var(--radius-control);
+  pointer-events: none;
+}
+
+/* A refused drop (a locked container, one inside the dragged objects): the refusal colour, the
+   not-allowed cursor, and the reason under the list. */
+.dropLine[data-refused] {
+  background: var(--color-mark-red-pencil);
+}
+
+.dropInto[data-refused] {
+  border-color: var(--color-mark-red-pencil);
+}
+
+.list[data-dragging]:has([data-refused]),
+.list[data-dragging]:has([data-refused]) .row {
+  cursor: not-allowed;
+}
+
+.dropStatus {
+  flex: none;
+  margin: 0;
+  padding: var(--space-1) var(--space-3);
+  color: var(--color-mark-red-pencil);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.dropStatus:empty {
+  padding: 0;
+}

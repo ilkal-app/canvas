@@ -1,0 +1,138 @@
+/* The panel fills the inspector drawer, which gives it its sheet and, in its header,
+   says what is selected; the panel scrolls under that header. */
+.panel {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0 var(--space-4) var(--space-4);
+  overflow-y: auto;
+  overscroll-behavior-x: none;
+}
+
+/* The panel's name, for assistive technology: the drawer's header shows what it styles. */
+.heading {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* The header's rule stands above the first section. */
+.heading + .section {
+  border-top: 0;
+}
+
+.heading + .empty {
+  margin-top: var(--space-3);
+}
+
+.empty {
+  margin: 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  border-top: 1px solid var(--color-line-hairline);
+}
+
+/* A section's uppercase heading, as the inspector's frames set it (Figma 02, 03). */
+.sectionHeading {
+  margin: 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-section);
+  letter-spacing: var(--text-section-tracking);
+  text-transform: uppercase;
+}
+
+/* The heading is the section's collapse toggle: the title, a collapsed section's
+   summary and the chevron, across the panel's width. */
+.sectionToggle {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  width: 100%;
+  min-height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: start;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.sectionToggle:hover {
+  color: var(--color-ink-primary);
+}
+
+.sectionToggle:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.sectionTitle {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* A collapsed section's one-line summary (the layout's "176 × 120 at 412, 268"). */
+.summary {
+  flex: none;
+  color: var(--color-ink-secondary);
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+  text-transform: none;
+}
+
+/* A section's controls: a fieldset, so a locked selection disables them all at once. */
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Disabled for a locked selection (UI-18 item 2): faded to 38%. */
+.body:disabled {
+  opacity: 0.38;
+}
+
+/* The locked selection's banner (Figma "Locked object"): under the header, over the sections. */
+.banner {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  margin: 0;
+  padding: var(--space-2) 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.banner + .section {
+  border-top: 1px solid var(--color-line-hairline);
+}
+
+.preference {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}

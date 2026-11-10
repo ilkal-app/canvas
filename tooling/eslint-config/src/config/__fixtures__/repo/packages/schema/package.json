@@ -1,0 +1,5 @@
+{
+  "name": "@canvas/schema",
+  "private": true,
+  "type": "module"
+}

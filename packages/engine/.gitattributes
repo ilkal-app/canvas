@@ -1,0 +1,3 @@
+# Written by scripts/compile-shaders.ts from the .wgsl sources; collapsed in diffs.
+src/gpu/shaders/*.glsl linguist-generated=true
+src/gpu/shaders/*.generated.ts linguist-generated=true

@@ -1,0 +1,7 @@
+/* An anchored popover: fixed to the window where `placePopover` puts it, over the
+   canvas with the dock and the zoom control; theme tokens only (theme/token-usage.test.ts). */
+
+.popover {
+  position: fixed;
+  z-index: var(--layer-controls);
+}

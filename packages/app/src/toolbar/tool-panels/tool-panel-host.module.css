@@ -1,0 +1,59 @@
+/* A tool panel (the design's "Whiteboard · tool panels"): a one-row floating sheet,
+   44 px tall, centred on the floating dock (which is centred on the canvas) and 8 px above its top
+   edge, never closer than 16 px to the canvas's sides. */
+@value dockTop, compactBarHeight, compactBarBottom from '../dock.module.css';
+
+.panel {
+  position: absolute;
+  bottom: calc(dockTop + var(--space-2));
+  left: 50%;
+  z-index: var(--layer-controls);
+  max-width: calc(100% - 2 * var(--space-4));
+  transform: translateX(-50%);
+}
+
+.panel[data-shape='toolbar'] {
+  height: 44px;
+  /* The design's 9 px inset: 8 + the 1 px border. */
+  padding: 0 var(--space-2);
+}
+
+/* Its items, one row, with roving focus: 4 px apart, the Sticky panel's 8. */
+.items {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.panel[data-tool-panel='sticky'] .items {
+  gap: var(--space-2);
+}
+
+/* The Image panel's items are 6 px apart, as the design draws them. */
+.panel[data-tool-panel='image'] .items {
+  gap: 6px;
+}
+
+/* Below 768 px wide: a bottom sheet over the compact bar, 16 px in from the sides and
+   8 px above the bar, its items 48 px touch targets that wrap onto more rows when they need. */
+.panel[data-sheet] {
+  right: max(var(--space-4), env(safe-area-inset-right, 0px));
+  bottom: calc(compactBarBottom + compactBarHeight + var(--space-2));
+  left: max(var(--space-4), env(safe-area-inset-left, 0px));
+  max-width: none;
+  transform: none;
+}
+
+.panel[data-sheet][data-shape='toolbar'] {
+  height: auto;
+  padding: var(--space-1) var(--space-2);
+}
+
+.panel[data-sheet] .items {
+  flex-wrap: wrap;
+}
+
+.panel[data-sheet] button {
+  min-width: 48px;
+  min-height: 48px;
+}

@@ -1,0 +1,42 @@
+/* The sticky panel (the design's STICKY card and frame A): six 20 px colour swatches 8 px
+   apart (a 28 px step), a divider, the Square and Wide chips, a divider, and the hint. */
+
+.swatches {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* A 20 px square with 4 px corners, its edge the control line (the design draws the hairline,
+   which the 3:1 control rule refuses, theme/token-usage.test.ts). The design draws no chosen
+   state: the chosen colour is ringed in primary ink, 2 px clear of it. */
+.swatch {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid var(--color-line-control);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.swatch[aria-checked='true'] {
+  box-shadow:
+    0 0 0 2px var(--color-surface-sheet),
+    0 0 0 3px var(--color-ink-primary);
+}
+
+.swatch:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* The design's 120 px caption box, its words from its left edge, 8 px after the divider. */
+.hint {
+  box-sizing: border-box;
+  min-width: 120px;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  white-space: nowrap;
+}

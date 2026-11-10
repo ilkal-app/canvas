@@ -1,0 +1,20 @@
+{
+  // A self-contained stand-in for a real package tsconfig, so the fixture repo type-checks
+  // without the workspace's node_modules. `paths` plays the role of pnpm's workspace links.
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "types": [],
+    "noEmit": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@canvas/schema": ["../schema/src/index.ts"],
+      "@canvas/engine": ["../engine/src/index.ts"],
+      "@canvas/*": ["../*"]
+    }
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    // Tooling runs in Node (ESLint loads this package from the root eslint.config.js).
+    "types": ["node"]
+  },
+  "include": ["src"],
+  // The fixture repo is linted by the test, never compiled: it contains deliberate violations.
+  "exclude": ["src/**/__fixtures__"]
+}

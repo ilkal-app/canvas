@@ -1,0 +1,38 @@
+/* Peers editing text (Figma "States" E1, node 36:1836). The engine draws the outline,
+   the caret and the selection; this layer holds each peer's name tag, and transparent markers
+   over the outline and the caret that name the object and the peer, so they can be found. */
+.layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.outline,
+.caret {
+  position: absolute;
+  transform-origin: 0 0;
+}
+
+/* The tag sits on the box's top-left corner, above it; a second peer on the same text stacks
+   above the first. */
+.tag {
+  position: absolute;
+  padding: 1px 6px;
+  border-radius: var(--radius-control);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  white-space: nowrap;
+  transform: translate(0, calc(-100% - 2px));
+}
+
+/* The tag's ink (`avatarColorsOf`): the theme's darkest or lightest text, as the avatars take. */
+.tag[data-ink='dark'],
+[data-theme='light'] .tag[data-ink='light'] {
+  color: var(--color-action-on);
+}
+
+.tag[data-ink='light'],
+[data-theme='light'] .tag[data-ink='dark'] {
+  color: var(--color-ink-primary);
+}

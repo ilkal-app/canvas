@@ -1,0 +1,28 @@
+{
+  "name": "@canvas/document",
+  "version": "0.0.0",
+  "private": true,
+  "description": "DocumentStore over Yjs, the command layer, undo/redo and fractional z-order.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "lint": "eslint --max-warnings 0 ."
+  },
+  "dependencies": {
+    "@canvas/schema": "workspace:*",
+    "lib0": "~0.2.118",
+    "yjs": "~13.6.33",
+    "zod": "^4.6.5"
+  }
+}

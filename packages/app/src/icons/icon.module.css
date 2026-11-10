@@ -1,0 +1,9 @@
+/* Every icon (Icon, UI-18): strokes in the text colour; its size and its 1.5 px stroke are the
+   element's own, the same everywhere. */
+.icon {
+  flex: none;
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

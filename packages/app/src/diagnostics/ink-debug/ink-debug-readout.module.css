@@ -1,0 +1,16 @@
+/* The ink latency readout (`?inkdebug=1`): a small panel in a corner, for reading figures
+   off a device, never in the way of the board. */
+.readout {
+  position: fixed;
+  z-index: 1000;
+  top: 72px;
+  left: 16px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--color-surface-raised);
+  color: var(--color-ink-primary);
+  font: var(--text-mono-value);
+  letter-spacing: var(--text-mono-value-tracking);
+  pointer-events: none;
+  white-space: pre;
+}

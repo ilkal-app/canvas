@@ -1,0 +1,75 @@
+/* The control states sheet (Figma 35:1786; UI-18) inside the token sheet: theme tokens only. */
+.sheet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  /* Room for the focus ring outside a control, so a row's capture holds it. */
+  padding: var(--space-2) var(--space-2) var(--space-2) 0;
+}
+
+/* Room above the tool buttons for their tooltip. */
+.row[data-states-row='Dock tool button'] {
+  padding-top: 36px;
+}
+
+.rowName {
+  margin: 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-section);
+  letter-spacing: var(--text-section-tracking);
+  text-transform: uppercase;
+}
+
+.states {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* The tool buttons on the dock's sheet, as the dock holds them. */
+.dock {
+  display: flex;
+  gap: 2px;
+  padding: var(--space-1);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-sheet);
+  background: var(--color-surface-sheet);
+}
+
+.spinners {
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+  color: var(--color-ink-secondary);
+}
+
+.skeletons {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* A floating sheet's sample words (`?chrome=floating` only). */
+.sample {
+  display: flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 var(--space-2);
+  color: var(--color-ink-secondary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+}
+
+/* An icon in the whiteboard icons' row (`?chrome=floating` only). */
+.icon {
+  display: inline-flex;
+  color: var(--color-ink-primary);
+}

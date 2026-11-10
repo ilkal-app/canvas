@@ -1,0 +1,16 @@
+{
+  // The browser side of the engine host: animation frames, clock origin, canvas hand-over and
+  // GPU backend creation for the page and the engine worker. Like gpu/ it is its own project
+  // with the DOM lib, so the engine core stays DOM-free (Global Constraint 2); it cannot import
+  // the core (the core references it), so it restates the platform shape the core checks.
+  "extends": "../../../../../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM"],
+    "types": ["@webgpu/types"],
+    "rootDir": ".",
+    "outDir": "../../../dist/host/web",
+    "tsBuildInfoFile": "../../../dist/host/web/tsconfig.tsbuildinfo"
+  },
+  "include": ["."],
+  "references": [{ "path": "../../gpu" }]
+}

@@ -1,0 +1,88 @@
+/* The shared button (the control states sheet, 35:1786; UI-18): theme tokens only
+   (theme/token-usage.test.ts). 32 px tall, 12 px in, the control's corners, Label type. */
+.button {
+  display: inline-flex;
+  flex: none;
+  gap: var(--space-2);
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0 var(--space-3);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Primary: the action's fill; hover lightens it, pressed is secondary ink. */
+.button[data-kind='primary'] {
+  border-color: var(--color-action-fill);
+  background: var(--color-action-fill);
+  color: var(--color-action-on);
+}
+
+.button[data-kind='primary']:hover:not(:disabled, [aria-disabled='true']) {
+  opacity: 0.88;
+}
+
+.button[data-kind='primary']:active:not(:disabled, [aria-disabled='true']) {
+  border-color: var(--color-ink-secondary);
+  background: var(--color-ink-secondary);
+  opacity: 1;
+}
+
+/* Secondary: the raised surface inside the 3:1 control line (the sheet's hairline is
+   1.3:1); hover is the pressed surface, pressed the strong line. */
+.button[data-kind='secondary'] {
+  border-color: var(--color-line-control);
+  background: var(--color-surface-raised);
+}
+
+.button[data-kind='secondary']:hover:not(:disabled, [aria-disabled='true']) {
+  background: var(--color-surface-pressed);
+}
+
+.button[data-kind='secondary']:active:not(:disabled, [aria-disabled='true']) {
+  background: var(--color-line-strong);
+}
+
+/* Ghost and danger: no fill until hovered (raised) or pressed (pressed). */
+.button[data-kind='ghost']:hover:not(:disabled, [aria-disabled='true']),
+.button[data-kind='danger']:hover:not(:disabled, [aria-disabled='true']) {
+  background: var(--color-surface-raised);
+}
+
+.button[data-kind='ghost']:active:not(:disabled, [aria-disabled='true']),
+.button[data-kind='danger']:active:not(:disabled, [aria-disabled='true']) {
+  background: var(--color-surface-pressed);
+}
+
+/* Danger: the red pencil's edge. Its words stay primary ink: red pencil text at label size is
+   under 4.5:1 on the sheet (4.1:1 in Graphite) and the raised surface (a ruling of, as
+   the fields' error messages do). */
+.button[data-kind='danger'] {
+  border-color: var(--color-mark-red-pencil);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Disabled, and not built yet: 38% opacity, no hover (the rules above skip it). */
+.button:disabled,
+.button[aria-disabled='true'] {
+  cursor: default;
+  opacity: 0.38;
+}
+
+/* Busy: it takes no press, but keeps its look while it works (the sheet's busy state). */
+.button[aria-busy='true'][aria-disabled='true'] {
+  cursor: progress;
+  opacity: 1;
+}

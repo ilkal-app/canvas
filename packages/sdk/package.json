@@ -1,0 +1,63 @@
+{
+  "name": "@ilkal/sdk",
+  "version": "0.1.0",
+  "private": false,
+  "description": "The embeddable canvas bundle and its public API.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "NOTICE",
+    "THIRD_PARTY_LICENSES.md"
+  ],
+  "scripts": {
+    "build": "vite build && tsc -b",
+    "lint": "eslint --max-warnings 0 .",
+    "sample": "vite sample --config vite.config.ts",
+    "sample:built": "pnpm run build && vite build --config vite.sample.config.ts && vite preview --config vite.sample.config.ts",
+    "licenses": "node --experimental-strip-types scripts/third-party-licenses.ts"
+  },
+  "dependencies": {
+    "@canvas/app": "workspace:*",
+    "@canvas/document": "workspace:*",
+    "@canvas/schema": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "jsdom": "^30.1.1",
+    "magic-string": "^0.30.21",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "vite": "^7.3.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilkal-app/canvas.git",
+    "directory": "packages/sdk"
+  },
+  "homepage": "https://github.com/ilkal-app/canvas#readme",
+  "bugs": "https://github.com/ilkal-app/canvas/issues",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

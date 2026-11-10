@@ -1,0 +1,199 @@
+/* The board search sheet (design board, Whiteboard frame B): a stack-shaped floating
+   sheet (controls/floating-sheet) 261 px wide, 8 px under the board bar, its rows 4 px apart
+   and 245 px wide: frame B's hairline is inside its 8 px padding, so 7 + 1 here; theme tokens
+   only (theme/token-usage.test.ts). The attributes outrank the stack shape's own gap and
+   padding. */
+.sheet[data-floating-sheet][data-shape='stack'] {
+  position: fixed;
+  z-index: 1;
+  width: 261px;
+  gap: var(--space-1);
+  padding: 7px;
+}
+
+/* The query: the Library's field, 245 x 32, 4 px corners on the raised surface; the search
+   glyph, the query and the count, 6 px apart, 7 px in at the left and 9 px at the right (the
+   1 px edge, the focus ring when focused, counted). */
+.field {
+  display: flex;
+  flex: none;
+  gap: 6px;
+  align-items: center;
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0 8px 0 6px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  background: var(--color-surface-raised);
+  color: var(--color-ink-primary);
+}
+
+.field:focus-within {
+  border-color: var(--color-focus-ring);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+  appearance: none;
+}
+
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.count {
+  flex: none;
+  /* Text, not a placeholder: AA contrast. */
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/* The results: groups of rows, scrolling past 360 px (frame B draws no limit). An empty list
+   keeps a 1 px line so it is still laid out. */
+.results {
+  display: flex;
+  flex-direction: column;
+  max-height: 360px;
+  min-height: 1px;
+  overflow-y: auto;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* A group's head, the Library's narrow section head: 32 px, its name and count in UI/Section,
+   upper case, with the chevron at the right. */
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 32px;
+  padding-left: var(--space-2);
+  color: var(--color-ink-secondary);
+  font: var(--text-section);
+  letter-spacing: var(--text-section-tracking);
+  text-transform: uppercase;
+}
+
+/* A result: the Library's row, 28 px, 4 px corners; its glyph 8 px in, its text at 34 px with an
+   ellipsis, its section at the right. The active row is pressed, with the person's colour as a
+   2 x 16 bar at its left edge. */
+.row {
+  position: relative;
+  display: flex;
+  flex: none;
+  gap: 6px;
+  align-items: center;
+  box-sizing: border-box;
+  height: 28px;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-control);
+  color: var(--color-ink-primary);
+  cursor: pointer;
+}
+
+.row:hover {
+  background: var(--color-surface-raised);
+}
+
+.row[aria-selected='true'] {
+  background: var(--color-surface-pressed);
+}
+
+/* The pressed row's meta in primary ink: secondary is 4.2:1 on Graphite's pressed. */
+.row[aria-selected='true'] .meta {
+  color: var(--color-ink-primary);
+}
+
+.row[aria-selected='true']::before {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 2px;
+  height: 16px;
+  border-radius: 1px;
+  background: var(--color-hand-you);
+  content: '';
+}
+
+.label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  font: var(--text-label);
+  letter-spacing: var(--text-label-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta {
+  flex: none;
+  max-width: 44px;
+  overflow: hidden;
+  /* Text, not a placeholder: AA contrast. */
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.empty,
+.footer {
+  margin: 0;
+  padding: 0 var(--space-2);
+  /* Text, not a placeholder: AA contrast. */
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+/* All pages (not in frame B): a small switch in the footer row. */
+.footerRow {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scope {
+  flex: none;
+  padding: 2px 6px;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  cursor: pointer;
+}
+
+.scope:hover {
+  background: var(--color-surface-raised);
+}
+
+.scope[aria-checked='true'] {
+  background: var(--color-surface-pressed);
+  color: var(--color-ink-primary);
+}
+
+/* The field's edge already turns amber while its input has focus; under the floating chrome the
+   input draws no outline of its own inside it (item 7), which the site's
+   `.frame input:focus-visible` would otherwise add. */
+:is([data-whiteboard-chrome='floating'], [data-whiteboard-chrome-scope='floating'])
+  .input:focus-visible:not([aria-invalid='true']) {
+  outline: none;
+  outline-offset: 0;
+}

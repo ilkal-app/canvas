@@ -1,0 +1,538 @@
+{
+  "format": "canvas.board",
+  "schemaVersion": 39,
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Kanban",
+      "order": "a0"
+    }
+  ],
+  "objects": [
+    {
+      "id": "kanban-0",
+      "parentId": null,
+      "pageId": "page-1",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 1600,
+      "height": 1000,
+      "name": "Kanban",
+      "clip": false,
+      "background": null,
+      "showName": false,
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "cornerRadius": 16
+    },
+    {
+      "id": "kanban-1",
+      "parentId": "kanban-0",
+      "pageId": null,
+      "x": 48,
+      "y": 40,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "title",
+      "type": "text",
+      "width": 900,
+      "height": 40,
+      "text": "Kanban",
+      "runs": [
+        {
+          "length": 6,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 32,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "kanban-10",
+      "parentId": "kanban-8",
+      "pageId": null,
+      "x": 24,
+      "y": 72,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "card",
+      "type": "sticky",
+      "width": 432,
+      "height": 216,
+      "text": "Something in progress",
+      "runs": [
+        {
+          "length": 21,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9568627450980393, 0.8117647058823529, 0.6509803921568628, 1],
+      "aspect": "wide"
+    },
+    {
+      "id": "kanban-11",
+      "parentId": "kanban-8",
+      "pageId": null,
+      "x": 24,
+      "y": 304,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "card",
+      "type": "sticky",
+      "width": 432,
+      "height": 216,
+      "text": "Something in progress",
+      "runs": [
+        {
+          "length": 21,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9568627450980393, 0.8117647058823529, 0.6509803921568628, 1],
+      "aspect": "wide"
+    },
+    {
+      "id": "kanban-12",
+      "parentId": "kanban-0",
+      "pageId": null,
+      "x": 1072,
+      "y": 140,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 480,
+      "height": 812,
+      "name": "Done",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "kanban-13",
+      "parentId": "kanban-12",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 432,
+      "height": 25,
+      "text": "Done",
+      "runs": [
+        {
+          "length": 4,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "kanban-14",
+      "parentId": "kanban-12",
+      "pageId": null,
+      "x": 24,
+      "y": 72,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "card",
+      "type": "sticky",
+      "width": 432,
+      "height": 216,
+      "text": "Something finished",
+      "runs": [
+        {
+          "length": 18,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1],
+      "aspect": "wide"
+    },
+    {
+      "id": "kanban-2",
+      "parentId": "kanban-0",
+      "pageId": null,
+      "x": 48,
+      "y": 88,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "subtitle",
+      "type": "text",
+      "width": 900,
+      "height": 20,
+      "text": "Move each card to the right as the work moves along.",
+      "runs": [
+        {
+          "length": 52,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "kanban-3",
+      "parentId": "kanban-0",
+      "pageId": null,
+      "x": 48,
+      "y": 140,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 480,
+      "height": 812,
+      "name": "To do",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "kanban-4",
+      "parentId": "kanban-3",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 432,
+      "height": 25,
+      "text": "To do",
+      "runs": [
+        {
+          "length": 5,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "kanban-5",
+      "parentId": "kanban-3",
+      "pageId": null,
+      "x": 24,
+      "y": 72,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "card",
+      "type": "sticky",
+      "width": 432,
+      "height": 216,
+      "text": "Add a task",
+      "runs": [
+        {
+          "length": 10,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1],
+      "aspect": "wide"
+    },
+    {
+      "id": "kanban-6",
+      "parentId": "kanban-3",
+      "pageId": null,
+      "x": 24,
+      "y": 304,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "card",
+      "type": "sticky",
+      "width": 432,
+      "height": 216,
+      "text": "Add a task",
+      "runs": [
+        {
+          "length": 10,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1],
+      "aspect": "wide"
+    },
+    {
+      "id": "kanban-7",
+      "parentId": "kanban-3",
+      "pageId": null,
+      "x": 24,
+      "y": 536,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "card",
+      "type": "sticky",
+      "width": 432,
+      "height": 216,
+      "text": "Add a task",
+      "runs": [
+        {
+          "length": 10,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1],
+      "aspect": "wide"
+    },
+    {
+      "id": "kanban-8",
+      "parentId": "kanban-0",
+      "pageId": null,
+      "x": 560,
+      "y": 140,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 480,
+      "height": 812,
+      "name": "Doing",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "kanban-9",
+      "parentId": "kanban-8",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 432,
+      "height": 25,
+      "text": "Doing",
+      "runs": [
+        {
+          "length": 5,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    }
+  ]
+}

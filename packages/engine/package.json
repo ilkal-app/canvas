@@ -1,0 +1,33 @@
+{
+  "name": "@canvas/engine",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Scene graph, GPU backends, rendering, spatial index, hit testing and layout.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "shaders": "node --experimental-strip-types scripts/compile-shaders.ts",
+    "shaders:check": "node --experimental-strip-types scripts/compile-shaders.ts --check",
+    "build": "pnpm run shaders && tsc -b",
+    "lint": "pnpm run shaders:check && eslint --max-warnings 0 ."
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "@webgpu/types": "^0.1.74",
+    "naga-wasm": "30.1.0"
+  },
+  "dependencies": {
+    "@canvas/schema": "workspace:*",
+    "@canvas/text": "workspace:*"
+  }
+}

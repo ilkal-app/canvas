@@ -1,0 +1,1649 @@
+{
+  "format": "canvas.board",
+  "schemaVersion": 39,
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "User journey map",
+      "order": "a0"
+    }
+  ],
+  "objects": [
+    {
+      "id": "user-journey-map-0",
+      "parentId": null,
+      "pageId": "page-1",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 1600,
+      "height": 1000,
+      "name": "User journey map",
+      "clip": false,
+      "background": null,
+      "showName": false,
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "cornerRadius": 16
+    },
+    {
+      "id": "user-journey-map-1",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 48,
+      "y": 40,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "title",
+      "type": "text",
+      "width": 900,
+      "height": 40,
+      "text": "User journey map",
+      "runs": [
+        {
+          "length": 16,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 32,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "user-journey-map-10",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 48,
+      "y": 588,
+      "rotation": 0,
+      "z": "a9",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane Feeling",
+      "type": "shape",
+      "width": 1504,
+      "height": 176,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 12,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "user-journey-map-11",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 48,
+      "y": 776,
+      "rotation": 0,
+      "z": "aA",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane Opportunities",
+      "type": "shape",
+      "width": 1504,
+      "height": 176,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 12,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "user-journey-map-12",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 72,
+      "y": 236,
+      "rotation": 0,
+      "z": "aB",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane label",
+      "type": "text",
+      "width": 152,
+      "height": 22.5,
+      "text": "Doing",
+      "runs": [
+        {
+          "length": 5,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "user-journey-map-13",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 72,
+      "y": 264,
+      "rotation": 0,
+      "z": "aC",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane prompt",
+      "type": "text",
+      "width": 152,
+      "height": 17.5,
+      "text": "What do they do?",
+      "runs": [
+        {
+          "length": 16,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "user-journey-map-14",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 72,
+      "y": 424,
+      "rotation": 0,
+      "z": "aD",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane label",
+      "type": "text",
+      "width": 152,
+      "height": 22.5,
+      "text": "Thinking",
+      "runs": [
+        {
+          "length": 8,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "user-journey-map-15",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 72,
+      "y": 452,
+      "rotation": 0,
+      "z": "aE",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane prompt",
+      "type": "text",
+      "width": 152,
+      "height": 17.5,
+      "text": "What’s on their mind?",
+      "runs": [
+        {
+          "length": 21,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "user-journey-map-16",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 72,
+      "y": 612,
+      "rotation": 0,
+      "z": "aF",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane label",
+      "type": "text",
+      "width": 152,
+      "height": 22.5,
+      "text": "Feeling",
+      "runs": [
+        {
+          "length": 7,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "user-journey-map-17",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 72,
+      "y": 640,
+      "rotation": 0,
+      "z": "aG",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane prompt",
+      "type": "text",
+      "width": 152,
+      "height": 35,
+      "text": "Good at the top, rough at the bottom",
+      "runs": [
+        {
+          "length": 36,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "user-journey-map-18",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 72,
+      "y": 800,
+      "rotation": 0,
+      "z": "aH",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane label",
+      "type": "text",
+      "width": 152,
+      "height": 22.5,
+      "text": "Opportunities",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 18,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "user-journey-map-19",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 72,
+      "y": 828,
+      "rotation": 0,
+      "z": "aI",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane prompt",
+      "type": "text",
+      "width": 152,
+      "height": 17.5,
+      "text": "How could we help?",
+      "runs": [
+        {
+          "length": 18,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "user-journey-map-2",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 48,
+      "y": 88,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "subtitle",
+      "type": "text",
+      "width": 900,
+      "height": 20,
+      "text": "Follow one person through each stage. Where does it feel hard?",
+      "runs": [
+        {
+          "length": 62,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "user-journey-map-20",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 292,
+      "y": 228,
+      "rotation": 0,
+      "z": "aJ",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "doing",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add an action",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "user-journey-map-21",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 556,
+      "y": 228,
+      "rotation": 0,
+      "z": "aK",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "doing",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add an action",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "user-journey-map-22",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 820,
+      "y": 228,
+      "rotation": 0,
+      "z": "aL",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "doing",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add an action",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "user-journey-map-23",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 1084,
+      "y": 228,
+      "rotation": 0,
+      "z": "aM",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "doing",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add an action",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "user-journey-map-24",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 1348,
+      "y": 228,
+      "rotation": 0,
+      "z": "aN",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "doing",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add an action",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "user-journey-map-25",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 292,
+      "y": 416,
+      "rotation": 0,
+      "z": "aO",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "thinking",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add a thought",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1]
+    },
+    {
+      "id": "user-journey-map-26",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 556,
+      "y": 416,
+      "rotation": 0,
+      "z": "aP",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "thinking",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add a thought",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1]
+    },
+    {
+      "id": "user-journey-map-27",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 820,
+      "y": 416,
+      "rotation": 0,
+      "z": "aQ",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "thinking",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add a thought",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1]
+    },
+    {
+      "id": "user-journey-map-28",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 1084,
+      "y": 416,
+      "rotation": 0,
+      "z": "aR",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "thinking",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add a thought",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1]
+    },
+    {
+      "id": "user-journey-map-29",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 1348,
+      "y": 416,
+      "rotation": 0,
+      "z": "aS",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "thinking",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add a thought",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.8549019607843137, 0.803921568627451, 0.9372549019607843, 1]
+    },
+    {
+      "id": "user-journey-map-3",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 240,
+      "y": 140,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "stage 1",
+      "type": "shape",
+      "width": 248,
+      "height": 56,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": {
+        "text": "Discover",
+        "runs": [
+          {
+            "length": 8,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 18,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "user-journey-map-30",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 352,
+      "y": 616,
+      "rotation": 0,
+      "z": "aT",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "feeling point",
+      "type": "shape",
+      "width": 24,
+      "height": 24,
+      "kind": "ellipse",
+      "stroke": null,
+      "fill": {
+        "token": "accent"
+      },
+      "cornerRadius": 0,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "user-journey-map-31",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 616,
+      "y": 684,
+      "rotation": 0,
+      "z": "aU",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "feeling point",
+      "type": "shape",
+      "width": 24,
+      "height": 24,
+      "kind": "ellipse",
+      "stroke": null,
+      "fill": {
+        "token": "accent"
+      },
+      "cornerRadius": 0,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "user-journey-map-32",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 880,
+      "y": 716,
+      "rotation": 0,
+      "z": "aV",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "feeling point",
+      "type": "shape",
+      "width": 24,
+      "height": 24,
+      "kind": "ellipse",
+      "stroke": null,
+      "fill": {
+        "token": "accent"
+      },
+      "cornerRadius": 0,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "user-journey-map-33",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 1144,
+      "y": 648,
+      "rotation": 0,
+      "z": "aW",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "feeling point",
+      "type": "shape",
+      "width": 24,
+      "height": 24,
+      "kind": "ellipse",
+      "stroke": null,
+      "fill": {
+        "token": "accent"
+      },
+      "cornerRadius": 0,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "user-journey-map-34",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 1408,
+      "y": 612,
+      "rotation": 0,
+      "z": "aX",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "feeling point",
+      "type": "shape",
+      "width": 24,
+      "height": 24,
+      "kind": "ellipse",
+      "stroke": null,
+      "fill": {
+        "token": "accent"
+      },
+      "cornerRadius": 0,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "user-journey-map-35",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aY",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "feeling line",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "user-journey-map-30",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "user-journey-map-31",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "route": "straight",
+      "stroke": {
+        "color": {
+          "token": "accent"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "user-journey-map-36",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aZ",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "feeling line",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "user-journey-map-31",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "user-journey-map-32",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "route": "straight",
+      "stroke": {
+        "color": {
+          "token": "accent"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "user-journey-map-37",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "aa",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "feeling line",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "user-journey-map-32",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "user-journey-map-33",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "route": "straight",
+      "stroke": {
+        "color": {
+          "token": "accent"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "user-journey-map-38",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "ab",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "feeling line",
+      "type": "connector",
+      "from": {
+        "kind": "object",
+        "objectId": "user-journey-map-33",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "to": {
+        "kind": "object",
+        "objectId": "user-journey-map-34",
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "route": "straight",
+      "stroke": {
+        "color": {
+          "token": "accent"
+        },
+        "width": 2
+      },
+      "startCap": "none",
+      "endCap": "none",
+      "label": null
+    },
+    {
+      "id": "user-journey-map-39",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 292,
+      "y": 792,
+      "rotation": 0,
+      "z": "ac",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "opportunity",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add an idea",
+      "runs": [
+        {
+          "length": 11,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1]
+    },
+    {
+      "id": "user-journey-map-4",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 504,
+      "y": 140,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "stage 2",
+      "type": "shape",
+      "width": 248,
+      "height": 56,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": {
+        "text": "Sign up",
+        "runs": [
+          {
+            "length": 7,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 18,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "user-journey-map-40",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 556,
+      "y": 792,
+      "rotation": 0,
+      "z": "ad",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "opportunity",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add an idea",
+      "runs": [
+        {
+          "length": 11,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1]
+    },
+    {
+      "id": "user-journey-map-41",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 820,
+      "y": 792,
+      "rotation": 0,
+      "z": "ae",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "opportunity",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add an idea",
+      "runs": [
+        {
+          "length": 11,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1]
+    },
+    {
+      "id": "user-journey-map-42",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 1084,
+      "y": 792,
+      "rotation": 0,
+      "z": "af",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "opportunity",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add an idea",
+      "runs": [
+        {
+          "length": 11,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1]
+    },
+    {
+      "id": "user-journey-map-43",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 1348,
+      "y": 792,
+      "rotation": 0,
+      "z": "ag",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "opportunity",
+      "type": "sticky",
+      "width": 144,
+      "height": 144,
+      "text": "Add an idea",
+      "runs": [
+        {
+          "length": 11,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1]
+    },
+    {
+      "id": "user-journey-map-5",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 768,
+      "y": 140,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "stage 3",
+      "type": "shape",
+      "width": 248,
+      "height": 56,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": {
+        "text": "First use",
+        "runs": [
+          {
+            "length": 9,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 18,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "user-journey-map-6",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 1032,
+      "y": 140,
+      "rotation": 0,
+      "z": "a5",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "stage 4",
+      "type": "shape",
+      "width": 248,
+      "height": 56,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": {
+        "text": "Get value",
+        "runs": [
+          {
+            "length": 9,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 18,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "user-journey-map-7",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 1296,
+      "y": 140,
+      "rotation": 0,
+      "z": "a6",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "stage 5",
+      "type": "shape",
+      "width": 248,
+      "height": 56,
+      "kind": "rectangle",
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 10,
+      "sides": 4,
+      "label": {
+        "text": "Come back",
+        "runs": [
+          {
+            "length": 9,
+            "style": {
+              "fontFamily": "Geist",
+              "fontSize": 18,
+              "color": "ink",
+              "weight": 600,
+              "italic": false,
+              "letterSpacing": {
+                "unit": "px",
+                "value": 0
+              },
+              "lineHeight": "auto"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "user-journey-map-8",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 48,
+      "y": 212,
+      "rotation": 0,
+      "z": "a7",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane Doing",
+      "type": "shape",
+      "width": 1504,
+      "height": 176,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 12,
+      "sides": 4,
+      "label": null
+    },
+    {
+      "id": "user-journey-map-9",
+      "parentId": "user-journey-map-0",
+      "pageId": null,
+      "x": 48,
+      "y": 400,
+      "rotation": 0,
+      "z": "a8",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "lane Thinking",
+      "type": "shape",
+      "width": 1504,
+      "height": 176,
+      "kind": "rectangle",
+      "stroke": null,
+      "fill": {
+        "token": "surface"
+      },
+      "cornerRadius": 12,
+      "sides": 4,
+      "label": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  // The engine's GPU backends: the only engine code that sees the DOM lib and the WebGPU types
+  // (Global Constraint 2).
+  "extends": "../../../../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM"],
+    "types": ["@webgpu/types"],
+    "rootDir": ".",
+    "outDir": "../../dist/gpu",
+    "tsBuildInfoFile": "../../dist/gpu/tsconfig.tsbuildinfo"
+  },
+  "include": ["."]
+}

@@ -1,0 +1,32 @@
+diff --git a/dec/decode.js b/dec/decode.js
+index 7b2aa776e812726c1dee4727122e6b625b9173af..983b6b830f58792776b7089286417f4b64eb4a51 100644
+--- a/dec/decode.js
++++ b/dec/decode.js
+@@ -675,12 +675,6 @@ function BrotliDecompress(input, output) {
+     
+     var _out = DecodeMetaBlockLength(br);
+     meta_block_remaining_len = _out.meta_block_length;
+-    if (pos + meta_block_remaining_len > output.buffer.length) {
+-      /* We need to grow the output buffer to fit the additional data. */
+-      var tmp = new Uint8Array( pos + meta_block_remaining_len );
+-      tmp.set( output.buffer );
+-      output.buffer = tmp;
+-    }    
+     input_end = _out.input_end;
+     is_uncompressed = _out.is_uncompressed;
+     
+@@ -695,7 +689,13 @@ function BrotliDecompress(input, output) {
+       
+       continue;
+     }
+-    
++
++    /* canvas: the caller sizes the output; a block writing past it is refused rather
++       than allowed to grow the buffer without bound. Metadata, skipped above, writes nothing. */
++    if (pos + meta_block_remaining_len > output.buffer.length) {
++      throw new Error('Output buffer is not large enough');
++    }
++
+     if (meta_block_remaining_len === 0) {
+       continue;
+     }

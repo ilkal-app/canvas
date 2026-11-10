@@ -1,0 +1,63 @@
+/* The Tooltip (Figma 35:1769): theme tokens only (theme/token-usage.test.ts). */
+.slot {
+  position: relative;
+  display: inline-flex;
+}
+
+/* The inverse chip: primary ink, the words in the mat's colour, caption type. */
+.tooltip {
+  position: absolute;
+  z-index: 2;
+  display: none;
+  gap: 6px;
+  align-items: center;
+  padding: 5px 6px 5px var(--space-2);
+  border-radius: 5px;
+  background: var(--color-ink-primary);
+  color: var(--color-ground-mat);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.tooltip[data-placement='above'] {
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip[data-placement='above-start'] {
+  bottom: calc(100% + 6px);
+  left: 0;
+}
+
+.tooltip[data-placement='above-end'] {
+  right: 0;
+  bottom: calc(100% + 6px);
+}
+
+.tooltip[data-placement='below-end'] {
+  top: calc(100% + var(--space-2));
+  right: 0;
+}
+
+/* On hover, and on keyboard focus of the control; not over a menu the control opened. */
+.slot:hover > .tooltip,
+.slot:has(> :focus-visible) > .tooltip {
+  display: inline-flex;
+}
+
+.slot:has(> [role='menu']) > .tooltip {
+  display: none;
+}
+
+/* The shortcut: a mono key on secondary ink. */
+.key {
+  padding: 1px var(--space-1);
+  border-radius: 3px;
+  background: var(--color-ink-secondary);
+  color: var(--color-ground-mat);
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+}

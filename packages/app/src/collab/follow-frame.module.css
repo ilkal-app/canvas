@@ -1,0 +1,95 @@
+/* The follow frame (frames F3–F6, P1): a 2 px ring inside the canvas's edge, which the
+   canvas's input passes through, and a chip centred along its top. Spotlighting: the person's own hand
+   colour; following: the followed person's colour, which is data and set on the elements. */
+.frame {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  border: 2px solid var(--color-hand-you);
+  pointer-events: none;
+}
+
+.chip {
+  position: absolute;
+  /* Centred along the top, level with the top bars (16 px in), clear of the board bar at the
+     left and the presence bar at the right, which would otherwise cover it. */
+  top: var(--space-4);
+  left: 50%;
+  display: inline-flex;
+  gap: var(--space-2);
+  align-items: center;
+  max-width: calc(100% - 2 * var(--space-3));
+  transform: translateX(-50%);
+  padding: var(--space-1) var(--space-1) var(--space-1) var(--space-3);
+  border-radius: 999px;
+  background: var(--color-hand-you);
+  color: var(--color-action-on);
+  font: var(--text-label);
+  font-weight: 500;
+  letter-spacing: var(--text-label-tracking);
+  box-shadow: var(--shadow-float);
+  pointer-events: auto;
+}
+
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.count {
+  font-weight: 400;
+}
+
+.stop {
+  flex: none;
+  min-height: 24px;
+  padding: 0 var(--space-2);
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, currentcolor 18%, transparent);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.stop:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.key {
+  flex: none;
+  padding-right: var(--space-2);
+  font: var(--text-mono-key);
+  opacity: 0.8;
+}
+
+/* On a phone (frame P1) the chip sits under the compact top bar (44 px, 12 px in), which spans
+   the width. */
+.frame[data-compact] .chip {
+  top: calc(var(--space-3) + 44px + var(--space-3));
+}
+
+/* A 44 px touch target on a phone or under a coarse pointer: Stop is the way out of a
+   spotlight. */
+.frame[data-compact] .stop {
+  min-height: 44px;
+}
+
+@media (pointer: coarse) {
+  .stop {
+    min-height: 44px;
+  }
+}
+
+/* The chip's ink on a followed person's colour (`avatarColorsOf`), as their avatar's initials. */
+.chip[data-ink='dark'],
+[data-theme='light'] .chip[data-ink='light'] {
+  color: var(--color-action-on);
+}
+
+.chip[data-ink='light'],
+[data-theme='light'] .chip[data-ink='dark'] {
+  color: var(--color-ink-primary);
+}

@@ -1,0 +1,66 @@
+/* The editing states' labels (Figma "States" E2): pills over the canvas, placed by the
+   world anchor each label carries. */
+.layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pill {
+  position: absolute;
+  padding: 2px 6px;
+  border-radius: var(--radius-control);
+  white-space: nowrap;
+}
+
+/* Numbers: the sizes in the person's amber, gap lengths in the guides' red. */
+.size,
+.extent,
+.gap {
+  color: var(--color-ground-mat);
+  font: var(--text-mono-key);
+  letter-spacing: var(--text-mono-key-tracking);
+}
+
+.size,
+.extent {
+  background: var(--color-hand-you);
+}
+
+.size {
+  transform: translate(10px, -100%);
+}
+
+.extent {
+  transform: translate(-50%, 8px);
+}
+
+.gap {
+  background: var(--color-mark-red-pencil);
+}
+
+.gapAlongX {
+  transform: translate(-50%, 6px);
+}
+
+.gapAlongY {
+  transform: translate(6px, -50%);
+}
+
+/* Words: the locked notice and the connector's hint. */
+.notice,
+.connect {
+  background: var(--color-surface-raised);
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.notice {
+  transform: translate(0, 7px);
+}
+
+.connect {
+  transform: translate(14px, 8px);
+}

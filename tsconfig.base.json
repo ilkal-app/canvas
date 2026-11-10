@@ -1,0 +1,38 @@
+{
+  // Shared compiler options for every package. Each package's tsconfig.json extends this file
+  // and adds only rootDir/outDir, its references and, where the package needs it, extra `lib`s
+  // (DOM for app, tools, collab, sdk and engine's gpu/) or `types`.
+  "compilerOptions": {
+    "target": "ES2022",
+    // ES2022 only: DOM is opt-in per package so pure packages cannot touch browser globals.
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    // Resolve workspace packages to their `src/` through the `development` export condition,
+    // so editors and `tsc -b` see source.
+    "customConditions": ["development"],
+    // No ambient @types packages unless a package opts in (e.g. "types": ["node"]).
+    "types": [],
+
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    // Project references: every package is a composite project so `tsc -b` at the root
+    // type-checks the whole workspace in dependency order, incrementally.
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "noEmitOnError": true,
+    // Build info goes inside dist, so deleting dist (clean, `vite build`) also resets it and a
+    // turbo cache hit restores both together.
+    "tsBuildInfoFile": "${configDir}/dist/tsconfig.tsbuildinfo"
+  }
+}

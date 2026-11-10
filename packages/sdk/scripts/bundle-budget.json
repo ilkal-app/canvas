@@ -1,0 +1,10 @@
+{
+  "mainGzipBytes": 953121,
+  "lazyGzipBytes": {
+    "workers": 832159,
+    "lazyChunks": 722684,
+    "wasm": 176751,
+    "fonts": 65297897,
+    "stylesheet": 19864
+  }
+}

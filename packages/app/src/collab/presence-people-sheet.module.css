@@ -1,0 +1,37 @@
+/* The phone's people sheet (frame P2): one 56 px row per person, the avatar, the name
+   and the row's action at the right. Theme tokens only. */
+.rows {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 var(--space-5) var(--space-4);
+  overflow-y: auto;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  min-height: 56px;
+}
+
+.name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--color-ink-primary);
+  font: var(--text-body);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.detail {
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+}
+
+/* Each row's action: a 44 px touch target, as everything on the phone's sheet. */
+.action {
+  min-height: 44px;
+}

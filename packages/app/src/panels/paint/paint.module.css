@@ -1,0 +1,106 @@
+.paint {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.kinds {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.kinds > button {
+  flex: 1 1 0;
+}
+
+.mixed {
+  margin: 0;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.gradient {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* The gradient left to right, as the stops are listed. */
+.preview {
+  height: 16px;
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+}
+
+.stops {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stop {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.stop > div {
+  flex: 1 1 auto;
+}
+
+.stopMarker {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid var(--color-line-control);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.stopMarker[aria-pressed='true'] {
+  outline: 2px solid var(--color-action-fill);
+  outline-offset: 1px;
+}
+
+.stopMarker:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.stopActions {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.action {
+  flex: 1 1 0;
+  height: 28px;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-sheet);
+  color: var(--color-ink-primary);
+  font: inherit;
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  cursor: pointer;
+}
+
+.action:hover:enabled {
+  background: var(--color-surface-pressed);
+}
+
+.action:disabled {
+  color: var(--color-ink-secondary);
+  cursor: default;
+}
+
+.action:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}

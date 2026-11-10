@@ -1,0 +1,16 @@
+{
+  // The sample host page: served by Vite from the SDK's sources, never built into the
+  // package. Type-checked by `tsc -b` from the root's references; only declarations are emitted,
+  // into dist/sample.
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM"],
+    "emitDeclarationOnly": true,
+    "rootDir": ".",
+    "outDir": "../dist/sample",
+    "tsBuildInfoFile": "../dist/sample/tsconfig.tsbuildinfo"
+  },
+  "include": ["."],
+  // The page imports the SDK by its name, as a host does.
+  "references": [{ "path": ".." }]
+}

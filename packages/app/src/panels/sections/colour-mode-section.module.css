@@ -1,0 +1,6 @@
+/* The Colours section: Auto, Light and Dark side by side. Theme tokens only
+   (theme/token-usage.test.ts). */
+.modes {
+  display: flex;
+  gap: var(--space-2);
+}

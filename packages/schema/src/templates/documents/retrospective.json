@@ -1,0 +1,869 @@
+{
+  "format": "canvas.board",
+  "schemaVersion": 39,
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Retrospective",
+      "order": "a0"
+    }
+  ],
+  "objects": [
+    {
+      "id": "retrospective-0",
+      "parentId": null,
+      "pageId": "page-1",
+      "x": 0,
+      "y": 0,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 1600,
+      "height": 1000,
+      "name": "Retrospective",
+      "clip": false,
+      "background": null,
+      "showName": false,
+      "stroke": {
+        "color": {
+          "token": "border"
+        },
+        "width": 1
+      },
+      "cornerRadius": 16
+    },
+    {
+      "id": "retrospective-1",
+      "parentId": "retrospective-0",
+      "pageId": null,
+      "x": 48,
+      "y": 40,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "title",
+      "type": "text",
+      "width": 900,
+      "height": 40,
+      "text": "Retrospective",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 32,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "retrospective-10",
+      "parentId": "retrospective-8",
+      "pageId": null,
+      "x": 24,
+      "y": 56,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "prompt",
+      "type": "text",
+      "width": 432,
+      "height": 17.5,
+      "text": "What isn’t working for us?",
+      "runs": [
+        {
+          "length": 26,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "retrospective-11",
+      "parentId": "retrospective-8",
+      "pageId": null,
+      "x": 24,
+      "y": 100,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "note",
+      "type": "sticky",
+      "width": 200,
+      "height": 200,
+      "text": "Add a thought",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9529411764705882, 0.7647058823529411, 0.8117647058823529, 1]
+    },
+    {
+      "id": "retrospective-12",
+      "parentId": "retrospective-8",
+      "pageId": null,
+      "x": 256,
+      "y": 100,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "note",
+      "type": "sticky",
+      "width": 200,
+      "height": 200,
+      "text": "Add a thought",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9529411764705882, 0.7647058823529411, 0.8117647058823529, 1]
+    },
+    {
+      "id": "retrospective-13",
+      "parentId": "retrospective-0",
+      "pageId": null,
+      "x": 1072,
+      "y": 140,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 480,
+      "height": 560,
+      "name": "Continue",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "retrospective-14",
+      "parentId": "retrospective-13",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 432,
+      "height": 25,
+      "text": "Continue",
+      "runs": [
+        {
+          "length": 8,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "retrospective-15",
+      "parentId": "retrospective-13",
+      "pageId": null,
+      "x": 24,
+      "y": 56,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "prompt",
+      "type": "text",
+      "width": 432,
+      "height": 17.5,
+      "text": "What went well that we should keep?",
+      "runs": [
+        {
+          "length": 35,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "retrospective-16",
+      "parentId": "retrospective-13",
+      "pageId": null,
+      "x": 24,
+      "y": 100,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "note",
+      "type": "sticky",
+      "width": 200,
+      "height": 200,
+      "text": "Add a thought",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "retrospective-17",
+      "parentId": "retrospective-13",
+      "pageId": null,
+      "x": 256,
+      "y": 100,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "note",
+      "type": "sticky",
+      "width": 200,
+      "height": 200,
+      "text": "Add a thought",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7372549019607844, 0.8392156862745098, 0.9333333333333333, 1]
+    },
+    {
+      "id": "retrospective-18",
+      "parentId": "retrospective-0",
+      "pageId": null,
+      "x": 48,
+      "y": 740,
+      "rotation": 0,
+      "z": "a5",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 1504,
+      "height": 212,
+      "name": "Actions",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "retrospective-19",
+      "parentId": "retrospective-18",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 180,
+      "height": 25,
+      "text": "Actions",
+      "runs": [
+        {
+          "length": 7,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "retrospective-2",
+      "parentId": "retrospective-0",
+      "pageId": null,
+      "x": 48,
+      "y": 88,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "subtitle",
+      "type": "text",
+      "width": 900,
+      "height": 20,
+      "text": "Look back together, then agree on what changes next.",
+      "runs": [
+        {
+          "length": 52,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "retrospective-20",
+      "parentId": "retrospective-18",
+      "pageId": null,
+      "x": 24,
+      "y": 56,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "prompt",
+      "type": "text",
+      "width": 180,
+      "height": 17.5,
+      "text": "Who does what, by when?",
+      "runs": [
+        {
+          "length": 23,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "retrospective-21",
+      "parentId": "retrospective-18",
+      "pageId": null,
+      "x": 240,
+      "y": 24,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "action",
+      "type": "sticky",
+      "width": 164,
+      "height": 164,
+      "text": "Add an action",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9568627450980393, 0.8117647058823529, 0.6509803921568628, 1]
+    },
+    {
+      "id": "retrospective-22",
+      "parentId": "retrospective-18",
+      "pageId": null,
+      "x": 436,
+      "y": 24,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "action",
+      "type": "sticky",
+      "width": 164,
+      "height": 164,
+      "text": "Add an action",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9568627450980393, 0.8117647058823529, 0.6509803921568628, 1]
+    },
+    {
+      "id": "retrospective-23",
+      "parentId": "retrospective-18",
+      "pageId": null,
+      "x": 632,
+      "y": 24,
+      "rotation": 0,
+      "z": "a4",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "action",
+      "type": "sticky",
+      "width": 164,
+      "height": 164,
+      "text": "Add an action",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.9568627450980393, 0.8117647058823529, 0.6509803921568628, 1]
+    },
+    {
+      "id": "retrospective-3",
+      "parentId": "retrospective-0",
+      "pageId": null,
+      "x": 48,
+      "y": 140,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 480,
+      "height": 560,
+      "name": "Start",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "retrospective-4",
+      "parentId": "retrospective-3",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 432,
+      "height": 25,
+      "text": "Start",
+      "runs": [
+        {
+          "length": 5,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "retrospective-5",
+      "parentId": "retrospective-3",
+      "pageId": null,
+      "x": 24,
+      "y": 56,
+      "rotation": 0,
+      "z": "a1",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "prompt",
+      "type": "text",
+      "width": 432,
+      "height": 17.5,
+      "text": "What should we begin doing?",
+      "runs": [
+        {
+          "length": 27,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 14,
+            "color": {
+              "token": "muted"
+            },
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "retrospective-6",
+      "parentId": "retrospective-3",
+      "pageId": null,
+      "x": 24,
+      "y": 100,
+      "rotation": 0,
+      "z": "a2",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "note",
+      "type": "sticky",
+      "width": 200,
+      "height": 200,
+      "text": "Add a thought",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1]
+    },
+    {
+      "id": "retrospective-7",
+      "parentId": "retrospective-3",
+      "pageId": null,
+      "x": 256,
+      "y": 100,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "note",
+      "type": "sticky",
+      "width": 200,
+      "height": 200,
+      "text": "Add a thought",
+      "runs": [
+        {
+          "length": 13,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 16,
+            "color": "ink",
+            "weight": 400,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top",
+      "color": [0.7843137254901961, 0.8941176470588236, 0.7137254901960784, 1]
+    },
+    {
+      "id": "retrospective-8",
+      "parentId": "retrospective-0",
+      "pageId": null,
+      "x": 560,
+      "y": 140,
+      "rotation": 0,
+      "z": "a3",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "type": "frame",
+      "width": 480,
+      "height": 560,
+      "name": "Stop",
+      "clip": false,
+      "background": {
+        "token": "surface"
+      },
+      "cornerRadius": 12
+    },
+    {
+      "id": "retrospective-9",
+      "parentId": "retrospective-8",
+      "pageId": null,
+      "x": 24,
+      "y": 24,
+      "rotation": 0,
+      "z": "a0",
+      "locked": false,
+      "createdBy": "system",
+      "createdAt": 1792972800000,
+      "updatedAt": 1792972800000,
+      "name": "heading",
+      "type": "text",
+      "width": 432,
+      "height": 25,
+      "text": "Stop",
+      "runs": [
+        {
+          "length": 4,
+          "style": {
+            "fontFamily": "Geist",
+            "fontSize": 20,
+            "color": "ink",
+            "weight": 600,
+            "italic": false,
+            "letterSpacing": {
+              "unit": "px",
+              "value": 0
+            },
+            "lineHeight": "auto"
+          }
+        }
+      ],
+      "align": "left",
+      "autoWidth": false,
+      "verticalAlign": "top"
+    }
+  ]
+}

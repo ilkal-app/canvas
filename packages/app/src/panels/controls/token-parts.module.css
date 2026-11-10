@@ -1,0 +1,71 @@
+/* The board colour token parts of a colour field: the token line, the list and its
+   options. Theme tokens only (theme/token-usage.test.ts). */
+.tokenLine,
+.tokenList {
+  /* Indented under the swatch (`.colourControl [data-token-part]`): the indent stays inside the
+     row's width rather than pushing the line past the panel's edge. */
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 0 100%;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.tokenList {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+.tokenLine .tokenName {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.tokenOption {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 28px;
+  padding: 0 var(--space-2);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-primary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  text-align: start;
+  cursor: pointer;
+}
+
+.tokenOption:hover {
+  background: var(--color-surface-raised);
+}
+
+.tokenOption[aria-pressed='true'] {
+  border-color: var(--color-action-fill);
+  background: var(--color-surface-pressed);
+}
+
+.tokenOption:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.tokenSwatch {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-line-control);
+  border-radius: var(--radius-control);
+}
+
+.tokenName {
+  overflow: hidden;
+  color: var(--color-ink-primary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

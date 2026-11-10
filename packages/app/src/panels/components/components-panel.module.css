@@ -1,0 +1,103 @@
+/* The components panel (ruling 3): a section at the top of the layers panel, over a
+   hairline, its list scrolling on its own so the layers tree keeps most of the drawer. */
+.panel {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  max-height: 40%;
+  border-bottom: 1px solid var(--color-line-hairline);
+}
+
+.heading {
+  margin: 0;
+  padding: var(--space-2) var(--space-3) var(--space-1);
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.list {
+  margin: 0;
+  /* Room for a focused control's ring, drawn outside it. */
+  padding: var(--space-1) var(--space-2) var(--space-2);
+  overflow-y: auto;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 28px;
+  border-radius: var(--radius-control);
+}
+
+.row:hover {
+  background: var(--color-surface-raised);
+}
+
+.row[draggable='true'] {
+  cursor: grab;
+}
+
+.go {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: var(--space-1);
+  min-width: 0;
+  min-height: 28px;
+  padding: 0 var(--space-2);
+  border: none;
+  border-radius: var(--radius-control);
+  background: none;
+  color: var(--color-ink-primary);
+  font: var(--text-body);
+  letter-spacing: var(--text-body-tracking);
+  text-align: start;
+  cursor: inherit;
+}
+
+.go:focus-visible,
+.place:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* A variant set's axes, shortened before the name is. */
+.axes {
+  overflow: hidden;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.page {
+  flex: none;
+  margin-inline-start: auto;
+  color: var(--color-ink-secondary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+}
+
+.place {
+  flex: none;
+  min-height: 24px;
+  margin-inline-end: var(--space-1);
+  padding: 0 var(--space-2);
+  border: 1px solid var(--color-line-hairline);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-sheet);
+  color: var(--color-ink-primary);
+  font: var(--text-caption);
+  letter-spacing: var(--text-caption-tracking);
+  cursor: default;
+}
