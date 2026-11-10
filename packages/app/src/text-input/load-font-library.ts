@@ -1,5 +1,7 @@
 import { FontLibrary, type FontFaceSource } from '@canvas/engine';
 
+import { fontFileUrl } from './font-file-urls.js';
+
 /**
  * Fetches a font file's bytes.
  *
@@ -9,15 +11,18 @@ import { FontLibrary, type FontFaceSource } from '@canvas/engine';
 export type FontFetcher = (url: string) => Promise<ArrayBuffer>;
 
 /**
- * Fetches with the scope's `fetch`, on the page or in a worker.
+ * Fetches with the scope's `fetch`, on the page or in a worker, from where the page's resolver
+ * says the file is (`setFontFileResolver`).
  *
- * @param url - The file's URL (http(s) or `data:`).
+ * @param url - The file's URL (http(s) or `data:`), as the catalogue names it.
  * @returns The bytes.
  * @throws {Error} When the response is not OK (as a rejection).
  */
 export async function fetchFontBytes(url: string): Promise<ArrayBuffer> {
-  const response = await fetch(url);
-  if (!response.ok) throw new Error(`The font ${url} did not load: ${String(response.status)}.`);
+  const located = fontFileUrl(url);
+  const response = await fetch(located);
+  if (!response.ok)
+    throw new Error(`The font ${located} did not load: ${String(response.status)}.`);
   return response.arrayBuffer();
 }
 

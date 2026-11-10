@@ -99,6 +99,10 @@ export function withBoardImages(connection: BoardConnection, images: PageImages)
     ...(connection.remotePresence === undefined
       ? {}
       : { remotePresence: connection.remotePresence.bind(connection) }),
+    // Its undo history sees each presence change, not only each refresh.
+    ...(connection.subscribePresenceChanges === undefined
+      ? {}
+      : { subscribePresenceChanges: connection.subscribePresenceChanges.bind(connection) }),
     // Following and the spotlight need the local presence; only where there is one.
     ...(connection.localPresence === undefined
       ? {}

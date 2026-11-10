@@ -14,8 +14,9 @@ and its terms.
   Apache-2.0: Google's Brotli decoder, inside brotli (Copyright 2013 Google Inc.). We modify
   its dec/decode.js: patches/brotli@1.3.3.patch.
 
-This product loads fonts under the SIL Open Font License 1.1. Each font's licence text ships
-beside it, and fonts/LICENSES lists them:
+This product loads fonts under the SIL Open Font License 1.1. They are a package of their own,
+@canvas/fonts, released with this one, where each font's licence text ships beside it and
+app/LICENSES lists them:
 
   Geist and Geist Mono (Vercel and the Geist Project Authors); Liberation Sans (Red Hat, Inc.,
   digitized data Google Corporation); Lora (The Lora Project Authors, also through

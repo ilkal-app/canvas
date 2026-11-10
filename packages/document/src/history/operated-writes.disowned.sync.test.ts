@@ -116,4 +116,19 @@ describe('an agent step under an id the relay never vouched for', () => {
     }
     expect(() => createHistory(store, BOB_ID, {})).not.toThrow();
   });
+
+  it('releases the operatedWriters once when it is destroyed', () => {
+    let releases = 0;
+    const operatedWriters = {
+      records: () => false,
+      owns: () => false,
+      destroy: () => {
+        releases += 1;
+      },
+    };
+    const history = createHistory(storeOf(ADA_CLIENT), ADA_ID, { operatedWriters });
+    history.destroy();
+    history.destroy();
+    expect(releases).toBe(1);
+  });
 });

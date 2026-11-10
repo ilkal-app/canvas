@@ -1,4 +1,5 @@
 import type {
+  PresenceChangeListener,
   PresenceCursor,
   PresenceEditing,
   PresenceSnapshot,
@@ -117,6 +118,11 @@ export class SyncedBoardConnection implements BoardConnection {
   /** @inheritdoc */
   remotePresence(): PresenceSnapshot {
     return this.#client.presence?.getRemote() ?? new Map();
+  }
+
+  /** @inheritdoc */
+  subscribePresenceChanges(listener: PresenceChangeListener): () => void {
+    return this.#client.presence?.subscribeChanges?.(listener) ?? (() => undefined);
   }
 
   /** @inheritdoc */

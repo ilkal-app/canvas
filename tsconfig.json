@@ -10,6 +10,7 @@
     { "path": "packages/tools" },
     { "path": "packages/app" },
     { "path": "packages/sdk" },
+    { "path": "packages/fonts" },
     { "path": "tooling/eslint-config" }
   ]
 }

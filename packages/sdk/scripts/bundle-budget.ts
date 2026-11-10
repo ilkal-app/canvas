@@ -1,8 +1,10 @@
 // The SDK's bundle budget (measure first, then lock). What a host page
 // downloads at once, the main script (the entry and the chunks it imports statically), gzipped,
 // and the parts it loads only when needed, each counted apart: the engine and job workers, the
-// other lazy chunks, the wasm, the fonts and the stylesheet. Each may not grow past its locked
-// figure (bundle-budget.json). The heavy parts must stay files of their own, loaded when needed:
+// other lazy chunks, the wasm, the fonts and the stylesheet. The fonts are the files of the fonts
+// package, @ilkal/fonts: the build emits them into dist/fonts/, which the SDK's own
+// package leaves out, and a font anywhere else in dist/ is a problem. Each part may not grow past
+// its locked figure (bundle-budget.json). The heavy parts must stay files of their own, loaded when needed:
 // the main script holding one inlined (a data URL of a font, the wasm or a script, or a long
 // base64 run, as library mode does unless told otherwise), a heavy part with no files
 // left, or an emitted file no part counts, is a problem too. Pure: check-bundle-budget.ts builds
@@ -54,6 +56,11 @@ export interface BundleMeasure {
   readonly inlined: readonly string[];
   /** Emitted files no part counts (not a map or a declaration): none, or a problem. */
   readonly unbudgeted: readonly string[];
+  /**
+   * Font files emitted outside dist/fonts/, so in the SDK's own package rather than the fonts
+   * package's: none, or a problem.
+   */
+  readonly strayFonts: readonly string[];
 }
 
 /**
@@ -113,8 +120,14 @@ function longBase64Runs(text: string): number[] {
   return runs;
 }
 
-/** Emitted files nothing loads: source maps and declarations. */
-const NOT_LOADED = /\.(?:map|d\.ts)$/u;
+/** Emitted files nothing loads: source maps, declarations and the fonts' licence files. */
+const NOT_LOADED = /\.(?:map|d\.ts)$|^fonts\/(?:.*\/)?(?:LICEN[CS]E|OFL|COPYING)[^/]*$/u;
+
+/** A font file. */
+const FONT_FILE = /\.(?:ttf|otf|woff2?)$/u;
+
+/** The folder of dist/ the fonts package's files are emitted into. */
+const FONTS_DIR = 'fonts/';
 
 /**
  * What a main-script file holds inlined: each data URL type with its count, and each long base64
@@ -156,7 +169,7 @@ export interface BundleBudget {
  */
 export function lazyPartOf(fileName: string): LazyPart | undefined {
   if (NOT_LOADED.test(fileName)) return undefined;
-  if (/\.(?:ttf|otf|woff2?)$/u.test(fileName)) return 'fonts';
+  if (FONT_FILE.test(fileName)) return 'fonts';
   if (fileName.endsWith('.wasm')) return 'wasm';
   if (fileName.endsWith('.css')) return 'stylesheet';
   if (!fileName.endsWith('.js')) return undefined;
@@ -216,6 +229,9 @@ export function measureBundle(files: readonly BundleFile[]): BundleMeasure {
     else if (!NOT_LOADED.test(file.fileName)) unbudgeted.push(file.fileName);
   }
   const mainFiles = [...main].flatMap((name) => byName.get(name) ?? []);
+  const strayFonts = files
+    .map(({ fileName }) => fileName)
+    .filter((fileName) => FONT_FILE.test(fileName) && !fileName.startsWith(FONTS_DIR));
   return {
     main: partOf(mainFiles),
     lazy: Object.fromEntries(LAZY_PARTS.map((part) => [part, partOf(lazy[part])])) as Record<
@@ -224,6 +240,7 @@ export function measureBundle(files: readonly BundleFile[]): BundleMeasure {
     >,
     inlined: mainFiles.flatMap((file) => inlinedIn(file)),
     unbudgeted,
+    strayFonts,
   };
 }
 
@@ -256,7 +273,7 @@ export function allowedBytes(locked: number): number {
 /**
  * What a measure breaks: each part grown more than 1% past its locked figure ({@link allowedBytes}); anything the main script holds
  * inlined; a heavy part (workers, wasm, fonts) with no files of its own; an emitted file no part
- * counts. Pure.
+ * counts; a font outside dist/fonts/, which would ship in the SDK's own package. Pure.
  *
  * @param measure - The build measured.
  * @param budget - The locked figures.
@@ -279,6 +296,9 @@ export function budgetProblems(measure: BundleMeasure, budget: BundleBudget): st
       (part) => `${part}: no files of their own (inlined into the main script, or gone)`,
     ),
     ...measure.unbudgeted.map((name) => `counted by no part of the budget: ${name}`),
+    ...measure.strayFonts.map(
+      (name) => `a font in the SDK's own package, not in ${FONTS_DIR} (the fonts package): ${name}`,
+    ),
   ];
 }
 

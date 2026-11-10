@@ -9,5 +9,9 @@
     "packages/schema",
     "packages/document",
     "packages/collab"
-  ]
+  ],
+  "fonts": {
+    "license": "OFL-1.1",
+    "packages": ["packages/fonts"]
+  }
 }

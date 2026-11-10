@@ -130,6 +130,7 @@ export {
   PresenceChannel,
 } from './presence/presence-channel.js';
 export type {
+  PresenceChangeListener,
   PresenceChannelOptions,
   PresenceListener,
   PresencePrincipalInput,
@@ -143,8 +144,8 @@ export {
 } from './presence/presence-color.js';
 export { isPresencePrincipal, isPresenceState } from './presence/presence-guard.js';
 export { mergePresence } from './presence/presence-merge.js';
-export { writersOperatedBy } from './presence/operated-writers.js';
-export type { OperatedWriterIds } from './presence/operated-writers.js';
+export { trackOperatedWriters, writersOperatedBy } from './presence/operated-writers.js';
+export type { OperatedPresenceSource, OperatedWriterIds } from './presence/operated-writers.js';
 export { writerClientIdsOf } from './presence/presence-sanitize.js';
 export { PRINCIPAL_KINDS } from './presence/presence-state.js';
 export type {

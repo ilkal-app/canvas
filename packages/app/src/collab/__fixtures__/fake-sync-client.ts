@@ -5,6 +5,7 @@ import type {
   CollabStatus,
   CollabStatusListener,
   ConnectionState,
+  PresenceChangeListener,
   PresenceListener,
   PresenceSnapshot,
   PresenceState,
@@ -29,6 +30,7 @@ export class FakeSyncClient implements BoardSyncClient {
   #remote: PresenceSnapshot = new Map();
   readonly #statusListeners = new Set<CollabStatusListener>();
   readonly #presenceListeners = new Set<PresenceListener>();
+  readonly #changeListeners = new Set<PresenceChangeListener>();
   readonly presence: BoardSyncClient['presence'];
 
   constructor(options: CollabClientOptions, hasPresence = true, role: BoardTokenRole = 'editor') {
@@ -40,6 +42,10 @@ export class FakeSyncClient implements BoardSyncClient {
           subscribe: (listener: PresenceListener): (() => void) => {
             this.#presenceListeners.add(listener);
             return () => this.#presenceListeners.delete(listener);
+          },
+          subscribeChanges: (listener: PresenceChangeListener): (() => void) => {
+            this.#changeListeners.add(listener);
+            return () => this.#changeListeners.delete(listener);
           },
         }
       : undefined;
@@ -71,6 +77,7 @@ export class FakeSyncClient implements BoardSyncClient {
 
   showRemote(states: readonly PresenceState[]): void {
     this.#remote = new Map(states.map((state, index) => [index + 10, state]));
+    for (const listener of this.#changeListeners) listener(this.#remote);
     for (const listener of this.#presenceListeners) listener(this.#remote);
   }
 }

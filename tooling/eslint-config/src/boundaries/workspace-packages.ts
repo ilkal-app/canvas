@@ -116,6 +116,9 @@ export const WORKSPACE_PACKAGES: readonly WorkspacePackage[] = [
     ],
     canImportReact: true,
   },
+  // The SDK's font files: its build script copies them from the SDK's build, by path,
+  // and imports nothing.
+  { name: '@ilkal/fonts', dir: 'packages/fonts', allowedImports: [], canImportReact: false },
   {
     name: '@canvas/relay',
     dir: 'services/relay',

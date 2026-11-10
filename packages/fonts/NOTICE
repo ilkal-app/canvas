@@ -1,0 +1,13 @@
+Ilkal canvas fonts
+
+The font files the Ilkal canvas SDK (@canvas/sdk) loads, packaged apart from it. Each font is
+the work of its authors and licensed under the SIL Open Font License 1.1; its licence text ships
+beside it (LICENSE, LICENSE.txt), and app/LICENSES lists the families:
+
+  Geist and Geist Mono (Vercel and the Geist Project Authors); Liberation Sans (Red Hat, Inc.,
+  digitized data Google Corporation); Lora (The Lora Project Authors); the Noto families
+  (Google LLC); and the font library families.
+  The Noto CJK fonts are shipped as slices of the original files, under their own names.
+
+The fonts are not modified otherwise. The OFL lets them be used, studied, modified and
+redistributed freely, bundled with software, but not sold by themselves.

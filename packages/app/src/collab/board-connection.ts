@@ -4,6 +4,7 @@ import type {
   CollabClient,
   LayoutCarryOver,
   LocalPresence,
+  PresenceChangeListener,
   PresenceChannel,
   PresenceCursor,
   PresenceEditing,
@@ -94,6 +95,15 @@ export interface BoardConnection {
    */
   remotePresence?(): PresenceSnapshot;
   /**
+   * Calls `listener` with each remote presence change as it arrives, before the connection's
+   * next refresh folds it in: for the person's undo history, which must see a relay
+   * restamp even when its client leaves before that refresh. Absent where there is no presence.
+   *
+   * @param listener - Receives the changed clients' states.
+   * @returns A function that unsubscribes it.
+   */
+  subscribePresenceChanges?(listener: PresenceChangeListener): () => void;
+  /**
    * This client and its own presence (its page and any spotlight it shares), or
    * `undefined` where there is no presence (a local board).
    *
@@ -181,7 +191,7 @@ export type BoardSyncClient = Partial<
     /** Remote presence, when the client was asked for it. */
     readonly presence:
       | (Pick<PresenceChannel, 'getRemote' | 'subscribe'> &
-          Partial<Pick<PresenceChannel, 'setLocal' | 'getLocal' | 'clientId'>>)
+          Partial<Pick<PresenceChannel, 'setLocal' | 'getLocal' | 'clientId' | 'subscribeChanges'>>)
       | undefined;
     /** The layout carry-over, when the client has a cache with earlier layouts. */
     readonly layoutCarryOver:

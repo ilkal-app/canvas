@@ -7,6 +7,7 @@ import {
   decideOutbound,
   presenceIntervalMs,
 } from './outbound-throttle.js';
+import { callEach, changedStatesOf } from './presence-changes.js';
 import {
   DEFAULT_PRESENCE_TIMEOUT_MS,
   MAX_PRESENCE_TIMEOUT_MS,
@@ -36,6 +37,15 @@ export type { PresenceChannelOptions, PresencePrincipalInput } from './presence-
 /** Receives the remote presence whenever it changes, at most once per inbound flush. */
 export type PresenceListener = (snapshot: PresenceSnapshot) => void;
 
+/**
+ * Receives each remote awareness change as it arrives, before an inbound flush folds it in:
+ * the changed clients' cleaned states, `undefined` for one that left or holds no
+ * valid presence.
+ */
+export type PresenceChangeListener = (
+  changed: ReadonlyMap<PresenceClientId, PresenceState | undefined>,
+) => void;
+
 interface AwarenessChange {
   readonly added: readonly PresenceClientId[];
   readonly updated: readonly PresenceClientId[];
@@ -62,6 +72,7 @@ export class PresenceChannel {
   private readonly intervalMs: number;
   private readonly timeoutMs: number;
   private readonly listeners = new Set<PresenceListener>();
+  private readonly changeListeners = new Set<PresenceChangeListener>();
   private readonly pendingClients = new Set<PresenceClientId>();
   private readonly lastSeenAtMs = new Map<PresenceClientId, number>();
   private local: PresenceState;
@@ -196,6 +207,23 @@ export class PresenceChannel {
   }
 
   /**
+   * Calls `listener` with each remote awareness change as it arrives, before the inbound flush
+   * folds it into the snapshot: a client whose state changed twice, or changed and
+   * left, before one flush shows only its last state in the snapshot, but each step here. For a
+   * reader that must not miss an intermediate state, such as a relay restamp just before its
+   * client leaves (`trackOperatedWriters`); others use {@link PresenceChannel.subscribe}.
+   *
+   * @param listener - Receives the changed clients' states.
+   * @returns A function that unsubscribes the listener.
+   */
+  subscribeChanges(listener: PresenceChangeListener): () => void {
+    this.changeListeners.add(listener);
+    return () => {
+      this.changeListeners.delete(listener);
+    };
+  }
+
+  /**
    * Hides the local client from its peers, or shows it again (an idle pooled client):
    * hiding clears the local awareness state, so peers see the client leave, and holds every send,
    * renewal included; showing sends the local state as last merged. Remote presence keeps flowing.
@@ -230,6 +258,7 @@ export class PresenceChannel {
     this.awareness.off('change', this.handleChange);
     this.awareness.off('destroy', this.handleAwarenessDestroy);
     this.listeners.clear();
+    this.changeListeners.clear();
     this.awareness.setLocalState(null);
   }
 
@@ -267,7 +296,19 @@ export class PresenceChannel {
       this.pendingClients.add(clientId);
     }
     this.scheduleInbound();
+    this.tellChange(change);
   };
+
+  private tellChange(change: AwarenessChange): void {
+    if (this.changeListeners.size === 0) return;
+    const states = this.awareness.getStates();
+    const changed = changedStatesOf(
+      [...change.added, ...change.updated, ...change.removed],
+      (clientId) => states.get(clientId),
+      this.clientId,
+    );
+    if (changed.size > 0) callEach(this.changeListeners, changed);
+  }
 
   private scheduleInbound(): void {
     if (this.pendingClients.size === 0) return;
@@ -310,17 +351,8 @@ export class PresenceChannel {
       return;
     }
     this.notifiedSnapshot = this.snapshot;
-    for (const listener of this.listeners) {
-      try {
-        listener(this.snapshot);
-      } catch (error: unknown) {
-        // One failing subscriber must not starve the others or break the flush; its error is
-        // rethrown on its own, where the host's error reporting sees it.
-        queueMicrotask(() => {
-          throw error;
-        });
-      }
-    }
+    // One failing subscriber must not starve the others or break the flush.
+    callEach(this.listeners, this.snapshot);
   }
 
   private scheduleSweep(): void {

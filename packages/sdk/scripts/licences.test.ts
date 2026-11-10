@@ -4,7 +4,12 @@ import { fileURLToPath } from 'node:url';
 
 import { describe, expect, it } from 'vitest';
 
-import { OPEN_LICENSE, OPEN_PACKAGES } from './open-packages.ts';
+import {
+  OPEN_FONT_LICENSE,
+  OPEN_FONT_PACKAGES,
+  OPEN_LICENSE,
+  OPEN_PACKAGES,
+} from './open-packages.ts';
 import {
   collectThirdParty,
   currentThirdPartyLicenses,
@@ -55,6 +60,19 @@ describe('the open packages', () => {
       expect((manifest as unknown as { private?: unknown }).private).toBe(true);
     }
   });
+
+  it.each(OPEN_FONT_PACKAGES)(
+    "%s declares the fonts' licence, and ships a NOTICE beside them",
+    (dir) => {
+      const manifest = manifestOf(dir);
+      expect(manifest.license).toBe(OPEN_FONT_LICENSE);
+      expect(manifest.files).toEqual(expect.arrayContaining(['NOTICE']));
+      expect(existsSync(join(ROOT_DIR, dir, 'NOTICE'))).toBe(true);
+      if (!manifest.name.startsWith('@ilkal/')) {
+        expect((manifest as unknown as { private?: unknown }).private).toBe(true);
+      }
+    },
+  );
 
   it('include the SDK, the shell and every workspace package they bundle', () => {
     // Anchored here rather than taken from open-packages.json, so narrowing the list fails.

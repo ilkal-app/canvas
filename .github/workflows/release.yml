@@ -1,5 +1,7 @@
-# Publishes @ilkal/sdk to npm, with provenance, when a maintainer pushes a version tag (vX.Y.Z).
-# It runs in the protected `npm` environment, which the owner approves each time.
+# Publishes @ilkal/fonts, then @ilkal/sdk, to npm, with provenance, when a maintainer pushes a
+# version tag (vX.Y.Z). The two are released together at the same version: the SDK loads its
+# fonts from @ilkal/fonts at its own version, so the fonts go first. It runs in the protected
+# `npm` environment, which the owner approves each time.
 name: release
 
 on:
@@ -29,22 +31,34 @@ jobs:
           cache: pnpm
           registry-url: https://registry.npmjs.org
       - run: pnpm install --frozen-lockfile
-      - name: The tag names the SDK's version
+      - name: The tag names the SDK's version, and the fonts' is the same
         run: |
           version=$(node -p "require('./packages/sdk/package.json').version")
+          fonts=$(node -p "require('./packages/fonts/package.json').version")
           if [ "v$version" != "$GITHUB_REF_NAME" ]; then
             echo "::error::The tag $GITHUB_REF_NAME does not match @ilkal/sdk $version. Run pnpm changeset version, merge, then tag."
+            exit 1
+          fi
+          if [ "$fonts" != "$version" ]; then
+            echo "::error::@ilkal/fonts is $fonts, not $version: the SDK loads the fonts of its own version. Release them together (.changeset/config.json fixes the two)."
             exit 1
           fi
       - run: pnpm run typecheck
       - run: pnpm test
       - run: pnpm run build
-      # pnpm packs the SDK (resolving workspace versions); npm publishes the tarball, since npm's
-      # CLI carries trusted publishing and provenance. npm 11.5 or later is needed for both.
+      # pnpm packs each package (resolving workspace versions); npm publishes the tarballs, since
+      # npm's CLI carries trusted publishing and provenance. npm 11.5 or later is needed for both.
+      # The build filled @ilkal/fonts from the SDK's build (packages/fonts/scripts/build-fonts.ts).
+      - run: pnpm --filter @ilkal/fonts pack --pack-destination "$RUNNER_TEMP"
       - run: pnpm --filter @ilkal/sdk pack --pack-destination "$RUNNER_TEMP"
-      - name: Publish with provenance
+      # The fonts first: an SDK published without them would load fonts that are not there.
+      - name: Publish @ilkal/fonts with provenance
         env:
           # Empty when npm trusted publishing is set up for this workflow; otherwise the owner
           # sets an automation token as the environment's NPM_TOKEN secret.
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx --yes npm@11.21.1 publish "$RUNNER_TEMP"/ilkal-fonts-*.tgz --provenance --access public
+      - name: Publish @ilkal/sdk with provenance
+        env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx --yes npm@11.21.1 publish "$RUNNER_TEMP"/ilkal-sdk-*.tgz --provenance --access public

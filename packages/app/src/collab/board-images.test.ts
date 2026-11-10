@@ -122,6 +122,7 @@ describe('withBoardImages and pageImagesFor', () => {
     expect('stopSyncing' in withImages).toBe(false);
     // Nor presence it does not have.
     expect('remotePresence' in withImages).toBe(false);
+    expect('subscribePresenceChanges' in withImages).toBe(false);
     expect('localPresence' in withImages).toBe(false);
   });
 
@@ -163,6 +164,25 @@ describe('withBoardImages and pageImagesFor', () => {
     } as unknown as BoardConnection;
     const images = pageImagesFor({ ...ADDRESS, assetsUrl: undefined }, { subject: () => 'g' });
     expect(withBoardImages(connection, images).remotePresence?.()).toBe(presence);
+    images.destroy();
+  });
+
+  it('forwards each presence change of a connection that has them', () => {
+    const stop = vi.fn();
+    const subscribePresenceChanges = vi.fn(() => stop);
+    const connection = {
+      store: {},
+      origin: { kind: 'user', principalId: 'user:a' },
+      status: () => ({ kind: 'synced' }),
+      subscribe: () => () => undefined,
+      dismissStrandedEdits: () => undefined,
+      subscribePresenceChanges,
+      destroy: () => undefined,
+    } as unknown as BoardConnection;
+    const images = pageImagesFor({ ...ADDRESS, assetsUrl: undefined }, { subject: () => 'g' });
+    const listener = vi.fn();
+    expect(withBoardImages(connection, images).subscribePresenceChanges?.(listener)).toBe(stop);
+    expect(subscribePresenceChanges).toHaveBeenCalledWith(listener);
     images.destroy();
   });
 

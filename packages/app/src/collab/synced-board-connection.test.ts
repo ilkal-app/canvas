@@ -258,6 +258,33 @@ describe('SyncedBoardConnection.remotePresence', () => {
     expect(alone.remotePresence().size).toBe(0);
     alone.destroy();
   });
+
+  it('forwards each presence change as it arrives, and none without presence', () => {
+    const { connection, client } = connect();
+    const changes: number[][] = [];
+    const stop = connection.subscribePresenceChanges((changed) => {
+      changes.push([...changed.keys()]);
+    });
+    const mira = {
+      principal: { id: 'user-mira', kind: 'user' as const, name: 'Mira', color: '#cc5533' },
+      updatedAt: 1,
+    };
+    client.showRemote([mira]);
+    stop();
+    client.showRemote([mira, mira]);
+    expect(changes).toEqual([[10]]);
+    connection.destroy();
+    const store = new YjsDocumentStore();
+    const alone = new SyncedBoardConnection(
+      store,
+      new FakeSyncClient({ store, boardId: 'board-1', url: 'ws://relay.test' }, false),
+      userOriginFromClaims(client.claims),
+    );
+    expect(() => {
+      alone.subscribePresenceChanges(() => undefined)();
+    }).not.toThrow();
+    alone.destroy();
+  });
 });
 
 describe('SyncedBoardConnection dot-vote notices', () => {

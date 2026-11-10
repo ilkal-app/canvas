@@ -6,6 +6,7 @@
 //   ?theme=light|dark|system   the theme to start in; the system's if absent
 //   ?persistence=device        keep the board in IndexedDB; in memory if absent
 //   ?boardId=<id>              the board's id, the key a device board is kept under
+//   ?fontsUrl=<url>            where the font files are served from; jsDelivr's copy if absent
 import { mount, type CanvasInstance, type CanvasTheme, type MountOptions } from '@ilkal/sdk';
 
 /** The page's mounted board, for a test or a benchmark to read. */
@@ -30,7 +31,7 @@ function themeOf(search: string): CanvasTheme | undefined {
 }
 
 /**
- * The mount's options from the page's query: `theme`, `persistence` and `boardId`.
+ * The mount's options from the page's query: `theme`, `persistence`, `boardId` and `fontsUrl`.
  *
  * @param search - The page's query.
  * @returns The options.
@@ -39,10 +40,12 @@ function optionsOf(search: string): MountOptions {
   const parameters = new URLSearchParams(search);
   const theme = themeOf(search);
   const boardId = parameters.get('boardId');
+  const fontsUrl = parameters.get('fontsUrl');
   return {
     ...(theme === undefined ? {} : { theme }),
     ...(parameters.get('persistence') === 'device' ? { persistence: 'device' as const } : {}),
     ...(boardId === null ? {} : { boardId }),
+    ...(fontsUrl === null ? {} : { fontsUrl }),
   };
 }
 

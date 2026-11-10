@@ -37,6 +37,11 @@ export interface OperatedWriters {
    *   undo then waits, doing nothing, and drops nothing).
    */
   owns(clientId: number): boolean | undefined;
+  /**
+   * Called once when the history is destroyed, to release what the caller holds for it: give
+   * each history its own `OperatedWriters` when it has one.
+   */
+  destroy?(): void;
 }
 
 /** The ranges of one client id: sorted, disjoint, half-open `[start, end)` clock ranges. */
@@ -182,6 +187,11 @@ export class OperatedCapture {
    */
   static of(isOperated: OperatedWriters | undefined): OperatedCapture | undefined {
     return isOperated === undefined ? undefined : new OperatedCapture(isOperated);
+  }
+
+  /** Releases the caller's writers (`OperatedWriters.destroy`), when the history is destroyed. */
+  destroy(): void {
+    this.#writers.destroy?.();
   }
 
   /**

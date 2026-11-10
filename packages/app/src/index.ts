@@ -341,7 +341,6 @@ export {
   createDefaultToolbarActionRegistry,
   DEFAULT_TOOLBAR_ACTIONS,
 } from './toolbar/default-toolbar-actions.js';
-
 export {
   BRAND_NEUTRALS,
   COLOURWAYS,
@@ -368,6 +367,7 @@ export {
   type ChromeFontFaceFactory,
   type ChromeFontSet,
 } from './theme/chrome-fonts.js';
+export { setFontFileResolver, type FontFileResolver } from './text-input/font-file-urls.js';
 export { LAYER_TOKENS, type LayerTokenName } from './theme/layer-tokens.js';
 export { SCALE_TOKENS, type ScaleTokenName } from './theme/scale-tokens.js';
 export {

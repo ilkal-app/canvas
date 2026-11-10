@@ -225,6 +225,7 @@ class YjsUndoHistory implements UndoHistory {
     // Clearing lets Yjs collect the deleted content the steps were keeping alive.
     this.#manager.clear();
     this.#manager.destroy();
+    this.#operated?.destroy();
   }
 
   /**

@@ -1,3 +1,5 @@
+import { fontFileUrl } from '../text-input/font-file-urls.js';
+
 /** One face of the chrome's fonts: its family, weight and file. */
 export interface ChromeFontFace {
   /** The family `--font-ui` or `--font-mono` asks for (`Geist`, `Geist Mono`). */
@@ -149,7 +151,7 @@ export function loadChromeFonts(
   given.add(fonts);
   loaded.set(fontSet, given);
   for (const face of fonts.faces) {
-    const source = `url("${face.url}") format("woff2")`;
+    const source = `url("${fontFileUrl(face.url)}") format("woff2")`;
     const added = makeFace(face.family, source, {
       ...face.descriptors,
       weight: String(face.weight),

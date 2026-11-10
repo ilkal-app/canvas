@@ -1,6 +1,6 @@
 {
   "name": "@ilkal/sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "description": "The embeddable canvas bundle and its public API.",
   "license": "Apache-2.0",
@@ -19,12 +19,17 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
+    "!dist/fonts",
+    "!dist/scripts",
+    "!dist/**/*.test.d.ts",
+    "!dist/**/*.test.d.ts.map",
+    "!dist/**/*.tsbuildinfo",
     "LICENSE",
     "NOTICE",
     "THIRD_PARTY_LICENSES.md"
   ],
   "scripts": {
-    "build": "vite build && tsc -b",
+    "build": "vite build && tsc -b && node --experimental-strip-types scripts/prune-dist.ts",
     "lint": "eslint --max-warnings 0 .",
     "sample": "vite sample --config vite.config.ts",
     "sample:built": "pnpm run build && vite build --config vite.sample.config.ts && vite preview --config vite.sample.config.ts",

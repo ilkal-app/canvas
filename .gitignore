@@ -11,3 +11,7 @@ _site
 .turbo
 # CJK slice files, built from the coverage faces by packages/app/scripts/build-cjk-slices.ts.
 packages/app/assets/fonts/cjk/
+# The fonts package's files, copied from the SDK's build by packages/fonts/scripts/build-fonts.ts.
+packages/fonts/app/
+packages/fonts/engine/
+packages/fonts/npm/

@@ -1,0 +1,33 @@
+{
+  "name": "@ilkal/fonts",
+  "version": "0.1.1",
+  "private": false,
+  "description": "The font files the canvas SDK loads, for jsDelivr or a host to serve.",
+  "license": "OFL-1.1",
+  "type": "module",
+  "files": [
+    "app",
+    "engine",
+    "npm",
+    "NOTICE"
+  ],
+  "scripts": {
+    "build": "node --experimental-strip-types scripts/build-fonts.ts",
+    "lint": "eslint --max-warnings 0 ."
+  },
+  "devDependencies": {
+    "@ilkal/sdk": "workspace:*",
+    "@types/node": "^22.20.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilkal-app/canvas.git",
+    "directory": "packages/fonts"
+  },
+  "homepage": "https://github.com/ilkal-app/canvas#readme",
+  "bugs": "https://github.com/ilkal-app/canvas/issues",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

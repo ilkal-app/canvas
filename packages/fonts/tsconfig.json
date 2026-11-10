@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    // The package is the SDK's font files; its code is the folder check (src/) and the build
+    // script that copies the files (scripts/), which Node runs with type stripping
+    // (`node --experimental-strip-types`), so both use erasable syntax only.
+    "rootDir": ".",
+    "outDir": "dist",
+    "types": ["node"],
+    "erasableSyntaxOnly": true,
+    // Node runs the script as a .ts file, so its relative imports name the .ts file.
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true
+  },
+  "include": ["src", "scripts"]
+}

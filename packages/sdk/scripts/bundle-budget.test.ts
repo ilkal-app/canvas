@@ -30,7 +30,8 @@ const BUILD: readonly BundleFile[] = [
   file('msdf-job-b.js', 'y'.repeat(300)),
   file('assets/engine-worker-c.js', 'z'.repeat(900)),
   file('harfbuzz.wasm', 'w'.repeat(200)),
-  file('assets/400-d.ttf', 'f'.repeat(100)),
+  file('fonts/app/library/x/400.ttf', 'f'.repeat(100)),
+  file('fonts/app/library/x/LICENSE.txt', 'OFL'),
   file('index.css', '.a{}'),
   file('index.d.ts', 'export {};'),
 ];
@@ -55,7 +56,9 @@ describe('the SDK bundle budget', () => {
 
   it('sorts files into parts, and leaves maps and declarations out', () => {
     expect(lazyPartOf('assets/job-worker-x.js')).toBe('workers');
-    expect(lazyPartOf('assets/Geist-Medium-x.woff2')).toBe('fonts');
+    expect(lazyPartOf('fonts/app/Geist-Medium.woff2')).toBe('fonts');
+    expect(lazyPartOf('fonts/app/library/x/LICENSE.txt')).toBeUndefined();
+    expect(lazyPartOf('fonts/engine/LICENSE')).toBeUndefined();
     expect(lazyPartOf('index-b.js')).toBe('lazyChunks');
     expect(lazyPartOf('index-b.js.map')).toBeUndefined();
     expect(lazyPartOf('index.d.ts')).toBeUndefined();
@@ -134,6 +137,15 @@ describe('the SDK bundle budget', () => {
     );
     expect(measure.inlined).toEqual(['index-a.js: a base64 run of 65536 characters']);
     expect(performance.now() - started).toBeLessThan(2_000);
+  });
+
+  it('fails a font outside dist/fonts/, which would ship in the SDK itself', () => {
+    const measure = measureBundle([...BUILD, file('assets/400-d.ttf', 'f')]);
+    expect(measure.lazy.fonts.files).toBe(2);
+    expect(measure.strayFonts).toEqual(['assets/400-d.ttf']);
+    expect(budgetProblems(measure, budgetOf(measure))).toEqual([
+      "a font in the SDK's own package, not in fonts/ (the fonts package): assets/400-d.ttf",
+    ]);
   });
 
   it('fails an emitted file no part counts', () => {
