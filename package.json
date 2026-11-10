@@ -10,6 +10,7 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "prepare": "pnpm --filter @canvas/eslint-config run build",
     "build": "pnpm --filter @canvas/app run slices && pnpm -r run build",
     "test": "pnpm --filter @canvas/app run slices && vitest run",
     "lint": "pnpm -r run lint",
