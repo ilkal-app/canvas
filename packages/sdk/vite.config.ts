@@ -4,6 +4,7 @@ import MagicString from 'magic-string';
 import { defineConfig, type Plugin } from 'vite';
 
 import { defaultFontsUrl, FONT_FILE_SCHEME, fontFilesOutside } from './scripts/font-files.ts';
+import { minifyChunks } from './scripts/minify-chunks.ts';
 
 /**
  * A package's name and version, from its package.json.
@@ -77,7 +78,12 @@ function importExtractedCss(): Plugin {
 // The embeddable bundle: one ES module a host page loads. React is the host's (a peer dependency):
 // two copies of React on one page break hooks, so it is left out of the bundle.
 export default defineConfig({
-  plugins: [fontFilesOutside({ shouldEmit: true }), keepAssetsAsFiles(), importExtractedCss()],
+  plugins: [
+    fontFilesOutside({ shouldEmit: true }),
+    keepAssetsAsFiles(),
+    minifyChunks(),
+    importExtractedCss(),
+  ],
   // Relative asset URLs, so the workers and the wasm resolve next to dist/index.js wherever a
   // host serves it.
   base: './',
@@ -90,7 +96,10 @@ export default defineConfig({
   // uses): one graph, so Yjs and the document layer are bundled once.
   resolve: { conditions: ['development', 'module', 'browser'] },
   // The workers name the catalogue's fonts too (by face, never fetching them): the same names.
-  worker: { format: 'es', plugins: () => [fontFilesOutside({ shouldEmit: false })] },
+  worker: {
+    format: 'es',
+    plugins: () => [fontFilesOutside({ shouldEmit: false }), minifyChunks()],
+  },
   // harfbuzzjs finds harfbuzz.wasm next to its own module (new URL(…, import.meta.url)). The dev
   // server's dependency optimiser would move the module into .vite/deps, where no wasm is, and
   // shaping would fetch the page instead (as for @canvas/app): the sample host page
@@ -106,6 +115,8 @@ export default defineConfig({
         assetFileNames: '[name][extname]',
       },
     },
-    sourcemap: true,
+    // No source maps: they would be most of the package, and with their sources stripped
+    // (the export's boundary) they point at files a host does not have. minifyChunks minifies.
+    sourcemap: false,
   },
 });

@@ -12,7 +12,7 @@ describe("the SDK package's files", () => {
     expect(isTestDeclaration('mount/fonts-url.d.ts.map')).toBe(false);
   });
 
-  it('leave out the fonts, the release scripts, the tests and the build info', () => {
+  it('leave out the fonts, the release scripts, the tests, any map and the build info', () => {
     const manifest = JSON.parse(
       readFileSync(new URL('../package.json', import.meta.url), 'utf8'),
     ) as { readonly files: readonly string[] };
@@ -23,6 +23,7 @@ describe("the SDK package's files", () => {
         '!dist/scripts',
         '!dist/**/*.test.d.ts',
         '!dist/**/*.test.d.ts.map',
+        '!dist/**/*.map',
         '!dist/**/*.tsbuildinfo',
       ]),
     );

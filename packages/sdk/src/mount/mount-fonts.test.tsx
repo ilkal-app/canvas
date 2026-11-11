@@ -13,7 +13,7 @@ const { AppShell, createLocalBoardConnection, setFontFileResolver } = vi.hoisted
   // The build's settings, there before ./mount.js loads, as a build defines them.
   Reflect.set(globalThis, 'CANVAS_SDK_FONTS', {
     scheme: 'canvas-sdk-font:',
-    defaultUrl: 'https://cdn.jsdelivr.net/npm/@ilkal/fonts@0.1.1/',
+    defaultUrl: 'https://cdn.jsdelivr.net/npm/@ilkal/fonts@0.1.2/',
   });
   return {
     AppShell: vi.fn(() => null),
@@ -84,7 +84,7 @@ describe("a built SDK's font files", () => {
       expect(setFontFileResolver).toHaveBeenCalledTimes(1);
     });
     expect(resolved('canvas-sdk-font:app/library/opensans/400.ttf')).toBe(
-      'https://cdn.jsdelivr.net/npm/@ilkal/fonts@0.1.1/app/library/opensans/400.ttf',
+      'https://cdn.jsdelivr.net/npm/@ilkal/fonts@0.1.2/app/library/opensans/400.ttf',
     );
     expect(resolved('https://host.example/own.woff2')).toBe('https://host.example/own.woff2');
   });

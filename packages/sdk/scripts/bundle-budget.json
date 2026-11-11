@@ -1,8 +1,8 @@
 {
-  "mainGzipBytes": 953121,
+  "mainGzipBytes": 733254,
   "lazyGzipBytes": {
-    "workers": 832159,
-    "lazyChunks": 722684,
+    "workers": 669731,
+    "lazyChunks": 608163,
     "wasm": 176751,
     "fonts": 65297897,
     "stylesheet": 19864

@@ -6,8 +6,10 @@
     // Runs in the host page.
     "lib": ["ES2022", "DOM"],
     "jsx": "react-jsx",
-    // Vite bundles the JavaScript; tsc contributes only the declarations.
-    "emitDeclarationOnly": true
+    // Vite bundles the JavaScript; tsc contributes only the declarations, without maps: they
+    // would point the package's declarations at sources it does not carry.
+    "emitDeclarationOnly": true,
+    "declarationMap": false
   },
   "include": ["src"],
   // scripts/ (the third-party licence list) is a project of its own, referenced so `tsc -b`

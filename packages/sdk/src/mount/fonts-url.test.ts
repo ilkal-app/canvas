@@ -34,9 +34,9 @@ describe('a font file URL', () => {
       fontFileUrl(
         `${SCHEME}app/library/opensans/400.ttf`,
         SCHEME,
-        'https://cdn.jsdelivr.net/npm/@ilkal/fonts@0.1.1/',
+        'https://cdn.jsdelivr.net/npm/@ilkal/fonts@0.1.2/',
       ),
-    ).toBe('https://cdn.jsdelivr.net/npm/@ilkal/fonts@0.1.1/app/library/opensans/400.ttf');
+    ).toBe('https://cdn.jsdelivr.net/npm/@ilkal/fonts@0.1.2/app/library/opensans/400.ttf');
   });
 
   it('leaves any other URL as it is', () => {

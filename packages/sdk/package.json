@@ -1,6 +1,6 @@
 {
   "name": "@ilkal/sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "description": "The embeddable canvas bundle and its public API.",
   "license": "Apache-2.0",
@@ -23,6 +23,7 @@
     "!dist/scripts",
     "!dist/**/*.test.d.ts",
     "!dist/**/*.test.d.ts.map",
+    "!dist/**/*.map",
     "!dist/**/*.tsbuildinfo",
     "LICENSE",
     "NOTICE",

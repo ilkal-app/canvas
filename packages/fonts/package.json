@@ -1,6 +1,6 @@
 {
   "name": "@ilkal/fonts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "description": "The font files the canvas SDK loads, for jsDelivr or a host to serve.",
   "license": "OFL-1.1",
