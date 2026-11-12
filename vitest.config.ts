@@ -70,8 +70,12 @@ export default defineConfig({
         include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.ts'],
         exclude: [...configDefaults.exclude],
         benchmark: { include: ['src/**/*.bench.ts'] },
-        // The shell fails a test on a browser error.
-        ...(name === '@canvas/app' ? { setupFiles: ['src/__fixtures__/browser-errors.ts'] } : {}),
+        // Every worker reads Vitest's answers between tests (vitest.setup.ts); the shell also
+        // fails a test on a browser error.
+        setupFiles: [
+          join(ROOT_DIR, 'vitest.setup.ts'),
+          ...(name === '@canvas/app' ? ['src/__fixtures__/browser-errors.ts'] : []),
+        ],
       },
     })),
     coverage: {
