@@ -1,6 +1,6 @@
 // The backend parity scene's pass: instanced triangles placed in device
 // pixels, tinted per instance and masked by a texture's red channel, output premultiplied.
-// This file is the single source: `pnpm --filter @canvas/engine shaders` generates the
+// This file is the single source: the engine's `shaders` script generates the
 // GLSL ES 3.0 stages and parity-triangle.generated.ts from it.
 
 struct Frame {

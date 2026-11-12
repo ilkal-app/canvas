@@ -4,8 +4,8 @@
 // outline over the fill, inside the edge, straddling it or outside it. Ported from the prototype's src/render/shapeRenderer.ts. The scene draws it as the
 // shape pass (packages/engine/src/shapes/shape-pass.ts: sticky notes), and
 // packages/engine/src/shapes/shape-renderer.ts draws it outside a scene; the instance record is
-// documented in shape-instance-layout.ts. This file is the single source: `pnpm --filter
-// @canvas/engine shaders` generates the GLSL ES 3.0 stages and sdf-shape.generated.ts from it.
+// documented in shape-instance-layout.ts. This file is the single source: the engine's `shaders`
+// script generates the GLSL ES 3.0 stages and sdf-shape.generated.ts from it.
 
 // Frame clipping: `clipVertex`, `clipCoverage` and the clip table at `@binding(5)` are
 // included by scripts/clip-shader.ts; the coverage is multiplied in, never discarded.

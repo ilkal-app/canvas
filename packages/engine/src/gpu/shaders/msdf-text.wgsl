@@ -3,8 +3,8 @@
 // premultiplied. Pages are RGBA8 multi-channel distance fields from msdfgen (the distance is
 // the median of the three channels) or R8 single-channel fallback fields; both encode
 // 0.5 + d / range with the distance d positive inside. Ported from the prototype's
-// `src/render/textRenderer.ts`. This file is the single source: `pnpm --filter @canvas/engine
-// shaders` generates the GLSL ES 3.0 stages and msdf-text.generated.ts from it.
+// `src/render/textRenderer.ts`. This file is the single source: the engine's `shaders` script
+// generates the GLSL ES 3.0 stages and msdf-text.generated.ts from it.
 
 // The engine's camera uniform, shared by every pass: clip = world * scale + offset
 // (packages/engine/src/camera/camera.ts, cameraClipTransform).

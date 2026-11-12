@@ -54,7 +54,7 @@ fails when a name in any script it emits, the workers' included, has no file, or
 would share a path. `scripts/build-fonts.ts` copies that folder here as it is, replacing an
 earlier copy, and fails on a top folder package.json's `files` does not list. At run time the SDK
 resolves each name against `fontsUrl` before the page fetches it
-(`setFontFileResolver` in `@canvas/app`).
+(the shell's `setFontFileResolver`).
 
 The paths carry no content hash: the version in the URL pins the files, and a host's copy is
 replaced with the package. Each font is under the SIL Open Font License 1.1, its licence text

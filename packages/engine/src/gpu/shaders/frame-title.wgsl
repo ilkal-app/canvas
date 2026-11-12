@@ -4,7 +4,7 @@
 // top-left corner, and is scaled into the frame's frame by the size of one CSS pixel in world
 // units (the camera uniform's `cssPixel`), so the name turns with the frame but does not grow or
 // shrink with the zoom, and a zoom uploads nothing. This file is the single source:
-// `pnpm --filter @canvas/engine shaders` generates the GLSL ES 3.0 stages and
+// the engine's `shaders` script generates the GLSL ES 3.0 stages and
 // frame-title.generated.ts from it.
 
 // Frame clipping: `clipVertex`, `clipCoverage` and the clip table at `@binding(5)` are

@@ -5,7 +5,7 @@
 // from an instance buffer: the instance a draw steps through cannot change within it. The
 // arithmetic is the path pass's (path.wgsl), so a batched stroke draws the pixels a per-path draw
 // does. Opaque strokes only: they use no stencil, so a run of them may share a draw.
-// This file is the single source: `pnpm --filter @canvas/engine shaders` generates the
+// This file is the single source: the engine's `shaders` script generates the
 // GLSL ES 3.0 stages and path-batch.generated.ts from it.
 
 // Frame clipping and layer opacity: `clipVertex`, `clipCoverage`,

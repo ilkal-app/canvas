@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import { PageImages } from '../assets/page-images.js';
 import { ImagePreparer } from '../assets/prepare-image.js';
@@ -64,15 +64,29 @@ describe('imageHostOptions', () => {
   });
 
   it('gives a main-thread host the page’s end directly, closing both ports', async () => {
-    const images = new PageImages(ACCESS, { preparer: new ImagePreparer(() => undefined) });
-    const { channel, closed } = countingChannel();
-    const options = imageHostOptions(images, () => channel);
-    const support = options.createImages(options.imageChannel);
-    expect(closed()).toBe(2);
-    await expect(support.assets.describe('a'.repeat(64) as never)).resolves.toMatchObject({
-      levels: [],
-    });
-    support.close?.();
+    // The engine's source reads the board's records with the global fetch. Answered here as an
+    // unreachable service at once, never by the network: a real request to assets.test waited on
+    // the runner's DNS and timed the test out in the merge queue.
+    const fetchRecords = vi.fn(() => Promise.reject(new TypeError('Failed to fetch')));
+    vi.stubGlobal('fetch', fetchRecords);
+    try {
+      const images = new PageImages(ACCESS, { preparer: new ImagePreparer(() => undefined) });
+      const { channel, closed } = countingChannel();
+      const options = imageHostOptions(images, () => channel);
+      const support = options.createImages(options.imageChannel);
+      expect(closed()).toBe(2);
+      await expect(support.assets.describe('a'.repeat(64) as never)).resolves.toMatchObject({
+        levels: [],
+      });
+      // The page's access reached the engine's end directly: it asked for the board's records.
+      expect(fetchRecords).toHaveBeenCalledWith(
+        expect.stringMatching(/^http:\/\/assets\.test\/assets\/records\?board=board-a/),
+        expect.anything(),
+      );
+      support.close?.();
+    } finally {
+      vi.unstubAllGlobals();
+    }
   });
 
   it('gives the page’s images back to the engine linked before once released', async () => {

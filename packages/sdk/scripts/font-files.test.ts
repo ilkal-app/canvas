@@ -18,8 +18,8 @@ const ROOT = fileURLToPath(new URL('../../../', import.meta.url));
 
 describe("the SDK's font files", () => {
   it('load by default from jsDelivr, at the SDK version, from the fonts package', () => {
-    expect(defaultFontsUrl('@ilkal/fonts', '0.1.2')).toBe(
-      'https://cdn.jsdelivr.net/npm/@ilkal/fonts@0.1.2/',
+    expect(defaultFontsUrl('@ilkal/fonts', '0.1.3')).toBe(
+      'https://cdn.jsdelivr.net/npm/@ilkal/fonts@0.1.3/',
     );
   });
 

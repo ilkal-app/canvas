@@ -4,7 +4,7 @@
 // scene's persistent instance buffer, sampled from its page in the draw's page group (
 // eight atlas pages bound at once, each glyph naming its page's index in the group), antialiased
 // in screen space, output premultiplied. This file is the single
-// source: `pnpm --filter @canvas/engine shaders` generates the GLSL ES 3.0 stages and
+// source: the engine's `shaders` script generates the GLSL ES 3.0 stages and
 // scene-text.generated.ts from it.
 
 // Frame clipping: `clipVertex`, `clipCoverage` and the clip table at `@binding(5)` are

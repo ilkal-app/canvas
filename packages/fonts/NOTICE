@@ -1,6 +1,6 @@
 Ilkal canvas fonts
 
-The font files the Ilkal canvas SDK (@canvas/sdk) loads, packaged apart from it. Each font is
+The font files the Ilkal canvas SDK (@ilkal/sdk) loads, packaged apart from it. Each font is
 the work of its authors and licensed under the SIL Open Font License 1.1; its licence text ships
 beside it (LICENSE, LICENSE.txt), and app/LICENSES lists the families:
 

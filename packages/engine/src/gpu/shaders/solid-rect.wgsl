@@ -2,7 +2,7 @@
 // one instance per rectangle from the persistent instance buffer, placed in world units by the
 // object's world transform and mapped to clip space by the camera uniform, so a pan or zoom
 // rewrites only the uniform. Output is premultiplied, like every pass.
-// This file is the single source: `pnpm --filter @canvas/engine shaders` generates the
+// This file is the single source: the engine's `shaders` script generates the
 // GLSL ES 3.0 stages and solid-rect.generated.ts from it.
 
 // Frame clipping: `clipVertex`, `clipCoverage` and the clip table at `@binding(5)` are

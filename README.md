@@ -6,7 +6,7 @@ it through the same commands.
 
 **Version 0 is local only.** One person edits a board in the page. The board lives in memory, or
 on the device in IndexedDB if you ask for that, and the SDK makes no network request beyond its
-own bundled fonts. Real-time collaboration comes in a later release.
+fonts (see [Fonts](#fonts)). Real-time collaboration comes in a later release.
 
 ## Install
 
@@ -85,6 +85,25 @@ open or an engine that fails to start. Pass `onError` to `mount` to receive thos
 `theme` is `'light'`, `'dark'` or `'system'` (the default), and `canvas.setTheme()` changes it
 while the board runs. The editor's toolbar and panels are set in Geist and Geist Mono, which ship
 with the SDK. `chromeFonts` and `canvas.setChromeFonts()` set them in your own fonts instead.
+
+## Fonts
+
+The fonts a board draws text in, and Geist for its toolbar and panels, are a package of their own,
+`@ilkal/fonts`, released with the SDK at the same version. A board loads only the faces its text
+needs, from jsDelivr's copy of `@ilkal/fonts` at the SDK's version by default. To serve them
+yourself, copy the package into your public folder and say where:
+
+```sh
+npm install @ilkal/fonts
+cp -R node_modules/@ilkal/fonts/. public/fonts/
+```
+
+```ts
+await mount(element, { fontsUrl: '/fonts/' });
+```
+
+Install the same version as `@ilkal/sdk`: the SDK asks for the files of its own version. The
+fonts are under the SIL Open Font License 1.1, each with its licence beside it.
 
 ## API reference
 

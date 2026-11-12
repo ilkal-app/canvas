@@ -5,7 +5,7 @@
 // mesh by the object's world transform, as path.wgsl places a path's. No colour is written, so
 // there is no clip or layer opacity to apply here: the run's cover quad (path.wgsl) paints where
 // the count is not 0, clipped and faded there, and zeroes the stencil, clipped-out pixels too.
-// This file is the single source: `pnpm --filter @canvas/engine shaders` generates the
+// This file is the single source: the engine's `shaders` script generates the
 // GLSL ES 3.0 stages, glyph-stencil.generated.ts and its retained-move variant from it.
 
 // clip = world * scale + offset (packages/engine/src/camera/camera.ts, cameraClipTransform),

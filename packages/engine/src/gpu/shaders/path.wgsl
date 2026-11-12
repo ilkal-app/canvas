@@ -4,7 +4,7 @@
 // even-odd count is set); the stroke is its triangle mesh. The record places the mesh by the
 // object's world transform and gives the layer's colour, so a move rewrites one record and never
 // the mesh. Output is premultiplied, like every pass.
-// This file is the single source: `pnpm --filter @canvas/engine shaders` generates the
+// This file is the single source: the engine's `shaders` script generates the
 // GLSL ES 3.0 stages and path.generated.ts from it.
 
 // Frame clipping: `clipVertex`, `clipCoverage` and the clip table at `@binding(5)` are

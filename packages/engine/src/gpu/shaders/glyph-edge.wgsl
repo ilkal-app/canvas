@@ -6,7 +6,7 @@
 // The stencil lets each sample be painted once: where hulls overlap (corners), one edge's coverage
 // is used, and the run's cover (path.wgsl) skips what the hulls painted. The run's record places
 // the hulls by the object's world transform and gives the colour, as path.wgsl's does.
-// This file is the single source: `pnpm --filter @canvas/engine shaders` generates the
+// This file is the single source: the engine's `shaders` script generates the
 // GLSL ES 3.0 stages, glyph-edge.generated.ts and its retained-move variant from it.
 
 // Frame clipping and layer opacity: `clipVertex`, `clipCoverage`,

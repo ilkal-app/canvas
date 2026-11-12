@@ -58,3 +58,7 @@ jobs:
       - run: pnpm run typecheck
       - run: pnpm test
       - run: pnpm run build
+      # What a host gets from npm: the packed packages install into an empty project, type-check
+      # under strict and resolve, and name nothing of this workspace
+      # (packages/sdk/scripts/smoke-package.ts).
+      - run: pnpm --filter @ilkal/sdk run smoke

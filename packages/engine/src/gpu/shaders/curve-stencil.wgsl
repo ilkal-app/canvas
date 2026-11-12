@@ -4,7 +4,7 @@
 // between the curve and its chord is u² − v < 0; fragments past the curve are discarded. Fan
 // triangles give every corner (0, 1), which never discards. No colour is written: the stencil
 // counts windings, and a cover pass paints where the count is not 0.
-// This file is the single source: `pnpm --filter @canvas/engine shaders` generates the
+// This file is the single source: the engine's `shaders` script generates the
 // GLSL ES 3.0 stages and curve-stencil.generated.ts from it.
 
 struct Frame {

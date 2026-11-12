@@ -46,6 +46,10 @@ jobs:
       - run: pnpm run typecheck
       - run: pnpm test
       - run: pnpm run build
+      # The packed packages, checked as a host installs them before anything is published: they
+      # install into an empty project, type-check under strict, resolve, and name nothing of this
+      # workspace (packages/sdk/scripts/smoke-package.ts).
+      - run: pnpm --filter @ilkal/sdk run smoke
       # pnpm packs each package (resolving workspace versions); npm publishes the tarballs, since
       # npm's CLI carries trusted publishing and provenance. npm 11.5 or later is needed for both.
       # The build filled @ilkal/fonts from the SDK's build (packages/fonts/scripts/build-fonts.ts).

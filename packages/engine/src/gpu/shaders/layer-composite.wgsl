@@ -2,8 +2,8 @@
 // pass at an opacity, premultiplied source-over. The quad lands at `rect`, the layer's rectangle
 // in the pass's clip space (the whole viewport when the pass's viewport is the rectangle), and
 // samples the target's top-left `uvScale` part, which is the rectangle's size in device pixels:
-// every fragment reads its own texel. This file is the single source: `pnpm --filter
-// @canvas/engine shaders` generates the GLSL ES 3.0 stages and layer-composite.generated.ts.
+// every fragment reads its own texel. This file is the single source: the engine's `shaders` script
+// generates the GLSL ES 3.0 stages and layer-composite.generated.ts.
 
 struct Composite {
   // The layer's opacity, in [0, 1].

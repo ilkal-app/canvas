@@ -4,7 +4,7 @@
 // canvas's top-left corner: the CPU reduces the camera to the lattice's phase (the world
 // origin's position modulo the spacing), so the numbers stay small at any pan and a pan or
 // zoom rewrites only the uniform. Output is premultiplied, like every pass.
-// This file is the single source: `pnpm --filter @canvas/engine shaders` generates the
+// This file is the single source: the engine's `shaders` script generates the
 // GLSL ES 3.0 stages and dot-grid.generated.ts from it.
 
 struct Grid {
