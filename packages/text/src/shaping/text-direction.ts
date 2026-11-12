@@ -68,8 +68,12 @@ export function anyScript(scripts: readonly string[]): RegExp {
 
 const RTL = anyScript(RTL_SCRIPTS);
 
-/** A character with a script of its own: not Common, Inherited or Unknown. */
-const SCRIPTED = /[^\p{Script=Common}\p{Script=Inherited}\p{Script=Unknown}]/u;
+/**
+ * A character with a script of its own: not Common, Inherited or Unknown. Unknown is written as
+ * the categories it covers (unassigned, private use, surrogates): Safari 17 refuses the script
+ * Unknown under every name (`Unknown`, `Zzzz`, `sc=`), and the app then fails to load.
+ */
+const SCRIPTED = /[^\p{Script=Common}\p{Script=Inherited}\p{Cn}\p{Co}\p{Cs}]/u;
 
 /**
  * The direction HarfBuzz guesses for `text[start, end)`: right to left when the first character

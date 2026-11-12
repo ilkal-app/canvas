@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs';
+
 import { describe, expect, it } from 'vitest';
 
 import { anyScript, guessDirection } from './text-direction.js';
@@ -20,6 +22,11 @@ describe('guessDirection', () => {
     expect(guessDirection('', 0, 0)).toBe('ltr');
   });
 
+  it('steps over unassigned and private-use characters, whose script is Unknown', () => {
+    expect(guessDirection('͸مرحبا', 0, 7)).toBe('rtl');
+    expect(guessDirection('͸', 0, 2)).toBe('ltr');
+  });
+
   it('gives left to right for a script written either way, as HarfBuzz does', () => {
     // Old Italic (U+10300) is one of the four scripts HarfBuzz leaves without a direction.
     expect(guessDirection('\u{10300}', 0, 2)).toBe('ltr');
@@ -31,5 +38,15 @@ describe('anyScript', () => {
     const pattern = anyScript(['Arabic', 'Not_A_Script']);
     expect(pattern.test('م')).toBe(true);
     expect(pattern.test('a')).toBe(false);
+  });
+});
+
+describe('the source', () => {
+  it('never names the script Unknown, which Safari 17 cannot compile', () => {
+    // Safari 17 throws "invalid property expression" for the script Unknown under every name, and
+    // a thrown regular expression here leaves the app blank; the unit tests run in Node, which
+    // accepts it, so only this check catches it.
+    const source = readFileSync(new URL('text-direction.ts', import.meta.url), 'utf8');
+    expect(source).not.toMatch(/\\p\{(?:Script|sc|Script_Extensions|scx)=(?:Unknown|Zzzz)\}/u);
   });
 });
